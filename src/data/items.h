@@ -4740,109 +4740,109 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-// FireRed/LeafGreen key items
+// FireRed/LeafGreen key items/UncleDadHax items
 
-    [ITEM_OAKS_PARCEL] =
+    [ITEM_CUT] =
     {
-        .name = _("Oak's Parcel"),
-        .itemId = ITEM_OAKS_PARCEL,
+        .name = _("Sharp Axe"),
+        .itemId = ITEM_CUT,
         .price = 0,
-        .description = sOaksParcelDesc,
-        .importance = 2,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 0,
-    },
-
-    [ITEM_POKE_FLUTE] =
-    {
-        .name = _("Poké Flute"),
-        .itemId = ITEM_POKE_FLUTE,
-        .price = 0,
-        .description = sPokeFluteDesc,
+        .description = sCutDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = FieldUseFunc_Cut,
         .secondaryId = 0,
     },
 
-    [ITEM_SECRET_KEY] =
+    [ITEM_FLY] =
     {
-        .name = _("Secret Key"),
-        .itemId = ITEM_SECRET_KEY,
+        .name = _("Big Balloon"),
+        .itemId = ITEM_FLY,
         .price = 0,
-        .description = sSecretKeyDesc,
+        .description = sFlyDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_Fly,
         .secondaryId = 0,
     },
 
-    [ITEM_BIKE_VOUCHER] =
+    [ITEM_SURF] =
     {
-        .name = _("Bike Voucher"),
-        .itemId = ITEM_BIKE_VOUCHER,
+        .name = _("Inner Tube"),
+        .itemId = ITEM_SURF,
         .price = 0,
-        .description = sBikeVoucherDesc,
+        .description = sSurfDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = FieldUseFunc_Surf,
         .secondaryId = 0,
     },
 
-    [ITEM_GOLD_TEETH] =
+    [ITEM_STRENGTH] =
     {
-        .name = _("Gold Teeth"),
-        .itemId = ITEM_GOLD_TEETH,
+        .name = _("Golden Gauntlets"),
+        .itemId = ITEM_STRENGTH,
         .price = 0,
-        .description = sGoldTeethDesc,
+        .description = sStrengthDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = FieldUseFunc_Strength,
         .secondaryId = 0,
     },
 
-    [ITEM_OLD_AMBER] =
+    [ITEM_FLASH] =
     {
-        .name = _("Old Amber"),
-        .itemId = ITEM_OLD_AMBER,
+        .name = _("Head Lamp"),
+        .itemId = ITEM_FLASH,
         .price = 0,
-        .description = sOldAmberDesc,
+        .description = sFlashDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = FieldUseFunc_Flash,
         .secondaryId = 0,
     },
 
-    [ITEM_CARD_KEY] =
+    [ITEM_ROCK_SMASH] =
     {
-        .name = _("Card Key"),
-        .itemId = ITEM_CARD_KEY,
+        .name = _("Iron Pickaxe"),
+        .itemId = ITEM_ROCK_SMASH,
         .price = 0,
-        .description = sCardKeyDesc,
+        .description = sRock_SmashDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = FieldUseFunc_Rock_Smash,
         .secondaryId = 0,
     },
 
-    [ITEM_LIFT_KEY] =
+    [ITEM_WATERFALL] =
     {
-        .name = _("Lift Key"),
-        .itemId = ITEM_LIFT_KEY,
+        .name = _("Inner Tube Propeller"),
+        .itemId = ITEM_WATERFALL,
         .price = 0,
-        .description = sLiftKeyDesc,
+        .description = sWaterfallDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = FieldUseFunc_Waterfall,
+        .secondaryId = 0,
+    },
+
+    [ITEM_DIVE] =
+    {
+        .name = _("Scuba Gear"),
+        .itemId = ITEM_DIVE,
+        .price = 0,
+        .description = sDiveDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = 4,
+        .fieldUseFunc = FieldUseFunc_Dive,
         .secondaryId = 0,
     },
 
@@ -4976,16 +4976,15 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_SILPH_SCOPE] =
+    [ITEM_SPRAY_PAINT] =
     {
-        .name = _("Silph Scope"),
-        .itemId = ITEM_SILPH_SCOPE,
-        .price = 0,
-        .description = sSilphScopeDesc,
-        .importance = 1,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .name = _("Spray Paint"),
+        .itemId = ITEM_SPRAY_PAINT,
+        .price = 1000,
+        .description = sSpray_PaintDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 1,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
         .secondaryId = 0,
     },
 

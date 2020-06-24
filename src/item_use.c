@@ -191,6 +191,31 @@ static void CB2_CheckMail(void)
     ReadMail(&mail, CB2_ReturnToBagMenuPocket, 0);
 }
 
+// Replace HMs with Item affects
+void ItemUseOutOfBattle_Fly(u8 taskId)
+{
+	if(Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+	{
+		gSaveBlock2Ptr->ItemArg = 591;
+		if(!gTasks[taskId].tUsingRegisteredKeyItem)
+		{
+			gBagMenu->mainCallback2 = CB2_OpenFlyMap;
+			Task_FadeAndCloseBagMenu(taskId);
+		}
+		else
+		{
+			SetMainCallback2(CB2_OpenFlyMap);
+			DestroyTask(taskId);
+		}
+	}
+	else
+		DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+void ItemUseOutOfBattle_Cut(u8 taskId)
+{
+    gBagMenu->mainCallback2 = CB2_OpenFlyMap;
+    Task_FadeAndCloseBagMenu(taskId);
+}
 void ItemUseOutOfBattle_Mail(u8 taskId)
 {
     gBagMenu->mainCallback2 = CB2_CheckMail;

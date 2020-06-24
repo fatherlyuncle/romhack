@@ -116,6 +116,12 @@
     f;                       \
 })
 
+struct SaveBlock2 //items to replace HMs nonsense
+{
+.......................
+u16 ItemArg;
+}; // sizeof=0xF2C
+
 struct Coords8
 {
     s8 x;

@@ -1801,46 +1801,44 @@ static const u8 sHM08Desc[] = _(
     "the 1st turn, then\n"
     "attacks next turn.");
 
-// FireRed/LeafGreen key items
-static const u8 sOaksParcelDesc[] = _(
-    "A parcel for PROF.\n"
-    "OAK from a POKéMON\n"
-    "MART's clerk.");
+// FireRed/LeafGreen/UncleDadHax key items
+static const u8 sCutDesc[] = _(
+    "A sharp axe\n"
+    "made from steel.");
 
-static const u8 sPokeFluteDesc[] = _(
-    "A sweet-sounding\n"
-    "flute that awakens\n"
-    "POKéMON.");
+static const u8 sFlyDesc[] = _(
+    "A large balloon\n"
+    "used to float in\n"
+    "the sky.");
 
-static const u8 sSecretKeyDesc[] = _(
-    "The key to the\n"
-    "CINNABAR ISLAND\n"
-    "GYM's entrance.");
+static const u8 sSurfDesc[] = _(
+    "Very bouyant.\n"
+    "Made from rubber.");
 
-static const u8 sBikeVoucherDesc[] = _(
-    "A voucher for\n"
-    "obtaining a bicycle\n"
-    "from the BIKE SHOP.");
+static const u8 sStrengthDesc[] = _(
+    "Golden gauntlets\n"
+    "used to move \n"
+    "huge boulders.");
 
-static const u8 sGoldTeethDesc[] = _(
-    "Gold dentures lost\n"
-    "by the SAFARI\n"
-    "ZONE's WARDEN.");
+static const u8 sFlashDesc[] = _(
+    "A miner's head\n"
+    "lamp. Useful in \n"
+    "dark places.");
 
-static const u8 sOldAmberDesc[] = _(
-    "A stone containing\n"
-    "the genes of an\n"
-    "ancient POKéMON.");
+static const u8 sRock_Smash[] = _(
+    "A heavy pickaxe\n"
+    "capable of \n"
+    "destroying rocks.");
 
-static const u8 sCardKeyDesc[] = _(
-    "A card-type door\n"
-    "key used in SILPH\n"
-    "CO's office.");
+static const u8 sWaterfall[] = _(
+    "A propeller to\n"
+    "help boost up\n"
+    "waterfalls.");
 
-static const u8 sLiftKeyDesc[] = _(
-    "An elevator key\n"
-    "used in TEAM\n"
-    "ROCKET's HIDEOUT.");
+static const u8 sDiveDesc[] = _(
+    "Old scuba gear.\n"
+    "Has some cracks,\n"
+    "but still works.");
 
 static const u8 sArmorFossilDesc[] = _(
     "A piece of a\n"
@@ -1882,10 +1880,9 @@ static const u8 sSailFossilDesc[] = _(
     "toric POKéMON's\n"
     "skin sail.");
 
-static const u8 sSilphScopeDesc[] = _(
-    "SILPH CO's scope\n"
-    "makes unseeable\n"
-    "POKéMON visible.");
+static const u8 sSpray_PaintDesc[] = _(
+    "POKéMON-friendly\n"
+    "spray paint.");
 
 static const u8 sBicycleDesc[] = _(
     "A folding bicycle\n"

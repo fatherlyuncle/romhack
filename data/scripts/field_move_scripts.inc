@@ -2,16 +2,16 @@
 EventScript_CutTree:: @ 82906BB
 	lockall
 	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
-	checkpartymove MOVE_CUT
-	compare VAR_RESULT, PARTY_SIZE
+	checkitem ITEM_CUT, 1
+	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CheckTreeCantCut
-	setfieldeffectargument 0, VAR_RESULT
-	bufferpartymonnick 0, VAR_RESULT
-	buffermovename 1, MOVE_CUT
+	setfieldeffectargument 0, ITEM_CUT
+	//bufferpartymonnick 0, VAR_RESULT
+	//buffermovename 1, MOVE_CUT
 	msgbox Text_WantToCut, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_CancelCut
-	msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
+	//msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
