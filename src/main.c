@@ -34,7 +34,7 @@ const u8 gGameVersion = GAME_VERSION;
 
 const u8 gGameLanguage = GAME_LANGUAGE; // English
 
-const char BuildDateTime[] = "2005 02 21 11:10";
+const char BuildDateTime[] = "2020 04 20 04:20";
 
 const IntrFunc gIntrTableTemplate[] =
 {
@@ -118,6 +118,7 @@ void AgbMain()
     CheckForFlashMemory();
     InitMainCallbacks();
     InitMapMusic();
+	SeedRngAndSetTrainerId();
     //SeedRngWithRtc(); see comment at SeedRngWithRtc declaration below
     ClearDma3Requests();
     ResetBgs();
@@ -211,9 +212,11 @@ void StartTimer1(void)
 
 void SeedRngAndSetTrainerId(void)
 {
-    u16 val = REG_TM1CNT_L;
+	u32 seed = RtcGetMinuteCount();
+    u16 val = RtcGetMinuteCount();
+	seed = (seed >> 16) ^ (seed & 0xFFFF);
+	SeedRng(seed);
     SeedRng(val);
-    REG_TM1CNT_H = 0;
     gTrainerId = val;
 }
 
