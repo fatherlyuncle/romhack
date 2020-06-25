@@ -11969,3 +11969,14 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_MayLinkPlaceholder},
     },
 };
+
+
+
+
+
+
+
+
+
+
+
