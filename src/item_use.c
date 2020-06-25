@@ -191,7 +191,7 @@ static void CB2_CheckMail(void)
     ReadMail(&mail, CB2_ReturnToBagMenuPocket, 0);
 }
 
-// Replace HMs with Item affects
+// Replace FLY HM with Item affects
 void ItemUseOutOfBattle_Fly(u8 taskId)
 {
 	if(Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
@@ -211,9 +211,9 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 	else
 		DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
-void ItemUseOutOfBattle_Cut(u8 taskId)
+void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 {
-    gBagMenu->mainCallback2 = CB2_OpenFlyMap;
+    gBagMenu->mainCallback2 = FldEff_UseFlash;
     Task_FadeAndCloseBagMenu(taskId);
 }
 void ItemUseOutOfBattle_Mail(u8 taskId)

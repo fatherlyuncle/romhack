@@ -4751,7 +4751,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = FieldUseFunc_Cut,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
 
@@ -4777,7 +4777,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = FieldUseFunc_Surf,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
 
@@ -4790,7 +4790,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = FieldUseFunc_Strength,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
 
@@ -4803,7 +4803,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = FieldUseFunc_Flash,
+        .fieldUseFunc = ItemUseOutOfBattle_Flash,
         .secondaryId = 0,
     },
 
@@ -4816,7 +4816,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = FieldUseFunc_Rock_Smash,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
 
@@ -4829,7 +4829,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = FieldUseFunc_Waterfall,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
 
@@ -4842,7 +4842,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = FieldUseFunc_Dive,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
 
