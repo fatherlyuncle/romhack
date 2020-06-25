@@ -1801,7 +1801,7 @@ static const u8 sHM08Desc[] = _(
     "the 1st turn, then\n"
     "attacks next turn.");
 
-// FireRed/LeafGreen/UncleDadHax key items
+// FireRed/LeafGreen/UncleDadHax key items //remove HMs for items
 static const u8 sCutDesc[] = _(
     "A sharp axe\n"
     "made from steel.");
@@ -1825,12 +1825,12 @@ static const u8 sFlashDesc[] = _(
     "lamp. Useful in \n"
     "dark places.");
 
-static const u8 sRock_Smash[] = _(
+static const u8 sRock_SmashDesc[] = _(
     "A heavy pickaxe\n"
     "capable of \n"
     "destroying rocks.");
 
-static const u8 sWaterfall[] = _(
+static const u8 sWaterfallDesc[] = _(
     "A propeller to\n"
     "help boost up\n"
     "waterfalls.");
@@ -1880,7 +1880,7 @@ static const u8 sSailFossilDesc[] = _(
     "toric POKéMON's\n"
     "skin sail.");
 
-static const u8 sSpray_PaintDesc[] = _(
+static const u8 sSpray_PaintDesc[] = _(  //custom item for shiny
     "POKéMON-friendly\n"
     "spray paint.");
 
