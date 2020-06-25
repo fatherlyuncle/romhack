@@ -214,7 +214,7 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 }
 void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 {
-    gBagMenu->mainCallback2 = FldEff_UseFlash;
+    SetUpFieldMove_Flash(void);
     Task_FadeAndCloseBagMenu(taskId);
 }
 void ItemUseOutOfBattle_Mail(u8 taskId)
