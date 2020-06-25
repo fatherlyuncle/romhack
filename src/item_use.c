@@ -18,6 +18,7 @@
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
 #include "field_weather.h"
+#include "fldeff.h" //for flash 
 #include "item.h"
 #include "item_menu.h"
 #include "item_use.h"
@@ -191,7 +192,7 @@ static void CB2_CheckMail(void)
     ReadMail(&mail, CB2_ReturnToBagMenuPocket, 0);
 }
 
-// Replace FLY HM with Item affects
+// Replace FLY HM with Item effects
 void ItemUseOutOfBattle_Fly(u8 taskId)
 {
 	if(Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
