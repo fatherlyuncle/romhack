@@ -32,6 +32,7 @@
 #include "party_menu.h"
 #include "pokeblock.h"
 #include "pokemon.h"
+#include "region_map.h" //for fly
 #include "script.h"
 #include "sound.h"
 #include "strings.h"
