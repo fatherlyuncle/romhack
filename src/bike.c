@@ -125,13 +125,14 @@ static const struct BikeHistoryInputInfo sAcroBikeTricksList[] =
 };
 
 // code
-void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys)
+void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys)  
 {
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
         MovePlayerOnMachBike(direction, newKeys, heldKeys);
     else
         MovePlayerOnAcroBike(direction, newKeys, heldKeys);
-	if (heldKeys & R_BUTTON)
+	
+	if (heldKeys & R_BUTTON) // DPPT Bike Swap 
     {
         if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
         {
@@ -146,7 +147,7 @@ void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys)
         PlaySE(SE_JITE_PYOKO);
     }
 }
-}
+
 
 static void MovePlayerOnMachBike(u8 direction, u16 newKeys, u16 heldKeys)
 {
