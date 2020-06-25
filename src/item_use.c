@@ -214,7 +214,7 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 }
 void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 {
-    SetUpFieldMove_Flash(void);
+    SetUpFieldMove_Flash;
     Task_FadeAndCloseBagMenu(taskId);
 }
 void ItemUseOutOfBattle_Mail(u8 taskId)
