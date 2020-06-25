@@ -61,7 +61,7 @@ Text_CantCut: @ 829077D
 EventScript_RockSmash:: @ 82907A6
 	lockall
 	//goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
-	checkpitem ITEM_ROCK_SMASH, 1
+	checkitem ITEM_ROCK_SMASH, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSmashRock
 	setfieldeffectargument 0, ITEM_ROCK_SMASH
