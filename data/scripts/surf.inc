@@ -1,5 +1,5 @@
 EventScript_UseSurf:: @ 8271EA0
-	checkitem ITEM_SURF
+	checkitem ITEM_SURF, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_EndUseSurf
 	//bufferpartymonnick 0, VAR_RESULT  Replace HM with Item
