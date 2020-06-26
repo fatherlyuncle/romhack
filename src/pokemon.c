@@ -2631,15 +2631,15 @@ void CreateMonWithIVsPersonality(struct Pokemon *mon, u16 species, u8 level, u32
     CalculateMonStats(mon);
 }
 
-void CreateMonWithIVsOTID(struct Pokemon *mon, u16 species, u8 level, u8 *ivs, u32 otId)
+void CreateMonWithIVsOTID(struct Pokemon *mon, u16 species, u8 level, u8 *ivs, u32 otId)//Not sure when used but changed IVs to 31
 {
     CreateMon(mon, species, level, 0, 0, 0, OT_ID_PRESET, otId);
-    SetMonData(mon, MON_DATA_HP_IV, &ivs[0]);
-    SetMonData(mon, MON_DATA_ATK_IV, &ivs[1]);
-    SetMonData(mon, MON_DATA_DEF_IV, &ivs[2]);
-    SetMonData(mon, MON_DATA_SPEED_IV, &ivs[3]);
-    SetMonData(mon, MON_DATA_SPATK_IV, &ivs[4]);
-    SetMonData(mon, MON_DATA_SPDEF_IV, &ivs[5]);
+    SetMonData(mon, MON_DATA_HP_IV, 31);//&ivs[0]);
+    SetMonData(mon, MON_DATA_ATK_IV, 31);//&ivs[1]);
+    SetMonData(mon, MON_DATA_DEF_IV, 31);//&ivs[2]);
+    SetMonData(mon, MON_DATA_SPEED_IV, 31);;//&ivs[3]);
+    SetMonData(mon, MON_DATA_SPATK_IV, 31);//&ivs[4]);
+    SetMonData(mon, MON_DATA_SPDEF_IV, 31);//&ivs[5]);
     CalculateMonStats(mon);
 }
 
@@ -6679,7 +6679,7 @@ void SetWildMonHeldItem(void)
     }
 }
 
-bool8 IsMonShiny(struct Pokemon *mon)
+bool8 IsMonShiny(struct Pokemon *mon)//
 {
     u32 otId = GetMonData(mon, MON_DATA_OT_ID, 0);
     u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, 0);
