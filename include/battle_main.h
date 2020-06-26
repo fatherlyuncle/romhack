@@ -7,6 +7,12 @@ struct TrainerMoney
     u8 value;
 };
 
+struct TrainerBall //Trainer has class-based pokeballs
+{
+	u8 classId;
+	u8 Ball; //can be expanded to u16 
+};
+
 struct UnknownPokemonStruct4
 {
     /*0x00*/ u16 species;
