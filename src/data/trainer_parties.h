@@ -6996,7 +6996,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute103Torchic[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_LUGIA,
+    .species = SPECIES_MUDKIP,
     }
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Torchic[] = {
@@ -7016,7 +7016,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute110Torchic[] = {
     .species = SPECIES_MARSHTOMP,
     }
 };
-
 static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Torchic[] = {
     {
     .iv = 100,
@@ -7034,7 +7033,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayRoute119Torchic[] = {
     .species = SPECIES_MARSHTOMP,
     }
 };
-
 static const struct TrainerMonNoItemDefaultMoves sParty_Isaac1[] = {
     {
     .iv = 0,
@@ -12423,6 +12421,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+
+
+
+
+
 
 
 
