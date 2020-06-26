@@ -167,9 +167,11 @@ static const struct MenuAction gPCText_ItemPCOptionsText[] =
     { gText_Cancel, ItemStorage_Exit }
 };
 
-static const struct ItemSlot gNewGamePCItems[] =
+static const struct ItemSlot gNewGamePCItems[] = //Added additional items
 {
-    { ITEM_POTION, 1 },
+    { ITEM_PREMIER_BALL, 5 },
+	{ ITEM_SPRAY_PAINT, 3},
+	{ ITEM_NUGGET, 2},
     { ITEM_NONE, 0 }
 };
 
