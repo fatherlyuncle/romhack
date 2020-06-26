@@ -2526,34 +2526,34 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     SetBoxMonData(boxMon, MON_DATA_POKEBALL, &value);
     SetBoxMonData(boxMon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
 
-    if (fixedIV < 32)
+    if (fixedIV < 32) //Set IVs to 31 for gift pokemon 
     {
-        SetBoxMonData(boxMon, MON_DATA_HP_IV, &fixedIV);
-        SetBoxMonData(boxMon, MON_DATA_ATK_IV, &fixedIV);
-        SetBoxMonData(boxMon, MON_DATA_DEF_IV, &fixedIV);
-        SetBoxMonData(boxMon, MON_DATA_SPEED_IV, &fixedIV);
-        SetBoxMonData(boxMon, MON_DATA_SPATK_IV, &fixedIV);
-        SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &fixedIV);
+        SetBoxMonData(boxMon, MON_DATA_HP_IV, 31);
+        SetBoxMonData(boxMon, MON_DATA_ATK_IV, 31);
+        SetBoxMonData(boxMon, MON_DATA_DEF_IV, 31);
+        SetBoxMonData(boxMon, MON_DATA_SPEED_IV, 31);
+        SetBoxMonData(boxMon, MON_DATA_SPATK_IV, 31);
+        SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, 31);//&fixedIV);
     }
     else
     {
-        u32 iv;
+        u32 iv = 31; //Set IVs to 31 for all wild pokemon
         value = Random();
 
-        iv = value & 0x1F;
+        //iv = value & 0x1F;
         SetBoxMonData(boxMon, MON_DATA_HP_IV, &iv);
-        iv = (value & 0x3E0) >> 5;
+        //iv = (value & 0x3E0) >> 5;
         SetBoxMonData(boxMon, MON_DATA_ATK_IV, &iv);
-        iv = (value & 0x7C00) >> 10;
+        //iv = (value & 0x7C00) >> 10;
         SetBoxMonData(boxMon, MON_DATA_DEF_IV, &iv);
 
         value = Random();
 
-        iv = value & 0x1F;
+        //iv = value & 0x1F;
         SetBoxMonData(boxMon, MON_DATA_SPEED_IV, &iv);
-        iv = (value & 0x3E0) >> 5;
+        //iv = (value & 0x3E0) >> 5;
         SetBoxMonData(boxMon, MON_DATA_SPATK_IV, &iv);
-        iv = (value & 0x7C00) >> 10;
+        //iv = (value & 0x7C00) >> 10;
         SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv);
     }
 

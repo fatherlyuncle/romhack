@@ -116,8 +116,8 @@
 #define SPLIT_STATUS    0x2
 
 // Shiny odds
-#define SHINY_ODDS 8 // Actual probability is SHINY_ODDS/65536
-#define SHINY_CHARM_REROLLS 3 // Amount of re-rolls if has Shiny Charm.
+#define SHINY_ODDS 800 //used to be 8 //Actual probability is SHINY_ODDS/65536
+#define SHINY_CHARM_REROLLS 7 //used to be 3 //Amount of re-rolls if has Shiny Charm.
 
 // Flags for Get(Box)MonData / Set(Box)MonData
 #define MON_DATA_PERSONALITY        0
@@ -259,7 +259,7 @@
 #define STATUS_PRIMARY_FAINTED   7
 
 #define MAX_TOTAL_EVS 510
-#define EV_ITEM_RAISE_LIMIT 100
+#define EV_ITEM_RAISE_LIMIT 255 //used to be 100 
 
 #define UNOWN_FORM_COUNT 28
 
