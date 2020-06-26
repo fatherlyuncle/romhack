@@ -6252,11 +6252,11 @@ static u32 CalcFinalDmg(u32 dmg, u16 move, u8 battlerAtk, u8 battlerDef, u8 move
     // check stab
     if (IS_BATTLER_OF_TYPE(battlerAtk, moveType) && move != MOVE_STRUGGLE)
     {
-        if ((abilityAtk == ABILITY_ADAPTABILITY)&&(gBattleMons[battler1].type2 == TYPE_MYSTERY))//MonotypeXAdaptability STAB boost
+        if ((abilityAtk == ABILITY_ADAPTABILITY)&&(gBattleMons[battlerAtk].type2 == TYPE_MYSTERY))//MonotypeXAdaptability STAB boost
             MulModifier(&finalModifier, UQ_4_12(2.25));
         else if (abilityAtk == ABILITY_ADAPTABILITY)
             MulModifier(&finalModifier, UQ_4_12(2.0));
-		else if (gBattleMons[battler1].type2 == TYPE_MYSTERY)//Monotype STAB Boost 
+		else if (gBattleMons[battlerAtk].type2 == TYPE_MYSTERY)//Monotype STAB Boost 
             MulModifier(&finalModifier, UQ_4_12(1.75));
 		else
             MulModifier(&finalModifier, UQ_4_12(1.5));
