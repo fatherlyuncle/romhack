@@ -224,16 +224,10 @@ void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
 {
 	if (VarGet(VAR_SPRAY_COUNT) == 0) // closes if one is already in use
-	{
+	{ 
 		gTasks[taskId].func = Task_SprayPaint;	
     }
 	Task_FadeAndCloseBagMenu(taskId);
-}
-
-static void Task_SprayPaint(u8 taskId) //sets VAR_SPRAY_COUNT to 1
-{
-	VarSet(VAR_SPRAY_COUNT, ItemId_GetHoldEffectParam(gSpecialVar_ItemId));
-        RemoveUsedItem();
 }
 
 void ItemUseOutOfBattle_Mail(u8 taskId)
@@ -916,6 +910,13 @@ static void Task_UseRepel(u8 taskId)
             DisplayItemMessageInBattlePyramid(taskId, gStringVar4, Task_CloseBattlePyramidBagMessage);
     }
 }
+
+static void Task_SprayPaint(u8 taskId) //sets VAR_SPRAY_COUNT to 1
+{
+	VarSet(VAR_SPRAY_COUNT, ItemId_GetHoldEffectParam(gSpecialVar_ItemId));
+    RemoveUsedItem();
+}
+
 
 static void Task_UsedBlackWhiteFlute(u8 taskId)
 {
