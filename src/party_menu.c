@@ -4480,6 +4480,23 @@ void ItemUseCB_AbilityCapsule(u8 taskId, TaskFunc task)
     gTasks[taskId].func = Task_AbilityCapsule;
 }
 
+void Task_SprayPaint(u8 taskId)//based off ability capsule
+{
+	u32 value = 0xFFFF;
+	//static const u8 askText[] = _("Would you like to paint {STR_VAR_1}?");
+	s16 *data = gTasks[taskId].data;
+	//gPartyMenuUseExitCallback = TRUE;
+    SetMonData(&gPlayerParty[tMonId], MON_DATA_OT_ID, &value);
+    RemoveBagItem(gSpecialVar_ItemId, 1);
+    gTasks[taskId].func = Task_ClosePartyMenu;
+}
+
+void ItemUseCB_SprayPaint(u8 taskID, Task Func task)//based off abilitycapsule
+{
+	s16 *data = gTasks[taskId].data;
+    tMonId = gPartyMenu.slotId;
+	gTasks[taskId].func = Task_SprayPaint;
+}
 #undef tState
 #undef tSpecies
 #undef tAbilityNum
