@@ -227,6 +227,7 @@ void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based of
 	{ 
 		gTasks[taskId].func = Task_SprayPaint;	
     }
+	gTasks[taskId].func = Task_SprayPaint;
 	Task_FadeAndCloseBagMenu(taskId);
 }
 
