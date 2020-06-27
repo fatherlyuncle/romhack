@@ -223,7 +223,7 @@ void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn pokemon shiny
 {
 	u32 value = 0xFFFF;
-    SetMonData(mon, MON_DATA_OT_ID, &value); //brace for impact
+    SetMonData(&gPlayerParty[gPartyMenu.slotId], MON_DATA_OT_ID, &value); //brace for impact
     Task_FadeAndCloseBagMenu(taskId);
 }
 
