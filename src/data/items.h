@@ -4984,7 +4984,7 @@ const struct Item gItems[] =
         .description = sSpray_PaintDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,
-        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .fieldUseFunc = ItemUseOutOfBattle_SprayPaint,
         .secondaryId = 0,
     },
 
