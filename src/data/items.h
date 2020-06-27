@@ -4981,6 +4981,7 @@ const struct Item gItems[] =
         .name = _("Spray Paint"),
         .itemId = ITEM_SPRAY_PAINT,
         .price = 1000,
+		.holdEffectParam = 1, //number of pokemon that turn shiny
         .description = sSpray_PaintDesc,
         .pocket = POCKET_ITEMS,
         .type = 1,

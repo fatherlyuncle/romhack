@@ -2463,7 +2463,9 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     u32 personality;
     u32 value;
     u16 checksum;
-
+	u32 shinyValueSP; //for spray paint item formula
+	u8 shinyCountSP = VarGet(VAR_PAINT_COUNT); //for Spray paint item 
+	
     ZeroBoxMonData(boxMon);
 
     if (hasFixedPersonality)
@@ -2505,6 +2507,17 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         }
     }
 
+	if (shinyCountSP > 0) //shiny loop from spray paint item
+    {
+        do
+        {
+            personality = Random32();
+            shinyValueSP = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
+        } while (shinyValueSP >= SHINY_ODDS);
+		shinyCountSP--;
+        VarSet(VAR_PAINT_COUNT, 0);
+    }
+	
     SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
     SetBoxMonData(boxMon, MON_DATA_OT_ID, &value);
 

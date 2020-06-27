@@ -72,6 +72,7 @@ static void UseTMHMYesNo(u8 taskId);
 static void UseTMHM(u8 taskId);
 static void Task_StartUseRepel(u8 taskId);
 static void Task_UseRepel(u8 taskId);
+static void Task_SprayPaint(u8 taskId); //based off repel used for shiny encounters
 static void Task_CloseCantUseKeyItemMessage(u8 taskId);
 static void SetDistanceOfClosestHiddenItem(u8 taskId, s16 x, s16 y);
 static void CB2_OpenPokeblockCaseOnField(void);
@@ -220,10 +221,19 @@ void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
     Task_FadeAndCloseBagMenu(taskId);
 }
 
-void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn pokemon shiny
+void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
 {
-	gItemUseCB = ItemUseCB_SprayPaint; //?? declared in party_menu.c 
-    Task_FadeAndCloseBagMenu(taskId);
+	if (VarGet(VAR_SPRAY_COUNT) == 0) // closes if one is already in use
+	{
+		gTasks[taskId].func = Task_SprayPaint;	
+    }
+	Task_FadeAndCloseBagMenu(taskId);
+}
+
+static void Task_SprayPaint(u8 taskId) //sets VAR_SPRAY_COUNT to 1
+{
+	VarSet(VAR_SPRAY_COUNT, ItemId_GetHoldEffectParam(gSpecialVar_ItemId));
+        RemoveUsedItem();
 }
 
 void ItemUseOutOfBattle_Mail(u8 taskId)

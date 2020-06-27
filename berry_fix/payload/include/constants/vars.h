@@ -74,6 +74,7 @@
 #define VAR_CRUISE_STEP_COUNT      0x404A
 #define VAR_LOTTERY_RND_L          0x404B
 #define VAR_LOTTERY_RND_H          0x404C
+#define VAR_SPRAY_COUNT            0x404E //spray paint shiny constant
 
 #define VAR_BARBOACH_SIZE_RECORD   0x404F
 #define VAR_LITTLEROOT_STATE       0x4050
