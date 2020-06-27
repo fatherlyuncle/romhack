@@ -2485,7 +2485,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     {
         value = fixedOtId;
     }
-    else //Player is the OT
+    else //Player is the OT //"OT_ID_PLAYER_ID"
     {
         value = gSaveBlock2Ptr->playerTrainerId[0]
               | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
@@ -2537,7 +2537,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     }
     else
     {
-        u32 iv = 31; //Set IVs to 31 for all wild pokemon
+        u32 iv = 31; //Set IVs to 31 for all wild+gift pokemon
         value = Random();
 
         //iv = value & 0x1F;

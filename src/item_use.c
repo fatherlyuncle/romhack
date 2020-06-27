@@ -213,11 +213,20 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 	else
 		DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
+
 void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 {
     SetUpFieldMove_Flash;
     Task_FadeAndCloseBagMenu(taskId);
 }
+
+void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn pokemon shiny
+{
+	u32 value = 0xFFFF;
+    SetMonData(mon, MON_DATA_OT_ID, &value); //brace for impact
+    Task_FadeAndCloseBagMenu(taskId);
+}
+
 void ItemUseOutOfBattle_Mail(u8 taskId)
 {
     gBagMenu->mainCallback2 = CB2_CheckMail;
