@@ -48,6 +48,7 @@
 #include "constants/songs.h"
 #include "constants/species.h"
 #include "constants/trainers.h"
+#include "constants/vars.h" //for VAR_SPRAY_COUNT
 #include "constants/weather.h"
 
 struct SpeciesItem
@@ -2464,7 +2465,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     u32 value;
     u16 checksum;
 	u32 shinyValueSP; //for spray paint item formula
-	u8 shinyCountSP = VarGet(VAR_PAINT_COUNT); //for Spray paint item 
+	u8 shinyCountSP = VarGet(VAR_SPRAY_COUNT); //for Spray paint item 
 	
     ZeroBoxMonData(boxMon);
 
@@ -2515,7 +2516,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
             shinyValueSP = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
         } while (shinyValueSP >= SHINY_ODDS);
 		shinyCountSP--;
-        VarSet(VAR_PAINT_COUNT, 0);
+        VarSet(VAR_SPRAY_COUNT, 0);
     }
 	
     SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
