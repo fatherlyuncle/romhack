@@ -4491,7 +4491,7 @@ void Task_SprayPaint(u8 taskId)//based off ability capsule
     gTasks[taskId].func = Task_ClosePartyMenu;
 }
 
-void ItemUseCB_SprayPaint(u8 taskID, Task Func task)//based off abilitycapsule
+void ItemUseCB_SprayPaint(u8 taskID, TaskFunc task)//based off abilitycapsule
 {
 	s16 *data = gTasks[taskId].data;
     tMonId = gPartyMenu.slotId;
