@@ -49,7 +49,8 @@ EventScript_CancelCut:: @ 829072B
 Text_WantToCut: @ 829072E
 	.string "This tree looks like it can be\n"
 	.string "chopped down!\p"
-	.string "Would you like to chop it with the Sharp Axe?$"
+	.string "Would you like to chop\n"
+	.string "it with the Sharp Axe?$"
 
 Text_MonUsedFieldMove: @ 8290771
 	.string "{STR_VAR_1} used {STR_VAR_2}!$"
