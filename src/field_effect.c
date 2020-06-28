@@ -1,6 +1,7 @@
 #include "global.h"
 #include "item_icon.h"
 #include "decompress.h"
+#include "event_data.h" //for varget
 #include "event_object_movement.h"
 #include "field_camera.h"
 #include "field_control_avatar.h"
