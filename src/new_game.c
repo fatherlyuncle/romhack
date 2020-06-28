@@ -128,7 +128,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)//change beginning warp destination (-1, x, y)
 {
-    SetWarpDestination(MAP_GROUP(MAUVILLE_CITY_GAME_CORNER), MAP_NUM(MAUVILLE_CITY_GAME_CORNER), -1, -1, -1);
+    SetWarpDestination(MAP_GROUP(MAUVILLE_CITY_GAME_CORNER), MAP_NUM(MAUVILLE_CITY_GAME_CORNER), -1, 2, -1);
     WarpIntoMap();
 }
 
