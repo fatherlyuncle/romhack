@@ -217,6 +217,7 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 
 void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 {
+	gSaveBlock2Ptr->ItemArg = 594;
     SetUpFieldMove_Flash();
     Task_FadeAndCloseBagMenu(taskId);
 }
