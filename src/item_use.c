@@ -924,7 +924,7 @@ void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based of
 		PlaySE(SE_TU_SAA);
 		VarSet(VAR_SPRAY_COUNT, 1);
 		RemoveUsedItem();
-		DisplayItemMessage(taskId, 1, gStringVar4, BagMenu_InitListsMenu);
+		//DisplayItemMessage(taskId, 1, gStringVar4, BagMenu_InitListsMenu);
     }
 	//gTasks[taskId].func = Task_SprayPaint;
 	
