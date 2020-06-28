@@ -169,7 +169,7 @@ static const struct MenuAction gPCText_ItemPCOptionsText[] =
 
 static const struct ItemSlot gNewGamePCItems[] = //Added additional items
 {
-    { ITEM_PREMIER_BALL, 5 },
+    //{ ITEM_PREMIER_BALL, 5 },
 	{ ITEM_SPRAY_PAINT, 5 },
 	//{ ITEM_NUGGET, 2 },
 	{ ITEM_FLASH, 1 },
