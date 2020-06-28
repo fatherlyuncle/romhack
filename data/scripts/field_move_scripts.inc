@@ -13,7 +13,7 @@ EventScript_CutTree:: @ 82906BB
 	goto_if_eq EventScript_CancelCut
 	//msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	setvar gSaveBlock2Ptr->ItemArg, 590
+	//setvar gSaveBlock2Ptr->ItemArg, 590
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
@@ -74,7 +74,7 @@ EventScript_RockSmash:: @ 82907A6
 	goto_if_eq EventScript_CancelSmash
 	//msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	setvar ItemArg, 595
+	//setvar ItemArg, 595
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
 	waitstate
 	goto EventScript_SmashRock
@@ -139,7 +139,7 @@ EventScript_StrengthBoulder:: @ 82908BA
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_CancelStrength
 	closemessage
-	setvar ItemArg, 593
+	//setvar ItemArg, 593
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
 	goto EventScript_ActivateStrength
@@ -205,7 +205,7 @@ EventScript_UseWaterfall:: @ 8290A49
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndWaterfall
 	//msgbox Text_MonUsedWaterfall, MSGBOX_DEFAULT
-	setvar ItemArg, 596
+	//setvar ItemArg, 596
 	dofieldeffect FLDEFF_USE_WATERFALL
 	goto EventScript_EndWaterfall
 
@@ -243,7 +243,7 @@ EventScript_UseDive:: @ 8290B0F
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndDive
 	//msgbox Text_MonUsedDive, MSGBOX_DEFAULT
-	setvar ItemArg, 597
+	//setvar ItemArg, 597
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndDive
 	end
@@ -269,7 +269,7 @@ EventScript_UseDiveUnderwater:: @ 8290B5A
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndSurface
 	//msgbox Text_MonUsedDive, MSGBOX_DEFAULT
-	setvar ItemArg, 597
+	//setvar ItemArg, 597
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface
 	end
