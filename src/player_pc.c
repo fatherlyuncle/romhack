@@ -169,11 +169,11 @@ static const struct MenuAction gPCText_ItemPCOptionsText[] =
 
 static const struct ItemSlot gNewGamePCItems[] = //Added additional items
 {
-    { ITEM_PREMIER_BALL, 5 },
-	{ ITEM_SPRAY_PAINT, 5 },
-	{ ITEM_NUGGET, 2 },
+    //{ ITEM_PREMIER_BALL, 5 },
+	//{ ITEM_SPRAY_PAINT, 5 },
+	//{ ITEM_NUGGET, 2 },
 	{ ITEM_CUT, 1 },
-	{ ITEM_FLY, 1 },
+	//{ ITEM_FLY, 1 },
 	{ ITEM_FLASH, 1 },
 	{ ITEM_ROCK_SMASH, 1 },
 	{ ITEM_SURF, 1 },
@@ -181,7 +181,7 @@ static const struct ItemSlot gNewGamePCItems[] = //Added additional items
 	{ ITEM_DIVE, 1 },
 	{ ITEM_STRENGTH, 1 },
 	{ ITEM_TM50_OVERHEAT, 1 },
-	{ ITEM_TM75, 1 },
+	//{ ITEM_TM75, 1 },
     { ITEM_NONE, 0 }
 };
 
