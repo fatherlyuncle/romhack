@@ -221,17 +221,19 @@ void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
     Task_FadeAndCloseBagMenu(taskId);
 }
 
-void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
+/*void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
 {
 	if (VarGet(VAR_SPRAY_COUNT) == 0) // closes if one is already in use
 	{ 
 		//gTasks[taskId].func = Task_SprayPaint;	
+		PlaySE(SE_TU_SAA);
 		VarSet(VAR_SPRAY_COUNT, 1);
+		RemoveUsedItem();
     }
 	//gTasks[taskId].func = Task_SprayPaint;
 	
 	Task_FadeAndCloseBagMenu(taskId);
-}
+}*/
 
 void ItemUseOutOfBattle_Mail(u8 taskId)
 {
@@ -912,6 +914,21 @@ static void Task_UseRepel(u8 taskId)
         else
             DisplayItemMessageInBattlePyramid(taskId, gStringVar4, Task_CloseBattlePyramidBagMessage);
     }
+}
+
+void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
+{
+	if (VarGet(VAR_SPRAY_COUNT) == 0) // closes if one is already in use
+	{ 
+		//gTasks[taskId].func = Task_SprayPaint;	
+		PlaySE(SE_TU_SAA);
+		VarSet(VAR_SPRAY_COUNT, 1);
+		RemoveUsedItem();
+		DisplayItemMessage(taskId, 1, gStringVar4, BagMenu_InitListsMenu);
+    }
+	//gTasks[taskId].func = Task_SprayPaint;
+	
+	Task_FadeAndCloseBagMenu(taskId);
 }
 
 /*static void Task_SprayPaint(u8 taskId) //sets VAR_SPRAY_COUNT to 1
