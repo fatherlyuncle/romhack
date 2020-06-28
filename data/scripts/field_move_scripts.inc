@@ -123,7 +123,7 @@ Text_WantToSmash: @ 829083A
 
 Text_CantSmash: @ 829087F
 	.string "It's a hard rock, but a strong tool\n"
-	.string "may be able to smash it.$"
+	.string "may be able to smash it..$"
 
 EventScript_StrengthBoulder:: @ 82908BA
 	lockall
@@ -220,8 +220,9 @@ Text_CantWaterfall: @ 8290A8E
 	.string "a mighty roar.$"
 
 Text_WantToWaterfall: @ 8290AC3
-	.string "It's a large waterfall.\n"
-	.string "Would you like to use the Propeller?$"
+	.string "It's a large waterfall.\p"
+	.string "Would you like to climb it\n"
+	.string "with the Inner Tube Propeller?$"
 
 Text_MonUsedWaterfall: @ 8290AFC
 	.string "{STR_VAR_1} used WATERFALL.$"
@@ -282,7 +283,7 @@ Text_CantDive: @ 8290BAA
 	.string "may be able to go underwater.$"
 
 Text_WantToDive: @ 8290BE8
-	.string "The sea is deep here.\n"
+	.string "The sea is deep here.\p"
 	.string "Would you like to dive down\n"
 	.string "with your Scuba Gear?$"
 

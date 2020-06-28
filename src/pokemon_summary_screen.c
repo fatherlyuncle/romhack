@@ -2295,7 +2295,7 @@ static void Task_HandleReplaceMoveInput(u8 taskId)
             }
             else if (gMain.newKeys & A_BUTTON)
             {
-                if (CanReplaceMove() == TRUE)
+                /*if (CanReplaceMove() == TRUE)*/ //Allow HMs to be forgotten
                 {
                     StopPokemonAnimations();
                     PlaySE(SE_SELECT);
@@ -2303,11 +2303,11 @@ static void Task_HandleReplaceMoveInput(u8 taskId)
                     gSpecialVar_0x8005 = sMoveSlotToReplace;
                     BeginCloseSummaryScreen(taskId);
                 }
-                else
+                /*else
                 {
                     PlaySE(SE_HAZURE);
                     ShowCantForgetHMsWindow(taskId);
-                }
+                }*/
             }
             else if (gMain.newKeys & B_BUTTON)
             {
