@@ -13,7 +13,7 @@ EventScript_CutTree:: @ 82906BB
 	goto_if_eq EventScript_CancelCut
 	//msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	setvar ItemArg, 590
+	setvar gSaveBlock2Ptr->ItemArg, 590
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
