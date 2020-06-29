@@ -1826,7 +1826,7 @@ bool8 FldEff_UseDive(void)
 {
     u8 taskId;
     taskId = CreateTask(Task_Dive, 0xff);
-	gSaveBlock2Ptr->ItemArg = 597 //add item icon hopefully
+	gSaveBlock2Ptr->ItemArg = 597; //add item icon hopefully
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     gTasks[taskId].data[14] = gFieldEffectArguments[1];
     Task_Dive(taskId);
@@ -2881,7 +2881,6 @@ static void sub_80B8D20(struct Sprite *sprite)
 
 u8 FldEff_UseSurf(void)
 {
-	gSaveBlock2Ptr->ItemArg = 592;
     u8 taskId = CreateTask(sub_80B8D84, 0xff);
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     Overworld_ClearSavedMusic();

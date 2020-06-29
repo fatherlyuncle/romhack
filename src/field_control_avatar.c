@@ -449,11 +449,13 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
 static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metatileBehavior, u8 direction) //removed badge and surfmon prereq
 {
     if (/*FlagGet(FLAG_BADGE05_GET) == TRUE && PartyHasMonWithSurf() == TRUE &&*/ IsPlayerFacingSurfableFishableWater() == TRUE)
-        return EventScript_UseSurf;
+        gSaveBlock2Ptr->ItemArg = 592;
+		return EventScript_UseSurf;
 
     if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE) //removed badge prereq
     {
         if (/*FlagGet(FLAG_BADGE08_GET) == TRUE &&*/ IsPlayerSurfingNorth() == TRUE)
+			gSaveBlock2Ptr->ItemArg = 596;
             return EventScript_UseWaterfall;
         else
             return EventScript_CannotUseWaterfall;
@@ -465,6 +467,7 @@ static bool32 TrySetupDiveDownScript(void) // removed badge prereq
 {
     if (/*FlagGet(FLAG_BADGE07_GET) &&*/ TrySetDiveWarp() == 2)
     {
+		gSaveBlock2Ptr->ItemArg = 597;
         ScriptContext1_SetupScript(EventScript_UseDive);
         return TRUE;
     }
