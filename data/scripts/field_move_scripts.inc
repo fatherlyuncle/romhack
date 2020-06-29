@@ -186,12 +186,12 @@ Text_MonUsedStrength: @ 829098C
 
 Text_CantStrength: @ 82909D6
 	.string "It's a big boulder, but with the\n"
-	.string "right equipment you \n"
+	.string "right equipment you \p"
 	.string "may be able to push it aside.$"
 
 Text_StrengthActivated: @ 8290A16
 	.string "The Golden Gauntlets made \n"
-	.string "it possible to move\n"
+	.string "it possible to move\p"
 	.string "boulders around.$"
 
 EventScript_UseWaterfall:: @ 8290A49

@@ -126,9 +126,9 @@ static void ClearFrontierRecord(void)
     gSaveBlock2Ptr->frontier.opponentNames[1][0] = EOS;
 }
 
-static void WarpToTruck(void)//change beginning warp destination (-1, x, y)
+static void WarpToTruck(void) //starting location 
 {
-    SetWarpDestination(MAP_GROUP(MAUVILLE_CITY_GAME_CORNER), MAP_NUM(MAUVILLE_CITY_GAME_CORNER), -1, 2, 3);
+    SetWarpDestination(MAP_GROUP(MOSSDEEP_CITY), MAP_NUM(MOSSDEEP_CITY), -1, -1, -1);
     WarpIntoMap();
 }
 
