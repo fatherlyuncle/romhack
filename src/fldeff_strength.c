@@ -19,7 +19,7 @@ bool8 SetUpFieldMove_Strength(void)
 {
     if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_PUSHABLE_BOULDER) == TRUE)
     {
-		gSaveBlock2Ptr->ItemArg = 593;//add item icon hopefully
+		//gSaveBlock2Ptr->ItemArg = 593;//add item icon hopefully
         gSpecialVar_Result = GetCursorSelectionMonId();
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FldEff_UseStrength;
@@ -30,7 +30,8 @@ bool8 SetUpFieldMove_Strength(void)
 
 static void FldEff_UseStrength(void)
 {
-    gFieldEffectArguments[0] = GetCursorSelectionMonId();
+	gSaveBlock2Ptr->ItemArg = 593;//add item icon hopefully
+    //gFieldEffectArguments[0] = GetCursorSelectionMonId();
     ScriptContext1_SetupScript(EventScript_FldEffStrength);
 }
 
