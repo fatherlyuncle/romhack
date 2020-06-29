@@ -148,6 +148,7 @@ bool8 SetUpFieldMove_Cut(void)
     if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE) == TRUE)
     {
         // Standing in front of cuttable tree.
+		gSaveBlock2Ptr->ItemArg = 590; //item icon hopefully
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_CutTree;
         return TRUE;

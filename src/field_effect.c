@@ -1754,6 +1754,7 @@ static bool8 sub_80B72F4(struct Task *task)
 bool8 FldEff_UseWaterfall(void)
 {
     u8 taskId;
+	gSaveBlock2Ptr->ItemArg = 596;
     taskId = CreateTask(sub_80B7384, 0xff);
     gTasks[taskId].data[1] = gFieldEffectArguments[0];
     sub_80B7384(taskId);
@@ -1825,6 +1826,7 @@ bool8 FldEff_UseDive(void)
 {
     u8 taskId;
     taskId = CreateTask(Task_Dive, 0xff);
+	gSaveBlock2Ptr->ItemArg = 597 //add item icon hopefully
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     gTasks[taskId].data[14] = gFieldEffectArguments[1];
     Task_Dive(taskId);
@@ -2483,7 +2485,7 @@ bool8 FldEff_FieldMoveShowMonInit(void) //Remove Sprites from HMs
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     return FALSE;*/
 	//u32 flag = gFieldEffectArguments[0] & 0x80000000;
-	u32 flag = gSaveBlock2Ptr->ItemArg & 0x80000000;
+	u32 flag = gSaveBlock2Ptr->ItemArg; //removed 0x80000000;
 	//gFieldEffectArguments[0] |= flag;
 	gSaveBlock2Ptr->ItemArg |= flag;
 	FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
@@ -2879,6 +2881,7 @@ static void sub_80B8D20(struct Sprite *sprite)
 
 u8 FldEff_UseSurf(void)
 {
+	gSaveBlock2Ptr->ItemArg = 592;
     u8 taskId = CreateTask(sub_80B8D84, 0xff);
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     Overworld_ClearSavedMusic();

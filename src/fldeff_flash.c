@@ -86,6 +86,7 @@ bool8 SetUpFieldMove_Flash(void)
     }
     else if (gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH))
     {
+		gSaveBlock2Ptr->ItemArg = 594;
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Flash;
         return TRUE;
