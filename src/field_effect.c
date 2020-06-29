@@ -408,35 +408,35 @@ const struct SpriteFrameImage gSpriteImageTable_855C294[] =
 const struct Subsprite gSubspriteTable_855C29C[] =
 {
     {
-        .x = -12, 
-        .y =  -8, 
-        .shape = SPRITE_SHAPE(16x8), 
+        .x = -12,
+        .y =  -8,
+        .shape = SPRITE_SHAPE(16x8),
         .size = SPRITE_SIZE(16x8),
-        .tileOffset = 0, 
+        .tileOffset = 0,
         .priority = 2
     },
     {
-        .x =  4, 
+        .x =  4,
         .y = -8,
-        .shape = SPRITE_SHAPE(8x8), 
-        .size = SPRITE_SIZE(8x8), 
-        .tileOffset = 2, 
-        .priority = 2 
-    },
-    {
-        .x = -12, 
-        .y =   0, 
-        .shape = SPRITE_SHAPE(16x8), 
-        .size = SPRITE_SIZE(16x8),
-        .tileOffset = 3, 
+        .shape = SPRITE_SHAPE(8x8),
+        .size = SPRITE_SIZE(8x8),
+        .tileOffset = 2,
         .priority = 2
     },
     {
-        .x = 4, 
-        .y = 0, 
-        .shape = SPRITE_SHAPE(8x8), 
-        .size = SPRITE_SIZE(8x8), 
-        .tileOffset = 5, 
+        .x = -12,
+        .y =   0,
+        .shape = SPRITE_SHAPE(16x8),
+        .size = SPRITE_SIZE(16x8),
+        .tileOffset = 3,
+        .priority = 2
+    },
+    {
+        .x = 4,
+        .y = 0,
+        .shape = SPRITE_SHAPE(8x8),
+        .size = SPRITE_SIZE(8x8),
+        .tileOffset = 5,
         .priority = 2
     }
 };
@@ -446,35 +446,35 @@ const struct SubspriteTable gUnknown_0855C2AC = subsprite_table(gSubspriteTable_
 const struct Subsprite gSubspriteTable_855C2B4[] =
 {
     {
-        .x = -32, 
-        .y = -8, 
-        .shape = SPRITE_SHAPE(32x8), 
+        .x = -32,
+        .y = -8,
+        .shape = SPRITE_SHAPE(32x8),
         .size = SPRITE_SIZE(32x8),
-        .tileOffset = 0, 
+        .tileOffset = 0,
         .priority = 2
     },
     {
-        .x =  0, 
-        .y = -8, 
-        .shape = SPRITE_SHAPE(32x8), 
+        .x =  0,
+        .y = -8,
+        .shape = SPRITE_SHAPE(32x8),
         .size = SPRITE_SIZE(32x8),
-        .tileOffset = 4, 
+        .tileOffset = 4,
         .priority = 2
     },
     {
-        .x = -32, 
-        .y =  0, 
-        .shape = SPRITE_SHAPE(32x8), 
+        .x = -32,
+        .y =  0,
+        .shape = SPRITE_SHAPE(32x8),
         .size = SPRITE_SIZE(32x8),
-        .tileOffset = 8, 
+        .tileOffset = 8,
         .priority = 2
     },
     {
-        .x =   0, 
-        .y =  0, 
-        .shape = SPRITE_SHAPE(32x8), 
+        .x =   0,
+        .y =  0,
+        .shape = SPRITE_SHAPE(32x8),
         .size = SPRITE_SIZE(32x8),
-        .tileOffset = 12, 
+        .tileOffset = 12,
         .priority = 2
     }
 };
@@ -1754,7 +1754,7 @@ static bool8 sub_80B72F4(struct Task *task)
 bool8 FldEff_UseWaterfall(void)
 {
     u8 taskId;
-	gSaveBlock2Ptr->ItemArg = 596;
+	//gSaveBlock2Ptr->ItemArg = 596;
     taskId = CreateTask(sub_80B7384, 0xff);
     gTasks[taskId].data[1] = gFieldEffectArguments[0];
     sub_80B7384(taskId);
@@ -1826,7 +1826,7 @@ bool8 FldEff_UseDive(void)
 {
     u8 taskId;
     taskId = CreateTask(Task_Dive, 0xff);
-	gSaveBlock2Ptr->ItemArg = 597; //add item icon hopefully
+	//gSaveBlock2Ptr->ItemArg = 597; //add item icon hopefully
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     gTasks[taskId].data[14] = gFieldEffectArguments[1];
     Task_Dive(taskId);
@@ -2485,7 +2485,7 @@ bool8 FldEff_FieldMoveShowMonInit(void) //Remove Sprites from HMs
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     return FALSE;*/
 	//u32 flag = gFieldEffectArguments[0] & 0x80000000;
-	u32 flag = gSaveBlock2Ptr->ItemArg; //removed 0x80000000;
+	u32 flag = gSaveBlock2Ptr->ItemArg & 0x80000000;
 	//gFieldEffectArguments[0] |= flag;
 	gSaveBlock2Ptr->ItemArg |= flag;
 	FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
@@ -3743,4 +3743,3 @@ static void Fldeff_MoveDeoxysRock_Step(u8 taskId)
             break;
     }
 }
-

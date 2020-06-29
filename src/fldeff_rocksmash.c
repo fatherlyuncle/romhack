@@ -127,7 +127,7 @@ bool8 SetUpFieldMove_RockSmash(void)
     }
     else if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
     {
-		gSaveBlock2Ptr->ItemArg = 595;//item icon hopefully
+		//gSaveBlock2Ptr->ItemArg = 595;//item icon hopefully
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = sub_81356C4;
         return TRUE;

@@ -128,7 +128,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void) //starting location 
 {
-    SetWarpDestination(MAP_GROUP(MOSSDEEP_CITY), MAP_NUM(MOSSDEEP_CITY), -1, -1, -1);
+    SetWarpDestination(MAP_GROUP(INSIDE_OF_TRUCK), MAP_NUM(INSIDE_OF_TRUCK), -1, -1, -1);
     WarpIntoMap();
 }
 
@@ -163,6 +163,7 @@ void NewGameInitData(void)
     ClearMailData();
     gSaveBlock2Ptr->specialSaveWarpFlags = 0;
     gSaveBlock2Ptr->gcnLinkFlags = 0;
+	gSaveBlock2Ptr->ItemArg = 0; //set ItemArg to 0 on newgame init 
     InitPlayerTrainerId();
     PlayTimeCounter_Reset();
     ClearPokedexFlags();

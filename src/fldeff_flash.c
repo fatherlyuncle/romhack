@@ -86,7 +86,7 @@ bool8 SetUpFieldMove_Flash(void)
     }
     else if (gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH))
     {
-		gSaveBlock2Ptr->ItemArg = 594;
+		//gSaveBlock2Ptr->ItemArg = 594;
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Flash;
         return TRUE;
@@ -98,7 +98,7 @@ bool8 SetUpFieldMove_Flash(void)
 static void FieldCallback_Flash(void)
 {
     u8 taskId = oei_task_add();
-    gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    //gFieldEffectArguments[0] = GetCursorSelectionMonId();
     gTasks[taskId].data[8] = (uintptr_t)FldEff_UseFlash >> 16;
     gTasks[taskId].data[9] = (uintptr_t)FldEff_UseFlash;
 }

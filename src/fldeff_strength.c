@@ -30,7 +30,7 @@ bool8 SetUpFieldMove_Strength(void)
 
 static void FldEff_UseStrength(void)
 {
-	gSaveBlock2Ptr->ItemArg = 593;//add item icon hopefully
+	//gSaveBlock2Ptr->ItemArg = 593;//add item icon hopefully
     //gFieldEffectArguments[0] = GetCursorSelectionMonId();
     ScriptContext1_SetupScript(EventScript_FldEffStrength);
 }
