@@ -76,8 +76,8 @@ static void (*const sMachBikeTransitions[])(u8) =
 static void (*const sMachBikeSpeedCallbacks[])(u8) =
 {
     PlayerGoSpeed1, // normal speed (1 speed)
-    PlayerGoSpeed2, // fast speed (2 speed)
-    PlayerGoSpeed4, // fastest speed (4 speed)
+    PlayerGoSpeed2, // fast speed (2 speed) edited for rusty
+    PlayerGoSpeed4, // fastest speed (4 speed) edited for rusty 
 };
 
 static void (*const sAcroBikeTransitions[])(u8) =
@@ -128,7 +128,7 @@ static const struct BikeHistoryInputInfo sAcroBikeTricksList[] =
 void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys)  
 {
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
-        MovePlayerOnMachBike(direction, newKeys, heldKeys);
+        //MovePlayerOnMachBike(direction, newKeys, heldKeys); hopefully makes rusty bike shitty
     else
         MovePlayerOnAcroBike(direction, newKeys, heldKeys);
 	

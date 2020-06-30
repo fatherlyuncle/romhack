@@ -215,9 +215,9 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 		DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 
-void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
+/*void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 {
-	if(gMapHeader.mapType == gMapHeader.cave)
+	//if(FLAG_USE_FLASH == FALSE)
 	{
 		gSaveBlock2Ptr->ItemArg = 594;
 		if(!gTasks[taskId].tUsingRegisteredKeyItem)
@@ -231,9 +231,9 @@ void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 			DestroyTask(taskId);
 		}
 	}
-	else
-		DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
-}
+	//else
+		//DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}*/
 
 /*void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
 {

@@ -1366,10 +1366,10 @@ static const u8 sYellowScarfDesc[] = _(
     "CONTESTS.");
 
 // Key items
-static const u8 sMachBikeDesc[] = _(
-    "A folding bicycle\n"
-    "that doubles your\n"
-    "speed or better.");
+static const u8 sMachBikeDesc[] = _( //changed to rusty bike
+    "A rusty bicycle.\n"
+    "Make sure you\n"
+    "dont hurt yourself!");
 
 static const u8 sCoinCaseDesc[] = _(
     "A case that holds\n"
@@ -1425,10 +1425,10 @@ static const u8 sBasementKeyDesc[] = _(
     "MAUVILLE beneath\n"
     "MAUVILLE CITY.");
 
-static const u8 sAcroBikeDesc[] = _(
-    "A folding bicycle\n"
-    "capable of jumps\n"
-    "and wheelies.");
+static const u8 sAcroBikeDesc[] = _( //changed to chrome Bike
+    "A high-tech bicycle,\n"
+    "capable of tricks\n"
+    "and high speeds.");
 
 static const u8 sPokeblockCaseDesc[] = _(
     "A case for holding\n"
