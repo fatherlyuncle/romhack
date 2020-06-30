@@ -95,9 +95,9 @@ static void InitPlayerTrainerId(void)
 static void SetDefaultOptions(void)
 {
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST; //Set default speed to fast not mid
-    gSaveBlock2Ptr->optionsWindowFrameType = 12; //looks pretty, also could use 7 or 17
+    gSaveBlock2Ptr->optionsWindowFrameType = 17; //looks pretty, also could use 7 or 12
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_STEREO;
-    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET; // changed default from SHIFT to SET //may not be working
+    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET; // changed default from SHIFT to SET 
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
 }
@@ -128,7 +128,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void) //starting location 
 {
-    SetWarpDestination(MAP_GROUP(INSIDE_OF_TRUCK), MAP_NUM(INSIDE_OF_TRUCK), -1, -1, -1);
+    SetWarpDestination(MAP_GROUP(SEALED_CAVERN), MAP_NUM(SEALED_CAVERN), -1, -1, -1);
     WarpIntoMap();
 }
 
