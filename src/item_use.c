@@ -222,12 +222,12 @@ void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 		gSaveBlock2Ptr->ItemArg = 594;
 		if(!gTasks[taskId].tUsingRegisteredKeyItem)
 		{
-			gBagMenu->mainCallback2 = SetUpFieldMove_Flash;
+			gBagMenu->mainCallback2 = CB2_DoChangeMap;
 			Task_FadeAndCloseBagMenu(taskId);
 		}
 		else
 		{
-			SetMainCallback2(SetUpFieldMove_Flash);
+			SetMainCallback2(CB2_DoChangeMap);
 			DestroyTask(taskId);
 		}
 	}
