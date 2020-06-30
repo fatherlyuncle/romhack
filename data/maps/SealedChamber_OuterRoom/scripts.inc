@@ -106,12 +106,13 @@ SealedChamber_OuterRoom_EventScript_BrailleComma:: @ 82391C6
 	releaseall
 	end
 
-SealedChamber_OuterRoom_EventScript_InnerRoomEntranceWall:: @ 82391D0
+SealedChamber_OuterRoom_EventScript_InnerRoomEntranceWall:: @ 82391D0 //fuck braille
 	lockall
-	goto SealedChamber_OuterRoom_EventScript_HoleInWall //fuck braille 
+	goto_if_set FLAG_SYS_BRAILLE_DIG, SealedChamber_OuterRoom_EventScript_HoleInWall
 	braillemessage SealedChamber_OuterRoom_Braille_DigHere
 	waitbuttonpress
 	closebraillemessage
+	setflag FLAG_SYS_BRAILLE_DIG
 	releaseall
 	end
 

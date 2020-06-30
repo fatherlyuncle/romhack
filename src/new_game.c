@@ -128,7 +128,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void) //starting location 
 {
-    SetWarpDestination(MAP_GROUP(MOSSDEEP_CITY), MAP_NUM(MOSSDEEP_CITY), -1, 7, 7);
+    SetWarpDestination(MAP_GROUP(PACIFIDLOG_CITY), MAP_NUM(PACIFIDLOG_CITY), -1, -1, -1);
     WarpIntoMap();
 }
 
