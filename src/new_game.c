@@ -128,7 +128,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void) //starting location 
 {
-    SetWarpDestination(MAP_GROUP(PACIFIDLOG_TOWN), MAP_NUM(PACIFIDLOG_TOWN), -1, -1, -1);
+    SetWarpDestination(MAP_GROUP(SEALED_CHAMBER_OUTER_ROOM), MAP_NUM(SEALED_CHAMBER_OUTER_ROOM), -1, 10, 19);
     WarpIntoMap();
 }
 

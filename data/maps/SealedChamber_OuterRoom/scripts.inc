@@ -113,6 +113,12 @@ SealedChamber_OuterRoom_EventScript_InnerRoomEntranceWall:: @ 82391D0 //fuck bra
 	waitbuttonpress
 	closebraillemessage
 	setflag FLAG_SYS_BRAILLE_DIG
+	setmetatile 9, 1, METATILE_Cave_SealedChamberEntrance_TopLeft, 1
+	setmetatile 10, 1, METATILE_Cave_SealedChamberEntrance_TopMid, 1
+	setmetatile 11, 1, METATILE_Cave_SealedChamberEntrance_TopRight, 1
+	setmetatile 9, 2, METATILE_Cave_SealedChamberEntrance_BottomLeft, 1
+	setmetatile 10, 2, METATILE_Cave_SealedChamberEntrance_BottomMid, 0
+	setmetatile 11, 2, METATILE_Cave_SealedChamberEntrance_BottomRight, 1
 	special DrawWholeMapView
 	playse SE_BAN
 	releaseall
