@@ -3686,7 +3686,7 @@ const struct Item gItems[] =
         .unk19 = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 2,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, //changed from bike 
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, //changed from bike
         .secondaryId = 0,
     },
 
@@ -4803,7 +4803,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_Flash,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
 
