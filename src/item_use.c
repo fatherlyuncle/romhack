@@ -217,9 +217,22 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 
 void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
 {
-	gSaveBlock2Ptr->ItemArg = 594;
-    SetUpFieldMove_Flash();
-    Task_FadeAndCloseBagMenu(taskId);
+	if(gMapHeader.mapType == gMapHeader.cave)
+	{
+		gSaveBlock2Ptr->ItemArg = 594;
+		if(!gTasks[taskId].tUsingRegisteredKeyItem)
+		{
+			gBagMenu->mainCallback2 = FieldCallback_Flash;
+			Task_FadeAndCloseBagMenu(taskId);
+		}
+		else
+		{
+			SetMainCallback2(FieldCallback_Flash);
+			DestroyTask(taskId);
+		}
+	}
+	else
+		DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 
 /*void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
