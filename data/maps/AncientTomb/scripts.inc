@@ -37,9 +37,9 @@ AncientTomb_EventScript_HideRegiEntrance:: @ 8238FFC
 	setmetatile 9, 20, METATILE_Cave_SealedChamberBraille_Mid, 1
 	return
 
-AncientTomb_EventScript_CaveEntranceMiddle:: @ 8239033
+AncientTomb_EventScript_CaveEntranceMiddle:: @ 8239033 // _if_set FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, 
 	lockall
-	goto_if_set FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, AncientTomb_EventScript_BigHoleInWall
+	goto AncientTomb_EventScript_BigHoleInWall
 	braillemessage AncientTomb_Braille_ShineInTheMiddle
 	waitbuttonpress
 	closebraillemessage
@@ -59,14 +59,14 @@ AncientTomb_EventScript_CaveEntranceSide:: @ 8239050
 	releaseall
 	end
 
-AncientTomb_EventScript_Registeel:: @ 823905A
+AncientTomb_EventScript_Registeel:: @ 823905A //raised level to 60 and added item
 	lock
 	faceplayer
 	waitse
 	playmoncry SPECIES_REGISTEEL, 2
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_REGISTEEL, 40, ITEM_NONE
+	setwildbattle SPECIES_REGISTEEL, 60, ITEM_METAL_COAT
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	waitstate
@@ -82,9 +82,9 @@ AncientTomb_EventScript_Registeel:: @ 823905A
 	release
 	end
 
-AncientTomb_EventScript_DefeatedRegisteel:: @ 82390A1
+AncientTomb_EventScript_DefeatedRegisteel:: @ 82390A1 //allowed rebattle on return
 	setflag FLAG_DEFEATED_REGISTEEL
-	goto Common_EventScript_RemoveStaticPokemon
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 AncientTomb_EventScript_RanFromRegisteel:: @ 82390AA

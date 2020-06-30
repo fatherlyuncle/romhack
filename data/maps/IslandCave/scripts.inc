@@ -50,10 +50,10 @@ IslandCave_EventScript_OpenRegiEntrance:: @ 8238EAF
 	setflag FLAG_SYS_BRAILLE_REGICE_COMPLETED
 	end
 
-IslandCave_EventScript_CaveEntranceMiddle:: @ 8238EEF
+IslandCave_EventScript_CaveEntranceMiddle:: @ 8238EEF //_if_set FLAG_SYS_BRAILLE_REGICE_COMPLETED,
 	lockall
 	call_if_set FLAG_TEMP_3, IslandCave_EventScript_ClearSteps
-	goto_if_set FLAG_SYS_BRAILLE_REGICE_COMPLETED, IslandCave_EventScript_BigHoleInWall
+	goto IslandCave_EventScript_BigHoleInWall
 	braillemessage IslandCave_Braille_RunLapAroundWall
 	setflag FLAG_TEMP_2
 	special ShouldDoBrailleRegicePuzzle
@@ -88,14 +88,14 @@ IslandCave_EventScript_ClearSteps:: @ 8238F45
 	clearflag FLAG_TEMP_3
 	return
 
-IslandCave_EventScript_Regice:: @ 8238F58
+IslandCave_EventScript_Regice:: @ 8238F58 //changed level and item
 	lock
 	faceplayer
 	waitse
 	playmoncry SPECIES_REGICE, 2
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_REGICE, 40, ITEM_NONE
+	setwildbattle SPECIES_REGICE, 60, ITEM_NEVER_MELT_ICE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	waitstate
@@ -111,9 +111,9 @@ IslandCave_EventScript_Regice:: @ 8238F58
 	release
 	end
 
-IslandCave_EventScript_DefeatedRegice:: @ 8238F9F
+IslandCave_EventScript_DefeatedRegice:: @ 8238F9F //allowed rebattle on return
 	setflag FLAG_DEFEATED_REGICE
-	goto Common_EventScript_RemoveStaticPokemon
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 IslandCave_EventScript_RanFromRegice:: @ 8238FA8

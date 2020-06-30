@@ -57,8 +57,8 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
 // const rom data
 static const u16 sUnusedUnknownPal[] = INCBIN_U16("graphics/title_screen/unk_853EF78.gbapal");
 
-static const u32 sTitleScreenRayquazaGfx[] = INCBIN_U32("graphics/title_screen/rayquaza.4bpp.lz");
-static const u32 sTitleScreenRayquazaTilemap[] = INCBIN_U32("graphics/title_screen/rayquaza.bin.lz");
+static const u32 sTitleScreenRayquazaGfx[] = INCBIN_U32("graphics/title_screen/rayquaza.4bpp.lz"); //dicked around with files
+static const u32 sTitleScreenRayquazaTilemap[] = INCBIN_U32("graphics/title_screen/rayquaza.bin.lz"); //dicked arounf with files
 static const u32 sTitleScreenLogoShineGfx[] = INCBIN_U32("graphics/title_screen/logo_shine.4bpp.lz");
 static const u32 sTitleScreenCloudsGfx[] = INCBIN_U32("graphics/title_screen/clouds.4bpp.lz");
 
@@ -387,8 +387,8 @@ static void SpriteCB_PressStartCopyrightBanner(struct Sprite *sprite)
     if (sprite->data[0] == 1)
     {
         sprite->data[1]++;
-        // Alternate between hidden and shown every 16th frame
-        if (sprite->data[1] & 0x10)
+        // Alternate between hidden and shown every 16th frame //changed from 0x10->0x20 32frames
+        if (sprite->data[1] & 0x20)
             sprite->invisible = FALSE;
         else
             sprite->invisible = TRUE;
@@ -518,7 +518,7 @@ static void VBlankCB(void)
 #define tCounter data[0]
 #define tSkipToNext data[1]
 
-void CB2_InitTitleScreen(void)
+void CB2_InitTitleScreen(void) //editing title screen
 {
     switch (gMain.state)
     {
@@ -548,9 +548,9 @@ void CB2_InitTitleScreen(void)
     case 1:
         LZ77UnCompVram(gTitleScreenPokemonLogoGfx, (void *)VRAM);
         LZ77UnCompVram(gUnknown_08DE0644, (void *)(BG_SCREEN_ADDR(9)));
-        LoadPalette(gTitleScreenBgPalettes, 0, 0x1E0);
-        LZ77UnCompVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
-        LZ77UnCompVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));
+        LoadPalette(gTitleScreenBgPalettes, 0, 0x1E0);//backgground palette
+        LZ77UnCompVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));//bg gfx
+        LZ77UnCompVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));//bg tilemap
         LZ77UnCompVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
         LZ77UnCompVram(gUnknown_08DDE458, (void *)(BG_SCREEN_ADDR(27)));
         ScanlineEffect_Stop();
@@ -702,7 +702,7 @@ static void Task_TitleScreenPhase2(u8 taskId)
                                     | DISPCNT_BG2_ON
                                     | DISPCNT_OBJ_ON);
         CreatePressStartBanner(START_BANNER_X, 108);
-        CreateCopyrightBanner(START_BANNER_X, 148);
+        //CreateCopyrightBanner(START_BANNER_X, 148); //no copyright banner
         gTasks[taskId].data[4] = 0;
         gTasks[taskId].func = Task_TitleScreenPhase3;
     }
@@ -758,7 +758,7 @@ static void Task_TitleScreenPhase3(u8 taskId)
             gBattle_BG1_Y = gTasks[taskId].data[4] / 2;
             gBattle_BG1_X = 0;
         }
-        UpdateLegendaryMarkingColor(gTasks[taskId].tCounter);
+        //UpdateLegendaryMarkingColor(gTasks[taskId].tCounter); remove call for flashing effect
         if ((gMPlayInfo_BGM.status & 0xFFFF) == 0)
         {
             BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 0x10, RGB_WHITEALPHA);

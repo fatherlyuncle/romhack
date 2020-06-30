@@ -37,9 +37,9 @@ DesertRuins_EventScript_ShowRegirock:: @ 822D9D7
 	clearflag FLAG_HIDE_REGIROCK
 	return
 
-DesertRuins_EventScript_CaveEntranceMiddle:: @ 822D9DB
+DesertRuins_EventScript_CaveEntranceMiddle:: @ 822D9DB //_if_set FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, 
 	lockall
-	goto_if_set FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, DesertRuins_EventScript_BigHoleInWall
+	goto DesertRuins_EventScript_BigHoleInWall
 	braillemessage DesertRuins_Braille_UseRockSmash
 	waitbuttonpress
 	closebraillemessage
@@ -59,14 +59,14 @@ DesertRuins_EventScript_CaveEntranceSide:: @ 822D9F8
 	releaseall
 	end
 
-DesertRuins_EventScript_Regirock:: @ 822DA02
+DesertRuins_EventScript_Regirock:: @ 822DA02 //raised level 40 -> 60 +item
 	lock
 	faceplayer
 	waitse
 	playmoncry SPECIES_REGIROCK, 2
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_REGIROCK, 40, ITEM_NONE
+	setwildbattle SPECIES_REGIROCK, 60, ITEM_HARD_STONE
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special StartRegiBattle
 	waitstate
@@ -82,9 +82,9 @@ DesertRuins_EventScript_Regirock:: @ 822DA02
 	release
 	end
 
-DesertRuins_EventScript_DefeatedRegirock:: @ 822DA49
+DesertRuins_EventScript_DefeatedRegirock:: @ 822DA49 //allowed rebattle on return _RemoveStaticPokemon
 	setflag FLAG_DEFEATED_REGIROCK
-	goto Common_EventScript_RemoveStaticPokemon
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 DesertRuins_EventScript_RanFromRegirock:: @ 822DA52
