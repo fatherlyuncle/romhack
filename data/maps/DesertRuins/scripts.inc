@@ -43,6 +43,15 @@ DesertRuins_EventScript_CaveEntranceMiddle:: @ 822D9DB //_if_set FLAG_SYS_REGIRO
 	braillemessage DesertRuins_Braille_UseRockSmash
 	waitbuttonpress
 	closebraillemessage
+	setmetatile 7, 19, METATILE_Cave_SealedChamberEntrance_TopLeft, 1
+	setmetatile 8, 19, METATILE_Cave_SealedChamberEntrance_TopMid, 1
+	setmetatile 9, 19, METATILE_Cave_SealedChamberEntrance_TopRight, 1
+	setmetatile 7, 20, METATILE_Cave_SealedChamberEntrance_BottomLeft, 1
+	setmetatile 8, 20, METATILE_Cave_SealedChamberEntrance_BottomMid, 0
+	setmetatile 9, 20, METATILE_Cave_SealedChamberEntrance_BottomRight, 1
+	special DrawWholeMapView
+	playse SE_BAN
+	setflag FLAG_SYS_REGIROCK_PUZZLE_COMPLETED
 	releaseall
 	end
 

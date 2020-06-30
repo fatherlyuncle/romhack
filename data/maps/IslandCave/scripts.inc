@@ -50,10 +50,10 @@ IslandCave_EventScript_OpenRegiEntrance:: @ 8238EAF
 	setflag FLAG_SYS_BRAILLE_REGICE_COMPLETED
 	end
 
-IslandCave_EventScript_CaveEntranceMiddle:: @ 8238EEF //_if_set FLAG_SYS_BRAILLE_REGICE_COMPLETED,
+IslandCave_EventScript_CaveEntranceMiddle:: @ 8238EEF //avoid braille 
 	lockall
 	call_if_set FLAG_TEMP_3, IslandCave_EventScript_ClearSteps
-	goto IslandCave_EventScript_BigHoleInWall
+	goto_if_set FLAG_SYS_BRAILLE_REGICE_COMPLETED, IslandCave_EventScript_BigHoleInWall
 	braillemessage IslandCave_Braille_RunLapAroundWall
 	setflag FLAG_TEMP_2
 	special ShouldDoBrailleRegicePuzzle
@@ -75,9 +75,10 @@ IslandCave_EventScript_CaveEntranceSide:: @ 8238F1D
 	goto IslandCave_EventScript_CloseBrailleMsg
 	end
 
-IslandCave_EventScript_CloseBrailleMsg:: @ 8238F41
+IslandCave_EventScript_CloseBrailleMsg:: @ 8238F41 //added open hole call 
 	waitbuttonpress
 	closebraillemessage
+	goto_if_unset FLAG_SYS_BRAILLE_REGICE_COMPLETED, IslandCave_EventScript_OpenRegiEntrance
 	releaseall
 	end
 

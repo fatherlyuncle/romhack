@@ -37,12 +37,21 @@ AncientTomb_EventScript_HideRegiEntrance:: @ 8238FFC
 	setmetatile 9, 20, METATILE_Cave_SealedChamberBraille_Mid, 1
 	return
 
-AncientTomb_EventScript_CaveEntranceMiddle:: @ 8239033 // _if_set FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, 
+AncientTomb_EventScript_CaveEntranceMiddle:: @ 8239033 //remove puzzle  
 	lockall
-	goto AncientTomb_EventScript_BigHoleInWall
+	goto_if_set FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED, AncientTomb_EventScript_BigHoleInWall
 	braillemessage AncientTomb_Braille_ShineInTheMiddle
 	waitbuttonpress
 	closebraillemessage
+	setmetatile 7, 19, METATILE_Cave_SealedChamberEntrance_TopLeft, 1
+	setmetatile 8, 19, METATILE_Cave_SealedChamberEntrance_TopMid, 1
+	setmetatile 9, 19, METATILE_Cave_SealedChamberEntrance_TopRight, 1
+	setmetatile 7, 20, METATILE_Cave_SealedChamberEntrance_BottomLeft, 1
+	setmetatile 8, 20, METATILE_Cave_SealedChamberEntrance_BottomMid, 0
+	setmetatile 9, 20, METATILE_Cave_SealedChamberEntrance_BottomRight, 1
+	special DrawWholeMapView
+	playse SE_BAN
+	setflag FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED
 	releaseall
 	end
 
