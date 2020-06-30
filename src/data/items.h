@@ -3686,7 +3686,7 @@ const struct Item gItems[] =
         .unk19 = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 2,
-        .fieldUseFunc = ItemUseOutOfBattle_Bike,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, //changed from bike 
         .secondaryId = 0,
     },
 
