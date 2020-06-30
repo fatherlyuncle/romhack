@@ -128,7 +128,7 @@ static const struct BikeHistoryInputInfo sAcroBikeTricksList[] =
 void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys)  
 {
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
-        MovePlayerOnMachBike(direction, newKeys, heldKeys); hopefully makes rusty bike shitty
+        MovePlayerOnMachBike(direction, newKeys, heldKeys);
     else
         MovePlayerOnAcroBike(direction, newKeys, heldKeys);
 	
