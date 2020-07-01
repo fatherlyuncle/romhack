@@ -996,15 +996,15 @@ static void BuyMenuCollectObjectEventData(void)
     u8 r8 = 0;
 
     GetXYCoordsOneStepInFrontOfPlayer(&facingX, &facingY);
-    for (y = 0; y < OBJECT_EVENTS_COUNT; y++)
-        gShopDataPtr->viewportObjects[y][OBJ_EVENT_ID] = OBJECT_EVENTS_COUNT;
+    for (y = 0; y < 16; y++)
+        gShopDataPtr->viewportObjects[y][OBJ_EVENT_ID] = 16;
     for (y = 0; y < 5; y++)
     {
         for (x = 0; x < 7; x++)
         {
             u8 objEventId = GetObjectEventIdByXY(facingX - 4 + x, facingY - 2 + y);
 
-            if (objEventId != OBJECT_EVENTS_COUNT)
+            if (objEventId != 16)
             {
                 gShopDataPtr->viewportObjects[r8][OBJ_EVENT_ID] = objEventId;
                 gShopDataPtr->viewportObjects[r8][X_COORD] = x;
@@ -1039,9 +1039,9 @@ static void BuyMenuDrawObjectEvents(void)
     u8 spriteId;
     const struct ObjectEventGraphicsInfo *graphicsInfo;
 
-    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    for (i = 0; i < 16; i++) // max objects?
     {
-        if (gShopDataPtr->viewportObjects[i][OBJ_EVENT_ID] == OBJECT_EVENTS_COUNT)
+        if (gShopDataPtr->viewportObjects[i][OBJ_EVENT_ID] == 16)
             continue;
 
         graphicsInfo = GetObjectEventGraphicsInfo(gObjectEvents[gShopDataPtr->viewportObjects[i][OBJ_EVENT_ID]].graphicsId);

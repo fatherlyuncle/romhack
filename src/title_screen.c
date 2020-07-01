@@ -546,8 +546,7 @@ void CB2_InitTitleScreen(void) //editing title screen
         gMain.state = 1;
         break;
     case 1:
-        // bg2
-        LZ77UnCompVram(gTitleScreenPokemonLogoGfx, (void *)(BG_CHAR_ADDR(0)));
+        LZ77UnCompVram(gTitleScreenPokemonLogoGfx, (void *)VRAM);
         LZ77UnCompVram(gUnknown_08DE0644, (void *)(BG_SCREEN_ADDR(9)));
         LoadPalette(gTitleScreenBgPalettes, 0, 0x1E0);//backgground palette
         LZ77UnCompVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));//bg gfx

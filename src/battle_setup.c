@@ -905,9 +905,9 @@ static void CB2_GiveStarter(void)
     starterMon = GetStarterPokemon(gSpecialVar_Result);
     ScriptGiveMon(starterMon, 5, ITEM_NONE, 0, 0, 0);
     ResetTasks();
-    //PlayBattleBGM();
+    PlayBattleBGM();
     SetMainCallback2(CB2_StartFirstBattle);
-    BeginNormalPaletteFade(0xFFFFFFFF, -1, 0, 0x10, 0); // skip zzgoon fght
+    BattleTransition_Start(B_TRANSITION_BLUR);
 }
 
 static void CB2_StartFirstBattle(void)
@@ -915,12 +915,12 @@ static void CB2_StartFirstBattle(void)
     UpdatePaletteFade();
     RunTasks();
 
-    if (!gPaletteFade.active)
+    if (IsBattleTransitionDone() == TRUE)
     {
         gBattleTypeFlags = BATTLE_TYPE_FIRST_BATTLE;
         gMain.savedCallback = CB2_EndFirstBattle;
         FreeAllWindowBuffers();
-        SetMainCallback2(CB2_EndFirstBattle); //changed to skip fght
+        SetMainCallback2(CB2_InitBattle);
         RestartWildEncounterImmunitySteps();
         ClearPoisonStepCounter();
         IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
@@ -1366,7 +1366,7 @@ void ShowTrainerIntroSpeech(void)
         else
             CopyPyramidTrainerSpeechBefore(LocalIdToPyramidTrainerId(gObjectEvents[gApproachingTrainers[gApproachingTrainerId].objectEventId].localId));
 
-        ShowFieldMessageFromBuffer();
+        sub_80982B8();
     }
     else if (InTrainerHillChallenge())
     {
@@ -1375,7 +1375,7 @@ void ShowTrainerIntroSpeech(void)
         else
             CopyTrainerHillTrainerText(TRAINER_HILL_TEXT_INTRO, LocalIdToHillTrainerId(gObjectEvents[gApproachingTrainers[gApproachingTrainerId].objectEventId].localId));
 
-        ShowFieldMessageFromBuffer();
+        sub_80982B8();
     }
     else
     {
