@@ -5,7 +5,8 @@ EventScript_CutTree:: @ 82906BB
 	checkitem ITEM_CUT, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CheckTreeCantCut
-	setfieldeffectargument 0, ITEM_CUT //might be unneccesary
+	//setfieldeffectargument 0, ITEM_CUT //might be unneccesary
+	setitemarg ITEM_CUT
 	//bufferpartymonnick 0, VAR_RESULT
 	//buffermovename 1, MOVE_CUT
 	msgbox Text_WantToCut, MSGBOX_YESNO
@@ -13,7 +14,6 @@ EventScript_CutTree:: @ 82906BB
 	goto_if_eq EventScript_CancelCut
 	//msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	setitemarg ITEM_CUT
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
@@ -67,7 +67,7 @@ EventScript_RockSmash:: @ 82907A6
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSmashRock
 	setitemarg ITEM_ROCK_SMASH
-	setfieldeffectargument 0, ITEM_ROCK_SMASH
+	//setfieldeffectargument 0, ITEM_ROCK_SMASH
 	//bufferpartymonnick 0, VAR_RESULT
 	//buffermovename 1, MOVE_ROCK_SMASH
 	msgbox Text_WantToSmash, MSGBOX_YESNO
@@ -135,7 +135,7 @@ EventScript_StrengthBoulder:: @ 82908BA
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantStrength
 	setitemarg ITEM_STRENGTH
-	setfieldeffectargument 0, VAR_RESULT
+	//setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToStrength, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_CancelStrength
@@ -201,7 +201,7 @@ EventScript_UseWaterfall:: @ 8290A49
 	goto_if_eq EventScript_CantWaterfall
 	setitemarg ITEM_WATERFALL
 	//bufferpartymonnick 0, VAR_RESULT
-	setfieldeffectargument 0, ITEM_WATERFALL
+	//setfieldeffectargument 0, ITEM_WATERFALL
 	msgbox Text_WantToWaterfall, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndWaterfall
@@ -238,8 +238,8 @@ EventScript_UseDive:: @ 8290B0F
 	goto_if_eq EventScript_CantDive
 	setitemarg ITEM_DIVE
 	//bufferpartymonnick 0, VAR_RESULT
-	setfieldeffectargument 0, ITEM_DIVE
-	setfieldeffectargument 1, 1
+	//setfieldeffectargument 0, ITEM_DIVE
+	//setfieldeffectargument 1, 1
 	msgbox Text_WantToDive, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndDive
@@ -264,8 +264,8 @@ EventScript_UseDiveUnderwater:: @ 8290B5A
 	goto_if_eq EventScript_CantSurface
 	setitemarg ITEM_DIVE
 	//bufferpartymonnick 0, VAR_RESULT
-	setfieldeffectargument 0, ITEM_DIVE
-	setfieldeffectargument 1, 1
+	//setfieldeffectargument 0, ITEM_DIVE
+	//setfieldeffectargument 1, 1
 	msgbox Text_WantToSurface, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndSurface

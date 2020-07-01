@@ -4,7 +4,7 @@ EventScript_UseSurf:: @ 8271EA0
 	goto_if_eq EventScript_EndUseSurf
 	setitemarg ITEM_SURF
 	//bufferpartymonnick 0, VAR_RESULT  Replace HM with Item
-	setfieldeffectargument 0, ITEM_SURF
+	//setfieldeffectargument 0, ITEM_SURF
 	lockall
 	msgbox gText_WantToUseSurf, MSGBOX_YESNO
 	compare VAR_RESULT, NO
