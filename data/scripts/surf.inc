@@ -13,6 +13,7 @@ EventScript_UseSurf:: @ 8271EA0
 	
 	dofieldeffect FLDEFF_USE_SURF
 EventScript_ReleaseUseSurf:: @ 8271ED5
+	setitemarg ITEM_SURF
 	releaseall
 EventScript_EndUseSurf:: @ 8271ED6
 	end
