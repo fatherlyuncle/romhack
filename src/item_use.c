@@ -72,7 +72,6 @@ static void UseTMHMYesNo(u8 taskId);
 static void UseTMHM(u8 taskId);
 static void Task_StartUseRepel(u8 taskId);
 static void Task_UseRepel(u8 taskId);
-//static void Task_SprayPaint(u8 taskId); //based off repel used for shiny encounters
 static void Task_CloseCantUseKeyItemMessage(u8 taskId);
 static void SetDistanceOfClosestHiddenItem(u8 taskId, s16 x, s16 y);
 static void CB2_OpenPokeblockCaseOnField(void);
@@ -215,39 +214,41 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 		DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
 
-/*void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement
+static void FldEff_UseFlash(void)//wiservisor flash fix
 {
-	//if(FLAG_USE_FLASH == FALSE)
+    PlaySE(SE_W115);
+    FlagSet(FLAG_SYS_USE_FLASH);
+    ScriptContext1_SetupScript(EventScript_FldEffFlash);
+}
+
+static void FieldCallback_Flash(void)//wiservisor flashfix
+{
+    u8 taskId = oei_task_add();
+    FadeInFromBlack();
+    gSaveBlock2Ptr->ItemArg = 594;
+    gTasks[taskId].data[8] = (uintptr_t)FldEff_UseFlash >> 16;
+    gTasks[taskId].data[9] = (uintptr_t)FldEff_UseFlash;
+}
+
+void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement//wiservisor flashfix
+{
+	if (gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH))
 	{
-		gSaveBlock2Ptr->ItemArg = 594;
 		if(!gTasks[taskId].tUsingRegisteredKeyItem)
 		{
-			gBagMenu->mainCallback2 = CB2_DoChangeMap;
+			gFieldCallback = FieldCallback_Flash;
+			gBagMenu->mainCallback2 = CB2_ReturnToField;
 			Task_FadeAndCloseBagMenu(taskId);
 		}
 		else
 		{
-			SetMainCallback2(CB2_DoChangeMap);
+			FldEff_UseFlash();
 			DestroyTask(taskId);
 		}
 	}
-	//else
-		//DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
-}*/
-
-/*void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
-{
-	if (VarGet(VAR_SPRAY_COUNT) == 0) // closes if one is already in use
-	{ 
-		//gTasks[taskId].func = Task_SprayPaint;	
-		PlaySE(SE_TU_SAA);
-		VarSet(VAR_SPRAY_COUNT, 1);
-		RemoveUsedItem();
-    }
-	//gTasks[taskId].func = Task_SprayPaint;
-	
-	Task_FadeAndCloseBagMenu(taskId);
-}*/
+	else
+		DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
 
 void ItemUseOutOfBattle_Mail(u8 taskId)
 {
@@ -934,23 +935,12 @@ void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based of
 {
 	if (VarGet(VAR_SPRAY_COUNT) == 0) // closes if one is already in use
 	{ 
-		//gTasks[taskId].func = Task_SprayPaint;	
 		PlaySE(SE_TU_SAA);
 		VarSet(VAR_SPRAY_COUNT, 1);
 		RemoveUsedItem();
-		//DisplayItemMessage(taskId, 1, gStringVar4, BagMenu_InitListsMenu);
     }
-	//gTasks[taskId].func = Task_SprayPaint;
-	
 	Task_FadeAndCloseBagMenu(taskId);
 }
-
-/*static void Task_SprayPaint(u8 taskId) //sets VAR_SPRAY_COUNT to 1
-{
-	VarSet(VAR_SPRAY_COUNT, 1);
-    RemoveUsedItem();
-}
-*/
 
 static void Task_UsedBlackWhiteFlute(u8 taskId)
 {

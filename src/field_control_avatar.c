@@ -450,15 +450,15 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
 {
     if (/*FlagGet(FLAG_BADGE05_GET) == TRUE && PartyHasMonWithSurf() == TRUE &&*/ IsPlayerFacingSurfableFishableWater() == TRUE)
 	{
-		gSaveBlock2Ptr->ItemArg = 592;
+		//gSaveBlock2Ptr->ItemArg = 592;
 		return EventScript_UseSurf;
 	}
 
     if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE) //removed badge prereq
     {
         if (/*FlagGet(FLAG_BADGE08_GET) == TRUE &&*/ IsPlayerSurfingNorth() == TRUE)
-		{	
-			gSaveBlock2Ptr->ItemArg = 596;
+		{
+			//gSaveBlock2Ptr->ItemArg = 596;
             return EventScript_UseWaterfall;
 		}
         else
@@ -471,7 +471,7 @@ static bool32 TrySetupDiveDownScript(void) // removed badge prereq
 {
     if (/*FlagGet(FLAG_BADGE07_GET) &&*/ TrySetDiveWarp() == 2)
     {
-		gSaveBlock2Ptr->ItemArg = 597;
+		//gSaveBlock2Ptr->ItemArg = 597;
         ScriptContext1_SetupScript(EventScript_UseDive);
         return TRUE;
     }
@@ -482,7 +482,7 @@ static bool32 TrySetupDiveEmergeScript(void) //removed badge prereq
 {
     if (/*FlagGet(FLAG_BADGE07_GET) &&*/ gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
     {
-		gSaveBlock2Ptr->ItemArg = 597;
+		//gSaveBlock2Ptr->ItemArg = 597;
         ScriptContext1_SetupScript(EventScript_UseDiveUnderwater);
         return TRUE;
     }

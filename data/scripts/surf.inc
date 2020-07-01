@@ -9,6 +9,7 @@ EventScript_UseSurf:: @ 8271EA0
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_ReleaseUseSurf
 	//msgbox gText_PlayerUsedSurf, MSGBOX_DEFAULT
+	setitemarg ITEM_SURF
 	dofieldeffect FLDEFF_USE_SURF
 EventScript_ReleaseUseSurf:: @ 8271ED5
 	releaseall

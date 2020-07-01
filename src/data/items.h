@@ -4794,7 +4794,7 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-    [ITEM_FLASH] =
+    [ITEM_FLASH] = //wiservisor flashfix 
     {
         .name = _("Head Lamp"),
         .itemId = ITEM_FLASH,
@@ -4803,7 +4803,7 @@ const struct Item gItems[] =
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_Flash,
         .secondaryId = 0,
     },
 
