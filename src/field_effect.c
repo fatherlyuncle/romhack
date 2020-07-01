@@ -2485,7 +2485,7 @@ bool8 FldEff_FieldMoveShowMonInit(void) //Remove Sprites from HMs
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     return FALSE;*/
 	//u32 flag = gFieldEffectArguments[0] & 0x80000000;
-	u32 flag = gSaveBlock2Ptr->ItemArg;
+	u32 flag = gSaveBlock2Ptr->ItemArg & 0x80000000; //readded 0x80000000 for test
 	//gFieldEffectArguments[0] |= flag;
 	gSaveBlock2Ptr->ItemArg |= flag;
 	FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);

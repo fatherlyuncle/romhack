@@ -448,6 +448,8 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
 
 static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metatileBehavior, u8 direction) //removed badge and surfmon prereq
 {
+	gSaveBlock2Ptr->ItemArg = NULL; //test fix surf icon
+	
     if (/*FlagGet(FLAG_BADGE05_GET) == TRUE && PartyHasMonWithSurf() == TRUE &&*/ IsPlayerFacingSurfableFishableWater() == TRUE)
 	{
 		//gSaveBlock2Ptr->ItemArg = 592;

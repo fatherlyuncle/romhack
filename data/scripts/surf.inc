@@ -5,6 +5,7 @@ EventScript_UseSurf:: @ 8271EA0
 	//bufferpartymonnick 0, VAR_RESULT  Replace HM with Item
 	setfieldeffectargument 0, ITEM_SURF
 	lockall
+	//setitemarg NULL //reset itemarg before surf call?
 	msgbox gText_WantToUseSurf, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_ReleaseUseSurf
@@ -14,5 +15,4 @@ EventScript_UseSurf:: @ 8271EA0
 EventScript_ReleaseUseSurf:: @ 8271ED5
 	releaseall
 EventScript_EndUseSurf:: @ 8271ED6
-	setitemarg NULL
 	end
