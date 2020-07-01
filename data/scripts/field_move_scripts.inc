@@ -66,6 +66,7 @@ EventScript_RockSmash:: @ 82907A6
 	checkitem ITEM_ROCK_SMASH, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSmashRock
+	setitemarg ITEM_ROCK_SMASH
 	setfieldeffectargument 0, ITEM_ROCK_SMASH
 	//bufferpartymonnick 0, VAR_RESULT
 	//buffermovename 1, MOVE_ROCK_SMASH
@@ -74,7 +75,6 @@ EventScript_RockSmash:: @ 82907A6
 	goto_if_eq EventScript_CancelSmash
 	//msgbox Text_MonUsedFieldMove, MSGBOX_DEFAULT
 	closemessage
-	setitemarg ITEM_ROCK_SMASH
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
 	waitstate
 	goto EventScript_SmashRock
@@ -134,12 +134,12 @@ EventScript_StrengthBoulder:: @ 82908BA
 	checkitem ITEM_STRENGTH, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantStrength
+	setitemarg ITEM_STRENGTH
 	setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToStrength, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_CancelStrength
 	closemessage
-	setitemarg ITEM_STRENGTH
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
 	goto EventScript_ActivateStrength
@@ -199,13 +199,13 @@ EventScript_UseWaterfall:: @ 8290A49
 	checkitem ITEM_WATERFALL, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantWaterfall
+	setitemarg ITEM_WATERFALL
 	//bufferpartymonnick 0, VAR_RESULT
 	setfieldeffectargument 0, ITEM_WATERFALL
 	msgbox Text_WantToWaterfall, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndWaterfall
 	//msgbox Text_MonUsedWaterfall, MSGBOX_DEFAULT
-	setitemarg ITEM_WATERFALL
 	dofieldeffect FLDEFF_USE_WATERFALL
 	goto EventScript_EndWaterfall
 
@@ -236,6 +236,7 @@ EventScript_UseDive:: @ 8290B0F
 	checkitem ITEM_DIVE, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantDive
+	setitemarg ITEM_DIVE
 	//bufferpartymonnick 0, VAR_RESULT
 	setfieldeffectargument 0, ITEM_DIVE
 	setfieldeffectargument 1, 1
@@ -243,7 +244,6 @@ EventScript_UseDive:: @ 8290B0F
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndDive
 	//msgbox Text_MonUsedDive, MSGBOX_DEFAULT
-	setitemarg ITEM_DIVE
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndDive
 	end
@@ -262,6 +262,7 @@ EventScript_UseDiveUnderwater:: @ 8290B5A
 	checkitem ITEM_DIVE, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSurface
+	setitemarg ITEM_DIVE
 	//bufferpartymonnick 0, VAR_RESULT
 	setfieldeffectargument 0, ITEM_DIVE
 	setfieldeffectargument 1, 1
@@ -269,7 +270,6 @@ EventScript_UseDiveUnderwater:: @ 8290B5A
 	compare VAR_RESULT, NO
 	goto_if_eq EventScript_EndSurface
 	//msgbox Text_MonUsedDive, MSGBOX_DEFAULT
-	setitemarg ITEM_DIVE
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface
 	end
