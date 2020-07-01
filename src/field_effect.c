@@ -2847,7 +2847,7 @@ static void sub_80B8CC0(struct Sprite *sprite)
         sprite->pos1.x = 0x78;
         sprite->data[1] = 30;
         sprite->callback = sub_80B8D04;
-		PlaySE(SE_TETSUJI);
+		PlaySE(SE_TAMA);
         /*if (sprite->data[6])
         {
             PlayCry2(sprite->data[0], 0, 0x7d, 0xa); HM replaced with item
