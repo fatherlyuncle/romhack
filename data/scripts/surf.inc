@@ -14,4 +14,5 @@ EventScript_UseSurf:: @ 8271EA0
 EventScript_ReleaseUseSurf:: @ 8271ED5
 	releaseall
 EventScript_EndUseSurf:: @ 8271ED6
+	setitemarg NULL
 	end
