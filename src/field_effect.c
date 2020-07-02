@@ -2817,7 +2817,7 @@ static u8 sub_80B8C60(u32 a0, u32 a1, u32 a2) //Remove pokemon from HM animation
     u8 monSprite;
     struct Sprite *sprite;
     v0 = (a0 & 0x80000000) >> 16;
-    a0 &= 0x7fffffff;
+    //a0 &= 0x7fffffff;
     monSprite = AddItemIconSprite(2110, 2110, VarGet(VAR_TEMP_F)); //test to change icon by item
     gSprites[monSprite].pos1.y = 0x50;
     gSprites[monSprite].pos1.x = 0x140;
