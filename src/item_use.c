@@ -227,7 +227,7 @@ static void FieldCallback_Flash(void)//wiservisor flashfix
 {
     u8 taskId = oei_task_add();
     FadeInFromBlack();
-    gSaveBlock2Ptr->ItemArg = 594;
+    gSpecialVar_0x8000 = 594;
     gTasks[taskId].data[8] = (uintptr_t)FldEff_UseFlash >> 16;
     gTasks[taskId].data[9] = (uintptr_t)FldEff_UseFlash;
 }

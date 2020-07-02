@@ -2469,7 +2469,7 @@ bool8 FldEff_FieldMoveShowMon(void)
     {
         taskId = CreateTask(sub_80B88B4, 0xff);
     }
-    gTasks[taskId].data[15] = sub_80B8C60(gSaveBlock2Ptr->ItemArg, gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    gTasks[taskId].data[15] = sub_80B8C60(VarGet(gSpecialVar_0x8000), gFieldEffectArguments[1], gFieldEffectArguments[2]);
     return FALSE;
 }
 
@@ -2487,8 +2487,8 @@ bool8 FldEff_FieldMoveShowMonInit(void) //Remove Sprites from HMs
     return FALSE;*/
 	//u32 flag = gFieldEffectArguments[0] & 0x80000000;
 	//gFieldEffectArguments[0] |= flag;
-	u32 flag = gSaveBlock2Ptr->ItemArg & 0x80000000; //readded 0x80000000 for test
-	gSaveBlock2Ptr->ItemArg |= flag;
+	/*u32 flag = gSpecialVar_0x8000 & 0x80000000; //readded 0x80000000 for test
+	gSpecialVar_0x8000 |= flag;*/
 	FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
 	FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
 	return FALSE;
