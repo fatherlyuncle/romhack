@@ -2464,9 +2464,11 @@ bool8 FldEff_FieldMoveShowMon(void)
     u8 taskId;
     if (IsMapTypeOutdoors(GetCurrentMapType()) == TRUE)
     {
+		ClearTempVars();
         taskId = CreateTask(sub_80B8554, 0xff);
     } else
     {
+		ClearTempVars();
         taskId = CreateTask(sub_80B88B4, 0xff);
     }
     gTasks[taskId].data[15] = sub_80B8C60(VarGet(VAR_TEMP_F),gFieldEffectArguments[1], gFieldEffectArguments[2]);
@@ -2490,7 +2492,6 @@ bool8 FldEff_FieldMoveShowMonInit(void) //Remove Sprites from HMs
 	//u32 flag = gSpecialVar_0x8000 & 0x80000000; //readded 0x80000000 for test
 	//gSpecialVar_0x8000 |= flag;
 	FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
-	ClearTempVars();
 	FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
 	return FALSE;
 }
