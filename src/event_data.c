@@ -52,6 +52,11 @@ void ClearTempFieldEventData(void)
     FlagClear(FLAG_NURSE_UNION_ROOM_REMINDER);
 }
 
+void ClearTempVars(void)
+{
+    memset(gSaveBlock1Ptr->vars + ((TEMP_VARS_START - VARS_START) * 2), 0, TEMP_VARS_SIZE);
+}
+
 void ClearDailyFlags(void)
 {
     memset(gSaveBlock1Ptr->flags + (DAILY_FLAGS_START / 8), 0, DAILY_FLAGS_SIZE);
