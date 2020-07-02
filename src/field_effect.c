@@ -2810,7 +2810,7 @@ static bool8 sub_80B8BF0(struct Task *task)
     return FALSE;
 }
 
-static u8 sub_80B8C60(u32 a0, u32 a1, u32 a2) //Remove pokemon from HM animation
+static u8 sub_80B8C60(u32 a0, u32 a1, u32 a2) //Remove pokemon from HM animation and replace with item icon
 {
     /*u16 v0;
     u8 monSprite;

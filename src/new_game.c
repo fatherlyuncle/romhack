@@ -97,7 +97,7 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST; //Set default speed to fast not mid
     gSaveBlock2Ptr->optionsWindowFrameType = 17; //looks pretty, also could use 7 or 12
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_STEREO;
-    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET; // changed default from SHIFT to SET 
+    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET; // changed default from SHIFT to SET
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
 }
@@ -126,7 +126,7 @@ static void ClearFrontierRecord(void)
     gSaveBlock2Ptr->frontier.opponentNames[1][0] = EOS;
 }
 
-static void WarpToTruck(void) //starting location 
+static void WarpToTruck(void) //starting location
 {
     SetWarpDestination(MAP_GROUP(INSIDE_OF_TRUCK), MAP_NUM(INSIDE_OF_TRUCK), -1, -1, -1);
     WarpIntoMap();
@@ -163,7 +163,6 @@ void NewGameInitData(void)
     ClearMailData();
     gSaveBlock2Ptr->specialSaveWarpFlags = 0;
     gSaveBlock2Ptr->gcnLinkFlags = 0;
-	gSaveBlock2Ptr->ItemArg = 0; //set ItemArg to 0 on newgame init 
     InitPlayerTrainerId();
     PlayTimeCounter_Reset();
     ClearPokedexFlags();

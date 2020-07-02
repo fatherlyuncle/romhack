@@ -21,7 +21,6 @@ EventScript_CutTree:: @ 82906BB
 
 EventScript_FldEffCut:: @ 8290705
 	lockall
-	setitemarg ITEM_CUT
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
@@ -31,6 +30,7 @@ EventScript_CutTreeDown:: @ 8290710
 	applymovement VAR_LAST_TALKED, Movement_CutTreeDown
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
+	special DrawWholeMapView
 	releaseall
 	end
 
@@ -83,7 +83,6 @@ EventScript_RockSmash:: @ 82907A6
 
 EventScript_FldEffRockSmash:: @ 82907F0
 	lockall
-	setitemarg ITEM_ROCK_SMASH
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
 	waitstate
 	goto EventScript_SmashRock
