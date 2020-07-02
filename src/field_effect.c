@@ -2487,9 +2487,8 @@ bool8 FldEff_FieldMoveShowMonInit(void) //Remove Sprites from HMs
     return FALSE;*/
 	//u32 flag = gFieldEffectArguments[0] & 0x80000000;
 	//gFieldEffectArguments[0] |= flag;
-	ClearTempFieldEventData();
-	//u32 flag = gSpecialVar_0x8000 & 0x80000000; //readded 0x80000000 for test
-	//gSpecialVar_0x8000 |= flag;
+	u32 flag = gSpecialVar_0x8000 & 0x80000000; //readded 0x80000000 for test
+	gSpecialVar_0x8000 |= flag;
 	FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
 	FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
 	return FALSE;
