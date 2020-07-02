@@ -33,6 +33,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/vars.h"
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
@@ -2829,7 +2830,7 @@ static u8 sub_80B8C60(u32 a0, u32 a1, u32 a2) //Remove pokemon from HM animation
     struct Sprite *sprite;
     v0 = (a0 & 0x80000000) >> 16;
     a0 &= 0x7fffffff;
-    monSprite = AddItemIconSprite(2110, 2110, a0); //test to change icon by item
+    monSprite = AddItemIconSprite(2110, 2110, VarGet(VAR_0x8000); //test to change icon by item
     gSprites[monSprite].pos1.y = 0x50;
     gSprites[monSprite].pos1.x = 0x140;
     sprite = &gSprites[monSprite];
