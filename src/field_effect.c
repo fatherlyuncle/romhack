@@ -2828,7 +2828,7 @@ static u8 sub_80B8C60(u32 a0, u32 a1, u32 a2) //Remove pokemon from HM animation
 	ClearTempVars();
     sprite->callback = SpriteCallbackDummy;
     sprite->oam.priority = 0;
-    sprite->data[0] = VAR_TEMP_F;
+    sprite->data[0] = a0;
     sprite->data[6] = v0;
     return monSprite;
 }
