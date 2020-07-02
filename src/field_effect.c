@@ -2486,8 +2486,8 @@ bool8 FldEff_FieldMoveShowMonInit(void) //Remove Sprites from HMs
     return FALSE;*/
 	//u32 flag = gFieldEffectArguments[0] & 0x80000000;
 	//gFieldEffectArguments[0] |= flag;
-	u32 flag = gSaveBlock2Ptr->ItemArg; //& 0x80000000; //readded 0x80000000 for test
-	//gSaveBlock2Ptr->ItemArg |= flag;
+	u32 flag = gSaveBlock2Ptr->ItemArg & 0x80000000; //readded 0x80000000 for test
+	gSaveBlock2Ptr->ItemArg |= flag;
 	FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
 	FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
 	return FALSE;
@@ -2828,7 +2828,7 @@ static u8 sub_80B8C60(u32 a0, u32 a1, u32 a2) //Remove pokemon from HM animation
     u8 monSprite;
     struct Sprite *sprite;
     v0 = (a0 & 0x80000000) >> 16;
-    //a0 &= 0x7fffffff;
+    a0 &= 0x7fffffff;
     monSprite = AddItemIconSprite(2110, 2110, a0); //test to change icon by item
     gSprites[monSprite].pos1.y = 0x50;
     gSprites[monSprite].pos1.x = 0x140;
