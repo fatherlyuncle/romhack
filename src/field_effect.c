@@ -1755,7 +1755,7 @@ static bool8 sub_80B72F4(struct Task *task)
 bool8 FldEff_UseWaterfall(void)
 {
     u8 taskId;
-	VAR_TEMP_F = 596;
+	//VAR_TEMP_F = 596;
     taskId = CreateTask(sub_80B7384, 0xff);
     gTasks[taskId].data[1] = gFieldEffectArguments[0];
     sub_80B7384(taskId);
@@ -1827,7 +1827,7 @@ bool8 FldEff_UseDive(void)
 {
     u8 taskId;
     taskId = CreateTask(Task_Dive, 0xff);
-	VAR_TEMP_F = 597; //add item icon hopefully
+	//VAR_TEMP_F = 597; //add item icon hopefully
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     gTasks[taskId].data[14] = gFieldEffectArguments[1];
     Task_Dive(taskId);
