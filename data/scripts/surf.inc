@@ -2,7 +2,7 @@ EventScript_UseSurf:: @ 8271EA0
 	checkitem ITEM_SURF, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_EndUseSurf
-	setvar VAR_TEMP_F, ITEM_SURF
+	setvar VAR_0x8000, ITEM_SURF
 	//bufferpartymonnick 0, VAR_RESULT  Replace HM with Item
 	//setfieldeffectargument 0, ITEM_SURF
 	lockall

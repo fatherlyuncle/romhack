@@ -6,7 +6,7 @@ EventScript_CutTree:: @ 82906BB
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CheckTreeCantCut
 	//setfieldeffectargument 0, ITEM_CUT //might be unneccesary
-	setvar VAR_TEMP_F, ITEM_CUT
+	setvar VAR_0x8000, ITEM_CUT
 	//bufferpartymonnick 0, VAR_RESULT
 	//buffermovename 1, MOVE_CUT
 	msgbox Text_WantToCut, MSGBOX_YESNO
@@ -66,7 +66,7 @@ EventScript_RockSmash:: @ 82907A6
 	checkitem ITEM_ROCK_SMASH, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSmashRock
-	setvar VAR_TEMP_F, ITEM_ROCK_SMASH
+	setvar VAR_0x8000, ITEM_ROCK_SMASH
 	//setfieldeffectargument 0, ITEM_ROCK_SMASH
 	//bufferpartymonnick 0, VAR_RESULT
 	//buffermovename 1, MOVE_ROCK_SMASH
@@ -134,7 +134,7 @@ EventScript_StrengthBoulder:: @ 82908BA
 	checkitem ITEM_STRENGTH, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantStrength
-	setitemarg ITEM_STRENGTH
+	setvar VAR_0x8000, ITEM_STRENGTH
 	//setfieldeffectargument 0, VAR_RESULT
 	msgbox Text_WantToStrength, MSGBOX_YESNO
 	compare VAR_RESULT, NO
@@ -199,7 +199,7 @@ EventScript_UseWaterfall:: @ 8290A49
 	checkitem ITEM_WATERFALL, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantWaterfall
-	setitemarg ITEM_WATERFALL
+	setvar VAR_0x8000, ITEM_WATERFALL
 	//bufferpartymonnick 0, VAR_RESULT
 	//setfieldeffectargument 0, ITEM_WATERFALL
 	msgbox Text_WantToWaterfall, MSGBOX_YESNO
@@ -236,7 +236,7 @@ EventScript_UseDive:: @ 8290B0F
 	checkitem ITEM_DIVE, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantDive
-	setitemarg ITEM_DIVE
+	setvar VAR_0x8000, ITEM_DIVE
 	//bufferpartymonnick 0, VAR_RESULT
 	//setfieldeffectargument 0, ITEM_DIVE
 	//setfieldeffectargument 1, 1
@@ -262,7 +262,7 @@ EventScript_UseDiveUnderwater:: @ 8290B5A
 	checkitem ITEM_DIVE, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSurface
-	setitemarg ITEM_DIVE
+	setvar VAR_0x8000, ITEM_DIVE
 	//bufferpartymonnick 0, VAR_RESULT
 	//setfieldeffectargument 0, ITEM_DIVE
 	//setfieldeffectargument 1, 1
