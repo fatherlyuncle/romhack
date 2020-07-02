@@ -6,7 +6,7 @@ EventScript_CutTree:: @ 82906BB
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CheckTreeCantCut
 	//setfieldeffectargument 0, ITEM_CUT //might be unneccesary
-	setitemarg ITEM_CUT
+	setvar VAR_0x8000, ITEM_CUT
 	//bufferpartymonnick 0, VAR_RESULT
 	//buffermovename 1, MOVE_CUT
 	msgbox Text_WantToCut, MSGBOX_YESNO
@@ -66,7 +66,7 @@ EventScript_RockSmash:: @ 82907A6
 	checkitem ITEM_ROCK_SMASH, 1
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSmashRock
-	setitemarg ITEM_ROCK_SMASH
+	setvar VAR_0x8000, ITEM_ROCK_SMASH
 	//setfieldeffectargument 0, ITEM_ROCK_SMASH
 	//bufferpartymonnick 0, VAR_RESULT
 	//buffermovename 1, MOVE_ROCK_SMASH
