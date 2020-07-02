@@ -2471,8 +2471,12 @@ bool8 FldEff_FieldMoveShowMon(void)
 		//ClearTempVars();
         taskId = CreateTask(sub_80B88B4, 0xff);
     }
+<<<<<<< HEAD
     gTasks[taskId].data[15] = sub_80B8C60(VarGet(VAR_TEMP_F),gFieldEffectArguments[1], gFieldEffectArguments[2]);
 	//ClearTempVars();
+=======
+    gTasks[taskId].data[15] = sub_80B8C60(gSaveBlock2Ptr->ItemArg, gFieldEffectArguments[1], gFieldEffectArguments[2]);
+>>>>>>> parent of 5715a849f... field_effect.c tinkering and itemarg replacing
     return FALSE;
 }
 
