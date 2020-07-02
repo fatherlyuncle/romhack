@@ -2464,14 +2464,15 @@ bool8 FldEff_FieldMoveShowMon(void)
     u8 taskId;
     if (IsMapTypeOutdoors(GetCurrentMapType()) == TRUE)
     {
-		ClearTempVars();
+		//ClearTempVars();
         taskId = CreateTask(sub_80B8554, 0xff);
     } else
     {
-		ClearTempVars();
+		//ClearTempVars();
         taskId = CreateTask(sub_80B88B4, 0xff);
     }
     gTasks[taskId].data[15] = sub_80B8C60(VarGet(VAR_TEMP_F),gFieldEffectArguments[1], gFieldEffectArguments[2]);
+	ClearTempVars();
     return FALSE;
 }
 
