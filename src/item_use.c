@@ -201,13 +201,13 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 		
 		if(!gTasks[taskId].tUsingRegisteredKeyItem)
 		{
-			gSaveBlock2Ptr->ItemArg = 591;
+			gSpecialVar_0x8000 = 591;
 			gBagMenu->mainCallback2 = CB2_OpenFlyMap;
 			Task_FadeAndCloseBagMenu(taskId);
 		}
 		else
 		{
-			gSaveBlock2Ptr->ItemArg = 591;
+			gSpecialVar_0x8000 = 591;
 			SetMainCallback2(CB2_OpenFlyMap);
 			DestroyTask(taskId);
 		}
