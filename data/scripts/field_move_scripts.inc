@@ -30,7 +30,6 @@ EventScript_CutTreeDown:: @ 8290710
 	applymovement VAR_LAST_TALKED, Movement_CutTreeDown
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
-	special DrawWholeMapView
 	releaseall
 	end
 
