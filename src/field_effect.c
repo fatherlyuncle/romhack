@@ -2469,7 +2469,7 @@ bool8 FldEff_FieldMoveShowMon(void)
     {
         taskId = CreateTask(sub_80B88B4, 0xff);
     }
-    gTasks[taskId].data[15] = sub_80B8C60(/*VarGet(gSpecialVar_0x8000)*/gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    gTasks[taskId].data[15] = sub_80B8C60(VarGet(gSpecialVar_0x8000),gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
     return FALSE;
 }
 
@@ -2813,18 +2813,6 @@ static bool8 sub_80B8BF0(struct Task *task)
 
 static u8 sub_80B8C60(u32 a0, u32 a1, u32 a2) //Remove pokemon from HM animation and replace with item icon
 {
-    /*u16 v0;
-    u8 monSprite;
-    struct Sprite *sprite;
-    v0 = (a0 & 0x80000000) >> 16;
-    a0 &= 0x7fffffff;
-    monSprite = CreateMonSprite_FieldMove(a0, a1, a2, 0x140, 0x50, 0);
-    sprite = &gSprites[monSprite];
-    sprite->callback = SpriteCallbackDummy;
-    sprite->oam.priority = 0;
-    sprite->data[0] = a0;
-    sprite->data[6] = v0;
-    return monSprite; */
 	u16 v0;
     u8 monSprite;
     struct Sprite *sprite;
