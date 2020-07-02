@@ -1755,7 +1755,7 @@ static bool8 sub_80B72F4(struct Task *task)
 bool8 FldEff_UseWaterfall(void)
 {
     u8 taskId;
-	//gSaveBlock2Ptr->ItemArg = 596;
+	VAR_TEMP_F = 596;
     taskId = CreateTask(sub_80B7384, 0xff);
     gTasks[taskId].data[1] = gFieldEffectArguments[0];
     sub_80B7384(taskId);
@@ -1827,7 +1827,7 @@ bool8 FldEff_UseDive(void)
 {
     u8 taskId;
     taskId = CreateTask(Task_Dive, 0xff);
-	//gSaveBlock2Ptr->ItemArg = 597; //add item icon hopefully
+	VAR_TEMP_F = 597; //add item icon hopefully
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     gTasks[taskId].data[14] = gFieldEffectArguments[1];
     Task_Dive(taskId);
@@ -2489,6 +2489,7 @@ bool8 FldEff_FieldMoveShowMonInit(void) //Remove Sprites from HMs
 	//gFieldEffectArguments[0] |= flag;
 	//u32 flag = gSpecialVar_0x8000 & 0x80000000; //readded 0x80000000 for test
 	//gSpecialVar_0x8000 |= flag;
+	ClearTempVars();
 	FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
 	FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
 	return FALSE;
