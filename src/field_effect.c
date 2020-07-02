@@ -2469,7 +2469,7 @@ bool8 FldEff_FieldMoveShowMon(void)
     {
         taskId = CreateTask(sub_80B88B4, 0xff);
     }
-    gTasks[taskId].data[15] = sub_80B8C60(VarGet(gSpecialVar_0x8000), gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    gTasks[taskId].data[15] = sub_80B8C60(/*VarGet(gSpecialVar_0x8000)*/gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
     return FALSE;
 }
 
