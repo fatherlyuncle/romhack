@@ -2623,7 +2623,8 @@ static void overworld_bg_setup_2(struct Task *task)
     LoadWordFromTwoHalfwords((u16 *)&task->data[13], (u32 *)&callback);
     SetVBlankCallback(callback);
     sub_8197200();
-    FreeResourcesAndDestroySprite(&gSprites[task->data[15]], task->data[15]);
+	FieldEffectFreeGraphicsResources(&gSprites[task->data[15]]); //delete leftover HM sprite
+    //FreeResourcesAndDestroySprite(&gSprites[task->data[15]], task->data[15]);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON);
     DestroyTask(FindTaskIdByFunc(sub_80B8554));
 }
@@ -2739,7 +2740,8 @@ static void sub_80B8A64(struct Task *task)
     LoadWordFromTwoHalfwords((u16 *)&task->data[13], (u32 *)&intrCallback);
     SetVBlankCallback(intrCallback);
     sub_8197200();
-    FreeResourcesAndDestroySprite(&gSprites[task->data[15]], task->data[15]);
+	FieldEffectFreeGraphicsResources(&gSprites[task->data[15]]);//delete leftover HM sprite
+    //FreeResourcesAndDestroySprite(&gSprites[task->data[15]], task->data[15]);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON);
     DestroyTask(FindTaskIdByFunc(sub_80B88B4));
 }
