@@ -994,7 +994,7 @@ SlateportCity_Text_HowTownIsBornAndGrows: @ 81DD8A6
 SlateportCity_Text_SlateportWonderfulPlace: @ 81DD93D
 	.string "Shopping where you can breathe the\n"
 	.string "scent of the ocean…\p"
-	.string "SLATEPORT is such a wonderful place!$"
+	.string "Slateport is such a wonderful place!$"
 
 SlateportCity_Text_BuyBricksSoDecorWontGetDirty: @ 81DD999
 	.string "If you put DOLLS or CUSHIONS on\n"
@@ -1123,7 +1123,7 @@ SlateportCity_Text_CantChangeTradeMonName: @ 81DE16C
 
 SlateportCity_Text_BattleTentBuiltRecently: @ 81DE1EC
 	.string "Recently, a BATTLE TENT was built\n"
-	.string "in SLATEPORT.\p"
+	.string "in Slateport.\p"
 	.string "GYMS are fun, but the BATTLE TENT's\n"
 	.string "awesome in its own way.\p"
 	.string "You should go find tough POKéMON\n"
@@ -1221,7 +1221,7 @@ SlateportCity_Text_PleaseComeWithMe: @ 81DE8A0
 	.string "Please, come with me!$"
 
 SlateportCity_Text_BattleTentSign: @ 81DE8BC
-	.string "BATTLE TENT SLATEPORT SITE\n"
+	.string "Battle Tent Slateport Site\n"
 	.string "“Find it! The ultimate POKéMON!”$"
 
 SlateportCity_Text_SternsShipyardWantedSign: @ 81DE8F8
@@ -1233,11 +1233,11 @@ SlateportCity_Text_SternsShipyardNearsCompletion: @ 81DE940
 	.string "STERN'S SHIPYARD\p"
 	.string "“The ferry S.S. TIDAL nears\n"
 	.string "completion for serving the ports of\l"
-	.string "SLATEPORT and LILYCOVE.”$"
+	.string "Slateport and Lilycove.”$"
 
 SlateportCity_Text_SternsShipyardFerryComplete: @ 81DE9AA
 	.string "STERN'S SHIPYARD\p"
-	.string "“Boarding of the SLATEPORT-LILYCOVE\n"
+	.string "“Boarding of the Slateport-Lilycove\n"
 	.string "ferry S.S. TIDAL is handled at the\l"
 	.string "HARBOR.”$"
 
@@ -1251,23 +1251,23 @@ SlateportCity_Text_OceanicMuseumSign: @ 81DEA3B
 	.string "OCEANIC MUSEUM$"
 
 SlateportCity_Text_CitySign: @ 81DEA6F
-	.string "SLATEPORT CITY\p"
+	.string "Slateport City\p"
 	.string "“The port where people and POKéMON\n"
 	.string "cross paths.”$"
 
 SlateportCity_Text_MarketSign: @ 81DEAAF
-	.string "SLATEPORT MARKET\n"
+	.string "Slateport Market\n"
 	.string "“Unique items found nowhere else!”$"
 
 SlateportCity_Text_HarborFerryUnderConstruction: @ 81DEAE3
-	.string "SLATEPORT HARBOR\p"
+	.string "Slateport Harbor\p"
 	.string "“The ferry S.S. TIDAL is under\n"
 	.string "construction in the SHIPYARD.\p"
 	.string "“Service is scheduled to begin\n"
 	.string "shortly.”$"
 
 SlateportCity_Text_HarborSign: @ 81DEB5A
-	.string "SLATEPORT HARBOR\p"
+	.string "Slateport Harbor\p"
 	.string "“Enjoy a delightful cruise on\n"
 	.string "the ferry S.S. TIDAL.”$"
 

@@ -343,7 +343,7 @@ BattleFrontier_OutsideWest_Text_WhereWouldYouLikeToGo: @ 823D89D
 	.string "And where would you like to go?$"
 
 BattleFrontier_OutsideWest_Text_SlateportItIs: @ 823D8F2
-	.string "SLATEPORT CITY it is, then!$"
+	.string "Slateport City it is, then!$"
 
 BattleFrontier_OutsideWest_Text_LilycoveItIs: @ 823D90E
 	.string "LILYCOVE CITY it is, then!$"
@@ -526,4 +526,3 @@ BattleFrontier_OutsideWest_Text_MonWithLongTailInFrontier: @ 823E5A5
 	.string "It must be adorable. I'm sure of it…\p"
 	.string "Oh, challenges can wait. I feel driven\n"
 	.string "to find the delightful creature!$"
-

@@ -405,7 +405,7 @@ Route116_Text_ThankYouTokenOfAppreciation: @ 81F3317
 	.string "You're that person who not only helped\n"
 	.string "me in PETALBURG WOODS, but also got\l"
 	.string "back my stolen package and then even\l"
-	.string "graciously delivered it to SLATEPORT!\p"
+	.string "graciously delivered it to Slateport!\p"
 	.string "CAPT. STERN informed us that the\n"
 	.string "package arrived, too!\p"
 	.string "I thank you very, very much!\p"
@@ -488,4 +488,3 @@ Route116_Text_TrainerTipsBagHasPockets: @ 81F38D4
 	.string "placed in the appropriate POCKETS.\p"
 	.string "No TRAINER can afford to be without\n"
 	.string "a BAG of their own.$"
-

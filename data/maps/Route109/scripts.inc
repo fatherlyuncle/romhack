@@ -479,7 +479,7 @@ Route109_EventScript_Elijah:: @ 81EEC06
 
 DewfordTown_Text_BrineyLandedInSlateportDeliverGoods: @ 81EEC1D
 	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've made land in SLATEPORT!\p"
+	.string "We've made land in Slateport!\p"
 	.string "I suppose you're going to visit CAPT.\n"
 	.string "STERN and deliver the DEVON GOODS?$"
 
@@ -500,7 +500,7 @@ Route109_Text_BrineyDeliverDevonGoods: @ 81EED5E
 
 DewfordTown_Text_BrineyLandedInSlateport: @ 81EEDA7
 	.string "MR. BRINEY: Ahoy! We've made land in\n"
-	.string "SLATEPORT!\p"
+	.string "Slateport!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 

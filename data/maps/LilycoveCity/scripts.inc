@@ -701,7 +701,7 @@ LilycoveCity_Text_MuseumSignPlayersExhibit: @ 81E4571
 LilycoveCity_Text_HarborSignUnderConstruction: @ 81E45A7
 	.string "LILYCOVE CITY HARBOR\p"
 	.string "“The ferry S.S. TIDAL is under\n"
-	.string "construction in SLATEPORT CITY.\p"
+	.string "construction in Slateport City.\p"
 	.string "“Service is scheduled to begin\n"
 	.string "shortly.”$"
 
@@ -766,4 +766,3 @@ LilycoveCity_Text_HoneymoonVowToSeeRarePokemon: @ 81E49F4
 	.string "So we were delighted to see a rare\n"
 	.string "POKéMON as soon as we arrived.\p"
 	.string "I mean, we are totally happy!$"
-

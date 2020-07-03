@@ -772,7 +772,7 @@ Route110_Text_WeCantTalkAboutAquaActivities: @ 81EFB5D
 	.string "We can't talk about them yet.$"
 
 Route110_Text_KickUpARuckus: @ 81EFB93
-	.string "I want to get going to SLATEPORT and\n"
+	.string "I want to get going to Slateport and\n"
 	.string "kick up a ruckus!$"
 
 Route110_Text_MyFirstJobInAqua: @ 81EFBCA
@@ -921,7 +921,7 @@ Route110_Text_ChallengeReactionWorst: @ 81F05CE
 Route110_Text_RatedForNumberOfCollisions: @ 81F0661
 	.string "This is CYCLING ROAD.\p"
 	.string "If you were to ride from MAUVILLE to\n"
-	.string "SLATEPORT on a MACH BIKE, you would\l"
+	.string "Slateport on a Chrome Bike, you would\l"
 	.string "be rated for the number of collisions\l"
 	.string "and your total time.$"
 
@@ -939,7 +939,7 @@ Route110_Text_AcroBikesDoNotQualify: @ 81F0755
 
 Route110_Text_SlateportCitySign: @ 81F0812
 	.string "ROUTE 110\n"
-	.string "{DOWN_ARROW} SLATEPORT CITY$"
+	.string "{DOWN_ARROW} Slateport City$"
 
 Route110_Text_CyclingRoadSign: @ 81F082D
 	.string "SEASIDE CYCLING ROAD$"
@@ -1015,4 +1015,3 @@ Route110_Text_KeepAnEyeOutForRival: @ 81F0C33
 	.string "… … … … … …\p"
 	.string "Well, I had better get going.\n"
 	.string "See you again, {PLAYER}{KUN}!$"
-

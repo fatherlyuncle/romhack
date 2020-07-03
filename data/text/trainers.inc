@@ -464,7 +464,7 @@ Route105_Text_DominikDefeated: @ 8295EEA
 Route105_Text_DominikPostBattle: @ 8295F08
 	.string "Why is the sea blue?\p"
 	.string "I learned about that at the MUSEUM in\n"
-	.string "SLATEPORT, but I forgot.$"
+	.string "Slateport, but I forgot.$"
 
 Route105_Text_BeverlyIntro: @ 8295F5C
 	.string "My body feels lighter in the water.\n"
@@ -824,7 +824,7 @@ Route109_Text_AlicePostBattle: @ 829720F
 
 Route109_Text_HueyIntro: @ 8297235
 	.string "I've laid anchor in ports around\n"
-	.string "the world, but SLATEPORT's the best.$"
+	.string "the world, but Slateport's the best.$"
 
 Route109_Text_HueyDefeated: @ 829727B
 	.string "You're the best!$"
@@ -1001,7 +1001,7 @@ Route109_Text_ElijahDefeated: @ 8297AC7
 Route109_Text_ElijahPostBattle: @ 8297AE5
 	.string "For a guy as macho as me, a port\n"
 	.string "is the perfect setting!\p"
-	.string "I guess I'll head for SLATEPORT.$"
+	.string "I guess I'll head for Slateport.$"
 
 Route110_Text_JacobIntro: @ 8297B3F
 	.string "Whoa! Watch it!\n"

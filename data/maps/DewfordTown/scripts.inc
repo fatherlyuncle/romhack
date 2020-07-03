@@ -692,7 +692,7 @@ DewfordTown_Text_PetalburgWereSettingSail: @ 81E9CE5
 	.string "PEEKO, we're setting sail, my darling!$"
 
 DewfordTown_Text_SlateportWereSettingSail: @ 81E9D3A
-	.string "MR. BRINEY: SLATEPORT, is it?\p"
+	.string "Mr. Briney: Slateport, is it?\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 

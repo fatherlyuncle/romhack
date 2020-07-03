@@ -110,7 +110,7 @@ Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford: @ 8229E9B
 	.string "You want to sail with me?\p"
 	.string "Hmhm…\p"
 	.string "You have a LETTER bound for DEWFORD\n"
-	.string "and a package for SLATEPORT, then?\p"
+	.string "and a package for Slateport, then?\p"
 	.string "Quite the busy life you must lead!\p"
 	.string "But, certainly, what you're asking is\n"
 	.string "no problem at all.\p"
@@ -132,7 +132,7 @@ Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford: @ 822A0AD
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "I know exactly what you want to say!\p"
 	.string "You're to deliver a LETTER to DEWFORD\n"
-	.string "and a package to SLATEPORT.\p"
+	.string "and a package to Slateport.\p"
 	.string "What you need me to do is no problem\n"
 	.string "at all--I'm the man for the job!\p"
 	.string "First, we'll set sail for DEWFORD.$"
@@ -141,7 +141,7 @@ Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford: @ 822A18F
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "I know exactly what you want to say!\p"
 	.string "You're to deliver a package to\n"
-	.string "CAPT. STERN in SLATEPORT.\p"
+	.string "Capt. Stern in Slateport.\p"
 	.string "What you need me to do is no problem\n"
 	.string "at all--I'm the man for the job!\p"
 	.string "First, we'll set sail for DEWFORD.$"
@@ -159,4 +159,3 @@ Route104_MrBrineysHouse_Text_TellMeWheneverYouWantToSail: @ 822A2C3
 
 Route104_MrBrineysHouse_Text_Peeko: @ 822A337
 	.string "PEEKO: Pii piihyoro!$"
-

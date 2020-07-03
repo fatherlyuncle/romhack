@@ -152,7 +152,7 @@ Route109_SeashoreHouse_Text_DwayneDefeated: @ 8269867
 	.string "I can accept that loss, matey!$"
 
 Route109_SeashoreHouse_Text_DwaynePostBattle: @ 826989D
-	.string "Whenever I'm in SLATEPORT, I enjoy\n"
+	.string "Whenever I'm in Slateport, I enjoy\n"
 	.string "hot battles and ice-cold SODA POP!$"
 
 Route109_SeashoreHouse_Text_JohannaIntro: @ 82698E3
@@ -178,4 +178,3 @@ Route109_SeashoreHouse_Text_SimonPostBattle: @ 82699DF
 	.string "If one of my POKéMON knew the move\n"
 	.string "for carrying me across water on its\l"
 	.string "back, I could get rid of this inner tube.$"
-
