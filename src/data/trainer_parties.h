@@ -7975,6 +7975,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMtChimney[] = {
     {
     .iv = 150,
     .lvl = 25,
+	.evs = {0, 0, 0, 255, 0, 255},
     .species = SPECIES_CAMERUPT,
     }
 };
