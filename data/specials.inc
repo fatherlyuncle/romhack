@@ -535,3 +535,9 @@ gSpecials:: @ 81DBA64
 	def_special RemoveRecordsWindow
 	def_special CloseDeptStoreElevatorWindow
 	def_special TrySetBattleTowerLinkType
+	def_special SetHpEvs //for setting EVs in script //gSpecialVar_0x8000
+	def_special SetAtkEvs//^//gSpecialVar_0x8001
+	def_special SetDefEvs//^//gSpecialVar_0x8002
+	def_special SetSpdEvs//^//gSpecialVar_0x8003
+	def_special SetSpAtkEvs//^//gSpecialVar_0x8005
+	def_special SetSpDefEvs//^//gSpecialVar_0x8006   //gSpecialVar_0x8004=mon
