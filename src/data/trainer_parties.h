@@ -2,7 +2,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
     {
     .iv = 0,
     .lvl = 21,
-	.evs = {0, 0, 0, 0, 0, 0},
     .species = SPECIES_GEODUDE,
     },
     {
@@ -7971,7 +7970,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMtChimney[] = {
     {
     .iv = 150,
     .lvl = 24,
-	.evs = {255, 0, 0, 255, 0, 0},
     .species = SPECIES_MIGHTYENA,
     },
     {
@@ -7982,7 +7980,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMtChimney[] = {
     {
     .iv = 150,
     .lvl = 25,
-	.evs = {255, 0, 0, 255, 0, 255},
     .species = SPECIES_CAMERUPT,
     }
 };
