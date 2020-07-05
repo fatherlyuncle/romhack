@@ -7965,7 +7965,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMagmaHideout[] = {
     .species = SPECIES_CAMERUPT,
     }
 };
-
 static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMtChimney[] = {
     {
     .iv = 150,
@@ -7981,9 +7980,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMtChimney[] = {
     .iv = 150,
     .lvl = 25,
     .species = SPECIES_CAMERUPT,
+    },
+    {
+    .iv = 0,
+    .lvl = 25,
+    .species = SPECIES_CHIMCHAR,
     }
 };
-
 static const struct TrainerMonNoItemDefaultMoves sParty_Tiana[] = {
     {
     .iv = 0,
@@ -9829,7 +9832,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMossdeep[] = {
     .species = SPECIES_CAMERUPT,
     }
 };
-
 static const struct TrainerMonNoItemDefaultMoves sParty_Pete[] = {
     {
     .iv = 0,
@@ -12426,6 +12428,10 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+
+
+
+
 
 
 
