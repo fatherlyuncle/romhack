@@ -2,6 +2,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Sawyer1[] = {
     {
     .iv = 0,
     .lvl = 21,
+	.evs = {0, 0, 0, 0, 0, 0},
+    .species = SPECIES_GEODUDE,
+    },
+    {
+    .iv = 0,
+    .lvl = 21,
     .species = SPECIES_GEODUDE,
     }
 };
@@ -12423,6 +12429,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+
 
 
 

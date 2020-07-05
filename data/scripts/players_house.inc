@@ -698,5 +698,6 @@ PlayersHouse_1F_Movement_PlayerApproachTVForLatiFemale: @ 8292DDE
 	step_end
 
 EventScript_RunningShoesManual:: @ 8292DE5
-	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
+	///msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
+	call SetEVs
 	end

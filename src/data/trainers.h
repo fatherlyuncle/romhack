@@ -11985,3 +11985,4 @@ const struct Trainer gTrainers[] = {
 
 
 
+
