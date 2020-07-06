@@ -1154,6 +1154,7 @@ extern const u8 gText_BunnyHops[];
 extern const u8 gText_Jump[];
 extern const u8 gText_Satisfied[];
 extern const u8 gText_Dissatisfied[];
+extern const u8 gText_ThrowInPremierBalls[]; //for free permier balls
 extern const u8 gText_DeepSeaTooth[];
 extern const u8 gText_DeepSeaScale[];
 extern const u8 gText_BlueFlute2[];
