@@ -383,6 +383,11 @@ static void CreateWildMon(u16 species, u8 level)
     }
 
     CreateMonWithNature(&gEnemyParty[0], species, level, 32, PickWildMonNature());
+	SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, /*Random() %*/ 2); //test by forcing hidden//adds wild hidden abil
+	if (GetMonAbility(&gEnemyParty[0]) == ABILITY_NONE)//backup to prevent null ability
+	{
+		SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, 0);
+	}
 }
 
 enum
