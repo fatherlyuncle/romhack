@@ -218,14 +218,38 @@ Route101_EventScript_RouteSign:: @ 81EBE0D
 Route101_EventScript_BirchsBag:: @ 81EBE16
 	lock
 	faceplayer
+	msgbox Text_ChooseLetter, MSGBOX_DEFAULT
+	closemessage
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
-	fadescreen FADE_TO_BLACK
-	removeobject 4
+	scrollingmultichoice 0, 2, 3, 5, FALSE
+	msgbox Text_ChoosePokemon, MSGBOX_DEFAULT
+	switch VAR_RESULT
+	callcase 0, Route101_Grass_Pokemon
+	callcase 1, Route101_Fire_Pokemon
+	callcase 2, Route101_Water_Pokemon
+	callcase 3, Route101_Bug_Pokemon
+	callcase 4, Route101_Normal_Pokemon
+	callcase 5, Route101_Poison_Pokemon
+	callcase 6, Route101_Flying_Pokemon
+	callcase 7, Route101_Rock_Pokemon
+	callcase 8, Route101_Ground_Pokemon
+	callcase 9, Route101_Electric_Pokemon
+	callcase 10, Route101_Fighting_Pokemon
+	callcase 11, Route101_Steel_Pokemon
+	callcase 12, Route101_Ice_Pokemon
+	callcase 13, Route101_Dark_Pokemon
+	callcase 14, Route101_Psychic_Pokemon
+	callcase 15, Route101_Ghost_Pokemon
+	callcase 16, Route101_Dragon_Pokemon
+	callcase 17, Route101_Fairy_Pokemon
+	closemessage
+	special ChooseStarter
+	waitmovement 0
+	setvar VAR_STARTER_MON, 255
 	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestLeft
-	waitmovement 0
-	special ChooseStarter
+	removeobject 4
 	waitstate
 	applymovement 2, Route101_Movement_BirchApproachPlayer
 	waitmovement 0
@@ -299,3 +323,306 @@ Route101_Text_RouteSign: @ 81EC0C8
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
+Route101_Grass_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 1, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Grass_Pokemon
+	return
+	
+Route101_Fire_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 2, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Fire_Pokemon
+	return
+	
+Route101_Water_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 3, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Water_Pokemon
+	return
+	
+Route101_Bug_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 4, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Bug_Pokemon
+	return
+	
+Route101_Normal_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 5, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Normal_Pokemon
+	return
+	
+Route101_Poison_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 6, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Poison_Pokemon
+	return
+
+Route101_Flying_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 7, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Flying_Pokemon
+	return
+
+Route101_Rock_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 8, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Rock_Pokemon
+	return
+	
+Route101_Ground_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 9, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Ground_Pokemon
+	return
+	
+Route101_Electric_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 10, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Electric_Pokemon
+	return
+	
+Route101_Fighting_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 11, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Fighting_Pokemon
+	return
+	
+Route101_Steel_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 12, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Steel_Pokemon
+	return
+	
+Route101_Ice_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 13, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Ice_Pokemon
+	return
+	
+Route101_Dark_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 14, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Murkrow_Pokemon
+	return
+	
+Route101_Psychic_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 15, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Psychic_Pokemon
+	return
+	
+Route101_Ghost_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 16, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Ghost_Pokemon
+	return
+	
+Route101_Dragon_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 17, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Dragon_Pokemon
+	return
+	
+Route101_Fairy_Pokemon
+	hidemonpic
+	closemessage
+	scrollingmultichoice 18, 2, 3, 5, TRUE
+	compare VAR_RESULT, 0x7F
+	goto_if_eq Route101_EventScript_BirchsBag
+	GetStarterName
+	showmonpic VAR_0x8002, 10, 3
+	playmoncry VAR_0x8002, 0
+	msgbox Text_YouSure, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	call_if_eq Route101_ImSure
+	compare VAR_RESULT, NO
+	goto_if_eq Route101_Fairy_Pokemon
+	return
+	
+Route101_ImSure::
+	hidemonpic
+	copyvar VAR_RESULT, VAR_0x8001
+	return
+	
+Text_ChooseLetter:
+	.string "Choose the Type of the\n"
+	.string "Starter Pokemon that you want.$"
+	
+Text_ChoosePokemon:
+	.string "Choose which Pokemon you want.\n"
+	.string "Press B to go back to prior list.$"
+
+Text_YouSure:
+	.string "Are you sure you want {STR_VAR_1}?$"

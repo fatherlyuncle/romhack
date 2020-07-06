@@ -245,18 +245,24 @@ LilycoveCity_EventScript_May:: @ 81E2DF8
 	goto_if_eq LilycoveCity_EventScript_DeclineMayBattle
 	msgbox LilycoveCity_Text_MayWontBeBeaten, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, LilycoveCity_EventScript_BattleMayTreecko
-	case 1, LilycoveCity_EventScript_BattleMayTorchic
-	case 2, LilycoveCity_EventScript_BattleMayMudkip
+	case 1, LilycoveCity_EventScript_BattleMayFighting
+	case 2, LilycoveCity_EventScript_BattleMayFlying
+	case 3, LilycoveCity_EventScript_BattleMayPoison
+	case 4, LilycoveCity_EventScript_BattleMayGround
+	case 5, LilycoveCity_EventScript_BattleMayRock
+	case 6, LilycoveCity_EventScript_BattleMayBug
+	case 7, LilycoveCity_EventScript_BattleMayGhost
+	case 8, LilycoveCity_EventScript_BattleMaySteel
+	case 10, LilycoveCity_EventScript_BattleMayTreecko
+	case 11, LilycoveCity_EventScript_BattleMayTorchic
+	case 12, LilycoveCity_EventScript_BattleMayMudkip
+	case 13, LilycoveCity_EventScript_BattleMayElectric
+	case 14, LilycoveCity_EventScript_BattleMayPsychic
+	case 15, LilycoveCity_EventScript_BattleMayIce
+	case 16, LilycoveCity_EventScript_BattleMayDragon
+	case 17, LilycoveCity_EventScript_BattleMayDark
+	case 18, LilycoveCity_EventScript_BattleMayFairy
 	end
-
-LilycoveCity_EventScript_MayAskToBattleAgain:: @ 81E2E48
-	msgbox LilycoveCity_Text_MayBattleMe, MSGBOX_YESNO
-	return
-
-LilycoveCity_EventScript_MayAskToBattle:: @ 81E2E51
-	msgbox LilycoveCity_Text_MayShoppingLetsBattle, MSGBOX_YESNO
-	return
 
 LilycoveCity_EventScript_DeclineMayBattle:: @ 81E2E5A
 	setflag FLAG_DECLINED_RIVAL_BATTLE_LILYCOVE
@@ -274,18 +280,24 @@ LilycoveCity_EventScript_Brendan:: @ 81E2E6B
 	goto_if_eq LilycoveCity_EventScript_DeclineBrendanBattle
 	msgbox LilycoveCity_Text_BrendanWontBeBeaten, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, LilycoveCity_EventScript_BattleBrendanTreecko
-	case 1, LilycoveCity_EventScript_BattleBrendanTorchic
-	case 2, LilycoveCity_EventScript_BattleBrendanMudkip
+	case 1, LilycoveCity_EventScript_BattleBrendanFighting
+	case 2, LilycoveCity_EventScript_BattleBrendanFlying
+	case 3, LilycoveCity_EventScript_BattleBrendanPoison
+	case 4, LilycoveCity_EventScript_BattleBrendanGround
+	case 5, LilycoveCity_EventScript_BattleBrendanRock
+	case 6, LilycoveCity_EventScript_BattleBrendanBug
+	case 7, LilycoveCity_EventScript_BattleBrendanGhost
+	case 8, LilycoveCity_EventScript_BattleBrendanSteel
+	case 10, LilycoveCity_EventScript_BattleBrendanTreecko
+	case 11, LilycoveCity_EventScript_BattleBrendanTorchic
+	case 12, LilycoveCity_EventScript_BattleBrendanMudkip
+	case 13, LilycoveCity_EventScript_BattleBrendanElectric
+	case 14, LilycoveCity_EventScript_BattleBrendanPsychic
+	case 15, LilycoveCity_EventScript_BattleBrendanIce
+	case 16, LilycoveCity_EventScript_BattleBrendanDragon
+	case 17, LilycoveCity_EventScript_BattleBrendanDark
+	case 18, LilycoveCity_EventScript_BattleBrendanFairy
 	end
-
-LilycoveCity_EventScript_BrendanAskToBattleAgain:: @ 81E2EBB
-	msgbox LilycoveCity_Text_BrendanBattleMe, MSGBOX_YESNO
-	return
-
-LilycoveCity_EventScript_BrendanAskToBattle:: @ 81E2EC4
-	msgbox LilycoveCity_Text_BrendanShoppingLetsBattle, MSGBOX_YESNO
-	return
 
 LilycoveCity_EventScript_DeclineBrendanBattle:: @ 81E2ECD
 	setflag FLAG_DECLINED_RIVAL_BATTLE_LILYCOVE
@@ -295,33 +307,173 @@ LilycoveCity_EventScript_DeclineBrendanBattle:: @ 81E2ECD
 	release
 	end
 
-LilycoveCity_EventScript_BattleMayTreecko:: @ 81E2EDE
+LilycoveCity_EventScript_BattleMayFighting::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_FIGHTING, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayFlying::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_FLYING, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayPoison::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_POISON, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayGround::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_GROUND, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayRock::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_ROCK, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayBug::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_BUG, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayGhost::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_GHOST, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMaySteel::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_STEEL, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+
+LilycoveCity_EventScript_BattleMayTreecko:: @ 81E10DB
 	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_TREECKO, LilycoveCity_Text_MayDefeat
 	goto LilycoveCity_EventScript_DefeatedMay
 	end
 
-LilycoveCity_EventScript_BattleMayTorchic:: @ 81E2EEE
+LilycoveCity_EventScript_BattleMayTorchic:: @ 81E10EE
 	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_TORCHIC, LilycoveCity_Text_MayDefeat
 	goto LilycoveCity_EventScript_DefeatedMay
 	end
 
-LilycoveCity_EventScript_BattleMayMudkip:: @ 81E2EFE
+LilycoveCity_EventScript_BattleMayMudkip:: @ 81E1191
 	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_MUDKIP, LilycoveCity_Text_MayDefeat
 	goto LilycoveCity_EventScript_DefeatedMay
 	end
+	
+LilycoveCity_EventScript_BattleMayElectric::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_ELECTRIC, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayPsychic::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_PSYCHIC, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayIce::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_ICE, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayDragon::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_DRAGON, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayDark::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_DARK, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
+	
+LilycoveCity_EventScript_BattleMayFairy::
+	trainerbattle_no_intro TRAINER_MAY_LILYCOVE_FAIRY, LilycoveCity_Text_MayDefeat
+	goto LilycoveCity_EventScript_DefeatedMay
+	end
 
-LilycoveCity_EventScript_BattleBrendanTreecko:: @ 81E2F0E
+LilycoveCity_EventScript_BattleBrendanFighting::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_FIGHTING, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanFlying::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_FLYING, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanPoison::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_POISON, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanGround::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_GROUND, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanRock::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_ROCK, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanBug::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_BUG, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanGhost::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_GHOST, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanSteel::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_STEEL, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+
+LilycoveCity_EventScript_BattleBrendanTreecko:: @ 81E10DB
 	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_TREECKO, LilycoveCity_Text_BrendanDefeat
 	goto LilycoveCity_EventScript_DefeatedBrendan
 	end
 
-LilycoveCity_EventScript_BattleBrendanTorchic:: @ 81E2F1E
+LilycoveCity_EventScript_BattleBrendanTorchic:: @ 81E10EE
 	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_TORCHIC, LilycoveCity_Text_BrendanDefeat
 	goto LilycoveCity_EventScript_DefeatedBrendan
 	end
 
-LilycoveCity_EventScript_BattleBrendanMudkip:: @ 81E2F2E
+LilycoveCity_EventScript_BattleBrendanMudkip:: @ 81E1191
 	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_MUDKIP, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanElectric::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_ELECTRIC, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanPsychic::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_PSYCHIC, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanIce::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_ICE, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanDragon::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_DRAGON, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanDark::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_DARK, LilycoveCity_Text_BrendanDefeat
+	goto LilycoveCity_EventScript_DefeatedBrendan
+	end
+	
+LilycoveCity_EventScript_BattleBrendanFairy::
+	trainerbattle_no_intro TRAINER_BRENDAN_LILYCOVE_FAIRY, LilycoveCity_Text_BrendanDefeat
 	goto LilycoveCity_EventScript_DefeatedBrendan
 	end
 

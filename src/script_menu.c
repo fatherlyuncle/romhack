@@ -763,3 +763,340 @@ int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width)
 
     return adjustedLeft;
 }
+
+static const u8 sText_Example1[] = _("Grass");
+static const u8 sText_Example2[] = _("Fire");
+static const u8 sText_Example4[] = _("Water");
+static const u8 sText_Example5[] = _("Bug");
+static const u8 sText_Example6[] = _("Normal");
+static const u8 sText_Example7[] = _("Poison");
+static const u8 sText_Example8[] = _("Flying");
+static const u8 sText_Example9[] = _("Rock");
+static const u8 sText_Example10[] = _("Ground");
+static const u8 sText_Example11[] = _("Electric");
+static const u8 sText_Example12[] = _("Fighting");
+static const u8 sText_Example13[] = _("Steel");
+static const u8 sText_Example14[] = _("Ice");
+static const u8 sText_Example15[] = _("Dark");
+static const u8 sText_Example16[] = _("Psychic");
+static const u8 sText_Example17[] = _("Ghost");
+static const u8 sText_Example18[] = _("Dragon");
+static const u8 sText_Example19[] = _("Fairy");
+static const u8 Treecko[] = _("Treecko");
+static const u8 Turtwig[] = _("Turtwig");
+static const u8 Rowlet[] = _("Rowlet");
+static const u8 Torchic[] = _("Torchic");
+static const u8 Chimchar[] = _("Chimchar");
+static const u8 Litten[] = _("Litten");
+static const u8 Mudkip[] = _("Mudkip");
+static const u8 Piplup[] = _("Piplup");
+static const u8 Popplio[] = _("Popplio");
+static const u8 Pinsir[] = _("Pinsir");
+static const u8 Yanma[] = _("Yanma");
+static const u8 Sewaddle[] = _("Sewaddle");
+static const u8 Teddiursa[] = _("Teddiursa");
+static const u8 Stantler[] = _("Stantler");
+static const u8 Lillipup[] = _("Lillipup");
+static const u8 Alolan_Grimer[] = _("Alolan Grimer");
+static const u8 Croagunk[] = _("Croagunk");
+static const u8 Nidoran_M[] = _("Nidoran M");
+static const u8 Pidgey[] = _("Pidgey");
+static const u8 Starly[] = _("Starly");
+static const u8 Pikipek[] = _("Pikipek");
+static const u8 Bonsly[] = _("Bonsly");
+static const u8 Roggenrola[] = _("Roggenrola");
+static const u8 Rockruff[] = _("Rockruff");
+static const u8 Phanpy[] = _("Phanpy");
+static const u8 Sundile[] = _("Sandile");
+static const u8 Mudbray[] = _("Mudbray");
+static const u8 Mareep[] = _("Mareep");
+static const u8 Pichu[] = _("Pichu");
+static const u8 Shinx[] = _("Shinx");
+static const u8 Riolu[] = _("Riolu");
+static const u8 Pancham[] = _("Pancham");
+static const u8 Timburr[] = _("Timburr");
+static const u8 Magnemite[] = _("Magnemite");
+static const u8 Bronzor[] = _("Bronzor");
+static const u8 Klink[] = _("Klink");
+static const u8 Swinub[] = _("Swinub");
+static const u8 Cubchoo[] = _("Cubchoo");
+static const u8 Smoochum[] = _("Smoochum");
+static const u8 Houndoor[] = _("Houndoor");
+static const u8 Zorua[] = _("Zorua");
+static const u8 Murkrow[] = _("Murkrow");
+static const u8 Girafarig[] = _("Girafarig");
+static const u8 Ralts[] = _("Ralts");
+static const u8 Solosis[] = _("Solosis");
+static const u8 Spiritomb[] = _("Spiritomb");
+static const u8 Misdreavus[] = _("Misdreavus");
+static const u8 Gastly[] = _("Gastly");
+static const u8 Dratini[] = _("Dratini");
+static const u8 Druddigon[] = _("Druddigon");
+static const u8 Axew[] = _("Axew");
+static const u8 Flabebe[] = _("Flabebe");
+static const u8 Cleffa[] = _("Cleffa");
+static const u8 Togepi[] = _("Togepi");
+
+// Sets of multichoices.
+static const struct ListMenuItem sSetGrass[] =
+{
+	{Treecko, 25},
+	{Turtwig, 26},
+	{Rowlet, 27},
+};
+
+static const struct ListMenuItem sSetFire[] =
+{
+	{Torchic, 28},
+	{Chimchar, 29},
+	{Litten, 30},
+};
+
+static const struct ListMenuItem sSetWater[] =
+{
+	{Mudkip, 31},
+	{Piplup, 32},
+	{Popplio, 33},
+};
+
+static const struct ListMenuItem sSetBug[] =
+{
+	{Pinsir, 34},
+	{Yanma, 35},
+	{Sewaddle, 36},
+};
+
+static const struct ListMenuItem sSetNormal[] =
+{
+	{Teddiursa, 37},
+	{Stantler, 38},
+	{Lillipup, 39},
+};
+
+static const struct ListMenuItem sSetPoison[] =
+{
+	{Alolan_Grimer, 40},
+	{Croagunk, 41},
+	{Nidoran_M, 42},
+};
+
+static const struct ListMenuItem sSetFlying[] =
+{
+	{Pidgey, 43},
+	{Starly, 44},
+	{Pikipek, 45},
+};
+
+static const struct ListMenuItem sSetRock[] =
+{
+	{Bonsly, 46},
+	{Roggenrola, 47},
+	{Rockruff, 48},
+};
+
+static const struct ListMenuItem sSetGround[] =
+{
+	{Phanpy, 49},
+	{Sandile, 50},
+	{Mudbray, 51},
+};
+
+static const struct ListMenuItem sSetElectric[] =
+{
+	{Mareep, 52},
+	{Pichu, 53},
+	{Shinx, 54},
+};
+
+static const struct ListMenuItem sSetFighting[] =
+{
+	{Riolu, 55},
+	{Pancham, 56},
+	{Timburr, 57},
+};
+
+static const struct ListMenuItem sSetSteel[] =
+{
+	{Magnemite, 58},
+	{Bronzor, 59},
+	{Klink, 60},
+};
+
+static const struct ListMenuItem sSetIce[] =
+{
+	{Swinub, 61},
+	{Cubchoo, 62},
+	{Smoochum, 63},
+};
+
+static const struct ListMenuItem sSetDark[] =
+{
+	{Houndoor, 64},
+	{Zorua, 65},
+	{Murkrow, 66},
+};
+
+static const struct ListMenuItem sSetPsychic[] =
+{
+	{Girafarig, 67},
+	{Ralts, 68},
+	{Solosis, 69},
+};
+
+static const struct ListMenuItem sSetGhost[] =
+{
+	{Spiritomb, 70},
+	{Misdreavus, 71},
+	{Gastly, 72},
+};
+
+static const struct ListMenuItem sSetDragon[] =
+{
+	{Dratini, 73},
+	{Druddigon, 74},
+	{Axew, 75},
+};
+
+static const struct ListMenuItem sSetFairy[] =
+{
+	{Flabebe, 76},
+	{Cleffa, 77},
+	{Togepi, 78},
+};
+
+static const struct ListMenuItem sSet2[] =
+{
+	{sText_Example19, 0},
+	{sText_Example18, 1},
+	{sText_Example17, 2},
+	{sText_Example16, 3},
+	{sText_Example15, 4},
+	{sText_Example14, 5},
+	{sText_Example13, 6},
+	{sText_Example12, 7},
+	{sText_Example11, 8},
+	{sText_Example10, 9},
+	{sText_Example9, 10},
+	{sText_Example8, 11},
+	{sText_Example7, 12},
+	{sText_Example6, 13},
+	{sText_Example5, 14},
+	{sText_Example4, 15},
+    {sText_Example3, 16},
+    {sText_Example2, 17},
+    {sText_Example1, 18},
+};
+
+// Table of your multichoice sets.
+struct
+{
+    const struct ListMenuItem *set;
+    int count;
+} 
+static const sScrollingSets[] =
+{
+    {sSet2, ARRAY_COUNT(sSet2)},
+	{sSetGrass, ARRAY_COUNT(sSetGrass)},
+	{sSetFire, ARRAY_COUNT(sSetFire)},
+	{sSetWater, ARRAY_COUNT(sSetWater)},
+	{sSetBug, ARRAY_COUNT(sSetBug)},
+	{sSetNormal, ARRAY_COUNT(sSetNormal)},
+	{sSetPoison, ARRAY_COUNT(sSetPoison)},
+	{sSetFlying, ARRAY_COUNT(sSetFlying)},
+	{sSetRock, ARRAY_COUNT(sSetRock)},
+	{sSetGround, ARRAY_COUNT(sSetGround)},
+	{sSetElectric, ARRAY_COUNT(sSetElectric)},
+	{sSetFighting, ARRAY_COUNT(sSetFighting)},
+	{sSetSteel, ARRAY_COUNT(sSetSteel)},
+	{sSetIce, ARRAY_COUNT(sSetIce)},
+	{sSetDark, ARRAY_COUNT(sSetDark)},
+	{sSetPsychic, ARRAY_COUNT(sSetPsychic)},
+	{sSetGhost, ARRAY_COUNT(sSetGhost)},
+	{sSetDragon, ARRAY_COUNT(sSetDragon)},
+	{sSetFairy, ARRAY_COUNT(sSetFairy)},
+};
+
+static void Task_ScrollingMultichoiceInput(u8 taskId);
+
+static const struct ListMenuTemplate sMultichoiceListTemplate =
+{
+    .header_X = 0,
+    .item_X = 8,
+    .cursor_X = 0,
+    .upText_Y = 1,
+    .cursorPal = 2,
+    .fillValue = 1,
+    .cursorShadowPal = 3,
+    .lettersSpacing = 1,
+    .itemVerticalPadding = 0,
+    .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
+    .fontId = 1,
+    .cursorKind = 0
+};
+
+// 0x8004 = set id
+// 0x8005 = window X
+// 0x8006 = window y
+// 0x8007 = showed at once
+// 0x8008 = Allow B press
+void ScriptMenu_ScrollingMultichoice(void)
+{
+    int i, windowId, taskId, width = 0;
+    int setId = gSpecialVar_0x8004;
+    int left = gSpecialVar_0x8005;
+    int top = gSpecialVar_0x8006;
+    int maxShowed = gSpecialVar_0x8007;
+	
+	for (i = 0; i < sScrollingSets[setId].count; i++)
+        width = DisplayTextAndGetWidth(sScrollingSets[setId].set[i].name, width);
+
+    width = ConvertPixelWidthToTileWidth(width);
+    left = sub_80E2D5C(left, width);
+    windowId = CreateWindowFromRect(left, top, width, maxShowed * 2);
+    SetStandardWindowBorderStyle(windowId, 0);
+    CopyWindowToVram(windowId, 3);
+
+    gMultiuseListMenuTemplate = sMultichoiceListTemplate;
+    gMultiuseListMenuTemplate.windowId = windowId;
+    gMultiuseListMenuTemplate.items = sScrollingSets[setId].set;
+    gMultiuseListMenuTemplate.totalItems = sScrollingSets[setId].count;
+    gMultiuseListMenuTemplate.maxShowed = maxShowed;
+
+    taskId = CreateTask(Task_ScrollingMultichoiceInput, 0);
+    gTasks[taskId].data[0] = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
+    gTasks[taskId].data[1] = gSpecialVar_0x8008;
+    gTasks[taskId].data[2] = windowId;
+}
+
+static void Task_ScrollingMultichoiceInput(u8 taskId)
+{
+    bool32 done = FALSE;
+    s32 input = ListMenu_ProcessInput(gTasks[taskId].data[0]);
+
+    switch (input)
+    {
+    case LIST_HEADER:
+    case LIST_NOTHING_CHOSEN:
+        break;
+    case LIST_CANCEL:
+        if (gTasks[taskId].data[1])
+        {
+            gSpecialVar_Result = 0x7F;
+            done = TRUE;
+        }
+        break;
+    default:
+        gSpecialVar_Result = input;
+        done = TRUE;
+        break;
+    }
+
+    if (done)
+    {
+        DestroyListMenuTask(gTasks[taskId].data[0], NULL, NULL);
+        ClearStdWindowAndFrame(gTasks[taskId].data[2], TRUE);
+        RemoveWindow(gTasks[taskId].data[2]);
+        EnableBothScriptContexts();
+        DestroyTask(taskId);
+    }
+}

@@ -878,9 +878,23 @@ RustboroCity_EventScript_MayAskToBattle:: @ 81E1070
 RustboroCity_EventScript_BattleMay:: @ 81E1092
 	msgbox RustboroCity_Text_MayImNotGoingToLose, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, RustboroCity_EventScript_BattleMayTreecko
-	case 1, RustboroCity_EventScript_BattleMayTorchic
-	case 2, RustboroCity_EventScript_BattleMayMudkip
+	case 1, RustboroCity_EventScript_BattleMayFighting
+	case 2, RustboroCity_EventScript_BattleMayFlying
+	case 3, RustboroCity_EventScript_BattleMayPoison
+	case 4, RustboroCity_EventScript_BattleMayGround
+	case 5, RustboroCity_EventScript_BattleMayRock
+	case 6, RustboroCity_EventScript_BattleMayBug
+	case 7, RustboroCity_EventScript_BattleMayGhost
+	case 8, RustboroCity_EventScript_BattleMaySteel
+	case 10, RustboroCity_EventScript_BattleMayTreecko
+	case 11, RustboroCity_EventScript_BattleMayTorchic
+	case 12, RustboroCity_EventScript_BattleMayMudkip
+	case 13, RustboroCity_EventScript_BattleMayElectric
+	case 14, RustboroCity_EventScript_BattleMayPsychic
+	case 15, RustboroCity_EventScript_BattleMayIce
+	case 16, RustboroCity_EventScript_BattleMayDragon
+	case 17, RustboroCity_EventScript_BattleMayDark
+	case 18, RustboroCity_EventScript_BattleMayFairy
 	end
 
 RustboroCity_EventScript_MayBrineyHint:: @ 81E10C1
@@ -894,6 +908,54 @@ RustboroCity_EventScript_RestoreBgm:: @ 81E10D6
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	return
+
+RustboroCity_EventScript_BattleMayFighting::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_FIGHTING, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayFlying::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_FLYING, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayPoison::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_POISON, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayGround::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_GROUND, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayRock::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_ROCK, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayBug::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_BUG, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayGhost::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_GHOST, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMaySteel::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_STEEL, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
 
 RustboroCity_EventScript_BattleMayTreecko:: @ 81E10DB
 	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_TREECKO, RustboroCity_Text_MayDefeat
@@ -909,6 +971,42 @@ RustboroCity_EventScript_BattleMayTorchic:: @ 81E10EE
 
 RustboroCity_EventScript_BattleMayMudkip:: @ 81E1101
 	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_MUDKIP, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayElectric::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_ELECTRIC, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayPsychic::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_PSYCHIC, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayIce::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_ICE, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayDragon::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_DRAGON, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayDark::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_DARK, RustboroCity_Text_MayDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_MayBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleMayFairy::
+	trainerbattle_no_intro TRAINER_MAY_RUSTBORO_FAIRY, RustboroCity_Text_MayDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
 	goto RustboroCity_EventScript_MayBrineyHint
 	end
@@ -952,11 +1050,81 @@ RustboroCity_EventScript_BattleBrendan:: @ 81E1191
 	case 2, RustboroCity_EventScript_BattleBrendanMudkip
 	end
 
+RustboroCity_EventScript_BattleBrendan:: @ 81E1191
+	msgbox RustboroCity_Text_BrendanIWontGoEasy, MSGBOX_DEFAULT
+	switch VAR_STARTER_MON
+	case 1, RustboroCity_EventScript_BattleBrendanFighting
+	case 2, RustboroCity_EventScript_BattleBrendanFlying
+	case 3, RustboroCity_EventScript_BattleBrendanPoison
+	case 4, RustboroCity_EventScript_BattleBrendanGround
+	case 5, RustboroCity_EventScript_BattleBrendanRock
+	case 6, RustboroCity_EventScript_BattleBrendanBug
+	case 7, RustboroCity_EventScript_BattleBrendanGhost
+	case 8, RustboroCity_EventScript_BattleBrendanSteel
+	case 10, RustboroCity_EventScript_BattleBrendanTreecko
+	case 11, RustboroCity_EventScript_BattleBrendanTorchic
+	case 12, RustboroCity_EventScript_BattleBrendanMudkip
+	case 13, RustboroCity_EventScript_BattleBrendanElectric
+	case 14, RustboroCity_EventScript_BattleBrendanPsychic
+	case 15, RustboroCity_EventScript_BattleBrendanIce
+	case 16, RustboroCity_EventScript_BattleBrendanDragon
+	case 17, RustboroCity_EventScript_BattleBrendanDark
+	case 18, RustboroCity_EventScript_BattleBrendanFairy
+	end
+
 RustboroCity_EventScript_BrendanBrineyHint:: @ 81E11C0
 	msgbox RustboroCity_Text_BrendanMrBrineyHint, MSGBOX_DEFAULT
 	compare VAR_0x8008, 0
 	call_if_eq RustboroCity_EventScript_RestoreBgm
 	releaseall
+	end
+	
+RustboroCity_EventScript_BattleBrendanFighting::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_FIGHTING, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanFlying::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_FLYING, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanPoison::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_POISON, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanGround::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_GROUND, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanRock::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_ROCK, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanBug::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_BUG, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanGhost::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_GHOST, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanSteel::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_STEEL, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
 	end
 
 RustboroCity_EventScript_BattleBrendanTreecko:: @ 81E11D5
@@ -973,6 +1141,42 @@ RustboroCity_EventScript_BattleBrendanTorchic:: @ 81E11E8
 
 RustboroCity_EventScript_BattleBrendanMudkip:: @ 81E11FB
 	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_MUDKIP, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanElectric::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_ELECTRIC, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanPsychic::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_PSYCHIC, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanIce::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_ICE, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanDragon::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_DRAGON, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanDark::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_DARK, RustboroCity_Text_BrendanDefeat
+	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
+	goto RustboroCity_EventScript_BrendanBrineyHint
+	end
+	
+RustboroCity_EventScript_BattleBrendanFairy::
+	trainerbattle_no_intro TRAINER_BRENDAN_RUSTBORO_FAIRY, RustboroCity_Text_BrendanDefeat
 	setflag FLAG_DEFEATED_RIVAL_RUSTBORO
 	goto RustboroCity_EventScript_BrendanBrineyHint
 	end

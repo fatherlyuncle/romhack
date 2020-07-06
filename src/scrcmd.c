@@ -2304,3 +2304,174 @@ void ScrCmd_SetItemArg(void)
 {
 	gSaveBlock2Ptr->ItemArg = gSpecialVar_0x8000;
 }
+
+void ScrCmd_GetStarterName(void)
+{
+	gSpecialVar_0x8001 = gSpecialVar_Result;
+	switch(gSpecialVar_Result)
+	{
+		case 25:
+			gSpecialVar_0x8002 = SPECIES_TREECKO;
+			break;
+		case 26:
+			gSpecialVar_0x8002 = SPECIES_TURTWIG;
+			break;
+		case 27:
+			gSpecialVar_0x8002 = SPECIES_ROWLET;
+			break;
+		case 28:
+			gSpecialVar_0x8002 = SPECIES_TORCHIC;
+			break;
+		case 29:
+			gSpecialVar_0x8002 = SPECIES_CHIMCHAR;
+			break;
+		case 30:
+			gSpecialVar_0x8002 = SPECIES_LITTEN;
+			break;
+		case 31:
+			gSpecialVar_0x8002 = SPECIES_MUDKIP;
+			break;
+		case 32:
+			gSpecialVar_0x8002 = SPECIES_PIPLUP;
+			break;
+		case 33:
+			gSpecialVar_0x8002 = SPECIES_POPPLIO;
+			break;
+		case 34:
+			gSpecialVar_0x8002 = SPECIES_PINSIR;
+			break;
+		case 35:
+			gSpecialVar_0x8002 = SPECIES_YANMA;
+			break;
+		case 36:
+			gSpecialVar_0x8002 = SPECIES_SEWADDLE;
+			break;
+		case 37:
+			gSpecialVar_0x8002 = SPECIES_TEDDIURSA;
+			break;
+		case 38:
+			gSpecialVar_0x8002 = SPECIES_STANTLER;
+			break;
+		case 39:
+			gSpecialVar_0x8002 = SPECIES_LILLIPUP;
+			break;
+		case 40:
+			gSpecialVar_0x8002 = SPECIES_ALOLAN_GRIMER;
+			break;
+		case 41:
+			gSpecialVar_0x8002 = SPECIES_CROAGUNK;
+			break;
+		case 42:
+			gSpecialVar_0x8002 = SPECIES_NIDORAN_M;
+			break;
+		case 43:
+			gSpecialVar_0x8002 = SPECIES_PIDGEY;
+			break;
+		case 44:
+			gSpecialVar_0x8002 = SPECIES_STARLY;
+			break;
+		case 45:
+			gSpecialVar_0x8002 = SPECIES_PIKIPEK;
+			break;
+		case 46:
+			gSpecialVar_0x8002 = SPECIES_BONSLY;
+			break;
+		case 47:
+			gSpecialVar_0x8002 = SPECIES_ROGGENROLA;
+			break;
+		case 48:
+			gSpecialVar_0x8002 = SPECIES_ROCKRUFF;
+			break;
+		case 49:
+			gSpecialVar_0x8002 = SPECIES_PHANPY;
+			break;
+		case 50:
+			gSpecialVar_0x8002 = SPECIES_SANDILE;
+			break;
+		case 51:
+			gSpecialVar_0x8002 = SPECIES_MUDBRAY;
+			break;
+		case 52:
+			gSpecialVar_0x8002 = SPECIES_MAREEP;
+			break;
+		case 53:
+			gSpecialVar_0x8002 = SPECIES_PICHU;
+			break;
+		case 54:
+			gSpecialVar_0x8002 = SPECIES_SHINX;
+			break;
+		case 55:
+			gSpecialVar_0x8002 = SPECIES_RIOLU;
+			break;
+		case 56:
+			gSpecialVar_0x8002 = SPECIES_PANCHAM;
+			break;
+		case 57:
+			gSpecialVar_0x8002 = SPECIES_TIMBURR;
+			break;
+		case 58:
+			gSpecialVar_0x8002 = SPECIES_MAGNEMITE;
+			break;
+		case 59:
+			gSpecialVar_0x8002 = SPECIES_BRONZOR;
+			break;
+		case 60:
+			gSpecialVar_0x8002 = SPECIES_KLINK;
+			break;
+		case 61:
+			gSpecialVar_0x8002 = SPECIES_SWINUB;
+			break;
+		case 62:
+			gSpecialVar_0x8002 = SPECIES_CUBCHOO;
+			break;
+		case 63:
+			gSpecialVar_0x8002 = SPECIES_SMOOCHUM;
+			break;
+		case 64:
+			gSpecialVar_0x8002 = SPECIES_HOUNDOOR;
+			break;
+		case 65:
+			gSpecialVar_0x8002 = SPECIES_ZORUA;
+			break;
+		case 66:
+			gSpecialVar_0x8002 = SPECIES_MURKROW;
+			break;
+		case 67:
+			gSpecialVar_0x8002 = SPECIES_GIRAFARIG;
+			break;
+		case 68:
+			gSpecialVar_0x8002 = SPECIES_RALTS;
+			break;
+		case 69:
+			gSpecialVar_0x8002 = SPECIES_SOLOSIS;
+			break;
+		case 70:
+			gSpecialVar_0x8002 = SPECIES_SPIRITOMB;
+			break;
+		case 71:
+			gSpecialVar_0x8002 = SPECIES_MISDREAVUS;
+			break;
+		case 72:
+			gSpecialVar_0x8002 = SPECIES_GASTLY;
+			break;
+		case 73:
+			gSpecialVar_0x8002 = SPECIES_DRATINI;
+			break;
+		case 74:
+			gSpecialVar_0x8002 = SPECIES_DRUDDIGON;
+			break;
+		case 75:
+			gSpecialVar_0x8002 = SPECIES_AXEW;
+			break;
+		case 76:
+			gSpecialVar_0x8002 = SPECIES_FLABEBE;
+			break;
+		case 77:
+			gSpecialVar_0x8002 = SPECIES_CLEFFA;
+			break;
+		case 78:
+			gSpecialVar_0x8002 = SPECIES_TOGEPI;
+			break;
+	}
+	StringCopy(gStringVar1, gSpeciesNames[gSpecialVar_0x8002]);
+}
