@@ -13075,7 +13075,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalRustboroElectric[] 
     {
     .iv = 50,
     .lvl = 15,
-    .species = SPECIES_FLAFFY,
+    .species = SPECIES_FLAAFFY,
     }
 };
 
@@ -13093,7 +13093,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalRoute110Electric[] 
     {
     .iv = 100,
     .lvl = 20,
-    .species = SPECIES_FLAFFY,
+    .species = SPECIES_FLAAFFY,
     }
 };
 
