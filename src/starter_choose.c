@@ -665,7 +665,7 @@ static void Task_StarterChoose5(u8 taskId, u8 sprites[])
         FreeOamMatrix(gSprites[spriteId].oam.matrixNum);
         DestroySprite(&gSprites[spriteId]);
         gTasks[taskId].func = Task_StarterChoose6;*/
-		Task_StarterChoose6(taskId, sprites);
+		Task_StarterChoose6(taskId);
         break;
     }
 }
