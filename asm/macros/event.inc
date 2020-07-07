@@ -1751,3 +1751,4 @@
 	.macro GetStarterName
 	callnative ScrCmd_GetStarterName
 	.endm
+	
