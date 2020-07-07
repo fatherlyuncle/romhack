@@ -625,4 +625,4 @@ Text_ChoosePokemon:
 	.string "Press B to go back to prior list.$"
 
 Text_YouSure:
-	.string "Are you sure you want {STR_VAR_1}?$"
+	.string "Are you sure you want {STR_VAR_1}?\n$"
