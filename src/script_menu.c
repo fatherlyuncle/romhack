@@ -1051,7 +1051,7 @@ void ScriptMenu_ScrollingMultichoice(void)
         width = DisplayTextAndGetWidth(sScrollingSets[setId].set[i].name, width);
 
     width = ConvertPixelWidthToTileWidth(width);
-    left = sub_80E2D5C(left, width);
+    left = ScriptMenu_AdjustLeftCoordFromWidth(left, width);
     windowId = CreateWindowFromRect(left, top, width, maxShowed * 2);
     SetStandardWindowBorderStyle(windowId, 0);
     CopyWindowToVram(windowId, 3);
