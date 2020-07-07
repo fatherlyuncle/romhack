@@ -434,7 +434,7 @@ static void VblankCB_StarterChoose(void)
 
 void CB2_ChooseStarter(void)
 {
-	gSpecialVar_Result -= 25;
+	gSpecialVar_Result -= 18; //used to be 25 but types not letters
 
 	// If it's second type is Flying, check to see if it's primary type is Normal. If so, call it
 	// a flying type. Otherwise, flip a coin to decide if it's Flying or it's primary type.
@@ -599,11 +599,11 @@ static void Task_StarterChoose1(u8 taskId)
     }
 }*/
 
-static void Task_StarterChoose2(u8 taskId/*, u8 sprites[]*/)
+static void Task_StarterChoose2(u8 taskId, u8 sprites[])
 {
     u8 selection = taskId;
 
-	u8 sprites[];
+	u8 sprites[2];
 
 	sub_8134604();
 
@@ -673,8 +673,8 @@ static void Task_StarterChoose5(u8 taskId, u8 sprites[])
 
 static void Task_StarterChoose6(u8 taskId)
 {
-    //gTasks[taskId].func = Task_StarterChoose1;
-	Task_StarterChoose1(taskId);
+    gTasks[taskId].func = Task_StarterChoose1;
+	//Task_StarterChoose1(taskId);
 }
 
 static void CreateStarterPokemonLabel(u8 selection)
