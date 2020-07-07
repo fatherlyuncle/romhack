@@ -434,7 +434,7 @@ static void VblankCB_StarterChoose(void)
 
 void CB2_ChooseStarter(void)
 {
-	gSpecialVar_Result -= 25; //used to be 25 but types not letters
+	gSpecialVar_Result -= 18; //used to be 25 but types not letters
 
 	// If it's second type is Flying, check to see if it's primary type is Normal. If so, call it
 	// a flying type. Otherwise, flip a coin to decide if it's Flying or it's primary type.

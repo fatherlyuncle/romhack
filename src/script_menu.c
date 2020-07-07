@@ -841,128 +841,128 @@ static const u8 Togepi[] = _("Togepi");
 // Sets of multichoices.
 static const struct ListMenuItem sSetGrass[] =
 {
-	{Treecko, 25},
-	{Turtwig, 26},
-	{Rowlet, 27}
+	{Treecko, 18},
+	{Turtwig, 19},
+	{Rowlet, 20}
 };
 
 static const struct ListMenuItem sSetFire[] =
 {
-	{Torchic, 28},
-	{Chimchar, 29},
-	{Litten, 30}
+	{Torchic, 21},
+	{Chimchar, 22},
+	{Litten, 23}
 };
 
 static const struct ListMenuItem sSetWater[] =
 {
-	{Mudkip, 31},
-	{Piplup, 32},
-	{Popplio, 33}
+	{Mudkip, 24},
+	{Piplup, 25},
+	{Popplio, 26}
 };
 
 static const struct ListMenuItem sSetBug[] =
 {
-	{Pinsir, 34},
-	{Yanma, 35},
-	{Sewaddle, 36}
+	{Pinsir, 27},
+	{Yanma, 28},
+	{Sewaddle, 29}
 };
 
 static const struct ListMenuItem sSetNormal[] =
 {
-	{Teddiursa, 37},
-	{Stantler, 38},
-	{Lillipup, 39}
+	{Teddiursa, 30},
+	{Stantler, 31},
+	{Lillipup, 32}
 };
 
 static const struct ListMenuItem sSetPoison[] =
 {
-	{Alolan_Grimer, 40},
-	{Croagunk, 41},
-	{Nidoran_M, 42}
+	{Alolan_Grimer, 33},
+	{Croagunk, 34},
+	{Nidoran_M, 35}
 };
 
 static const struct ListMenuItem sSetFlying[] =
 {
-	{Pidgey, 43},
-	{Starly, 44},
-	{Pikipek, 45}
+	{Pidgey, 36},
+	{Starly, 37},
+	{Pikipek, 38}
 };
 
 static const struct ListMenuItem sSetRock[] =
 {
-	{Bonsly, 46},
-	{Roggenrola, 47},
-	{Rockruff, 48}
+	{Bonsly, 39},
+	{Roggenrola, 40},
+	{Rockruff, 41}
 };
 
 static const struct ListMenuItem sSetGround[] =
 {
-	{Phanpy, 49},
-	{Sandile, 50},
-	{Mudbray, 51}
+	{Phanpy, 42},
+	{Sandile, 43},
+	{Mudbray, 44}
 };
 
 static const struct ListMenuItem sSetElectric[] =
 {
-	{Mareep, 52},
-	{Pichu, 53},
-	{Shinx, 54}
+	{Mareep, 45},
+	{Pichu, 46},
+	{Shinx, 47}
 };
 
 static const struct ListMenuItem sSetFighting[] =
 {
-	{Riolu, 55},
-	{Pancham, 56},
-	{Timburr, 57}
+	{Riolu, 48},
+	{Pancham, 49},
+	{Timburr, 50}
 };
 
 static const struct ListMenuItem sSetSteel[] =
 {
-	{Magnemite, 58},
-	{Bronzor, 59},
-	{Klink, 60}
+	{Magnemite, 51},
+	{Bronzor, 52},
+	{Klink, 53}
 };
 
 static const struct ListMenuItem sSetIce[] =
 {
-	{Swinub, 61},
-	{Cubchoo, 62},
-	{Smoochum, 63}
+	{Swinub, 54},
+	{Cubchoo, 55},
+	{Smoochum, 56}
 };
 
 static const struct ListMenuItem sSetDark[] =
 {
-	{Houndour, 64},
-	{Zorua, 65},
-	{Murkrow, 66}
+	{Houndour, 57},
+	{Zorua, 58},
+	{Murkrow, 59}
 };
 
 static const struct ListMenuItem sSetPsychic[] =
 {
-	{Girafarig, 67},
-	{Ralts, 68},
-	{Solosis, 69}
+	{Girafarig, 60},
+	{Ralts, 61},
+	{Solosis, 62}
 };
 
 static const struct ListMenuItem sSetGhost[] =
 {
-	{Spiritomb, 70},
-	{Misdreavus, 71},
-	{Gastly, 72}
+	{Spiritomb, 63},
+	{Misdreavus, 64},
+	{Gastly, 65}
 };
 
 static const struct ListMenuItem sSetDragon[] =
 {
-	{Dratini, 73},
-	{Druddigon, 74},
-	{Axew, 75}
+	{Dratini, 66},
+	{Druddigon, 67},
+	{Axew, 68}
 };
 
 static const struct ListMenuItem sSetFairy[] =
 {
-	{Flabebe, 76},
-	{Cleffa, 77},
-	{Togepi, 78}
+	{Flabebe, 69},
+	{Cleffa, 70},
+	{Togepi, 71}
 };
 
 static const struct ListMenuItem sSet2[] =
