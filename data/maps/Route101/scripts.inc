@@ -338,7 +338,7 @@ Route101_Grass_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Grass_Pokemon
 	return
-	
+
 Route101_Fire_Pokemon:
 	hidemonpic
 	closemessage
@@ -354,7 +354,7 @@ Route101_Fire_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Fire_Pokemon
 	return
-	
+
 Route101_Water_Pokemon:
 	hidemonpic
 	closemessage
@@ -370,7 +370,7 @@ Route101_Water_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Water_Pokemon
 	return
-	
+
 Route101_Bug_Pokemon:
 	hidemonpic
 	closemessage
@@ -386,7 +386,7 @@ Route101_Bug_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Bug_Pokemon
 	return
-	
+
 Route101_Normal_Pokemon:
 	hidemonpic
 	closemessage
@@ -402,7 +402,7 @@ Route101_Normal_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Normal_Pokemon
 	return
-	
+
 Route101_Poison_Pokemon:
 	hidemonpic
 	closemessage
@@ -450,7 +450,7 @@ Route101_Rock_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Rock_Pokemon
 	return
-	
+
 Route101_Ground_Pokemon:
 	hidemonpic
 	closemessage
@@ -466,7 +466,7 @@ Route101_Ground_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Ground_Pokemon
 	return
-	
+
 Route101_Electric_Pokemon:
 	hidemonpic
 	closemessage
@@ -482,7 +482,7 @@ Route101_Electric_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Electric_Pokemon
 	return
-	
+
 Route101_Fighting_Pokemon:
 	hidemonpic
 	closemessage
@@ -498,7 +498,7 @@ Route101_Fighting_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Fighting_Pokemon
 	return
-	
+
 Route101_Steel_Pokemon:
 	hidemonpic
 	closemessage
@@ -514,7 +514,7 @@ Route101_Steel_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Steel_Pokemon
 	return
-	
+
 Route101_Ice_Pokemon:
 	hidemonpic
 	closemessage
@@ -530,7 +530,7 @@ Route101_Ice_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Ice_Pokemon
 	return
-	
+
 Route101_Dark_Pokemon:
 	hidemonpic
 	closemessage
@@ -544,9 +544,9 @@ Route101_Dark_Pokemon:
 	compare VAR_RESULT, YES
 	call_if_eq Route101_ImSure
 	compare VAR_RESULT, NO
-	goto_if_eq Route101_Murkrow_Pokemon
+	goto_if_eq Route101_Dark_Pokemon
 	return
-	
+
 Route101_Psychic_Pokemon:
 	hidemonpic
 	closemessage
@@ -562,7 +562,7 @@ Route101_Psychic_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Psychic_Pokemon
 	return
-	
+
 Route101_Ghost_Pokemon:
 	hidemonpic
 	closemessage
@@ -578,7 +578,7 @@ Route101_Ghost_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Ghost_Pokemon
 	return
-	
+
 Route101_Dragon_Pokemon:
 	hidemonpic
 	closemessage
@@ -594,7 +594,7 @@ Route101_Dragon_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Dragon_Pokemon
 	return
-	
+
 Route101_Fairy_Pokemon:
 	hidemonpic
 	closemessage
@@ -610,18 +610,18 @@ Route101_Fairy_Pokemon:
 	compare VAR_RESULT, NO
 	goto_if_eq Route101_Fairy_Pokemon
 	return
-	
+
 Text_ChooseLetter:
 	.string "Choose the Type of the\n"
 	.string "Starter Pokemon that you want.$"
-	
+
 Text_ChoosePokemon:
 	.string "Choose which Pokemon you want.\n"
 	.string "Press B to go back to prior list.$"
 
 Text_YouSure:
 	.string "Are you sure you want {STR_VAR_1}?$"
-	
+
 Route101_ImSure::
 	hidemonpic
 	copyvar VAR_RESULT, VAR_0x8001
