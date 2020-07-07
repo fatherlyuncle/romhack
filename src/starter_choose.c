@@ -39,7 +39,7 @@ extern const u8 gText_ConfirmStarterChoice[];
 static void MainCallback2_StarterChoose(void);
 static void sub_8134604(void);
 static void Task_StarterChoose1(u8 taskId);
-static void Task_StarterChoose2(u8 taskId, u8 sprites[]);
+static void Task_StarterChoose2(u8 taskId);
 static void Task_StarterChoose3(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose4(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose5(u8 taskId, u8 sprites[]);
@@ -561,8 +561,8 @@ static void Task_StarterChoose1(u8 taskId)
     AddTextPrinterParameterized(0, 1, gText_BirchInTrouble, 0, 1, 0, NULL);
     PutWindowTilemap(0);
     schedule_bg_copy_tilemap_to_vram(0);
-    gTasks[taskId].func = Task_StarterChoose2;
-	//Task_StarterChoose2(taskId, sprites);
+    //gTasks[taskId].func = Task_StarterChoose2;
+	Task_StarterChoose2(taskId);
 }
 
 /*static void Task_StarterChoose2(u8 taskId)
@@ -599,9 +599,10 @@ static void Task_StarterChoose1(u8 taskId)
     }
 }*/
 
-static void Task_StarterChoose2(u8 taskId, u8 sprites[])
+static void Task_StarterChoose2(u8 taskId)
 {
     u8 selection = taskId;
+	u8 sprites[2];
 
 	sub_8134604();
 
