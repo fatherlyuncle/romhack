@@ -821,7 +821,7 @@ static const u8 Klink[] = _("Klink");
 static const u8 Swinub[] = _("Swinub");
 static const u8 Cubchoo[] = _("Cubchoo");
 static const u8 Smoochum[] = _("Smoochum");
-static const u8 Houndoor[] = _("Houndoor");
+static const u8 Houndour[] = _("Houndour");
 static const u8 Zorua[] = _("Zorua");
 static const u8 Murkrow[] = _("Murkrow");
 static const u8 Girafarig[] = _("Girafarig");
@@ -931,7 +931,7 @@ static const struct ListMenuItem sSetIce[] =
 
 static const struct ListMenuItem sSetDark[] =
 {
-	{Houndoor, 64},
+	{Houndour, 64},
 	{Zorua, 65},
 	{Murkrow, 66},
 };
@@ -992,7 +992,7 @@ struct
 {
     const struct ListMenuItem *set;
     int count;
-} 
+}
 static const sScrollingSets[] =
 {
     {sSet2, ARRAY_COUNT(sSet2)},
@@ -1046,7 +1046,7 @@ void ScriptMenu_ScrollingMultichoice(void)
     int left = gSpecialVar_0x8005;
     int top = gSpecialVar_0x8006;
     int maxShowed = gSpecialVar_0x8007;
-	
+
 	for (i = 0; i < sScrollingSets[setId].count; i++)
         width = DisplayTextAndGetWidth(sScrollingSets[setId].set[i].name, width);
 

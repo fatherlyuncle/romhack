@@ -165,7 +165,7 @@ static const u16 sStarterMon[STARTER_MON_COUNT] =
 	SPECIES_SWINUB,//ice
 	SPECIES_CUBCHOO,
 	SPECIES_SMOOCHUM,
-	SPECIES_HOUNDOOR,//dark
+	SPECIES_HOUNDOUR,//dark
 	SPECIES_ZORUA,
 	SPECIES_MURKROW,
 	SPECIES_GIRAFARIG,//psychic
@@ -434,7 +434,7 @@ static void VblankCB_StarterChoose(void)
 void CB2_ChooseStarter(void)
 {
 	gSpecialVar_Result -= 25;
-	
+
 	// If it's second type is Flying, check to see if it's primary type is Normal. If so, call it
 	// a flying type. Otherwise, flip a coin to decide if it's Flying or it's primary type.
 	// If it's second type ISN'T Flying, just take the primary type.
@@ -449,11 +449,11 @@ void CB2_ChooseStarter(void)
 	}
 	else
 		gSpecialVar_Unused_0x8014 = gBaseStats[sStarterMon[gSpecialVar_Result]].type1;
-	
+
 	Task_StarterChoose1(gSpecialVar_Result, spritecollection);
     ResetAllPicSprites();
     SetMainCallback2(gMain.savedCallback);
-	
+
 	/*u16 savedIme;
     u8 taskId;
     u8 spriteId;
@@ -600,7 +600,7 @@ static void Task_StarterChoose1(u8 taskId)
 static void Task_StarterChoose2(u8 taskId, u8 sprites[])
 {
     u8 selection = taskId;
-	
+
 	u8 spriteId;
 
 	sub_8134604();
@@ -616,7 +616,7 @@ static void Task_StarterChoose2(u8 taskId, u8 sprites[])
 
 	//gTasks[taskId].tPkmnSpriteId = spriteId;
 	Task_StarterChoose3(taskId, sprites);
-    
+
 }
 
 static void Task_StarterChoose3(u8 taskId, u8 sprites[])
