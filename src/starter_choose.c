@@ -38,12 +38,12 @@ extern const u8 gText_ConfirmStarterChoice[];
 // this file's functions
 static void MainCallback2_StarterChoose(void);
 static void sub_8134604(void);
-//static void Task_StarterChoose1(u8 taskId);
-//static void Task_StarterChoose2(u8 taskId);
-//static void Task_StarterChoose3(u8 taskId);
-//static void Task_StarterChoose4(u8 taskId);
-//static void Task_StarterChoose5(u8 taskId);
-//static void Task_StarterChoose6(u8 taskId);
+static void Task_StarterChoose1(u8 taskId);
+static void Task_StarterChoose2(u8 taskId);
+static void Task_StarterChoose3(u8 taskId);
+static void Task_StarterChoose4(u8 taskId);
+static void Task_StarterChoose5(u8 taskId);
+static void Task_StarterChoose6(u8 taskId);
 static void Task_MoveStarterChooseCursor(u8 taskId);
 static void sub_8134668(u8 taskId);
 static void CreateStarterPokemonLabel(u8 selection);
