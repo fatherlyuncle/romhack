@@ -1723,12 +1723,6 @@
 	setfieldeffectargument 2, \priority
 	dofieldeffect FLDEFF_SPARKLE
 	.endm
-	
-	@ allow ItemArg to be set in scripts 
-	.macro setitemarg id:req
-	setvar VAR_0x8000, \id,
-	callnative ScrCmd_SetItemArg
-	.endm
 
 	@ allow expanded starter choice
 	.macro callcase condition:req, dest:req
@@ -1752,3 +1746,8 @@
 	callnative ScrCmd_GetStarterName
 	.endm
 	
+	@ allow ItemArg to be set in scripts 
+	.macro setitemarg id:req
+	setvar VAR_0x8000, \id,
+	callnative ScrCmd_SetItemArg
+	.endm
