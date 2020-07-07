@@ -434,7 +434,7 @@ static void VblankCB_StarterChoose(void)
 
 void CB2_ChooseStarter(void)
 {
-	u8 spritecollection = 0;
+	u8 spritecollection = NULL;
 	gSpecialVar_Result -= 25;
 
 	// If it's second type is Flying, check to see if it's primary type is Normal. If so, call it
