@@ -767,22 +767,22 @@ int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width)
 
 static const u8 sText_Example1[] = _("Grass");
 static const u8 sText_Example2[] = _("Fire");
-static const u8 sText_Example4[] = _("Water");
-static const u8 sText_Example5[] = _("Bug");
-static const u8 sText_Example6[] = _("Normal");
-static const u8 sText_Example7[] = _("Poison");
-static const u8 sText_Example8[] = _("Flying");
-static const u8 sText_Example9[] = _("Rock");
-static const u8 sText_Example10[] = _("Ground");
-static const u8 sText_Example11[] = _("Electric");
-static const u8 sText_Example12[] = _("Fighting");
-static const u8 sText_Example13[] = _("Steel");
-static const u8 sText_Example14[] = _("Ice");
-static const u8 sText_Example15[] = _("Dark");
-static const u8 sText_Example16[] = _("Psychic");
-static const u8 sText_Example17[] = _("Ghost");
-static const u8 sText_Example18[] = _("Dragon");
-static const u8 sText_Example19[] = _("Fairy");
+static const u8 sText_Example3[] = _("Water");
+static const u8 sText_Example4[] = _("Bug");
+static const u8 sText_Example5[] = _("Normal");
+static const u8 sText_Example6[] = _("Poison");
+static const u8 sText_Example7[] = _("Flying");
+static const u8 sText_Example8[] = _("Rock");
+static const u8 sText_Example9[] = _("Ground");
+static const u8 sText_Example10[] = _("Electric");
+static const u8 sText_Example11[] = _("Fighting");
+static const u8 sText_Example12[] = _("Steel");
+static const u8 sText_Example13[] = _("Ice");
+static const u8 sText_Example14[] = _("Dark");
+static const u8 sText_Example15[] = _("Psychic");
+static const u8 sText_Example16[] = _("Ghost");
+static const u8 sText_Example17[] = _("Dragon");
+static const u8 sText_Example18[] = _("Fairy");
 static const u8 Treecko[] = _("Treecko");
 static const u8 Turtwig[] = _("Turtwig");
 static const u8 Rowlet[] = _("Rowlet");
@@ -808,7 +808,7 @@ static const u8 Bonsly[] = _("Bonsly");
 static const u8 Roggenrola[] = _("Roggenrola");
 static const u8 Rockruff[] = _("Rockruff");
 static const u8 Phanpy[] = _("Phanpy");
-static const u8 Sundile[] = _("Sandile");
+static const u8 Sandile[] = _("Sandile");
 static const u8 Mudbray[] = _("Mudbray");
 static const u8 Mareep[] = _("Mareep");
 static const u8 Pichu[] = _("Pichu");
@@ -967,25 +967,24 @@ static const struct ListMenuItem sSetFairy[] =
 
 static const struct ListMenuItem sSet2[] =
 {
-	{sText_Example19, 0},
-	{sText_Example18, 1},
-	{sText_Example17, 2},
-	{sText_Example16, 3},
-	{sText_Example15, 4},
-	{sText_Example14, 5},
-	{sText_Example13, 6},
-	{sText_Example12, 7},
-	{sText_Example11, 8},
-	{sText_Example10, 9},
-	{sText_Example9, 10},
-	{sText_Example8, 11},
-	{sText_Example7, 12},
-	{sText_Example6, 13},
-	{sText_Example5, 14},
-	{sText_Example4, 15},
-    {sText_Example3, 16},
-    {sText_Example2, 17},
-    {sText_Example1, 18}
+	{sText_Example18, 0},
+	{sText_Example17, 1},
+	{sText_Example16, 2},
+	{sText_Example15, 3},
+	{sText_Example14, 4},
+	{sText_Example13, 5},
+	{sText_Example12, 6},
+	{sText_Example11, 7},
+	{sText_Example10, 8},
+	{sText_Example9, 9},
+	{sText_Example8, 10},
+	{sText_Example7, 11},
+	{sText_Example6, 12},
+	{sText_Example5, 13},
+	{sText_Example4, 14},
+    {sText_Example3, 15},
+    {sText_Example2, 16},
+    {sText_Example1, 17}
 };
 
 // Table of your multichoice sets.
