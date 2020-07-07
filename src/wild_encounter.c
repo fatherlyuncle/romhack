@@ -350,6 +350,7 @@ static u8 PickWildMonNature(void)
 static void CreateWildMon(u16 species, u8 level)
 {
     bool32 checkCuteCharm;
+	u32 abilityNum = Random() % 3;
 
     ZeroEnemyPartyMons();
     checkCuteCharm = TRUE;
@@ -383,10 +384,19 @@ static void CreateWildMon(u16 species, u8 level)
     }
 
     CreateMonWithNature(&gEnemyParty[0], species, level, 32, PickWildMonNature());
-	SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, Random() % 2); //test by forcing hidden//adds wild hidden abil
+	SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, &abilityNum); //test by forcing hidden//adds wild hidden abil
 	if (GetMonAbility(&gEnemyParty[0]) == ABILITY_NONE)//backup to prevent null ability
 	{
-		SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, 0);
+		if ((GetMonData(mon, MON_DATA_ABILITY_NUM)) == 2 && ((gBaseStats[&gEnemyParty[0]].hiddenAbility != ABILITY_NONE) || (gBaseStats[&gEnemyParty[0]].hiddenAbility != 0) || (gBaseStats[&gEnemyParty[0]].hiddenAbility != NULL)))
+		{
+			abilityNum = 3;
+			SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, &abilityNum);
+		}
+		else
+		{	
+			abilityNum = 0;
+			SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, &abilityNum);
+		}
 	}
 }
 
