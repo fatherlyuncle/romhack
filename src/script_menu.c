@@ -842,126 +842,126 @@ static const struct ListMenuItem sSetGrass[] =
 {
 	{Treecko, 25},
 	{Turtwig, 26},
-	{Rowlet, 27},
+	{Rowlet, 27}
 };
 
 static const struct ListMenuItem sSetFire[] =
 {
 	{Torchic, 28},
 	{Chimchar, 29},
-	{Litten, 30},
+	{Litten, 30}
 };
 
 static const struct ListMenuItem sSetWater[] =
 {
 	{Mudkip, 31},
 	{Piplup, 32},
-	{Popplio, 33},
+	{Popplio, 33}
 };
 
 static const struct ListMenuItem sSetBug[] =
 {
 	{Pinsir, 34},
 	{Yanma, 35},
-	{Sewaddle, 36},
+	{Sewaddle, 36}
 };
 
 static const struct ListMenuItem sSetNormal[] =
 {
 	{Teddiursa, 37},
 	{Stantler, 38},
-	{Lillipup, 39},
+	{Lillipup, 39}
 };
 
 static const struct ListMenuItem sSetPoison[] =
 {
 	{Alolan_Grimer, 40},
 	{Croagunk, 41},
-	{Nidoran_M, 42},
+	{Nidoran_M, 42}
 };
 
 static const struct ListMenuItem sSetFlying[] =
 {
 	{Pidgey, 43},
 	{Starly, 44},
-	{Pikipek, 45},
+	{Pikipek, 45}
 };
 
 static const struct ListMenuItem sSetRock[] =
 {
 	{Bonsly, 46},
 	{Roggenrola, 47},
-	{Rockruff, 48},
+	{Rockruff, 48}
 };
 
 static const struct ListMenuItem sSetGround[] =
 {
 	{Phanpy, 49},
 	{Sandile, 50},
-	{Mudbray, 51},
+	{Mudbray, 51}
 };
 
 static const struct ListMenuItem sSetElectric[] =
 {
 	{Mareep, 52},
 	{Pichu, 53},
-	{Shinx, 54},
+	{Shinx, 54}
 };
 
 static const struct ListMenuItem sSetFighting[] =
 {
 	{Riolu, 55},
 	{Pancham, 56},
-	{Timburr, 57},
+	{Timburr, 57}
 };
 
 static const struct ListMenuItem sSetSteel[] =
 {
 	{Magnemite, 58},
 	{Bronzor, 59},
-	{Klink, 60},
+	{Klink, 60}
 };
 
 static const struct ListMenuItem sSetIce[] =
 {
 	{Swinub, 61},
 	{Cubchoo, 62},
-	{Smoochum, 63},
+	{Smoochum, 63}
 };
 
 static const struct ListMenuItem sSetDark[] =
 {
 	{Houndour, 64},
 	{Zorua, 65},
-	{Murkrow, 66},
+	{Murkrow, 66}
 };
 
 static const struct ListMenuItem sSetPsychic[] =
 {
 	{Girafarig, 67},
 	{Ralts, 68},
-	{Solosis, 69},
+	{Solosis, 69}
 };
 
 static const struct ListMenuItem sSetGhost[] =
 {
 	{Spiritomb, 70},
 	{Misdreavus, 71},
-	{Gastly, 72},
+	{Gastly, 72}
 };
 
 static const struct ListMenuItem sSetDragon[] =
 {
 	{Dratini, 73},
 	{Druddigon, 74},
-	{Axew, 75},
+	{Axew, 75}
 };
 
 static const struct ListMenuItem sSetFairy[] =
 {
 	{Flabebe, 76},
 	{Cleffa, 77},
-	{Togepi, 78},
+	{Togepi, 78}
 };
 
 static const struct ListMenuItem sSet2[] =
@@ -984,7 +984,7 @@ static const struct ListMenuItem sSet2[] =
 	{sText_Example4, 15},
     {sText_Example3, 16},
     {sText_Example2, 17},
-    {sText_Example1, 18},
+    {sText_Example1, 18}
 };
 
 // Table of your multichoice sets.
@@ -1013,7 +1013,7 @@ static const sScrollingSets[] =
 	{sSetPsychic, ARRAY_COUNT(sSetPsychic)},
 	{sSetGhost, ARRAY_COUNT(sSetGhost)},
 	{sSetDragon, ARRAY_COUNT(sSetDragon)},
-	{sSetFairy, ARRAY_COUNT(sSetFairy)},
+	{sSetFairy, ARRAY_COUNT(sSetFairy)}
 };
 
 static void Task_ScrollingMultichoiceInput(u8 taskId);
