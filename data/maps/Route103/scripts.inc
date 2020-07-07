@@ -524,10 +524,6 @@ Route103_Text_ShortcutToOldale: @ 81ECBB5
 	.string "it'll be a shortcut to OLDALE TOWN.\p"
 	.string "Fufufu, that's useful, isn't it?$"
 
-Route103_Text_RouteSign: @ 81ECC1A
-	.string "ROUTE 103\n"
-	.string "{DOWN_ARROW} OLDALE TOWN$"
-
 Route103_EventScript_Normal::
 	goto Route103_EventScript_FightingCheck
 	return
@@ -817,3 +813,7 @@ Route103_EventScript_FairyCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleFairy
 	return
+	
+Route103_Text_RouteSign: @ 81ECC1A
+	.string "ROUTE 103\n"
+	.string "{DOWN_ARROW} OLDALE TOWN$"

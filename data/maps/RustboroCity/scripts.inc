@@ -1045,14 +1045,6 @@ RustboroCity_EventScript_BrendanAskToBattle:: @ 81E1174
 RustboroCity_EventScript_BattleBrendan:: @ 81E1191
 	msgbox RustboroCity_Text_BrendanIWontGoEasy, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
-	case 0, RustboroCity_EventScript_BattleBrendanTreecko
-	case 1, RustboroCity_EventScript_BattleBrendanTorchic
-	case 2, RustboroCity_EventScript_BattleBrendanMudkip
-	end
-
-RustboroCity_EventScript_BattleBrendan:: @ 81E1191
-	msgbox RustboroCity_Text_BrendanIWontGoEasy, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
 	case 1, RustboroCity_EventScript_BattleBrendanFighting
 	case 2, RustboroCity_EventScript_BattleBrendanFlying
 	case 3, RustboroCity_EventScript_BattleBrendanPoison
