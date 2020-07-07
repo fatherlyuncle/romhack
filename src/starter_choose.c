@@ -38,12 +38,12 @@ extern const u8 gText_ConfirmStarterChoice[];
 // this file's functions
 static void MainCallback2_StarterChoose(void);
 static void sub_8134604(void);
-static void Task_StarterChoose1(u8 taskId, u8 sprites[]);
+static void Task_StarterChoose1(u8 taskId);
 static void Task_StarterChoose2(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose3(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose4(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose5(u8 taskId, u8 sprites[]);
-static void Task_StarterChoose6(u8 taskId, u8 sprites[]);
+static void Task_StarterChoose6(u8 taskId);
 static void Task_MoveStarterChooseCursor(u8 taskId);
 static void sub_8134668(u8 taskId);
 static void CreateStarterPokemonLabel(u8 selection);
@@ -434,7 +434,6 @@ static void VblankCB_StarterChoose(void)
 
 void CB2_ChooseStarter(void)
 {
-	u8 spritecollection = NULL;
 	gSpecialVar_Result -= 25;
 
 	// If it's second type is Flying, check to see if it's primary type is Normal. If so, call it
@@ -452,7 +451,7 @@ void CB2_ChooseStarter(void)
 	else
 		gSpecialVar_Unused_0x8014 = gBaseStats[sStarterMon[gSpecialVar_Result]].type1;
 
-	Task_StarterChoose1(gSpecialVar_Result, spritecollection);
+	Task_StarterChoose1(gSpecialVar_Result/*, spritecollection*/);
     ResetAllPicSprites();
     SetMainCallback2(gMain.savedCallback);
 
@@ -555,7 +554,7 @@ static void MainCallback2_StarterChoose(void)
     UpdatePaletteFade();
 }
 
-static void Task_StarterChoose1(u8 taskId, u8 sprites[])
+static void Task_StarterChoose1(u8 taskId)
 {
     CreateStarterPokemonLabel(gTasks[taskId].tStarterSelection);
     DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x2A8, 0xD);
@@ -667,15 +666,15 @@ static void Task_StarterChoose5(u8 taskId, u8 sprites[])
         FreeOamMatrix(gSprites[spriteId].oam.matrixNum);
         DestroySprite(&gSprites[spriteId]);
         gTasks[taskId].func = Task_StarterChoose6;*/
-		Task_StarterChoose6(taskId, sprites);
+		Task_StarterChoose6(taskId);
         break;
     }
 }
 
-static void Task_StarterChoose6(u8 taskId, u8 sprites[])
+static void Task_StarterChoose6(u8 taskId)
 {
     //gTasks[taskId].func = Task_StarterChoose1;
-	Task_StarterChoose1(taskId, sprites);
+	Task_StarterChoose1(taskId);
 }
 
 static void CreateStarterPokemonLabel(u8 selection)
