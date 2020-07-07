@@ -561,7 +561,8 @@ static void Task_StarterChoose1(u8 taskId, u8 sprites[])
     AddTextPrinterParameterized(0, 1, gText_BirchInTrouble, 0, 1, 0, NULL);
     PutWindowTilemap(0);
     schedule_bg_copy_tilemap_to_vram(0);
-    gTasks[taskId].func = Task_StarterChoose2;
+    //gTasks[taskId].func = Task_StarterChoose2;
+	Task_StarterChoose2(taskId, sprites);
 }
 
 /*static void Task_StarterChoose2(u8 taskId)
@@ -672,7 +673,8 @@ static void Task_StarterChoose5(u8 taskId, u8 sprites[])
 
 static void Task_StarterChoose6(u8 taskId, u8 sprites[])
 {
-    gTasks[taskId].func = Task_StarterChoose1;
+    //gTasks[taskId].func = Task_StarterChoose1;
+	Task_StarterChoose1(taskId, sprites);
 }
 
 static void CreateStarterPokemonLabel(u8 selection)
