@@ -38,12 +38,12 @@ extern const u8 gText_ConfirmStarterChoice[];
 // this file's functions
 static void MainCallback2_StarterChoose(void);
 static void sub_8134604(void);
-static void Task_StarterChoose1(u8 taskId);
+static void Task_StarterChoose1(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose2(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose3(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose4(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose5(u8 taskId, u8 sprites[]);
-static void Task_StarterChoose6(u8 taskId);
+static void Task_StarterChoose6(u8 taskId, u8 sprites[]);
 static void Task_MoveStarterChooseCursor(u8 taskId);
 static void sub_8134668(u8 taskId);
 static void CreateStarterPokemonLabel(u8 selection);
@@ -554,7 +554,7 @@ static void MainCallback2_StarterChoose(void)
     UpdatePaletteFade();
 }
 
-static void Task_StarterChoose1(u8 taskId)
+static void Task_StarterChoose1(u8 taskId, u8 sprites[])
 {
     CreateStarterPokemonLabel(gTasks[taskId].tStarterSelection);
     DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x2A8, 0xD);
@@ -665,12 +665,12 @@ static void Task_StarterChoose5(u8 taskId, u8 sprites[])
         FreeOamMatrix(gSprites[spriteId].oam.matrixNum);
         DestroySprite(&gSprites[spriteId]);
         gTasks[taskId].func = Task_StarterChoose6;*/
-		Task_StarterChoose6(taskId);
+		Task_StarterChoose6(taskId, sprites);
         break;
     }
 }
 
-static void Task_StarterChoose6(u8 taskId)
+static void Task_StarterChoose6(u8 taskId, u8 sprites[])
 {
     gTasks[taskId].func = Task_StarterChoose1;
 }
