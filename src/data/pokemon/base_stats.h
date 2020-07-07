@@ -286,7 +286,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -364,7 +365,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -2434,7 +2436,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -2458,7 +2461,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -2482,7 +2486,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_CURSED_BODY, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -2875,7 +2880,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -2901,7 +2907,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -3982,7 +3989,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SYNCHRONIZE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PINK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
 
@@ -5258,7 +5266,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -5283,7 +5292,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -6491,7 +6501,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -6598,7 +6609,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_NATURAL_CURE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -6992,7 +7004,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -7043,7 +7056,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -7548,7 +7562,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_TRUANT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -7573,7 +7588,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -7598,7 +7614,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_TRUANT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -7676,7 +7693,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_WONDER_GUARD, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -8659,7 +8677,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -8685,7 +8704,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -8870,7 +8890,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -8897,7 +8918,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -9027,7 +9049,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -9053,7 +9076,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -9238,7 +9262,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_FORECAST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -9425,7 +9450,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -10011,7 +10037,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -10035,7 +10062,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -10059,7 +10087,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_DRIZZLE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -10084,7 +10113,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_DROUGHT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -10109,7 +10139,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_AIR_LOCK, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -10136,7 +10167,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SERENE_GRACE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -10162,7 +10194,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -10865,7 +10898,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -10890,7 +10924,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SHED_SKIN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -11155,7 +11190,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PINK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
 
@@ -11180,7 +11216,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_FLOWER_GIFT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = TRUE,
     },
 
@@ -11387,7 +11424,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -11490,7 +11528,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -12073,7 +12112,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_GRASS,
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -12705,7 +12745,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -12730,7 +12771,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -12755,7 +12797,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -12780,7 +12823,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -12805,7 +12849,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -12830,7 +12875,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -12856,7 +12902,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -12882,7 +12929,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PINK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
 
@@ -12907,7 +12955,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -13007,7 +13056,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SLOW_START, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -13058,7 +13108,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -13083,7 +13134,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_HYDRATION, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -13108,7 +13160,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_HYDRATION, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -13133,7 +13186,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BAD_DREAMS, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -13160,7 +13214,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_NATURAL_CURE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -13185,7 +13240,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_MULTITYPE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -13210,7 +13266,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_VICTORY_STAR, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = TRUE,
     },
 
@@ -15002,7 +15059,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_MUMMY, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -15028,7 +15086,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_MUMMY, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -15105,7 +15164,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_DEFEATIST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -15130,7 +15190,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_DEFEATIST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -15209,7 +15270,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_ILLUSION, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -15233,7 +15295,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_ILLUSION, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -15910,7 +15973,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_GRASS,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_IRON_BARBS, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -16040,7 +16104,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -16065,7 +16130,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -16090,7 +16156,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -16371,7 +16438,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -16840,7 +16908,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_DRAGON,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_HUSTLE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -16865,7 +16934,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_DRAGON,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_HUSTLE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -16889,7 +16959,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_DRAGON,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -16967,7 +17038,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_JUSTIFIED, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -16992,7 +17064,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_JUSTIFIED, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -17017,7 +17090,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_JUSTIFIED, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -17093,7 +17167,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_TURBOBLAZE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -17118,7 +17193,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_TERAVOLT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -17169,7 +17245,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRESSURE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -17193,7 +17270,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_TURBOBLAZE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -17217,7 +17295,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_TERAVOLT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -17241,7 +17320,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_JUSTIFIED, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -17269,7 +17349,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SERENE_GRACE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -17295,7 +17376,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_DOWNLOAD, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -17992,7 +18074,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_FUR_COAT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -18094,7 +18177,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_NO_GUARD, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -18119,7 +18203,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_NO_GUARD, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -18145,7 +18230,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_STANCE_CHANGE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -18429,7 +18515,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_MEGA_LAUNCHER, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -18453,7 +18540,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_MEGA_LAUNCHER, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -19054,7 +19142,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_FAIRY_AURA, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -19079,7 +19168,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_DARK_AURA, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -19104,7 +19194,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_AURA_BREAK, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -19130,7 +19221,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_CLEAR_BODY, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PINK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
 
@@ -19154,7 +19246,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_MAGICIAN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -19178,7 +19271,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_WATER_ABSORB, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -19569,7 +19663,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SWARM, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -19595,7 +19690,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_BATTERY, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -19619,7 +19715,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -19698,7 +19795,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_DANCER, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -19829,7 +19927,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_2,
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_SCHOOLING, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -20392,7 +20491,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_WIMP_OUT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -20417,7 +20517,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_WATER_3,
         .abilities = {ABILITY_EMERGENCY_EXIT, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -20522,7 +20623,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BATTLE_ARMOR, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -20547,7 +20649,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_RKS_SYSTEM, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -20574,7 +20677,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_SHIELDS_DOWN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -20599,7 +20703,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_COMATOSE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -20625,7 +20730,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SHELL_ARMOR, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -20678,7 +20784,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_DISGUISE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -20756,7 +20863,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_STEELWORKER, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -20965,7 +21073,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_UNAWARE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -20991,7 +21100,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_STURDY, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -21016,7 +21126,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_FULL_METAL_BODY, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -21040,7 +21151,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SHADOW_SHIELD, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -21065,7 +21177,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -21091,7 +21204,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -21116,7 +21230,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -21140,7 +21255,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -21166,7 +21282,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -21191,7 +21308,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -21216,7 +21334,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -21241,7 +21360,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRISM_ARMOR, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -21265,7 +21385,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SOUL_HEART, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -21291,7 +21412,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_TECHNICIAN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -21316,7 +21438,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -21340,7 +21463,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -21365,7 +21489,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -21389,7 +21514,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_BEAST_BOOST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -21414,7 +21540,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_VOLT_ABSORB, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -21438,7 +21565,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_MAGNET_PULL, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -21462,7 +21590,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_IRON_FIST, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -21486,7 +21615,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_SHADOW_TAG, ABILITY_SHADOW_TAG},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -21510,7 +21640,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_PIXILATE, ABILITY_PIXILATE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -21534,7 +21665,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_MOLD_BREAKER, ABILITY_MOLD_BREAKER},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -21559,7 +21691,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_THICK_FAT, ABILITY_THICK_FAT},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -21583,7 +21716,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -21607,7 +21741,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_DROUGHT, ABILITY_DROUGHT},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -21631,7 +21766,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_STEADFAST, ABILITY_STEADFAST},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -21655,7 +21791,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_INSOMNIA, ABILITY_INSOMNIA},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -21679,7 +21816,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SPEED_BOOST, ABILITY_SPEED_BOOST},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -21703,7 +21841,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_PURE_POWER, ABILITY_PURE_POWER},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -21727,7 +21866,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SOLAR_POWER, ABILITY_SOLAR_POWER},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -21752,7 +21892,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_FILTER, ABILITY_FILTER},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -21777,7 +21918,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_PRANKSTER, ABILITY_PRANKSTER},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -21801,7 +21943,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_SAND_STREAM, ABILITY_SAND_STREAM},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -21825,7 +21968,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_TECHNICIAN, ABILITY_TECHNICIAN},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -21849,7 +21993,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_AERILATE, ABILITY_AERILATE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -21873,7 +22018,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -21898,7 +22044,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -21924,7 +22071,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_GRASS,
         .abilities = {ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -21948,7 +22096,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_MEGA_LAUNCHER, ABILITY_MEGA_LAUNCHER},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -21972,7 +22121,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_MONSTER,
         .abilities = {ABILITY_PARENTAL_BOND, ABILITY_PARENTAL_BOND},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -21996,7 +22146,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_2,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_MOLD_BREAKER, ABILITY_MOLD_BREAKER},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -22020,7 +22171,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -22045,7 +22197,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_TRACE, ABILITY_TRACE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -22069,7 +22222,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_SKILL_LINK, ABILITY_SKILL_LINK},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -22094,7 +22248,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_HUGE_POWER, ABILITY_HUGE_POWER},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -22118,7 +22273,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_INTIMIDATE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -22142,7 +22298,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_SAND_FORCE, ABILITY_SAND_FORCE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -22166,7 +22323,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_LEVITATE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -22190,7 +22348,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_LEVITATE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -22214,7 +22373,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_SWIFT_SWIM, ABILITY_SWIFT_SWIM},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -22238,7 +22398,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_LIGHTNING_ROD, ABILITY_LIGHTNING_ROD},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -22263,7 +22424,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_HUMAN_LIKE,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -22287,7 +22449,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_PIXILATE, ABILITY_PIXILATE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -22311,7 +22474,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_INNER_FOCUS, ABILITY_INNER_FOCUS},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -22337,7 +22501,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_HEALER, ABILITY_HEALER},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -22362,7 +22527,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_2,
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_STRONG_JAW, ABILITY_STRONG_JAW},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -22387,7 +22553,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_WATER_1,
         .abilities = {ABILITY_SHELL_ARMOR, ABILITY_SHELL_ARMOR},
-        .bodyColor = BODY_COLOR_PINK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
 
@@ -22412,7 +22579,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_SAND_FORCE, ABILITY_SAND_FORCE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -22436,7 +22604,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_NO_GUARD, ABILITY_NO_GUARD},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -22460,7 +22629,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FAIRY,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_REFRIGERATE, ABILITY_REFRIGERATE},
-        .bodyColor = BODY_COLOR_GRAY,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
 
@@ -22485,7 +22655,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_MAGIC_BOUNCE, ABILITY_MAGIC_BOUNCE},
-        .bodyColor = BODY_COLOR_PINK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
 
@@ -22510,7 +22681,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_TOUGH_CLAWS, ABILITY_TOUGH_CLAWS},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -22535,7 +22707,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_DELTA_STREAM, ABILITY_DELTA_STREAM},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -22560,7 +22733,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
         .abilities = {ABILITY_SHEER_FORCE, ABILITY_SHEER_FORCE},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -22584,7 +22758,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_HUMAN_LIKE,
         .abilities = {ABILITY_SCRAPPY, ABILITY_SCRAPPY},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -22609,7 +22784,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_DRAGON,
         .eggGroup2 = EGG_GROUP_DRAGON,
         .abilities = {ABILITY_AERILATE, ABILITY_AERILATE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -22635,7 +22811,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_BUG,
         .eggGroup2 = EGG_GROUP_BUG,
         .abilities = {ABILITY_ADAPTABILITY, ABILITY_ADAPTABILITY},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 
@@ -22714,7 +22891,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FAIRY,
         .abilities = {ABILITY_SURGE_SURFER, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -23138,7 +23316,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_PRIMORDIAL_SEA, ABILITY_PRIMORDIAL_SEA},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -23163,7 +23342,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_DESOLATE_LAND, ABILITY_DESOLATE_LAND},
-        .bodyColor = BODY_COLOR_RED,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_RED,
         .noFlip = FALSE,
     },
 
@@ -23190,7 +23370,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SERENE_GRACE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -23215,7 +23396,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_LEVITATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLACK,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLACK,
         .noFlip = FALSE,
     },
 
@@ -23265,7 +23447,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_REGENERATOR, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_GREEN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },
 
@@ -23290,7 +23473,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_VOLT_ABSORB, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -23314,7 +23498,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -23342,7 +23527,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_SERENE_GRACE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_WHITE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
 
@@ -23368,7 +23554,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_STANCE_CHANGE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -23392,7 +23579,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
         .abilities = {ABILITY_MAGICIAN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PURPLE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
 
@@ -23419,7 +23607,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
         .abilities = {ABILITY_SHIELDS_DOWN, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BROWN,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
 
@@ -23444,7 +23633,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_WATER_2,
         .eggGroup2 = EGG_GROUP_WATER_2,
         .abilities = {ABILITY_SCHOOLING, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_BLUE,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
 
@@ -23470,7 +23660,8 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
         .abilities = {ABILITY_DISGUISE, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_YELLOW,
+        .abilityHidden = ABILITY_NONE,
+		.bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
 

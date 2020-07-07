@@ -387,7 +387,8 @@ static void CreateWildMon(u16 species, u8 level)
 	SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, &abilityNum); //test by forcing hidden//adds wild hidden abil
 	if (GetMonAbility(&gEnemyParty[0]) == ABILITY_NONE)//backup to prevent null ability
 	{
-		if ((GetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM)) == 2 && ((gBaseStats[&gEnemyParty[0]].abilityHidden != ABILITY_NONE) || (gBaseStats[&gEnemyParty[0]].abilityHidden != 0) || (gBaseStats[&gEnemyParty[0]].abilityHidden != NULL)))
+		u8 abilityNumCheck = GetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM);
+		if ((&hiddenAbility == 2) && (gBaseStats[&gEnemyParty[0]].abilityHidden != ABILITY_NONE))
 		{
 			abilityNum = 3;
 			SetMonData(&gEnemyParty[0], MON_DATA_ABILITY_NUM, &abilityNum);
