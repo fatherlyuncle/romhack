@@ -611,11 +611,6 @@ Route101_Fairy_Pokemon
 	goto_if_eq Route101_Fairy_Pokemon
 	return
 	
-Route101_ImSure::
-	hidemonpic
-	copyvar VAR_RESULT, VAR_0x8001
-	return
-	
 Text_ChooseLetter:
 	.string "Choose the Type of the\n"
 	.string "Starter Pokemon that you want.$"
@@ -625,4 +620,9 @@ Text_ChoosePokemon:
 	.string "Press B to go back to prior list.$"
 
 Text_YouSure:
-	.string "Are you sure you want {STR_VAR_1}?\n$"
+	.string "Are you sure you want {STR_VAR_1}?$"
+	
+Route101_ImSure::
+	hidemonpic
+	copyvar VAR_RESULT, VAR_0x8001
+	return
