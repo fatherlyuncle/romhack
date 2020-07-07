@@ -39,7 +39,7 @@ extern const u8 gText_ConfirmStarterChoice[];
 static void MainCallback2_StarterChoose(void);
 static void sub_8134604(void);
 static void Task_StarterChoose1(u8 taskId);
-static void Task_StarterChoose2(u8 taskId, u8 sprites[]);
+static void Task_StarterChoose2(u8 taskId/*, u8 sprites[]*/);
 static void Task_StarterChoose3(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose4(u8 taskId, u8 sprites[]);
 static void Task_StarterChoose5(u8 taskId, u8 sprites[]);
@@ -599,7 +599,7 @@ static void Task_StarterChoose1(u8 taskId)
     }
 }*/
 
-static void Task_StarterChoose2(u8 taskId, u8 sprites[])
+static void Task_StarterChoose2(u8 taskId/*, u8 sprites[]*/)
 {
     u8 selection = taskId;
 
