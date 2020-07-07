@@ -561,8 +561,8 @@ static void Task_StarterChoose1(u8 taskId)
     AddTextPrinterParameterized(0, 1, gText_BirchInTrouble, 0, 1, 0, NULL);
     PutWindowTilemap(0);
     schedule_bg_copy_tilemap_to_vram(0);
-    //gTasks[taskId].func = Task_StarterChoose2;
-	Task_StarterChoose2(taskId, sprites);
+    gTasks[taskId].func = Task_StarterChoose2;
+	//Task_StarterChoose2(taskId, sprites);
 }
 
 /*static void Task_StarterChoose2(u8 taskId)
