@@ -323,7 +323,7 @@ Route101_Text_RouteSign: @ 81EC0C8
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
-Route101_Grass_Pokemon
+Route101_Grass_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 1, 2, 3, 5, TRUE
@@ -339,7 +339,7 @@ Route101_Grass_Pokemon
 	goto_if_eq Route101_Grass_Pokemon
 	return
 	
-Route101_Fire_Pokemon
+Route101_Fire_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 2, 2, 3, 5, TRUE
@@ -355,7 +355,7 @@ Route101_Fire_Pokemon
 	goto_if_eq Route101_Fire_Pokemon
 	return
 	
-Route101_Water_Pokemon
+Route101_Water_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 3, 2, 3, 5, TRUE
@@ -371,7 +371,7 @@ Route101_Water_Pokemon
 	goto_if_eq Route101_Water_Pokemon
 	return
 	
-Route101_Bug_Pokemon
+Route101_Bug_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 4, 2, 3, 5, TRUE
@@ -387,7 +387,7 @@ Route101_Bug_Pokemon
 	goto_if_eq Route101_Bug_Pokemon
 	return
 	
-Route101_Normal_Pokemon
+Route101_Normal_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 5, 2, 3, 5, TRUE
@@ -403,7 +403,7 @@ Route101_Normal_Pokemon
 	goto_if_eq Route101_Normal_Pokemon
 	return
 	
-Route101_Poison_Pokemon
+Route101_Poison_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 6, 2, 3, 5, TRUE
@@ -419,7 +419,7 @@ Route101_Poison_Pokemon
 	goto_if_eq Route101_Poison_Pokemon
 	return
 
-Route101_Flying_Pokemon
+Route101_Flying_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 7, 2, 3, 5, TRUE
@@ -435,7 +435,7 @@ Route101_Flying_Pokemon
 	goto_if_eq Route101_Flying_Pokemon
 	return
 
-Route101_Rock_Pokemon
+Route101_Rock_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 8, 2, 3, 5, TRUE
@@ -451,7 +451,7 @@ Route101_Rock_Pokemon
 	goto_if_eq Route101_Rock_Pokemon
 	return
 	
-Route101_Ground_Pokemon
+Route101_Ground_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 9, 2, 3, 5, TRUE
@@ -467,7 +467,7 @@ Route101_Ground_Pokemon
 	goto_if_eq Route101_Ground_Pokemon
 	return
 	
-Route101_Electric_Pokemon
+Route101_Electric_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 10, 2, 3, 5, TRUE
@@ -483,7 +483,7 @@ Route101_Electric_Pokemon
 	goto_if_eq Route101_Electric_Pokemon
 	return
 	
-Route101_Fighting_Pokemon
+Route101_Fighting_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 11, 2, 3, 5, TRUE
@@ -499,7 +499,7 @@ Route101_Fighting_Pokemon
 	goto_if_eq Route101_Fighting_Pokemon
 	return
 	
-Route101_Steel_Pokemon
+Route101_Steel_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 12, 2, 3, 5, TRUE
@@ -515,7 +515,7 @@ Route101_Steel_Pokemon
 	goto_if_eq Route101_Steel_Pokemon
 	return
 	
-Route101_Ice_Pokemon
+Route101_Ice_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 13, 2, 3, 5, TRUE
@@ -531,7 +531,7 @@ Route101_Ice_Pokemon
 	goto_if_eq Route101_Ice_Pokemon
 	return
 	
-Route101_Dark_Pokemon
+Route101_Dark_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 14, 2, 3, 5, TRUE
@@ -547,7 +547,7 @@ Route101_Dark_Pokemon
 	goto_if_eq Route101_Murkrow_Pokemon
 	return
 	
-Route101_Psychic_Pokemon
+Route101_Psychic_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 15, 2, 3, 5, TRUE
@@ -563,7 +563,7 @@ Route101_Psychic_Pokemon
 	goto_if_eq Route101_Psychic_Pokemon
 	return
 	
-Route101_Ghost_Pokemon
+Route101_Ghost_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 16, 2, 3, 5, TRUE
@@ -579,7 +579,7 @@ Route101_Ghost_Pokemon
 	goto_if_eq Route101_Ghost_Pokemon
 	return
 	
-Route101_Dragon_Pokemon
+Route101_Dragon_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 17, 2, 3, 5, TRUE
@@ -595,7 +595,7 @@ Route101_Dragon_Pokemon
 	goto_if_eq Route101_Dragon_Pokemon
 	return
 	
-Route101_Fairy_Pokemon
+Route101_Fairy_Pokemon:
 	hidemonpic
 	closemessage
 	scrollingmultichoice 18, 2, 3, 5, TRUE

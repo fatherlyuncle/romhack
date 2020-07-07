@@ -458,11 +458,6 @@ Route103_EventScript_Pete:: @ 81EC778
 	msgbox Route103_Text_PetePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route103_EventScript_Isabelle:: @ 81EC78F
-	trainerbattle_single TRAINER_ISABELLE, Route103_Text_IsabelleIntro, Route103_Text_IsabelleDefeated
-	msgbox Route103_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route103_Text_MayRoute103Pokemon: @ 81EC7A6
 	.string "MAY: Let's see… The POKéMON found\n"
 	.string "on ROUTE 103 include…$"
@@ -817,3 +812,8 @@ Route103_EventScript_FairyCheck::
 Route103_Text_RouteSign: @ 81ECC1A
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
+	
+Route103_EventScript_Isabelle:: @ 81EC78F
+	trainerbattle_single TRAINER_ISABELLE, Route103_Text_IsabelleIntro, Route103_Text_IsabelleDefeated
+	msgbox Route103_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
+	end
