@@ -603,7 +603,7 @@ static void Task_StarterChoose2(u8 taskId/*, u8 sprites[]*/)
 {
     u8 selection = taskId;
 
-	u8 sprites;
+	u8 sprites[];
 
 	sub_8134604();
 
