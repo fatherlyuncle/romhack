@@ -5359,7 +5359,7 @@ static void TryTradeSelectedMon(u8 taskId)//for tradeback npc
 	if (!gPaletteFade.active)
 	{
 		mon = &gPlayerParty[gPartyMenu.slotId];
-		switch (GetEvolutionTargetSpecies(mon, 1, 0)
+		switch (GetEvolutionTargetSpecies(mon, 1, 0))
 		{
 		case SPECIES_NONE:
 			FreePartyPointers();
@@ -5895,7 +5895,7 @@ void ChooseMonForTrade(void) //for tradeback npc
 
 void MonTradeable(void) //check if pokemon evolves w/ trade
 {
-  if (gEvolutionTable[&gPlayerParty[gSpecialVar_0x8004]] == EVO_TRADE))
+  if (gEvolutionTable[&gPlayerParty[gSpecialVar_0x8004]] == EVO_TRADE)
       gSpecialVar_Result = TRUE;
   else
       gSpecialVar_Result = FALSE;
