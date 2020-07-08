@@ -2776,7 +2776,7 @@ const struct Item gItems[] =
         .description = sKingsRockDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -2843,7 +2843,7 @@ const struct Item gItems[] =
         .description = sDeepSeaToothDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -2856,7 +2856,7 @@ const struct Item gItems[] =
         .description = sDeepSeaScaleDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -2936,7 +2936,7 @@ const struct Item gItems[] =
         .description = sMetalCoatDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -2964,7 +2964,7 @@ const struct Item gItems[] =
         .description = sDragonScaleDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -2976,7 +2976,7 @@ const struct Item gItems[] =
         .description = sOvalStoneDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -2988,7 +2988,7 @@ const struct Item gItems[] =
         .description = sProtectorDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3000,7 +3000,7 @@ const struct Item gItems[] =
         .description = sElectirizerDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3012,7 +3012,7 @@ const struct Item gItems[] =
         .description = sMagmarizerDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3024,7 +3024,7 @@ const struct Item gItems[] =
         .description = sDubiousDiscDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3036,7 +3036,7 @@ const struct Item gItems[] =
         .description = sReaperClothDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3049,7 +3049,7 @@ const struct Item gItems[] =
         .description = sRazorClawDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3063,7 +3063,7 @@ const struct Item gItems[] =
         .description = sRazorFangDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3075,7 +3075,7 @@ const struct Item gItems[] =
         .description = sPrismScaleDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3087,7 +3087,7 @@ const struct Item gItems[] =
         .description = sWhippedDreamDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3099,7 +3099,7 @@ const struct Item gItems[] =
         .description = sSachetDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 
@@ -3335,7 +3335,7 @@ const struct Item gItems[] =
         .description = sUpGradeDesc,
         .pocket = POCKET_ITEMS,
         .type = 4,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
         .secondaryId = 0,
     },
 

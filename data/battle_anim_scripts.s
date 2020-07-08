@@ -4834,7 +4834,7 @@ Move_SYCHRONOISE:
 Move_ELECTRO_BALL:
 	loadspritegfx ANIM_TAG_SPARK_2	@yellow
 	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT @charge
-	monbg ANIM_TARGET
+	monbg 0x0
 	setalpha 12, 8
 	playsewithpan SE_W268, SOUND_PAN_ATTACKER
 	launchtemplate gGrowingChargeOrbSpriteTemplate 0x2 0x1 0x0
@@ -4855,7 +4855,7 @@ Move_ELECTRO_BALL:
 	createvisualtask AnimTask_ShakeMon2, 0x2, 0x1, 0x4, 0x0, 0x8, 0x1
 	call ElectricityEffect
 	waitforvisualfinish
-	clearmonbg ANIM_TARGET
+	clearmonbg 0x0
 	blendoff
 	end
 

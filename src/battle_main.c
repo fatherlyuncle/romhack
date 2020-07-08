@@ -138,6 +138,7 @@ static void HandleAction_TryFinish(void);
 static void HandleAction_NothingIsFainted(void);
 static void HandleAction_ActionFinished(void);
 u16 HasLevelEvolution(u16 species, u8 level);
+u16 HasStoneEvolution(u16 species, u8 level);
 
 // EWRAM vars
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -1877,6 +1878,18 @@ u16 HasLevelEvolution(u16 species, u8 level)//for evolving enemy trainer mons
 	return 0;
 }
 
+u16 HasStoneEvolution(u16 species, u8 level)//for evolving trainers mons w. stones
+{
+	if((gEvolutionTable[species][0].method == EVO_ITEM) && (level >= 35))
+	{
+		if(HasStoneEvolution(gEvolutionTable[species][0].targetSpecies, level))
+			return HasStoneEvolution(gEvolutionTable[species][0].targetSpecies, level);
+		else
+			return gEvolutionTable[species][0].targetSpecies;
+	}
+	return 0;
+}
+
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer)
 {
     u32 nameHash = 0;
@@ -1920,7 +1933,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 	}
     }
 	
-    if(i == PARTY_SIZE) dynamicLevel /= i;
+    if(i == PARTY_SIZE) 
+		dynamicLevel /= i;
 
 	/* The following is used to account for a player having one or two very weak Pokemon
 	   along with some very strong Pokemon. It weights the averaged level more towards the
@@ -2049,7 +2063,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 				else
 				{
 					if(HasLevelEvolution(partyData[i].species, dynamicLevel))
-						CreateMon(&party[i], HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+					{
+						if(HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel))
+							CreateMon(&party[i], HasStoneEvolution(partyData[i].species, dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+						else
+							CreateMon(&party[i], HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+					}
 					else
 						CreateMon(&party[i], partyData[i].species, dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 				}
