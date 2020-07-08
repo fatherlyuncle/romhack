@@ -407,6 +407,7 @@ static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
 static bool8 SetUpFieldMove_Waterfall(void);
 static bool8 SetUpFieldMove_Dive(void);
+static void TryTradeSelectedMon(u8);//for tradeback npc
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -1251,6 +1252,14 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
                 TryTutorSelectedMon(taskId);
             }
             break;
+		case PARTY_ACTION_TRADE - 3:
+			if (MonTradeable((u8*)slotPtr))
+			{
+				PlaySE(SE_SELECT);
+                PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+                TryTradeSelectedMon(taskId);
+			}
+			break;
         case PARTY_ACTION_GIVE_MAILBOX_MAIL - 3:
             if (IsSelectedMonNotEgg((u8*)slotPtr))
             {
@@ -1288,6 +1297,7 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
             PlaySE(SE_SELECT);
             Task_TryCreateSelectionWindow(taskId);
             break;
+		
         }
     }
 }
@@ -5341,6 +5351,102 @@ u8 GetItemEffectType(u16 item)
         return ITEM_EFFECT_NONE;
 }
 
+static void TryTradeSelectedMon(u8 taskId)//for tradeback npc
+{
+	struct Pokemon *mon;
+	u16 = tradeEvo;
+	u8 = tradeSprite;
+	
+	if (!gPaletteFade.active)
+	{
+		mon = &gPlayerParty[gPartyMenu.slotId];
+		switch (GetEvolutionTargetSpecies(mon, 1, 0)
+		{
+		case SPECIES_NONE:
+			FreePartyPointers();
+			DestroyTask(taskId);
+			break;
+		case SPECIES_GOLEM:
+			tradeEvo = SPECIES_GOLEM;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_MACHAMP:
+			tradeEvo = SPECIES_MACHAMP;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_ALAKAZAM:
+			tradeEvo = SPECIES_ALAKAZAM;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_GIGALITH:
+			tradeEvo = SPECIES_GIGALITH;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_GENGAR:
+			tradeEvo = SPECIES_GENGAR;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_CONKELDURR:
+			tradeEvo = SPECIES_CONKELDURR;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_ALOLAN_GOLEM:
+			tradeEvo = SPECIES_ALOLAN_GOLEM;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_TREVENANT:
+			tradeEvo = SPECIES_TREVENANT;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_GOURGEIST:
+			tradeEvo = SPECIES_GOURGEIST;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_ESCAVALIER:
+			tradeEvo = SPECIES_ESCAVALIER;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		case SPECIES_ACCELGOR:
+			tradeEvo = SPECIES_ACCELGOR;
+			FreePartyPointers();
+			gCB2_AfterEvolution = gPartyMenu.exitCallback;
+			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
+			DestroyTask(taskId);
+			break;
+		}
+	}
+}
+
 static void TryTutorSelectedMon(u8 taskId)
 {
     struct Pokemon *mon;
@@ -5781,6 +5887,19 @@ void ChooseMonForTradingBoard(u8 menuType, MainCallback callback)
 void ChooseMonForMoveTutor(void)
 {
     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_MOVE_TUTOR, FALSE, PARTY_MSG_TEACH_WHICH_MON, Task_HandleChooseMonInput, CB2_ReturnToFieldContinueScriptPlayMapMusic);
+}
+
+void ChooseMonForTrade(void) //for tradeback npc
+{
+    InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, FALSE, PARTY_MSG_GIVE_MON, Task_HandleChooseMonInput, CB2_ReturnToFieldContinueScriptPlayMapMusic);
+}
+
+void MonTradeable(void) //check if pokemon evolves w/ trade
+{
+  if (gEvolutionTable[&gPlayerParty[gSpecialVar_0x8004]] == EVO_TRADE))
+      gSpecialVar_Result = TRUE;
+  else
+      gSpecialVar_Result = FALSE;
 }
 
 void ChooseMonForWirelessMinigame(void)

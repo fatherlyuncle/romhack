@@ -68,6 +68,8 @@ void InitChooseHalfPartyForBattle(u8 unused);
 void ClearSelectedPartyOrder(void);
 void ChooseMonForTradingBoard(u8 menuType, MainCallback callback);
 void ChooseMonForMoveTutor(void);
+void ChooseMonForTrade(void); //for tradeback npc
+void MonTradeable(void); //for tradeback npc
 void ChooseMonForWirelessMinigame(void);
 void OpenPartyMenuInBattle(u8 partyAction);
 void ChooseMonForInBattleItem(void);
