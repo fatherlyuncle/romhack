@@ -4368,7 +4368,7 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
     if (!IsItemFlute(item))
     {
         PlaySE(SE_KAIFUKU);
-        if (gPartyMenu.action != PARTY_ACTION_REUSABLE_ITEM)
+        //if (gPartyMenu.action != PARTY_ACTION_REUSABLE_ITEM) //replaced definition
             RemoveBagItem(item, 1);
     }
     else
@@ -5354,8 +5354,7 @@ u8 GetItemEffectType(u16 item)
 static void TryTradeSelectedMon(u8 taskId)//for tradeback npc
 {
 	struct Pokemon *mon;
-	u16 = tradeEvo;
-	u8 = tradeSprite;
+	u16 tradeEvo;
 	
 	if (!gPaletteFade.active)
 	{
