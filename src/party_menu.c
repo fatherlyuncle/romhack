@@ -5891,7 +5891,7 @@ void ChooseMonForMoveTutor(void)
 
 void ChooseMonForTrade(void) //for tradeback npc
 {
-    InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, FALSE, PARTY_MSG_GIVE_MON, Task_HandleChooseMonInput, CB2_ReturnToFieldContinueScriptPlayMapMusic);
+    InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_TRADE, FALSE, PARTY_MSG_GIVE_MON, Task_HandleChooseMonInput, CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }
 
 static bool8 MonTradeable(u8 *slotPtr) //check if pokemon evolves w/ trade
