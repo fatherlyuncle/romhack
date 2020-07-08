@@ -1254,7 +1254,7 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
             }
             break;
 		case PARTY_ACTION_TRADE - 3:
-			//if (MonTradeable((u8*)slotPtr))
+			if (MonTradeable((u8*)slotPtr))
 			{
 				PlaySE(SE_SELECT);
                 PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
@@ -5357,84 +5357,84 @@ static void TryTradeSelectedMon(u8 taskId)//for tradeback npc
 	struct Pokemon *mon;
 	u16 tradeEvo;
 	
-	//if (!gPaletteFade.active)
+	if (!gPaletteFade.active)
 	{
 		mon = &gPlayerParty[gPartyMenu.slotId];
 		switch (GetEvolutionTargetSpecies(mon, 1, 0))
 		{
 		case SPECIES_GOLEM:
 			tradeEvo = SPECIES_GOLEM;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_MACHAMP:
 			tradeEvo = SPECIES_MACHAMP;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_ALAKAZAM:
 			tradeEvo = SPECIES_ALAKAZAM;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_GIGALITH:
 			tradeEvo = SPECIES_GIGALITH;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_GENGAR:
 			tradeEvo = SPECIES_GENGAR;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_CONKELDURR:
 			tradeEvo = SPECIES_CONKELDURR;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_ALOLAN_GOLEM:
 			tradeEvo = SPECIES_ALOLAN_GOLEM;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_TREVENANT:
 			tradeEvo = SPECIES_TREVENANT;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_GOURGEIST:
 			tradeEvo = SPECIES_GOURGEIST;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_ESCAVALIER:
 			tradeEvo = SPECIES_ESCAVALIER;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
 			break;
 		case SPECIES_ACCELGOR:
 			tradeEvo = SPECIES_ACCELGOR;
-			//FreePartyPointers();
+			FreePartyPointers();
 			gCB2_AfterEvolution = gPartyMenu.exitCallback;
 			BeginEvolutionScene(mon, tradeEvo, 0, gPartyMenu.slotId);
 			DestroyTask(taskId);
