@@ -2065,7 +2065,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 					if(HasLevelEvolution(partyData[i].species, dynamicLevel))
 					{
 						if(HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel))
-							CreateMon(&party[i], HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+							CreateMon(&party[i], (HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel)), dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 						else
 							CreateMon(&party[i], HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 					}
@@ -2097,7 +2097,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 					if(HasLevelEvolution(partyData[i].species, dynamicLevel))
 					{
 						if(HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel))
-							CreateMon(&party[i], HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+							CreateMon(&party[i], (HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel)), dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 						else
 							CreateMon(&party[i], HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 					}
@@ -2135,7 +2135,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 					if(HasLevelEvolution(partyData[i].species, dynamicLevel))
 					{
 						if(HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel))
-							CreateMon(&party[i], HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+							CreateMon(&party[i], (HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel)), dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 						else
 							CreateMon(&party[i], HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 					}
@@ -2169,7 +2169,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
 					if(HasLevelEvolution(partyData[i].species, dynamicLevel))
 					{
 						if(HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel))
-							CreateMon(&party[i], HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel), fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+							CreateMon(&party[i], (HasStoneEvolution(HasLevelEvolution(partyData[i].species, dynamicLevel)), dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 						else
 							CreateMon(&party[i], HasLevelEvolution(partyData[i].species, dynamicLevel), dynamicLevel, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
 					}
