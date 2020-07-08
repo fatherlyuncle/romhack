@@ -408,6 +408,7 @@ static bool8 SetUpFieldMove_Fly(void);
 static bool8 SetUpFieldMove_Waterfall(void);
 static bool8 SetUpFieldMove_Dive(void);
 static void TryTradeSelectedMon(u8);//for tradeback npc
+static bool8 MonTradeable(u8*);//for tradeback npc
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -5893,12 +5894,16 @@ void ChooseMonForTrade(void) //for tradeback npc
     InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, FALSE, PARTY_MSG_GIVE_MON, Task_HandleChooseMonInput, CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }
 
-void MonTradeable(void) //check if pokemon evolves w/ trade
+static bool8 MonTradeable(u8 *slotPtr) //check if pokemon evolves w/ trade
 {
-  if (gEvolutionTable[&gPlayerParty[gSpecialVar_0x8004]] == EVO_TRADE)
-      gSpecialVar_Result = TRUE;
-  else
-      gSpecialVar_Result = FALSE;
+	u16 monEvoMethod = GetMonData(&gPlayerParty[*slotPtr], MON_DATA_SPECIES);
+	switch (gEvolutionTable[monEvoMethod][i].method)
+	{
+	case EVO_TRADE:
+		return TRUE;
+	default:
+		return FALSE;
+	}
 }
 
 void ChooseMonForWirelessMinigame(void)
