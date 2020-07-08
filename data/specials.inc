@@ -542,4 +542,3 @@ gSpecials:: @ 81DBA64
 	def_special SetSpAtkEvs//^//gSpecialVar_0x8005
 	def_special SetSpDefEvs//^//gSpecialVar_0x8006   //gSpecialVar_0x8004=mon
 	def_special ChooseMonForTrade //for tradeback npc
-	def_special MonTradeable //for tradeback npc
