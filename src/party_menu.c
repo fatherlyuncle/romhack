@@ -1254,7 +1254,7 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
             }
             break;
 		case PARTY_ACTION_TRADE - 3:
-			if (MonTradeable((u8*)slotPtr))
+			//if (MonTradeable((u8*)slotPtr))
 			{
 				PlaySE(SE_SELECT);
                 PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
