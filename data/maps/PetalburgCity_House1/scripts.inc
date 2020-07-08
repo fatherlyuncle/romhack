@@ -31,10 +31,10 @@ PetalburgCity_House1_Trade::
 	return
 
 PetalburgCity_House1_Text_Trade_Confirm:
-	.string "Really?? I can haz?\p$"
+	.string "Really?? I can haz?\n$"
 
 PetalburgCity_House1_Text_Trade_YesNo:
-	.string "Plz give pkmn.\p$"
+	.string "Plz give pkmn.\n$"
 
 PetalburgCity_House1_Trade_Declined::
 	msgbox PetalburgCity_House1_Text_Trade_Declined, MSGBOX_DEFAULT
@@ -42,7 +42,7 @@ PetalburgCity_House1_Trade_Declined::
 	end
 	
 PetalburgCity_House1_Text_Trade_Declined:
-	.string "Damn u suck..\p$"
+	.string "Damn u suck..\n$"
 
 PetalburgCity_House1_Trade_Done::
 	msgbox PetalburgCity_House1_Text_Trade_Done, MSGBOX_DEFAULT
