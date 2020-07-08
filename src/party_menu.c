@@ -5897,7 +5897,7 @@ void ChooseMonForTrade(void) //for tradeback npc
 static bool8 MonTradeable(u8 *slotPtr) //check if pokemon evolves w/ trade
 {
 	u16 monEvoMethod = GetMonData(&gPlayerParty[*slotPtr], MON_DATA_SPECIES);
-	switch (gEvolutionTable[monEvoMethod][i].method)
+	switch (gEvolutionTable[monEvoMethod][0].method)
 	{
 	case EVO_TRADE:
 		return TRUE;
