@@ -456,6 +456,10 @@ struct RankingHall2P
     u8 language;
 };
 
+// quest menu
+#include "constants/quests.h"
+#define SIDE_QUEST_FLAGS_COUNT     ((SIDE_QUEST_COUNT / 8) + ((SIDE_QUEST_COUNT % 8) ? 1 : 0))
+
 struct SaveBlock2
 {
     /*0x00*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
@@ -489,7 +493,11 @@ struct SaveBlock2
     /*0x624*/ u16 contestLinkResults[5][4]; // 4 positions for 5 categories.
     /*0x64C*/ struct BattleFrontier frontier;
 	          u16 ItemArg; //for da HMs
-}; // sizeof=0xF2C
+    /*0x0F2C*/ u8 unlockedQuests[SIDE_QUEST_FLAGS_COUNT];
+    /*0x????*/ u8 completedQuests[SIDE_QUEST_FLAGS_COUNT];
+    /*0x????*/ u8 activeQuest;
+}; 
+
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
@@ -903,6 +911,7 @@ struct MysteryEventStruct
     /*0x344 0x3570*/ u32 unk_344[2][5];
 }; // 0x36C 0x3598
 
+    
 struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
@@ -980,6 +989,7 @@ struct SaveBlock1
     /*0x31DC*/ struct Roamer roamer;
     /*0x31F8*/ struct EnigmaBerry enigmaBerry;
     /*0x322C*/ struct MEventBuffers unk_322C;
+<<<<<<< HEAD
     /*0x3???*/ u8 dexSeen[DEX_FLAGS_NO];
     /*0x3???*/ u8 dexCaught[DEX_FLAGS_NO];
     /*0x3???*/ u32 trainerHillTimes[4];
@@ -991,6 +1001,20 @@ struct SaveBlock1
     /*0x3???*/ struct SaveTrainerHill trainerHill;
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
+=======
+    /*0x3598*/ u8 field_3598[0x180];
+    /*0x3718*/ u32 trainerHillTimes[4];
+    /*0x3728*/ struct RamScript ramScript;
+    /*0x3B14*/ struct RecordMixingGift recordMixingGift;
+    /*0x3B24*/ u8 seen2[DEX_FLAGS_NO];
+    /*0x3B58*/ LilycoveLady lilycoveLady;
+    /*0x3B98*/ struct TrainerNameRecord trainerNameRecords[20];
+    /*0x3C88*/ u8 unk3C88[10][21];
+    /*0x3D5A*/ u8 filler3D5A[0xA];
+    /*0x3D64*/ struct SaveTrainerHill trainerHill;
+    /*0x3D70*/ struct WaldaPhrase waldaPhrase;
+    /* size = 0x3D88 */
+>>>>>>> ghoul/quest-menu
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;
