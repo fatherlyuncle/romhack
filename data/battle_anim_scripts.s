@@ -8713,7 +8713,7 @@ Move_BOOMBURST:
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATK_PARTNER, 1, 0, 6, 1
 	createvisualtask SoundTask_WaitForCry, 2, 1, 0, 6, 1
 	delay 20
-	#jumpifdoublebattle Boomburst_Doubles
+	
 	playsewithpan SE_W153, SOUND_PAN_ATTACKER
 	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 1
 	delay 4
