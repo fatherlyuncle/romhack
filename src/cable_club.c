@@ -544,7 +544,7 @@ static void Task_LinkupFailed(u8 taskId)
 {
     gSpecialVar_Result = LINKUP_FAILED;
     ClearLinkPlayerCountWindow(gTasks[taskId].tWindowId);
-    StopFieldMessage();
+    //StopFieldMessage();
     RemoveWindow(gTasks[taskId].tWindowId);
     EnableBothScriptContexts();
     DestroyTask(taskId);
