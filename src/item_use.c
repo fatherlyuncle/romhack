@@ -202,7 +202,8 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 		if(!gTasks[taskId].tUsingRegisteredKeyItem)
 		{
 			gSpecialVar_0x8000 = 591;
-			gBagMenu->mainCallback2 = CB2_OpenFlyMap;
+			//gBagMenu->mainCallback2 = CB2_OpenFlyMap;
+			SetMainCallback2(CB2_OpenFlyMap);
 			Task_FadeAndCloseBagMenu(taskId);
 		}
 		else
@@ -239,7 +240,8 @@ void ItemUseOutOfBattle_Flash(u8 taskId) //Flash item replacement//wiservisor fl
 		if(!gTasks[taskId].tUsingRegisteredKeyItem)
 		{
 			gFieldCallback = FieldCallback_Flash;
-			gBagMenu->mainCallback2 = CB2_ReturnToField;
+			//gBagMenu->mainCallback2 = CB2_ReturnToField;
+			SetMainCallback2(CB2_ReturnToField);
 			Task_FadeAndCloseBagMenu(taskId);
 		}
 		else
