@@ -456,10 +456,6 @@ struct RankingHall2P
     u8 language;
 };
 
-// quest menu
-#include "constants/quests.h"
-#define SIDE_QUEST_FLAGS_COUNT     ((SIDE_QUEST_COUNT / 8) + ((SIDE_QUEST_COUNT % 8) ? 1 : 0))
-
 struct SaveBlock2
 {
     /*0x00*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
@@ -493,11 +489,7 @@ struct SaveBlock2
     /*0x624*/ u16 contestLinkResults[5][4]; // 4 positions for 5 categories.
     /*0x64C*/ struct BattleFrontier frontier;
 	          u16 ItemArg; //for da HMs
-    /*0x0F2C*/ u8 unlockedQuests[SIDE_QUEST_FLAGS_COUNT];
-    /*0x????*/ u8 completedQuests[SIDE_QUEST_FLAGS_COUNT];
-    /*0x????*/ u8 activeQuest;
-}; 
-
+}; // sizeof=0xF2C
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
@@ -911,7 +903,6 @@ struct MysteryEventStruct
     /*0x344 0x3570*/ u32 unk_344[2][5];
 }; // 0x36C 0x3598
 
-    
 struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
@@ -1000,10 +991,7 @@ struct SaveBlock1
     /*0x3???*/ struct SaveTrainerHill trainerHill;
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
     // sizeof: 0x3???
-    /*0x3598*/ u8 field_3598[0x180];
-    /*0x3B24*/ u8 seen2[DEX_FLAGS_NO];
-    /*0x3D5A*/ u8 filler3D5A[0xA];
-    /* size = 0x3D88 */
+
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;
