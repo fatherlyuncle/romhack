@@ -22,7 +22,7 @@ static void sub_801B330(void);
 static void sub_801B368(void);
 static void sub_801B9F8(void);
 static void sub_801BA8C(u32 a0, u32 a1, u32 *a2, int a3);
-
+/*
 void sub_801AFD8(void)
 {
     CpuFill32(0, &gSaveBlock1Ptr->unk_322C, sizeof(gSaveBlock1Ptr->unk_322C));
@@ -629,3 +629,4 @@ static void sub_801BA8C(u32 a0, u32 a1, u32 *a2, int a3)
     if (sub_801BA24(a1, a2, a3))
         sub_801B7D8(a0);
 }
+*/
