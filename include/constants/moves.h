@@ -736,6 +736,44 @@
 
 #define MOVES_COUNT_GEN8              (MOVES_COUNT_GEN7 + 35)
 
-#define MOVES_COUNT                 MOVES_COUNT_GEN8
+//Custom typing tutor moves. 
+#define MOVE_SIMPLE_STRIKE            (MOVES_COUNT_GEN8 + 0)
+#define MOVE_CONVERSATION             (MOVES_COUNT_GEN8 + 1)
+#define MOVE_LAVA_RUSH                (MOVES_COUNT_GEN8 + 2)
+#define MOVE_CORE_MELTDOWN            (MOVES_COUNT_GEN8 + 3)
+#define MOVE_MAELSTROM                (MOVES_COUNT_GEN8 + 4)
+#define MOVE_PRESSURIZE               (MOVES_COUNT_GEN8 + 5)
+#define MOVE_SPROUT_SHOT              (MOVES_COUNT_GEN8 + 6)
+#define MOVE_VEGETATE                 (MOVES_COUNT_GEN8 + 7)
+#define MOVE_STATIC_SWIPES            (MOVES_COUNT_GEN8 + 8)
+#define MOVE_IONIC_GAS                (MOVES_COUNT_GEN8 + 9)
+#define MOVE_TRI_CHOP                 (MOVES_COUNT_GEN8 + 10)
+#define MOVE_FOCUS_CHI                (MOVES_COUNT_GEN8 + 11)
+#define MOVE_SAND_SURF                (MOVES_COUNT_GEN8 + 12)
+#define MOVE_EARTH_SWAP               (MOVES_COUNT_GEN8 + 13)
+#define MOVE_WING_SLASH               (MOVES_COUNT_GEN8 + 14)
+#define MOVE_GALE_FORCE               (MOVES_COUNT_GEN8 + 15)
+#define MOVE_BOULDER_ROLL             (MOVES_COUNT_GEN8 + 16)
+#define MOVE_CRYSTALLIZE              (MOVES_COUNT_GEN8 + 17)
+#define MOVE_INSECTION                (MOVES_COUNT_GEN8 + 18)
+#define MOVE_CHRYSALIS                (MOVES_COUNT_GEN8 + 19)
+#define MOVE_CRYO_BURST               (MOVES_COUNT_GEN8 + 20)
+#define MOVE_FREEZE_POWDER            (MOVES_COUNT_GEN8 + 21)
+#define MOVE_NOXIOUS_CLAW             (MOVES_COUNT_GEN8 + 22)
+#define MOVE_METASTASIZE              (MOVES_COUNT_GEN8 + 23)
+#define MOVE_PSIONIC_SLAM             (MOVES_COUNT_GEN8 + 24)
+#define MOVE_BRAIN_DRAIN              (MOVES_COUNT_GEN8 + 25)
+#define MOVE_NECROMANCY               (MOVES_COUNT_GEN8 + 26)
+#define MOVE_SPOOK                    (MOVES_COUNT_GEN8 + 27)
+#define MOVE_WYVERNS_WRATH            (MOVES_COUNT_GEN8 + 28)
+#define MOVE_DRAGON_BLOOD             (MOVES_COUNT_GEN8 + 29)
+#define MOVE_DEMONIC_HOWL             (MOVES_COUNT_GEN8 + 30)
+#define MOVE_MURKY_STARE              (MOVES_COUNT_GEN8 + 31)
+#define MOVE_MERCURY_BOMB             (MOVES_COUNT_GEN8 + 32)
+#define MOVE_NANOBOTS                 (MOVES_COUNT_GEN8 + 33)
+#define MOVE_PIXIE_DUST               (MOVES_COUNT_GEN8 + 34)
+#define MOVE_LUNAR_CURSE              (MOVES_COUNT_GEN8 + 35)
+
+#define MOVES_COUNT                   MOVES_COUNT_GEN8 + 36
 
 #endif  // GUARD_CONSTANTS_MOVES_H

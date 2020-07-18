@@ -871,7 +871,7 @@ static const u8 sPresentDescription[] = _(
 
 static const u8 sFrustrationDescription[] = _(
     "An attack that is stronger\n"
-    "if the TRAINER is disliked.");
+    "if the Trainer is disliked.");
 
 static const u8 sSafeguardDescription[] = _(
     "A mystical force prevents\n"
@@ -2766,6 +2766,151 @@ static const u8 sSTEEL_BEAMDescription[] = _(
     "Fires a beam of steel from\n"
     "its body. It hurts the user.");
 
+//Custom move tutor type moves
+static const u8 sSIMPLE_STRIKEDescription[] = _(
+	"Forgoes strategy and attacks,\n"
+	"resetting the foes stats.");
+	
+static const u8 sCONVERSATIONDescription[] = _(
+    "The user starts a friendly\n"
+    "chat. Causes a random status.");
+    
+static const u8 sLAVA_RUSHDescription[] = _(
+    "Shoots 2-5 globs of molten\n"
+    "lava at the foe. May cause a burn.");
+    
+static const u8 sCORE_MELTDOWNDescription[] = _(
+    "User melts down, increasing\n"
+    "Sp. Atk, but HP decreases each turn.");
+    
+static const u8 sMAELSTROMDescription[] = _(
+    "Slams the foe with the force\n"
+    "of a maelstrom, lowering their Spd.");
+    
+static const u8 sPRESSURIZEDescription[] = _(
+    "The user becomes pressurized.\n"
+    "Raises Sp. Atk and Speed.");
+    
+static const u8 sSPROUT_SHOTDescription[] = _(
+    "Slams the foe with a seeded\n"
+    "sprout, may inflict leech seeds.");
+    
+static const u8 sVEGETATEDescription[] = _(
+    "The user vegs out to heal and\n"
+    "raise one of its defenses.");
+    
+static const u8 sSTATIC_SWIPESDescription[] = _(
+    "The user attacks twice with\n"
+    "charged swipes. May cause paralysis.");
+    
+static const u8 sIONIC_GASDescription[] = _(
+    "Surrounds itself with ionized\n"
+    "gas, raising Speed and Evasion.");
+    
+static const u8 sTRI_CHOPDescription[] = _(
+    "Throws three chops at the same\n"
+    "time. May cause FRZ, BRN, or PAR.");
+    
+static const u8 sFOCUS_CHIDescription[] = _(
+    "Clearing the mind of negativity,\n"
+    "the user endures any hit.");
+    
+static const u8 sSAND_SURFDescription[] = _(
+    "User surfs across the sand.\n"
+    "Always strikes first.");
+    
+static const u8 sEARTH_SWAPDescription[] = _(
+    "The user moves the ground,\n"
+    "swapping both sides of the field.");
+    
+static const u8 sWING_SLASHDescription[] = _(
+    "Using powerful wings, the\n"
+    "user slashes the foe. May flinch.");
+    
+static const u8 sGALE_FORCEDescription[] = _(
+    "Summoning strong winds, the\n"
+    "user's Atk grows. Dispels weather.");
+    
+static const u8 sBOULDER_ROLLDescription[] = _(
+    "The user hardens itself and\n"
+    "rolls at the foe. Always goes last.");
+    
+static const u8 sCRYSTALLIZEDescription[] = _(
+    "Forms a crystalline shield,\n"
+    "protecting the user. Raises Sp. Def.");
+    
+static const u8 sINSECTIONDescription[] = _(
+    "Jab the target with a sharp\n"
+    "limb. May cause poison.");
+    
+static const u8 sCHRYSALISDescription[] = _(
+    "The user enters a cocoon\n"
+    "and rests, raising all stats.");
+    
+static const u8 sCRYO_BURSTDescription[] = _(
+    "Sprays the foe with a subzero\n"
+    "liquid. High chance of freezing.");
+    
+static const u8 sFREEZE_POWDERDescription[] = _(
+    "A cloud of icy dust is spread.\n"
+    "It may freeze the target.");
+    
+static const u8 sNOXIOUS_CLAWDescription[] = _(
+    "Slash the foe with a toxic claw.\n"
+    "Causes poisoned foes to sleep.");
+    
+static const u8 sMETASTASIZEDescription[] = _(
+    "Envenoms the target, \n"
+    "worsening the poison inside of them.");
+    
+static const u8 sPSIONIC_SLAMDescription[] = _(
+    "Strikes the foe with a psionic\n"
+    "blast. Hits again 2 turns later.");
+    
+static const u8 sBRAIN_DRAINDescription[] = _(
+    "Using psychic power, absorb the\n"
+    "foe's stat changes as health.");
+    
+static const u8 sNECROMANCYDescription[] = _(
+    "Conjurs up an evil spirit to\n"
+    "attack the foe, who may get cursed.");
+    
+static const u8 sSPOOKDescription[] = _(
+    "Terrify the opposing Pokémon.\n"
+    "Sharply lowers foe's Accuracy.");
+    
+static const u8 sWYVERNS_WRATHDescription[] = _(
+    "An all-out Dragon assault. User\n"
+    "takes severe recoil. May flinch.");
+    
+static const u8 sDRAGON_BLOODDescription[] = _(
+    "User awakens the power inside.\n"
+    "Raises Atk, lowers foe's offenses.");
+    
+static const u8 sDEMONIC_HOWLDescription[] = _(
+    "Roars with the power of Darkness.\n"
+    "Sharply lowers user's Sp. Atk.");
+    
+static const u8 sMURKY_STAREDescription[] = _(
+    "Casts a dark gaze on the target,\n"
+    "confusing and scaring them.");
+    
+static const u8 sMERCURY_BOMBDescription[] = _(
+    "Sets a mercury trap that \n"
+    "explodes and burns when struck.");
+    
+static const u8 sNANOBOTSDescription[] = _(
+    "Unleash a horde of medical\n"
+    "nanobots. They restore HP each turn.");
+    
+static const u8 sPIXIE_DUSTDescription[] = _(
+    "Coats the foe with a sparkling\n"
+    "dust. Lasts for 4 to 5 turns.");
+    
+static const u8 sLUNAR_CURSEDescription[] = _(
+    "Uses a magical spell and the\n"
+    "power of the moon to curse a foe.");
+
 static const u8 sNotDoneYetDescription[] = _(
 	"Not done yet.");
 
@@ -3485,4 +3630,41 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_METEOR_ASSAULT - 1] = sMETEOR_ASSAULTDescription,
     [MOVE_ETERNABEAM - 1] = sETERNABEAMDescription,
     [MOVE_STEEL_BEAM - 1] = sSTEEL_BEAMDescription,
+	//Custom move tutor type moves
+	[MOVE_SIMPLE_STRIKE - 1] = sSIMPLE_STRIKEDescription,
+	[MOVE_CONVERSATION - 1] = sCONVERSATIONDescription,
+	[MOVE_LAVA_RUSH - 1] = sLAVA_RUSHDescription,
+	[MOVE_CORE_MELTDOWN - 1] = sCORE_MELTDOWNDescription,
+	[MOVE_MAELSTROM - 1] = sMAELSTROMDescription,
+	[MOVE_PRESSURIZE - 1] = sPRESSURIZEDescription,
+	[MOVE_SPROUT_SHOT - 1] = sSPROUT_SHOTDescription,
+	[MOVE_VEGETATE - 1] = sVEGETATEDescription,
+	[MOVE_STATIC_SWIPES - 1] = sSTATIC_SWIPESDescription,
+	[MOVE_IONIC_GAS - 1] = sIONIC_GASDescription,
+	[MOVE_TRI_CHOP - 1] = sTRI_CHOPDescription,
+	[MOVE_FOCUS_CHI - 1] = sFOCUS_CHIDescription,
+	[MOVE_SAND_SURF - 1] = sSAND_SURFDescription,
+	[MOVE_EARTH_SWAP - 1] = sEARTH_SWAPDescription,
+	[MOVE_WING_SLASH - 1] = sWING_SLASHDescription,
+	[MOVE_GALE_FORCE - 1] = sGALE_FORCEDescription,
+	[MOVE_BOULDER_ROLL - 1] = sBOULDER_ROLLDescription,
+	[MOVE_CRYSTALLIZE - 1] = sCRYSTALLIZEDescription,
+	[MOVE_INSECTION - 1] = sINSECTIONDescription,
+	[MOVE_CHRYSALIS - 1] = sCHRYSALISDescription,
+	[MOVE_CRYO_BURST - 1] = sCRYO_BURSTDescription,
+	[MOVE_FREEZE_POWDER - 1] = sFREEZE_POWDERDescription,
+	[MOVE_NOXIOUS_CLAW - 1] = sNOXIOUS_CLAWDescription,
+	[MOVE_METASTASIZE - 1] = sMETASTASIZEDescription,
+	[MOVE_PSIONIC_SLAM - 1] = sPSIONIC_SLAMDescription,
+	[MOVE_BRAIN_DRAIN - 1] = sBRAIN_DRAINDescription,
+	[MOVE_NECROMANCY - 1] = sNECROMANCYDescription,
+	[MOVE_SPOOK - 1] = sSPOOKDescription,
+	[MOVE_WYVERNS_WRATH - 1] = sWYVERNS_WRATHDescription,
+	[MOVE_DRAGON_BLOOD - 1] = sDRAGON_BLOODDescription,
+	[MOVE_DEMONIC_HOWL - 1] = sDEMONIC_HOWLDescription,
+	[MOVE_MURKY_STARE - 1] = sMURKY_STAREDescription,
+	[MOVE_MERCURY_BOMB - 1] = sMERCURY_BOMBDescription,
+	[MOVE_NANOBOTS - 1] = sNANOBOTSDescription,
+	[MOVE_PIXIE_DUST - 1] = sPIXIE_DUSTDescription,
+	[MOVE_LUNAR_CURSE - 1] = sLUNAR_CURSEDescription,
 };
