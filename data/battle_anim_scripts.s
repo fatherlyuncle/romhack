@@ -14173,7 +14173,6 @@ Move_SPROUT_SHOT::
 	goto Move_LEECH_SEED
 	
 Move_VEGETATE::
-	loadspritegfx AN
 	call GrowthEffect
 	waitforvisualfinish
 	call GrowthEffect
