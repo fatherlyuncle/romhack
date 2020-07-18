@@ -10207,7 +10207,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .split = SPLIT_PHYSICAL,
     },
 	
-	[MOVE_GALE_WINGS] =
+	[MOVE_GALE_FORCE] =
     {
         .effect = EFFECT_ATTACK_UP,//GALE_WINGS,
         .power = 0,
@@ -10302,8 +10302,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 20,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
-        .priority = 0
-        .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_POWDER,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_MAGICCOAT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_POWDER,
         .split = SPLIT_STATUS,
 		.argument = STATUS1_FREEZE,
     },
