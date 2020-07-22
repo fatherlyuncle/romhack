@@ -4864,10 +4864,10 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-	[ITEM_TM70_CHRYSALILS] =
+	[ITEM_TM70_CHRYSALIS] =
     {
         .name = _("TM70"),
-        .itemId = ITEM_TM70_CHRYSALILS,
+        .itemId = ITEM_TM70_CHRYSALIS,
         .price = 3000,
         .description = sTM70Desc,
         .pocket = POCKET_TM_HM,
