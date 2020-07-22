@@ -6,7 +6,7 @@
 // each bit corresponding to a .
 const u32 gTMHMLearnsets[][2] =
 {
-    [SPECIES_NONE]        = TMHM_LEARNSET(0),
+    /*[SPECIES_NONE]        = TMHM_LEARNSET(0),
 
     [SPECIES_BULBASAUR]   = TMHM_LEARNSET(TMHM(TM45_ATTRACT)
 											| TMHM(TM09_BULLET_SEED)
@@ -7369,10 +7369,10 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM03_WATER_PULSE)
 											| TMHM(TM51_SIMPLE_STRIKE)
 											| TMHM(TM52_CONVERSATION)),
-
+*/
     [SPECIES_WURMPLE]     = TMHM_LEARNSET(TMHM(TM69_INSECTION)
 											| TMHM(TM70_CHRYSALIS)),
-
+/*
     [SPECIES_SILCOON]     = TMHM_LEARNSET(TMHM(TM69_INSECTION)
 											| TMHM(TM70_CHRYSALIS)),
 
@@ -22071,5 +22071,6 @@ const u32 gTMHMLearnsets[][2] =
 											| TMHM(TM54_CORE_MELTDOWN)
 											| TMHM(TM77_NECROMANCY)
 											| TMHM(TM78_SPOOK)),
+											*/
 
 };
