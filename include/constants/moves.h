@@ -736,7 +736,7 @@
 
 #define MOVES_COUNT_GEN8              (MOVES_COUNT_GEN7 + 35)
 
-//Custom typing tutor moves. 
+//Custom typing tutor moves.
 #define MOVE_SIMPLE_STRIKE            (MOVES_COUNT_GEN8 + 0)
 #define MOVE_CONVERSATION             (MOVES_COUNT_GEN8 + 1)
 #define MOVE_LAVA_RUSH                (MOVES_COUNT_GEN8 + 2)
@@ -774,6 +774,6 @@
 #define MOVE_PIXIE_DUST               (MOVES_COUNT_GEN8 + 34)
 #define MOVE_LUNAR_CURSE              (MOVES_COUNT_GEN8 + 35)
 
-#define MOVES_COUNT                   MOVES_COUNT_GEN8 + 36
+#define MOVES_COUNT                   (MOVES_COUNT_GEN8 + 36)
 
 #endif  // GUARD_CONSTANTS_MOVES_H

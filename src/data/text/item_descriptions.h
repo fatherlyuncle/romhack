@@ -1760,7 +1760,188 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers SP. ATK.");
 
-
+//custom type move TMs
+static const u8 sTM51Desc[] = _(
+    "Forgoe strategy to\n"
+    "attack. Clears the\n"
+    "foe's stat changes.");
+	
+static const u8 sTM52Desc[] = _(
+    "Starts a friendly\n"
+    "chat, causing\n"
+    "a random status.");	
+	
+static const u8 sTM53Desc[] = _(
+    "Strike the foe\n"
+    "with 2-5 globs of\n"
+    "molten lava.");
+	
+static const u8 sTM54Desc[] = _(
+    "User melts down,\n"
+    "increasing Sp. Atk.\n"
+    "but HP slowly falls.");
+	
+static const u8 sTM55Desc[] = _(
+    "Slams the foe with\n"
+    "the force of a\n"
+    "maelstrom. Slows.");
+	
+static const u8 sTM56Desc[] = _(
+    "Become pressurized\n"
+    "using steam. Raises\n"
+    "Sp. Atk. and Spd.");
+	
+static const u8 sTM57Desc[] = _(
+    "Slams the foe with\n"
+    "a growing sprout.\n"
+    "May inflict seeding.");
+	
+static const u8 sTM58Desc[] = _(
+    "Vegging out, the\n"
+    "user heals and ups\n"
+    "one of its defenses.");
+		
+static const u8 sTM59Desc[] = _(
+    "The user attacks 2x\n"
+    "with charged swipes.\n"
+    "May paralyze foe.");
+		
+static const u8 sTM60Desc[] = _(
+    "Surrounds itself\n"
+    "with ionized gas.\n"
+    "Raises Speed + Evas.");
+	
+static const u8 sTM61Desc[] = _(
+    "Throw 3 karate chops\n"
+    "charged with energy.\n"
+    "May cause a status.");
+	
+static const u8 sTM62Desc[] = _(
+    "Clears the mind\n"
+    "of negativity and\n"
+    "endures any hit.");	
+	
+static const u8 sTM63Desc[] = _(
+    "User surfs across\n"
+    "the sand to strike\n"
+    "first every time.");
+	
+static const u8 sTM64Desc[] = _(
+    "Harnesses the power\n"
+    "of the earth to\n"
+    "swap entry hazards.");
+	
+static const u8 sTM65Desc[] = _(
+    "With powerful wings,\n"
+    "the user slashes\n"
+    "the foe. May flinch.");
+	
+static const u8 sTM66Desc[] = _(
+    "Summons strong wind\n"
+    "to clear the skies\n"
+    "and raise Attack.");
+	
+static const u8 sTM67Desc[] = _(
+    "Hardening its outer\n"
+    "layer, the user\n"
+    "rolls at the foe.");
+	
+static const u8 sTM68Desc[] = _(
+    "Forms a crystalline\n"
+    "shield to protect\n"
+    "and raise Sp. Def.");
+		
+static const u8 sTM69Desc[] = _(
+    "Stab the foe with\n"
+    "a sharp limb.\n"
+    "May cause toxic.");
+		
+static const u8 sTM70Desc[] = _(
+    "The user enters a\n"
+    "silken cocoon to\n"
+    "rest. All stats up.");
+	
+static const u8 sTM71Desc[] = _(
+    "Sprays the foe with\n"
+    "a subzero liquid.\n"
+    "High freeze chance.");
+	
+static const u8 sTM72Desc[] = _(
+    "A cloud of icy dust\n"
+    "is spread around.\n"
+    "May cause freeze.");
+	
+static const u8 sTM73Desc[] = _(
+    "Slash the foe with\n"
+    "toxic claws. Causes\n"
+    "poisoned foes to sleep.");
+	
+static const u8 sTM74Desc[] = _(
+    "Envenoms the foe,\n"
+    "worsening the \n"
+    "poison within them.");
+	
+static const u8 sTM75Desc[] = _(
+    "Slam the foe with a\n"
+    "psionic blast. Hits\n"
+    "again in 2 turns.");
+	
+static const u8 sTM76Desc[] = _(
+    "Using psychic power,\n"
+    "absorb a foe's stat\n"
+    "changes as health.");
+	
+static const u8 sTM77Desc[] = _(
+    "Conjurs up an evil\n"
+    "spirit to attack the\n"
+    "foe. May curse.");
+	
+static const u8 sTM78Desc[] = _(
+    "Terrify the opposing\n"
+    "Pokémon, sharply\n"
+    "lowers accuracy.");
+		
+static const u8 sTM79Desc[] = _(
+    "An all-out Dragon\n"
+    "assault. User takes\n"
+    "extreme recoil.");
+		
+static const u8 sTM80Desc[] = _(
+    "User awakens a primal\n"
+    "power. Raises user\n"
+    "Atk and lowers foes.");
+	
+static const u8 sTM81Desc[] = _(
+    "Roars with the power\n"
+    "of darkness. Sharply\n"
+    "lowers Sp. Atk.");
+	
+static const u8 sTM82Desc[] = _(
+    "Casts a dark gaze,\n"
+    "confusing and\n"
+    "scaring the foe.");
+	
+static const u8 sTM83Desc[] = _(
+    "Sets a mercury trap\n"
+    "that explodes when\n"
+    "hit and burns foes.");
+	
+static const u8 sTM84Desc[] = _(
+    "Unleash a horde of\n"
+    "repairing nanobots,\n"
+    "healing each turn.");
+		
+static const u8 sTM85Desc[] = _(
+    "Coats the foe with\n"
+    "a sparkling dust.\n"
+    "Lasts 4 to 5 turns.");
+		
+static const u8 sTM86Desc[] = _(
+    "Use a magical spell\n"
+    "and the power of the\n"
+    "moon to curse a foe.");	
+//end custom TMs	
+	
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"
     "with sharp blades\n"

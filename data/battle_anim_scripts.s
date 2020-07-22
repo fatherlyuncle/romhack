@@ -14068,7 +14068,7 @@ SteelBeamShards:
 	launchtemplate gSteelBeamSpikeShardTemplate 0x80, 0x5 0xf 0xf 0x14 0xffec 0xfff6
 	delay 0x2
 
-@@@@@@@@@@@@@@@@@@@@@@@ CUSTOM MOVE TUTOR TYPE MOVES @@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@ CUSTOM TM TYPE MOVES @@@@@@@@@@@@
 
 Move_SIMPLE_STRIKE::
 	goto Move_BREAKING_SWIPE

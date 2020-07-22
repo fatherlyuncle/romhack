@@ -9990,7 +9990,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGSROCK_AFFECTED,
         .split = SPLIT_SPECIAL,
     },
-	
+	//custom type moves TMs 
 	[MOVE_SIMPLE_STRIKE] =
     {
         .effect = EFFECT_CLEAR_SMOG,

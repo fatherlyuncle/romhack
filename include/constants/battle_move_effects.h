@@ -352,7 +352,7 @@
 #define EFFECT_FAIRY_LOCK 346
 #define EFFECT_ALLY_SWITCH 347
 #define EFFECT_SLEEP_HIT 348 // Relic Song
-//custom move turot type moves
+//custom TM type moves
 #define EFFECT_CONVERSATION 349
 #define EFFECT_CORE_MELTDOWN 350
 #define EFFECT_VEGETATE 351
