@@ -4996,10 +4996,10 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-	[ITEM_TM81_DEMOIC_HOWL] =
+	[ITEM_TM81_DEMONIC_HOWL] =
     {
         .name = _("TM81"),
-        .itemId = ITEM_TM81_DEMOIC_HOWL,
+        .itemId = ITEM_TM81_DEMONIC_HOWL,
         .price = 3000,
         .description = sTM81Desc,
         .pocket = POCKET_TM_HM,
