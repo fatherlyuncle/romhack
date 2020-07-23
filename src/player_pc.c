@@ -182,6 +182,9 @@ static const struct ItemSlot gNewGamePCItems[] = //Added additional items
 	{ ITEM_DIVE, 1 },
 	{ ITEM_TM50_OVERHEAT, 1 },
 	{ ITEM_HM01_CUT, 1 },
+	{ ITEM_TM51_SIMPLE_STRIKE, 1 },
+	{ ITEM_TM71_CRYO_BURST, 1 },
+	{ ITEM_TM86_LUNAR_CURSE, 1 },
 	{ ITEM_RARE_CANDY, 99 },
     { ITEM_NONE, 0 }
 };
