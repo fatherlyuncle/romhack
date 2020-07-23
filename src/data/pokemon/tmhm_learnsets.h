@@ -3805,7 +3805,7 @@ TMHM(TM76_BRAIN_DRAIN),
 0xFF,
 };
 
-static const u8 sMr_mimeTMHMLearnset[] =
+static const u8 sMrmimeTMHMLearnset[] =
 {
 TMHM(TM40_AERIAL_ACE),
 TMHM(TM45_ATTRACT),
