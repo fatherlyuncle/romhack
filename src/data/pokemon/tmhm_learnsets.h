@@ -791,7 +791,7 @@ TMHM(TM64_EARTH_SWAP),
 0xFF,
 };
 
-static const u8 sNidoran_fTMHMLearnset[] =
+static const u8 sNidoranFTMHMLearnset[] =
 {
 TMHM(TM40_AERIAL_ACE),
 TMHM(TM45_ATTRACT),
@@ -908,7 +908,7 @@ TMHM(TM74_METASTASIZE),
 0xFF,
 };
 
-static const u8 sNidoran_mTMHMLearnset[] =
+static const u8 sNidoranMTMHMLearnset[] =
 {
 TMHM(TM45_ATTRACT),
 TMHM(TM14_BLIZZARD),
@@ -1937,7 +1937,9 @@ TMHM(TM56_PRESSURIZE),
 TMHM(TM61_TRI_CHOP),
 TMHM(TM62_FOCUS_CHI),
 0xFF,
-}; static const u8 sAbraTMHMLearnset[] =
+}; 
+
+static const u8 sAbraTMHMLearnset[] =
 {
 TMHM(TM45_ATTRACT),
 TMHM(TM04_CALM_MIND),
@@ -2647,7 +2649,9 @@ TMHM(TM52_CONVERSATION),
 TMHM(TM65_WING_SLASH),
 TMHM(TM66_GALE_FORCE),
 0xFF,
-}; static const u8 sSeelTMHMLearnset[] =
+}; 
+
+static const u8 sSeelTMHMLearnset[] =
 {
 TMHM(TM45_ATTRACT),
 TMHM(TM14_BLIZZARD),
@@ -2931,7 +2935,9 @@ TMHM(TM74_METASTASIZE),
 TMHM(TM77_NECROMANCY),
 TMHM(TM78_SPOOK),
 0xFF,
-}; static const u8 sOnixTMHMLearnset[] =
+}; 
+
+static const u8 sOnixTMHMLearnset[] =
 {
 TMHM(TM45_ATTRACT),
 TMHM(TM28_DIG),
@@ -3868,7 +3874,9 @@ TMHM(TM66_GALE_FORCE),
 TMHM(TM69_INSECTION),
 TMHM(TM70_CHRYSALIS),
 0xFF,
-}; static const u8 sJynxTMHMLearnset[] =
+}; 
+
+static const u8 sJynxTMHMLearnset[] =
 {
 TMHM(TM45_ATTRACT),
 TMHM(TM14_BLIZZARD),
@@ -4032,7 +4040,6 @@ TMHM(TM52_CONVERSATION),
 
 static const u8 sMagikarpTMHMLearnset[] =
 {
-0
 0xFF,
 };
 
@@ -4117,7 +4124,6 @@ TMHM(TM72_FREEZE_POWDER),
 };
 static const u8 sDittoTMHMLearnset[] =
 {
-0
 0xFF,
 };
 static const u8 sEeveeTMHMLearnset[] =
@@ -4965,7 +4971,7 @@ TMHM(TM54_CORE_MELTDOWN),
 0xFF,
 };
 
-T static const u8 sTyphlosionTMHMLearnset[] =
+static const u8 sTyphlosionTMHMLearnset[] =
 {
 TMHM(TM40_AERIAL_ACE),
 TMHM(TM45_ATTRACT),
@@ -5608,7 +5614,9 @@ TMHM(TM66_GALE_FORCE),
 TMHM(TM85_PIXIE_DUST),
 TMHM(TM86_LUNAR_CURSE),
 0xFF,
-}; static const u8 sNatuTMHMLearnset[] =
+};
+
+static const u8 sNatuTMHMLearnset[] =
 {
 TMHM(TM40_AERIAL_ACE),
 TMHM(TM45_ATTRACT),
@@ -5639,7 +5647,9 @@ TMHM(TM66_GALE_FORCE),
 TMHM(TM75_PSIONIC_SLAM),
 TMHM(TM76_BRAIN_DRAIN),
 0xFF,
-}; static const u8 sXatuTMHMLearnset[] =
+}; 
+
+static const u8 sXatuTMHMLearnset[] =
 {
 TMHM(TM40_AERIAL_ACE),
 TMHM(TM45_ATTRACT),
@@ -7898,7 +7908,7 @@ TMHM(TM75_PSIONIC_SLAM),
 TMHM(TM76_BRAIN_DRAIN),
 0xFF,
 };
-static const u8 sHo_ohTMHMLearnset[] =
+static const u8 sHoOhTMHMLearnset[] =
 {
 TMHM(TM40_AERIAL_ACE),
 TMHM(TM04_CALM_MIND),
@@ -9574,7 +9584,9 @@ TMHM(TM84_NANOBOTS),
 TMHM(TM85_PIXIE_DUST),
 TMHM(TM86_LUNAR_CURSE),
 0xFF,
-}; static const u8 sAronTMHMLearnset[] =
+}; 
+
+static const u8 sAronTMHMLearnset[] =
 {
 TMHM(TM40_AERIAL_ACE),
 TMHM(TM45_ATTRACT),
@@ -15184,7 +15196,9 @@ TMHM(TM60_IONIC_GAS),
 TMHM(TM77_NECROMANCY),
 TMHM(TM78_SPOOK),
 0xFF,
-}; static const u8 sUxieTMHMLearnset[] =
+}; 
+
+static const u8 sUxieTMHMLearnset[] =
 {
 TMHM(TM04_CALM_MIND),
 TMHM(TM32_DOUBLE_TEAM),
@@ -17018,7 +17032,9 @@ TMHM(TM06_TOXIC),
 TMHM(TM61_TRI_CHOP),
 TMHM(TM62_FOCUS_CHI),
 0xFF,
-}; static const u8 sSawkTMHMLearnset[] =
+}; 
+
+static const u8 sSawkTMHMLearnset[] =
 {
 TMHM(TM45_ATTRACT),
 TMHM(TM31_BRICK_BREAK),
@@ -19062,7 +19078,9 @@ TMHM(TM54_CORE_MELTDOWN),
 TMHM(TM77_NECROMANCY),
 TMHM(TM78_SPOOK),
 0xFF,
-}; static const u8 sAxewTMHMLearnset[] =
+}; 
+
+static const u8 sAxewTMHMLearnset[] =
 {
 TMHM(TM40_AERIAL_ACE),
 TMHM(TM45_ATTRACT),
@@ -24228,13 +24246,13 @@ TMHM(TM86_LUNAR_CURSE),
 0xFF,
 };
 
-static const u8 sCosmogTMHMLearnset[] = {
-0
+static const u8 sCosmogTMHMLearnset[] = 
+{
 0xFF,
 };
 
-static const u8 sCosmoemTMHMLearnset[] = {
-0
+static const u8 sCosmoemTMHMLearnset[] = 
+{
 0xFF,
 };
 
