@@ -207,6 +207,7 @@ void LoadSerializedGame(void)
 {
     LoadPlayerParty();
     LoadObjectEvents();
+	DeserializeTmHmItemSlots();//added to fix tmhms in bag
 }
 
 void LoadPlayerBag(void)
@@ -227,7 +228,8 @@ void LoadPlayerBag(void)
 
     // load player TMs and HMs.
     for (i = 0; i < BAG_TMHM_COUNT; i++)
-        gLoadedSaveData.TMsHMs[i] = gSaveBlock1Ptr->bagPocket_TMHM[i];
+        //gLoadedSaveData.TMsHMs[i] = gSaveBlock1Ptr->bagPocket_TMHM[i];
+		gLoadedSaveData.TMsHMs[i] = gTmHmItemSlots[i]; //added to fix HMs in bag
 
     // load player berries.
     for (i = 0; i < BAG_BERRIES_COUNT; i++)
@@ -259,7 +261,8 @@ void SavePlayerBag(void)
 
     // save player TMs and HMs.
     for (i = 0; i < BAG_TMHM_COUNT; i++)
-        gSaveBlock1Ptr->bagPocket_TMHM[i] = gLoadedSaveData.TMsHMs[i];
+        //gSaveBlock1Ptr->bagPocket_TMHM[i] = gLoadedSaveData.TMsHMs[i];
+		gTmHmItemSlots[i] = gLoadedSaveData.TMsHMs[i]; //added to fix HMs in bag
 
     // save player berries.
     for (i = 0; i < BAG_BERRIES_COUNT; i++)
