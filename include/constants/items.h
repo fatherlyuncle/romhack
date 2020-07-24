@@ -603,14 +603,14 @@
 #define ITEM_TM99 580
 #define ITEM_TM100 581
 
-#define ITEM_HM01 582
-#define ITEM_HM02 583
-#define ITEM_HM03 584
-#define ITEM_HM04 585
-#define ITEM_HM05 586
-#define ITEM_HM06 587
-#define ITEM_HM07 588
-#define ITEM_HM08 589
+#define ITEM_HM01 568 //582
+#define ITEM_HM02 569 //583
+#define ITEM_HM03 570 //584
+#define ITEM_HM04 571 //585
+#define ITEM_HM05 572 //586
+#define ITEM_HM06 573 //587
+#define ITEM_HM07 574 //588
+#define ITEM_HM08 575 //589
 
 #define ITEM_TM01_FOCUS_PUNCH ITEM_TM01
 #define ITEM_TM02_DRAGON_CLAW ITEM_TM02
