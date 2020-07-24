@@ -417,11 +417,11 @@ _080D6916:\n\
 }
 #endif // NONMATCHING
 
-static void SetTmHmOwned(u16 itemId)//added func to fix tmhms in bag
+/*static void SetTmHmOwned(u16 itemId)//added func to fix tmhms in bag (fix hms)
 {
 	u8* flagByte = &gSaveBlock1Ptr->bagPocket_TMHMOwnedFlags[(itemId - ITEM_TM01) / 8];
     *flagByte = (*flagByte) | (1 << ((itemId - ITEM_TM01) % 8));
-}
+}*/
 
 bool8 AddBagItem(u16 itemId, u16 count)
 {
