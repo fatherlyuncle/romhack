@@ -10,7 +10,7 @@
 // free saveblock 1 defines
 #define FREE_EXTRA_SEEN_FLAGS           //free up extra pokedex seen flags. Frees up 104 bytes
 #define FREE_FIELD_3598                 //frees up unused saveblock data. 384 bytes
-#define FREE_TRAINER_HILL               //frees up trainer hill data. 28 bytes 
+#define FREE_TRAINER_HILL               //frees up trainer hill data. 28 bytes
 #define FREE_MYSTERY_EVENT_BUFFERS      //frees up mystery event. 876 bytes
 #define FREE_MATCH_CALL                 //frees up match call data. 104 bytes
 #define FREE_UNION_ROOM_CHAT            //frees up field unk3C88. 210 bytes
@@ -22,7 +22,7 @@
 #define FREE_POKEMON_JUMP               //frees up pokemon jump data. 16 bytes
 #define FREE_RECORD_MIXING_HALL_RECORDS //frees up hall records for record mixing. 1032 bytes
                                         // saveblock2 total: 1236 bytes
-                                        
+
                                         //grand total: 3082
 
 // Prevent cross-jump optimization.
@@ -945,9 +945,9 @@ struct SaveBlock1
     /*0x560*/ struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
     /*0x5D8*/ struct ItemSlot bagPocket_KeyItems[BAG_KEYITEMS_COUNT];
     /*0x650*/ struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
-    /*0x690*/ //struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
-			  u8 bagPocket_TMHMOwnedFlags[14];//allows for 112 tm/hms
-			  u8 bagPocket_TMHMPadding[242]; //"dont touch save layout, take 242bytes free space"
+    /*0x690*/ struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
+			  //u8 bagPocket_TMHMOwnedFlags[14];//allows for 112 tm/hms (to fix hms)
+			  //u8 bagPocket_TMHMPadding[242]; //"dont touch save layout, take 242bytes free space" (to fix hms)
     /*0x790*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
     /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
     #ifndef FREE_EXTRA_SEEN_FLAGS
