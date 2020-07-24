@@ -198,7 +198,7 @@ static const struct ItemSlot gNewGamePCItems[] = //Added additional items
 	{ ITEM_TM85_PIXIE_DUST, 1 },
 	{ ITEM_TM86_LUNAR_CURSE, 1 },
 	{ ITEM_HM02_FLY, 1 },
-	{ ITEM_HM03_SURf, 1 },
+	{ ITEM_HM03_SURF, 1 },
 	{ ITEM_HM04_STRENGTH, 1 },
 	{ ITEM_HM05_FLASH, 1 },
 	{ ITEM_HM06_ROCK_SMASH, 1 },
