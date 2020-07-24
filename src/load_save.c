@@ -207,7 +207,7 @@ void LoadSerializedGame(void)
 {
     LoadPlayerParty();
     LoadObjectEvents();
-	DeserializeTmHmItemSlots();//added to fix tmhms in bag
+	//DeserializeTmHmItemSlots();//added to fix tmhms in bag
 }
 
 void LoadPlayerBag(void)
