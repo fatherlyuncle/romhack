@@ -1193,7 +1193,7 @@ static const u8 *const sUnused_StatStrings[] =
     gText_Speed2
 };
 
-static const u16 sTMHMMoves[] =
+const u16 sTMHMMoves[TMHM_COUNT] = //added to fix hms in bag pocket
 {
     MOVE_FOCUS_PUNCH,
     MOVE_DRAGON_CLAW,
@@ -1279,7 +1279,7 @@ static const u16 sTMHMMoves[] =
 	MOVE_DEMONIC_HOWL,
 	MOVE_MURKY_STARE,
 	MOVE_MERCURY_BOMB,
-  MOVE_NANOBOTS,
+    MOVE_NANOBOTS,
 	MOVE_PIXIE_DUST,
 	MOVE_LUNAR_CURSE,
 	//end custom moves
