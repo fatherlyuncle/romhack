@@ -28,7 +28,7 @@ static bool8 CheckPyramidBagHasSpace(u16 itemId, u16 count);
 
 // EWRAM variables
 EWRAM_DATA struct BagPocket gBagPockets[POCKETS_COUNT] = {0};
-EWRAM_DATA struct ItemSlot gTmHmItemSlots[BAG_TMHM_COUNT] = {0}; //added to fix HMs in bag
+//EWRAM_DATA struct ItemSlot gTmHmItemSlots[BAG_TMHM_COUNT] = {0}; //added to fix HMs in bag
 
 // rodata
 #include "data/text/item_descriptions.h"
@@ -70,7 +70,7 @@ void ApplyNewEncryptionKeyToBagItems_(u32 newKey) // really GF?
     ApplyNewEncryptionKeyToBagItems(newKey);
 }
 
-void DeserializeTmHmItemSlots(void) //added func to fix HMs in bag
+/*void DeserializeTmHmItemSlots(void) //added func to fix HMs in bag
 {
     int i;
 
@@ -85,7 +85,7 @@ void DeserializeTmHmItemSlots(void) //added func to fix HMs in bag
         //if(gSaveBlock1Ptr->bagPocket_TMHMOwnedFlags[i / 8] & (1<<bit))
         AddBagItem(i + ITEM_TM01, 1);
     }
-}
+}*/
 
 void SetBagItemsPointers(void)
 {
@@ -98,8 +98,8 @@ void SetBagItemsPointers(void)
     gBagPockets[BALLS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_PokeBalls;
     gBagPockets[BALLS_POCKET].capacity = BAG_POKEBALLS_COUNT;
 
-    //gBagPockets[TMHM_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_TMHM;
-    gBagPockets[TMHM_POCKET].itemSlots = &gTmHmItemSlots[0]; //added to fix HMs in bag
+    gBagPockets[TMHM_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_TMHM;
+    //gBagPockets[TMHM_POCKET].itemSlots = &gTmHmItemSlots[0]; //added to fix HMs in bag
 	gBagPockets[TMHM_POCKET].capacity = BAG_TMHM_COUNT;
 
     gBagPockets[BERRIES_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Berries;
@@ -447,11 +447,11 @@ bool8 AddBagItem(u16 itemId, u16 count)
         newItems = AllocZeroed(itemPocket->capacity * sizeof(struct ItemSlot));
         memcpy(newItems, itemPocket->itemSlots, itemPocket->capacity * sizeof(struct ItemSlot));
 
-        /*if (pocket != BERRIES_POCKET)
+        if (pocket != BERRIES_POCKET)
             slotCapacity = MAX_BAG_ITEM_CAPACITY;
         else
-            slotCapacity = MAX_BERRY_CAPACITY;*/
-		switch(pocket) //added to fix HMs in bag
+            slotCapacity = MAX_BERRY_CAPACITY;
+		/*switch(pocket) //added to fix HMs in bag
         {
             case BERRIES_POCKET:
                 slotCapacity = 999;
@@ -462,7 +462,7 @@ bool8 AddBagItem(u16 itemId, u16 count)
             default:
                 slotCapacity = 99;
             break;
-        }
+        }*/
 
         for (i = 0; i < itemPocket->capacity; i++)
         {
@@ -528,8 +528,8 @@ bool8 AddBagItem(u16 itemId, u16 count)
                     {
                         // created a new slot and added quantity
                         SetBagItemQuantity(&newItems[i].quantity, count);
-                        if(pocket == TMHM_POCKET) //added these 2 lines to fix HMs in bag
-                            SetTmHmOwned(itemId); //^^
+                        //if(pocket == TMHM_POCKET) //added these 2 lines to fix HMs in bag
+                            //SetTmHmOwned(itemId); //^^
 						goto SUCCESS_ADD_ITEM;
                     }
                 }
