@@ -1799,7 +1799,7 @@ static const u8 sTM57Desc[] = _(
 static const u8 sTM58Desc[] = _(
     "Vegging out, the\n"
     "user heals and ups\n"
-    "one of its defenses.");
+    "its defenses.");
 		
 static const u8 sTM59Desc[] = _(
     "The user attacks 2x\n"
@@ -1812,7 +1812,7 @@ static const u8 sTM60Desc[] = _(
     "Raises Speed + Evas.");
 	
 static const u8 sTM61Desc[] = _(
-    "Throw 3 karate chops\n"
+    "Throw 3 sharp chops\n"
     "charged with energy.\n"
     "May cause a status.");
 	
@@ -1827,7 +1827,7 @@ static const u8 sTM63Desc[] = _(
     "first every time.");
 	
 static const u8 sTM64Desc[] = _(
-    "Harnesses the power\n"
+    "Harness the power\n"
     "of the earth to\n"
     "swap entry hazards.");
 	
