@@ -1847,7 +1847,7 @@ static const u8 sTM67Desc[] = _(
     "rolls at the foe.");
 	
 static const u8 sTM68Desc[] = _(
-    "Forms a crystalline\n"
+    "Form a crystalline\n"
     "shield to protect\n"
     "and raise Sp. Def.");
 		
@@ -1862,7 +1862,7 @@ static const u8 sTM70Desc[] = _(
     "rest. All stats up.");
 	
 static const u8 sTM71Desc[] = _(
-    "Sprays the foe with\n"
+    "Spray the foe with\n"
     "a subzero liquid.\n"
     "High freeze chance.");
 	
@@ -1874,7 +1874,7 @@ static const u8 sTM72Desc[] = _(
 static const u8 sTM73Desc[] = _(
     "Slash the foe with\n"
     "toxic claws. Causes\n"
-    "poisoned foes to sleep.");
+    "sick foes to sleep.");
 	
 static const u8 sTM74Desc[] = _(
     "Envenoms the foe,\n"
@@ -1893,12 +1893,12 @@ static const u8 sTM76Desc[] = _(
 	
 static const u8 sTM77Desc[] = _(
     "Conjurs up an evil\n"
-    "spirit to attack the\n"
-    "foe. May curse.");
+    "spirit to attack\n"
+    "the foe. May curse.");
 	
 static const u8 sTM78Desc[] = _(
-    "Terrify the opposing\n"
-    "Pokémon, sharply\n"
+    "Terrify the foe's\n"
+    "Pokémon. Sharply\n"
     "lowers accuracy.");
 		
 static const u8 sTM79Desc[] = _(
@@ -1907,14 +1907,14 @@ static const u8 sTM79Desc[] = _(
     "extreme recoil.");
 		
 static const u8 sTM80Desc[] = _(
-    "User awakens a primal\n"
-    "power. Raises user\n"
+    "Awakening a primal\n"
+    "power, user raises\n"
     "Atk and lowers foes.");
 	
 static const u8 sTM81Desc[] = _(
-    "Roars with the power\n"
-    "of darkness. Sharply\n"
-    "lowers Sp. Atk.");
+    "Roar with the power\n"
+    "of darkness. Lowers\n"
+    "user's Sp. Atk.");
 	
 static const u8 sTM82Desc[] = _(
     "Casts a dark gaze,\n"
@@ -1938,7 +1938,7 @@ static const u8 sTM85Desc[] = _(
 		
 static const u8 sTM86Desc[] = _(
     "Use a magical spell\n"
-    "and the power of the\n"
+    "and power of the\n"
     "moon to curse a foe.");	
 //end custom TMs	
 	
