@@ -853,7 +853,7 @@ void GetItemName(s8 *dest, u16 itemId)
             }
             else
             {
-                ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, 3); //changed 2 at end to "3" for ?? reason (to fix HMs)
+                ConvertIntToDecimalStringN(gStringVar1, itemId - ITEM_TM01 + 1, STR_CONV_MODE_LEADING_ZEROS, 2); //change 2 to 3 to expand No. to 3digits 
                 StringExpandPlaceholders(dest, gText_NumberVar1Clear7Var2);
             }
             break;
