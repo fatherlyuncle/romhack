@@ -14203,10 +14203,13 @@ Move_VEGETATE::
 	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, 2, -6, 11
 	delay 2
 	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, -3, -5, 8
+	delay 2
 	call GrowthEffect
 	delay 3
 	call GrowthEffect
-	waitforvisualfinish
+	delay 3
+	call GrowthEffect
+	delay 3
 	call HealingEffect
 	waitforvisualfinish
 	end
@@ -14261,11 +14264,6 @@ Move_IONIC_GAS::
 	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
 	call MistCloud
 	call MistCloud
-	delay 12
-	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
-	call MistCloud
-	call MistCloud
-	delay 12
 	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
@@ -14276,15 +14274,15 @@ Move_IONIC_GAS::
 Move_TRI_CHOP::
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_TRI_ATTACK_TRIANGLE
-	createsprite gTriAttackTriangleSpriteTemplate, ANIM_TARGET, 2, 16, 0
+	@@@@createsprite gTriAttackTriangleSpriteTemplate, ANIM_TARGET, 2, 16, 0
 	delay 12
-	playsewithpan SE_W004, SOUND_PAN_TARGET
+	playsewithpan SE_W104, SOUND_PAN_TARGET
 	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
 	delay 20
-	playsewithpan SE_W004, SOUND_PAN_TARGET
+	playsewithpan SE_W104, SOUND_PAN_TARGET
 	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
 	delay 20
-	playsewithpan SE_W004, SOUND_PAN_TARGET
+	playsewithpan SE_W104, SOUND_PAN_TARGET
 	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
 	delay 20
 	createsoundtask SoundTask_LoopSEAdjustPanning, SE_W104, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 6, 0, 7
