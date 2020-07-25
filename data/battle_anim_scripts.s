@@ -14181,16 +14181,25 @@ Move_SPROUT_SHOT::
 	goto Move_LEECH_SEED
 	
 Move_VEGETATE::
+	loadspritegfx ANIM_TAG_RAZOR_LEAF
+	loadspritegfx ANIM_TAG_LEAF
+	loadspritegfx ANIM_TAG_BLUE_STAR
 	call GrowthEffect
-	waitforvisualfinish
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_ATTACKER, 2, 14, -12, 0, -12, 15, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_ATTACKER, 2, 26, 8, 12, 8, 15, 0, 0
+	delay 3
 	call GrowthEffect
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_ATTACKER, 2, 14, -12, 0, -16, 19, 0, 0
+	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_ATTACKER, 2, 26, 8, 12, 12, 19, 0, 0
 	waitforvisualfinish
 	call HealingEffect
 	waitforvisualfinish
 	end
 	
 Move_STATIC_SWIPES::
-	loadspritegfx ANIM_TAG_ELECTRICITY
+	loadspritegfx ANIM_TAG_SPARK_2 @ElectricityEffect
+	loadspritegfx ANIM_TAG_SPARK @shock wave
+	loadspritegfx ANIM_TAG_CLAW_SLASH
 	monbg ANIM_TARGET
 	setalpha 12, 8
 	createsprite gHorizontalLungeSpriteTemplate, 2, 2, 4, 4
@@ -14198,6 +14207,8 @@ Move_STATIC_SWIPES::
 	createvisualtask SoundTask_PlaySE1WithPanning, 5, SE_W013, SOUND_PAN_TARGET
 	createsprite gClawSlashSpriteTemplate, ANIM_TARGET, 2, 10, -10, 1
 	createsprite gClawSlashSpriteTemplate, ANIM_TARGET, 2, 10, 10, 1
+	call PlasmaFistSpark1
+	call PlasmaFistSpark2
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
 	delay 8
 	waitforvisualfinish
@@ -14206,6 +14217,8 @@ Move_STATIC_SWIPES::
 	createvisualtask SoundTask_PlaySE1WithPanning, 5, SE_W013, SOUND_PAN_TARGET
 	createsprite gClawSlashSpriteTemplate, ANIM_TARGET, 2, 10, -10, 1
 	createsprite gClawSlashSpriteTemplate, ANIM_TARGET, 2, 10, 10, 1
+	call PlasmaFistSpark1
+	call PlasmaFistSpark2
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
 	delay 8
 	waitforvisualfinish
@@ -14214,20 +14227,32 @@ Move_STATIC_SWIPES::
 	end
 
 Move_IONIC_GAS::
+	loadspritegfx ANIM_TAG_ELECTRIC_ORBS
 	loadspritegfx ANIM_TAG_MIST_CLOUD
 	monbg ANIM_ATK_PARTNER
 	setalpha 12, 8
+	createvisualtask AnimTask_ElectricChargingParticles, 2, ANIM_ATTACKER, 3, 20, 20
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 24, 6, 4, 4
 	createvisualtask AnimTask_TraceMonBlended, 2, 0, 4, 7, 10
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
+	call MistCloud
+	call MistCloud
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
+	call MistCloud
+	call MistCloud
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
+	call MistCloud
+	call MistCloud
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
+	call MistCloud
+	call MistCloud
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
+	call MistCloud
+	call MistCloud
 	delay 12
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
@@ -14239,10 +14264,14 @@ Move_TRI_CHOP::
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_TRI_ATTACK_TRIANGLE
 	createsprite gTriAttackTriangleSpriteTemplate, ANIM_TARGET, 2, 16, 0
+	delay 12
 	playsewithpan SE_W104, SOUND_PAN_TARGET
 	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
 	delay 20
-	playsewithpan SE_W104, SOUND_PAN_TARGET
+	playsewithpan SE_W004, SOUND_PAN_TARGET
+	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
+	delay 20
+	playsewithpan SE_W004, SOUND_PAN_TARGET
 	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
 	delay 20
 	createsoundtask SoundTask_LoopSEAdjustPanning, SE_W104, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 6, 0, 7
