@@ -14184,13 +14184,28 @@ Move_VEGETATE::
 	loadspritegfx ANIM_TAG_RAZOR_LEAF
 	loadspritegfx ANIM_TAG_LEAF
 	loadspritegfx ANIM_TAG_BLUE_STAR
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, -3, -2, 10
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, -1, -1, 15
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, -4, -4, 7
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, 3, -3, 11
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, -1, -6, 8
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, 2, -1, 12
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, -3, -4, 13
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, 4, -5, 7
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, 2, -6, 11
+	delay 2
+	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, -3, -5, 8
 	call GrowthEffect
-	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_ATTACKER, 2, 14, -12, 0, -12, 15, 0, 0
-	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_ATTACKER, 2, 26, 8, 12, 8, 15, 0, 0
 	delay 3
 	call GrowthEffect
-	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_ATTACKER, 2, 14, -12, 0, -16, 19, 0, 0
-	createsprite gBattleAnimSpriteTemplate_LeafStorm, ANIM_ATTACKER, 2, 26, 8, 12, 12, 19, 0, 0
 	waitforvisualfinish
 	call HealingEffect
 	waitforvisualfinish
@@ -14232,6 +14247,7 @@ Move_IONIC_GAS::
 	monbg ANIM_ATK_PARTNER
 	setalpha 12, 8
 	createvisualtask AnimTask_ElectricChargingParticles, 2, ANIM_ATTACKER, 3, 20, 20
+	createvisualtask AnimTask_ElectricChargingParticles, 2, ANIM_ATTACKER, 60, 2, 12
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 24, 6, 4, 4
 	createvisualtask AnimTask_TraceMonBlended, 2, 0, 4, 7, 10
 	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
@@ -14251,9 +14267,6 @@ Move_IONIC_GAS::
 	call MistCloud
 	delay 12
 	playsewithpan SE_W085B, SOUND_PAN_ATTACKER
-	call MistCloud
-	call MistCloud
-	delay 12
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
 	blendoff
@@ -14265,7 +14278,7 @@ Move_TRI_CHOP::
 	loadspritegfx ANIM_TAG_TRI_ATTACK_TRIANGLE
 	createsprite gTriAttackTriangleSpriteTemplate, ANIM_TARGET, 2, 16, 0
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_TARGET
+	playsewithpan SE_W004, SOUND_PAN_TARGET
 	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
 	delay 20
 	playsewithpan SE_W004, SOUND_PAN_TARGET
