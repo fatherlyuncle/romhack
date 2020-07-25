@@ -14099,6 +14099,7 @@ Move_LAVA_RUSH::
 Move_CORE_MELTDOWN::
 	loadspritegfx ANIM_TAG_EXPLOSION
 	loadspritegfx ANIM_TAG_FOCUS_ENERGY
+	call SetSolarbeamBg
 	playsewithpan SE_W082, SOUND_PAN_ATTACKER
 	call EndureEffect
 	delay 8
@@ -14107,12 +14108,15 @@ Move_CORE_MELTDOWN::
 	call EndureEffect
 	delay 8
 	call EndureEffect
+	call UnsetSolarbeamBg
 	waitforvisualfinish
 	end
 	
 Move_MAELSTROM::
 	loadspritegfx ANIM_TAG_SPLASH
+	loadspritegfx ANIM_TAG_WATER_ORB
 	loadspritegfx ANIM_TAG_WATER_IMPACT
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 6, 5
 	delay 6
 	playsewithpan SE_W152, SOUND_PAN_ATTACKER
@@ -14124,6 +14128,9 @@ Move_MAELSTROM::
 	call DiveAttackWaterDroplets
 	delay 12
 	call RisingWaterHitEffect
+	call WhirlpoolEffect
+	call WhirlpoolEffect
+	delay 12
 	waitforvisualfinish
 	end
 	
