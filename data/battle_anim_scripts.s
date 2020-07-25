@@ -14071,10 +14071,72 @@ SteelBeamShards:
 @@@@@@@@@@@@@@@@@@@@@@@ CUSTOM TM TYPE MOVES @@@@@@@@@@@@
 
 Move_SIMPLE_STRIKE::
-	goto Move_BREAKING_SWIPE
+	loadspritegfx ANIM_TAG_AMNESIA
+	loadspritegfx ANIM_TAG_IMPACT @hits
+	loadspritegfx ANIM_TAG_SPARK_2
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_IMPACT, 0, 12, 12, 0x001F  @Red
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_SPARK_2, 0, 12, 12, 0x001F @Red
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	launchtemplate gBasicHitSplatSpriteTemplate 0x83 0x4 0xffe0 0xfff0 0x1 0x1
+	launchtemplate gBreakingSwipeCenteredElectricity 0x82, 0x4, 0x5 0x0 0x5 0x0
+	playsewithpan SE_W004, SOUND_PAN_TARGET
+	launchtask AnimTask_ShakeMon 0x2 0x5 ANIM_TARGET 0x0 0x3 0x15 0x1
+	launchtask AnimTask_ShakeMon 0x2 0x5 ANIM_DEF_PARTNER 0x0 0x3 0x15 0x1
+	delay 0x4
+	launchtemplate gRandomPosHitSplatSpriteTemplate 0x83 0x2 0x1 0x1
+	launchtemplate gBreakingSwipeCenteredElectricity 0x82, 0x4, 0xfff1 0xfff6 0x5 0x0
+	playsewithpan SE_W004, SOUND_PAN_TARGET
+	delay 0x4
+	launchtemplate gRandomPosHitSplatSpriteTemplate 0x83 0x2 0x1 0x1
+	launchtemplate gBreakingSwipeCenteredElectricity 0x82, 0x4, 0xfff8 0x8 0x5 0x2
+	playsewithpan SE_W004, SOUND_PAN_TARGET
+	delay 0x4
+	launchtemplate gBasicHitSplatSpriteTemplate 0x83 0x4 0x20 0x14 0x1 0x1
+	launchtemplate gBreakingSwipeCenteredElectricity 0x82, 0x4, 0xffec 0xf 0x5 0x1
+	playsewithpan SE_W004, SOUND_PAN_TARGET
+	waitsound
+	createsprite gQuestionMarkSpriteTemplate, ANIM_ATTACKER, 20
+	waitforvisualfinish
+	blendoff
+	clearmonbg ANIM_TARGET
+	end
 	
 Move_CONVERSATION::
-	goto Move_MIMIC
+	loadspritegfx ANIM_TAG_BREATH
+	loadspritegfx ANIM_TAG_ANGER
+	loadspritegfx ANIM_TAG_NOISE_LINE
+	loadspritegfx ANIM_TAG_DUCK
+	loadspritegfx ANIM_TAG_PINK_HEART
+	createvisualtask AnimTask_GrowAndShrink, 2
+	call RoarEffect
+	createvisualtask SoundTask_PlayCryHighPitch, 2, ANIM_ATTACKER, 3
+	waitforvisualfinish
+	createsprite gBreathPuffSpriteTemplate, ANIM_TARGET, 2
+	loopsewithpan SE_W207, SOUND_PAN_ATTACKER, 4, 2
+	waitforvisualfinish
+	delay 24
+	playsewithpan SE_W213, SOUND_PAN_TARGET
+	createsprite gPinkHeartSpriteTemplate, ANIM_TARGET, 3, -256, -42
+	createsprite gPinkHeartSpriteTemplate, ANIM_TARGET, 3, 128, -14
+	createsprite gPinkHeartSpriteTemplate, ANIM_TARGET, 3, 416, -38
+	createsprite gPinkHeartSpriteTemplate, ANIM_TARGET, 3, -128, -22
+	createsprite gAngerMarkSpriteTemplate, ANIM_TARGET, 2, 1, -20, -28
+	waitforvisualfinish
+	createsprite gRoarNoiseLineSpriteTemplate, ANIM_TARGET, 2, 24, -8, 0
+	createsprite gRoarNoiseLineSpriteTemplate, ANIM_TARGET, 2, 24, 0, 2
+	createsprite gRoarNoiseLineSpriteTemplate, ANIM_TARGET, 2, 24, 8, 1
+	delay 15
+	createsprite gRoarNoiseLineSpriteTemplate, ANIM_TARGET, 2, 24, -8, 0
+	createsprite gRoarNoiseLineSpriteTemplate, ANIM_TARGET, 2, 24, 0, 2
+	createsprite gRoarNoiseLineSpriteTemplate, ANIM_TARGET, 2, 24, 8, 1
+	playsewithpan SE_W207B, SOUND_PAN_TARGET
+	delay 15
+	createsprite gAngerMarkSpriteTemplate, ANIM_TARGET, 2, 1, 20, -28
+	playsewithpan SE_W207B, SOUND_PAN_TARGET
+	waitforvisualfinish
+	call ConfusionEffect
+	end
 	
 Move_LAVA_RUSH::
 	loadspritegfx ANIM_TAG_FIRE_PLUME
@@ -14135,7 +14197,7 @@ Move_MAELSTROM::
 	end
 	
 Move_PRESSURIZE::
-	goto Move_STRANGE_STEAM
+	goto Move_REFRESH
 	
 Move_SPROUT_SHOT::
 	loadspritegfx ANIM_TAG_GREEN_SPIKE
@@ -14205,11 +14267,11 @@ Move_VEGETATE::
 	createsprite gRazorLeafParticleSpriteTemplate, ANIM_ATTACKER, 2, -3, -5, 8
 	delay 2
 	call GrowthEffect
-	delay 3
+	delay 20
 	call GrowthEffect
-	delay 3
+	delay 20
 	call GrowthEffect
-	delay 3
+	delay 20
 	call HealingEffect
 	waitforvisualfinish
 	end
@@ -14285,8 +14347,8 @@ Move_TRI_CHOP::
 	playsewithpan SE_W104, SOUND_PAN_TARGET
 	createsprite gKarateChopSpriteTemplate, ANIM_ATTACKER, 2, -16, 0, 0, 0, 10, 1, 3, 0
 	delay 20
-	createsoundtask SoundTask_LoopSEAdjustPanning, SE_W104, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 6, 0, 7
-	waitforvisualfinish
+	@@@@createsoundtask SoundTask_LoopSEAdjustPanning, SE_W104, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 5, 6, 0, 7
+	@@@@waitforvisualfinish
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 2, 0, 16, RGB_BLACK
 	delay 16
 	loadspritegfx ANIM_TAG_FIRE
