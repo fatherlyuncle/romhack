@@ -14071,7 +14071,6 @@ SteelBeamShards:
 @@@@@@@@@@@@@@@@@@@@@@@ CUSTOM TM TYPE MOVES @@@@@@@@@@@@
 
 Move_SIMPLE_STRIKE::
-	loadspritegfx ANIM_TAG_AMNESIA
 	loadspritegfx ANIM_TAG_IMPACT @hits
 	loadspritegfx ANIM_TAG_SPARK_2
 	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_IMPACT, 0, 12, 12, 0x001F  @Red
@@ -14096,7 +14095,7 @@ Move_SIMPLE_STRIKE::
 	launchtemplate gBreakingSwipeCenteredElectricity 0x82, 0x4, 0xffec 0xf 0x5 0x1
 	playsewithpan SE_W004, SOUND_PAN_TARGET
 	waitsound
-	createsprite gQuestionMarkSpriteTemplate, ANIM_ATTACKER, 20
+	createvisualtask AnimTask_RockMonBackAndForth, 3, ANIM_TARGET, 6, 2
 	waitforvisualfinish
 	blendoff
 	clearmonbg ANIM_TARGET
@@ -14197,7 +14196,20 @@ Move_MAELSTROM::
 	end
 	
 Move_PRESSURIZE::
-	goto Move_REFRESH
+	loadspritegfx ANIM_TAG_WATER_ORB @blue color
+	loadspritegfx ANIM_TAG_THIN_RING
+	loadspritegfx ANIM_TAG_SPARKLE_2
+	fadetobg BG_WATER
+	waitbgfadeout
+	playsewithpan SE_W287, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_StatusClearedEffect, 2, 0
+	waitforvisualfinish
+	playsewithpan SE_W234, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	playsewithpan SE_REAPOKE, SOUND_PAN_ATTACKER
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 3, 10, 0, RGB(12, 24, 30)
+	createsprite gThinRingExpandingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0
+	end
 	
 Move_SPROUT_SHOT::
 	loadspritegfx ANIM_TAG_GREEN_SPIKE
@@ -14390,13 +14402,60 @@ Move_TRI_CHOP::
 	end
 	
 Move_FOCUS_CHI::
-	goto Move_FOCUS_ENERGY
+	loadspritegfx ANIM_TAG_FOCUS_ENERGY
+	fadetobg BG_COSMIC
+	waitbgfadein
+	waitforvisualfinish
+	playsewithpan SE_W082, SOUND_PAN_ATTACKER
+	call EndureEffect
+	delay 8
+	createvisualtask AnimTask_BlendColorCycle, 2, 2, 2, 2, 0, 11, RGB_WHITE
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_ATTACKER, 1, 0, 32, 1
+	call EndureEffect
+	delay 8
+	call EndureEffect
+	waitforvisualfinish
+	restorebg
+	waitbgfadein
+	waitforvisualfinish
+	end
 	
 Move_SAND_SURF::
-	goto Move_ACCELEROCK
+	loadspritegfx ANIM_TAG_AIR_WAVE
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_FLYING_DIRT
+	playsewithpan SE_W201, 0
+	createvisualtask AnimTask_LoadSandstormBackground, 5, FALSE
+	monbg ANIM_DEF_PARTNER
+	monbgprio_28 ANIM_TARGET
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, 2, 2, 4, 4
+	call SonicBoomProjectile
+	call SonicBoomProjectile
+	call SonicBoomProjectile
+	call SonicBoomProjectile
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 10, 1
+	call SonicBoomHit
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
 	
 Move_EARTH_SWAP::
-	goto Move_COURT_CHANGE
+	loadspritegfx ANIM_TAG_FLYING_DIRT
+	loadspritegfx ANIM_TAG_BLUE_ORB
+	loadspritegfx ANIM_TAG_RECYCLE
+	playsewithpan SE_W201, 0
+	createvisualtask AnimTask_LoadSandstormBackground, 5, FALSE
+	createsprite gRecycleSpriteTemplate, ANIM_ATTACKER, 2
+	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
+	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
+	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 84
+	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 126
+	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 168
+	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 210
+	waitforvisualfinish
+	end
 	
 Move_WING_SLASH::
 	loadspritegfx ANIM_TAG_GUST
