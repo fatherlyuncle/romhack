@@ -14542,7 +14542,7 @@ Move_BOULDER_ROLL::
 	monbg ANIM_DEF_PARTNER
 	monbgprio_28 ANIM_TARGET
 	setalpha 12, 8
-	createvisualtask AnimTask_Withdraw, 5
+	@@createvisualtask AnimTask_Withdraw, 5
 	loopsewithpan SE_W231, SOUND_PAN_ATTACKER, 28, 2
 	createvisualtask AnimTask_MetallicShine, 5, 0, 0, 0
 	waitforvisualfinish
@@ -14569,10 +14569,14 @@ Move_BOULDER_ROLL::
 	end
 	
 Move_CRYSTALLIZE::
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
+	loadspritegfx ANIM_TAG_IMPACT
 	loopsewithpan SE_REAPOKE, SOUND_PAN_ATTACKER, 28, 2
 	createvisualtask AnimTask_MetallicShine, 5, 0, 0, 0
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 8, 2, RGB_WHITEALPHA, 14, -1, 0
 	waitforvisualfinish
+	launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x1 0x0 0xF 0x1888
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_ICE_CRYSTALS, 0, 0xD, 0xD, 0x7DDE  @Pink
 	call IceCrystalEffectLong
 	delay 30
 	goto Move_DIAMOND_STORM
