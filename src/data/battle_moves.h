@@ -10237,7 +10237,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_CRYSTALLIZE] =
     {
-        .effect = EFFECT_PROTECT,
+        .effect = EFFECT_HIT,
         .power = 0,
         .type = TYPE_ROCK,
         .accuracy = 100,
