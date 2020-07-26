@@ -14429,7 +14429,6 @@ Move_SAND_SURF::
 	loadspritegfx ANIM_TAG_FLYING_DIRT
 	playsewithpan SE_W201, 0
 	createvisualtask AnimTask_LoadSandstormBackground, 5, TRUE
-	setalpha 12, 8
 	createsprite gHorizontalLungeSpriteTemplate, 2, 2, 4, 4
 	call SonicBoomProjectile
 	call SonicBoomProjectile
@@ -14447,6 +14446,7 @@ Move_EARTH_SWAP::
 	loadspritegfx ANIM_TAG_RECYCLE
 	playsewithpan SE_W201, 0
 	createvisualtask AnimTask_LoadSandstormBackground, 5, TRUE
+	delay 12
 	createsprite gRecycleSpriteTemplate, ANIM_ATTACKER, 2
 	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
 	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
@@ -14485,7 +14485,34 @@ Move_WING_SLASH::
 	end
 	
 Move_GALE_FORCE::
-	goto Move_TAILWIND
+	loadspritegfx ANIM_TAG_FLYING_DIRT
+	call SetSkyBg
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 24, 6, 4, 4
+	createvisualtask AnimTask_TraceMonBlended, 2, 0, 4, 7, 10
+	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 10, 2304, 96, 0
+	delay 12
+	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 90, 2048, 96, 0
+	delay 12
+	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 50, 2560, 96, 0
+	delay 12
+	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 20, 2304, 96, 0
+	delay 12
+	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 70, 1984, 96, 0
+	delay 12
+	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 0, 2816, 96, 0
+	delay 10
+	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 60, 2560, 96, 0
+	waitforvisualfinish
+	stopsound
+	call UnsetSkyBg
+	blendoff
+	delay 1
+	end
 	
 Move_BOULDER_ROLL::
 	loadspritegfx ANIM_TAG_IMPACT
