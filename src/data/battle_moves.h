@@ -10152,7 +10152,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_FOCUS_CHI] =
     {
-        .effect = EFFECT_ENDURE,
+        .effect = EFFECT_HIT,
         .power = 0,
         .type = TYPE_FIGHTING,
         .accuracy = 95,
@@ -10181,7 +10181,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_EARTH_SWAP] =
     {
-        .effect = EFFECT_PLACEHOLDER,//COURT_CHANGE,
+        .effect = EFFECT_HIT,//COURT_CHANGE,
         .power = 0,
         .type = TYPE_GROUND,
         .accuracy = 100,
@@ -10295,7 +10295,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_FREEZE_POWDER] =
     {
-        .effect = EFFECT_DO_NOTHING,
+        .effect = EFFECT_HIT,
         .power = 0,
         .type = TYPE_ICE,
         .accuracy = 75,
@@ -10325,7 +10325,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_METASTASIZE] =
     {
-        .effect = EFFECT_PURIFY,//METASTASIZE,
+        .effect = EFFECT_HIT,//METASTASIZE,
         .power = 0,
         .type = TYPE_POISON,
         .accuracy = 100,
@@ -10353,7 +10353,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_BRAIN_DRAIN] =
     {
-        .effect = EFFECT_DREAM_EATER,//BRAIN_DRAIN,
+        .effect = EFFECT_HIT,//BRAIN_DRAIN,
         .power = 0,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
@@ -10381,7 +10381,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_SPOOK] =
     {
-        .effect = EFFECT_DO_NOTHING,
+        .effect = EFFECT_HIT,
         .power = 0,
         .type = TYPE_GHOST,
         .accuracy = 100,

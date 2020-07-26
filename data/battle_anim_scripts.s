@@ -14209,6 +14209,9 @@ Move_PRESSURIZE::
 	playsewithpan SE_REAPOKE, SOUND_PAN_ATTACKER
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 3, 10, 0, RGB(12, 24, 30)
 	createsprite gThinRingExpandingSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 0, 0
+	waitforvisualfinish
+	call UnsetPsychicBg
+	blendoff
 	end
 	
 Move_SPROUT_SHOT::
@@ -14425,9 +14428,7 @@ Move_SAND_SURF::
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_FLYING_DIRT
 	playsewithpan SE_W201, 0
-	createvisualtask AnimTask_LoadSandstormBackground, 5, FALSE
-	monbg ANIM_DEF_PARTNER
-	monbgprio_28 ANIM_TARGET
+	createvisualtask AnimTask_LoadSandstormBackground, 5, TRUE
 	setalpha 12, 8
 	createsprite gHorizontalLungeSpriteTemplate, 2, 2, 4, 4
 	call SonicBoomProjectile
@@ -14437,7 +14438,6 @@ Move_SAND_SURF::
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 10, 1
 	call SonicBoomHit
 	waitforvisualfinish
-	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
 	
@@ -14446,7 +14446,7 @@ Move_EARTH_SWAP::
 	loadspritegfx ANIM_TAG_BLUE_ORB
 	loadspritegfx ANIM_TAG_RECYCLE
 	playsewithpan SE_W201, 0
-	createvisualtask AnimTask_LoadSandstormBackground, 5, FALSE
+	createvisualtask AnimTask_LoadSandstormBackground, 5, TRUE
 	createsprite gRecycleSpriteTemplate, ANIM_ATTACKER, 2
 	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 0
 	createsprite gReversalOrbSpriteTemplate, ANIM_ATTACKER, 2, 26, 42
