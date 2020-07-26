@@ -14436,6 +14436,18 @@ Move_SAND_SURF::
 	call SonicBoomProjectile
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 10, 1
 	call SonicBoomHit
+	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_TARGET, 18, 6, 2, 4
+	delay 4
+	playsewithpan SE_W025B, SOUND_PAN_TARGET
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 16, 12, ANIM_TARGET, 1
+	delay 4
+	playsewithpan SE_W025B, SOUND_PAN_TARGET
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, -16, -12, ANIM_TARGET, 1
+	delay 4
+	playsewithpan SE_W025B, SOUND_PAN_TARGET
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 3, 4, ANIM_TARGET, 1
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 8, 1
 	waitforvisualfinish
 	blendoff
 	end
@@ -14489,19 +14501,19 @@ Move_GALE_FORCE::
 	call SetSkyBg
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 24, 6, 4, 4
 	createvisualtask AnimTask_TraceMonBlended, 2, 0, 4, 7, 10
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W239, SOUND_PAN_ATTACKER
 	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 10, 2304, 96, 0
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W239, SOUND_PAN_ATTACKER
 	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 90, 2048, 96, 0
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W239, SOUND_PAN_ATTACKER
 	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 50, 2560, 96, 0
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W239, SOUND_PAN_ATTACKER
 	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 20, 2304, 96, 0
 	delay 12
-	playsewithpan SE_W104, SOUND_PAN_ATTACKER
+	playsewithpan SE_W239, SOUND_PAN_ATTACKER
 	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 70, 1984, 96, 0
 	delay 12
 	createsprite gFlyingSandCrescentSpriteTemplate, ANIM_ATTACKER, 40, 0, 2816, 96, 0
@@ -14521,6 +14533,10 @@ Move_BOULDER_ROLL::
 	monbg ANIM_DEF_PARTNER
 	monbgprio_28 ANIM_TARGET
 	setalpha 12, 8
+	createvisualtask AnimTask_Withdraw, 5
+	loopsewithpan SE_W231, SOUND_PAN_ATTACKER, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 0, 0, 0
+	waitforvisualfinish
 	createvisualtask AnimTask_Rollout, 2
 	waitforvisualfinish
 	createsprite gComplexPaletteBlendSpriteTemplate, 2, 7, 31, 3, 1, 0, 10, 0, 0
@@ -14549,6 +14565,8 @@ Move_CRYSTALLIZE::
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 8, 2, RGB_WHITEALPHA, 14, -1, 0
 	waitforvisualfinish
 	call IceCrystalEffectLong
+	delay 30
+	goto Move_DIAMOND_STORM
 	end
 	
 Move_INSECTION::
