@@ -14871,12 +14871,29 @@ Move_BRAIN_DRAIN::
 Move_NECROMANCY::
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_ATTACKER
 	fadetobg BG_GHOST
-	waitbgfadeout
-	monbg ANIM_TARGET
-	monbgprio_29
-	playsewithpan SE_W060, SOUND_PAN_ATTACKER
 	waitbgfadein
+	delay 0
+	playsewithpan SE_W060, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_NightShadeClone, 5, 85
+	delay 70
+	createvisualtask AnimTask_SpiteTargetShadow, 2
+	loopsewithpan SE_W060, SOUND_PAN_TARGET, 20, 3
+	waitforvisualfinish
+	createvisualtask AnimTask_AttackerFadeToInvisible, 2, 1
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	invisible ANIM_ATTACKER
+	delay 1
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 0, 16, RGB_BLACK
+	createvisualtask AnimTask_SetAttackerInvisibleWaitForSignal, 2
+	setalpha 12, 8
+	monbg ANIM_TARGET
+	delay 1
+	launchtask AnimTask_PurpleFlamesOnTarget 0x3 0x0
+	delay 2
 	launchtask AnimTask_PurpleFlamesOnTarget 0x3 0x0
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
 	playsewithpan SE_W171, SOUND_PAN_TARGET
@@ -14884,13 +14901,50 @@ Move_NECROMANCY::
 	launchtask AnimTask_BlendColorCycle 0x2 0x6 ANIM_PAL_DEF 0x2 0x2 0x0 0xc 0x4C4A @;Deep purple
 	launchtemplate gCurseGhostSpriteTemplate 0x84, 0x0
 	waitforvisualfinish
+	delay 1
 	clearmonbg ANIM_TARGET
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
+	blendoff
+	delay 1
+	setarg 7, 0x1000
+	delay 32
+	createvisualtask AnimTask_InitAttackerFadeFromInvisible, 2
+	monbg ANIM_ATTACKER
+	createvisualtask AnimTask_AttackerFadeFromInvisible, 2, 1
+	waitforvisualfinish
+	clearmonbg ANIM_ATTACKER
+	delay 1
 	restorebg
 	waitbgfadein
 	end
 	
 Move_SPOOK::
-	goto Move_SCARY_FACE
+	loadspritegfx ANIM_TAG_EYE_SPARKLE
+	loadspritegfx ANIM_TAG_DEVIL
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 0, 16, RGB_BLACK
+	playsewithpan SE_W060, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	delay 10
+	createsprite gEyeSparkleSpriteTemplate, ANIM_ATTACKER, 0, -16, -8
+	createsprite gEyeSparkleSpriteTemplate, ANIM_ATTACKER, 0, 16, -8
+	waitforvisualfinish
+	fadetobg BG_NIGHTMARE
+	createvisualtask AnimTask_UproarDistortion, 2, 0
+	createsprite gNightmareDevilSpriteTemplate, ANIM_TARGET, 2
+	createvisualtask AnimTask_RockMonBackAndForth, 3, ANIM_TARGET, 6, 2
+	createsprite gNightmareDevilSpriteTemplate, ANIM_TARGET, 2
+	createvisualtask AnimTask_UproarDistortion, 2, 0
+	createsprite gNightmareDevilSpriteTemplate, ANIM_TARGET, 2
+	createvisualtask AnimTask_UproarDistortion, 2, 0
+	createsprite gNightmareDevilSpriteTemplate, ANIM_TARGET, 2
+	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
+	blendoff
+	delay 1
+	waitforvisualfinish
+	restorebg
+	waitbgfadein
+	end
 	
 Move_WYVERNS_WRATH::
 	goto Move_HEAD_SMASH
