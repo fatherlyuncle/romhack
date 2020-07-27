@@ -14593,12 +14593,12 @@ Move_INSECTION::
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
 	delay 16
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 30, -32, 0
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 30, -32, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
 	delay 16
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -42, 0
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -42, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
 	delay 5
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 10, 1
@@ -14766,6 +14766,15 @@ Move_METASTASIZE::
 	delay 5
 	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, -24, 0, TRUE
 	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 5
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 0, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 5
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 24, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 5
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, -24, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
 	delay 15
 	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 10, 1
 	createvisualtask AnimTask_ShakeMon2, 5, ANIM_DEF_PARTNER, 2, 0, 10, 1
@@ -14785,7 +14794,7 @@ Move_METASTASIZE::
 	createsprite gAcidPoisonDropletSpriteTemplate, ANIM_TARGET, 2, 27, -22, 0, 15, 50, TRUE
 	playsewithpan SE_W145, SOUND_PAN_TARGET
 	waitforvisualfinish
-	delay 15
+	delay 10
 	call PoisonBubblesEffect
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
@@ -14796,40 +14805,63 @@ Move_PSIONIC_SLAM::
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_EXPLOSION
 	loadspritegfx ANIM_TAG_EXPLOSION_6
-	delay 1
-	monbg ANIM_DEF_PARTNER
-	setalpha 12, 8
-	playsewithpan SE_W233B, SOUND_PAN_TARGET
-	call SetPsychicBackground
+	loadspritegfx ANIM_TAG_SPIRAL
+	monbg ANIM_ATK_PARTNER
+	fadetobg BG_PSYCHIC
+	waitbgfadeout
+	createvisualtask AnimTask_FadeScreenToWhite, 5
+	waitbgfadein
+	delay 6
+	createvisualtask AnimTask_BlendColorCycle, 2, 1, 2, 8, 0, 10, RGB_BLACK
+	delay 0
+	monbgprio_28 ANIM_ATTACKER
+	setalpha 8, 8
+	delay 10
+	loopsewithpan SE_W060B, SOUND_PAN_ATTACKER, 5, 10
+	createsprite gPsychUpSpiralSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 0, 0
+	createvisualtask AnimTask_SwayMon, 3, 0, 6, 1280, 3, ANIM_ATTACKER
+	delay 127
+	delay 4
+	playsewithpan SE_W060, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 10, ANIM_ATTACKER, 1
+	createvisualtask AnimTask_BlendBattleAnimPal, 9, 2, 2, 10, 0, 0x7FFC
+	waitforvisualfinish
+	createvisualtask AnimTask_TransparentCloneGrowAndShrink, 5, ANIM_ATTACKER	
 	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 20, 1, 0
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 0
-	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 5, 0, 7, 1
-	delay 1
-	waitsound
-	playsewithpan SE_W120, SOUND_PAN_TARGET
-	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 5, 0, 28, 1
-	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 1
-	delay 6
-	playsewithpan SE_W120, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 24, -24, 1, 1
-	delay 6
-	playsewithpan SE_W120, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, -16, 16, 1, 1
-	delay 6
-	playsewithpan SE_W120, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, -24, -12, 1, 1
-	delay 6
-	playsewithpan SE_W120, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 16, 16, 1, 1
+	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 2
+	playsewithpan SE_W043, SOUND_PAN_ATTACKERdyn
 	waitforvisualfinish
-	clearmonbg ANIM_DEF_PARTNER
+	clearmonbg ANIM_ATK_PARTNER
 	blendoff
-	delay 1
 	call UnsetPsychicBg
 	end
 	
 Move_BRAIN_DRAIN::
-	goto Move_RAZOR_SHELL
+	loadspritegfx ANIM_TAG_BLUE_RING
+	loadspritegfx ANIM_TAG_ORBS
+	loadspritegfx ANIM_TAG_BLUE_STAR
+	playsewithpan SE_W060, SOUND_PAN_ATTACKER
+	call SetPsychicBackground
+	createvisualtask AnimTask_StartSinAnimTimer, 5, 100
+	createsoundtask SoundTask_LoopSEAdjustPanning, SE_W100, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, 2, 9, 0, 10
+	call PsywaveRings
+	call PsywaveRings
+	createvisualtask AnimTask_BlendColorCycle, 2, 4, 1, 4, 0, 12, RGB(31, 18, 31)
+	call PsywaveRings
+	call PsywaveRings
+	call PsywaveRings
+	call PsywaveRings
+	waitforvisualfinish
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 2, 25, 1
+	call DreamEaterAbsorb
+	waitforvisualfinish
+	delay 15
+	call HealingEffect
+	waitforvisualfinish
+	delay 1
+	call UnsetPsychicBg
+	end
 	
 Move_NECROMANCY::
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
