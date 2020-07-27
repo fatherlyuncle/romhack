@@ -14585,10 +14585,16 @@ Move_INSECTION::
 	loadspritegfx ANIM_TAG_SLASH_2
 	loadspritegfx ANIM_TAG_CUT
 	monbg ANIM_TARGET
+	call SetBugBg
 	setalpha 12, 8
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 24, 6, 1, 5
 	createvisualtask AnimTask_TraceMonBlended, 2, 0, 4, 7, 3
-	call SetImpactBackground
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
+	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
+	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
@@ -14600,12 +14606,14 @@ Move_INSECTION::
 	clearmonbg ANIM_TARGET
 	blendoff
 	delay 2
-	restorebg
+	call UnsetBugBg
 	waitbgfadein
 	end
 	
 Move_CHRYSALIS::
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
+	loadspritegfx ANIM_TAG_STRING
+	loadspritegfx ANIM_TAG_WEB_THREAD
 	monbg ANIM_ATTACKER
 	call SetBugBg
 	createvisualtask AnimTask_DragonDanceWaver, 5
@@ -14639,9 +14647,37 @@ Move_CHRYSALIS::
 	end
 	
 Move_CRYO_BURST::
-	goto Move_FROST_BREATH
+	loadspritegfx ANIM_TAG_ICE_CHUNK
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	loadspritegfx ANIM_TAG_FIRE_PLUME
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
+	loadspritegfx ANIM_TAG_ICE_SPIKES
+	fadetobg BG_ICE
+	waitbgfadeout
+	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
+	waitbgfadein
+	playsewithpan SE_W082, SOUND_PAN_ATTACKER
+	launchtask AnimTask_ShakeMon 0x5 0x5 0x0 0x0 0x2 0x28 0x1
+	waitforvisualfinish
+	launchtemplate gSlideMonToOffsetSpriteTemplate 0x82 0x5 0x0 0xf 0x0 0x0 0x4
+	waitforvisualfinish
+	launchtemplate gFrostBreathBlueBreathTemplate 0x82 0x5 0x1e 0xf 0x0 0xa 0xa
+	waitforvisualfinish
+	loopsewithpan SE_W196, SOUND_PAN_TARGET, 0xb, 0x3
+	launchtask AnimTask_ShakeMon 0x5 0x5 0x1 0x0 0x3 0x19 0x1
+	delay 55
+	call IceSpikesEffectLong
+	waitforvisualfinish
+	call IceCrystalEffectLong
+	clearmonbg ANIM_DEF_PARTNER
+	restorebg
+	waitbgfadeout
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 11, 4, 4, 0, RGB_BLACK
+	waitbgfadein
+	end
 
 Move_FREEZE_POWDER::
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	loadspritegfx ANIM_TAG_SLEEP_POWDER
 	loopsewithpan SE_W077, SOUND_PAN_TARGET, 10, 6
 	createsprite gSleepPowderParticleSpriteTemplate, ANIM_TARGET, 2, -30, -22, 117, 80, 5, 1
@@ -14667,10 +14703,38 @@ Move_FREEZE_POWDER::
 	end
 	
 Move_NOXIOUS_CLAW::
-	goto Move_CROSS_POISON
+	loadspritegfx ANIM_TAG_TOXIC_BUBBLE
+	loadspritegfx ANIM_TAG_POISON_BUBBLE
+	loadspritegfx ANIM_TAG_CLAW_SLASH
+	createvisualtask AnimTask_LoadMistTiles, 5
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 3, 0, 16, RGB(26, 0, 26)
+	delay 16
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 6, 4
+	delay 2
+	playsewithpan SE_W013, SOUND_PAN_TARGET
+	createsprite gClawSlashSpriteTemplate, ANIM_TARGET, 2, -10, -10, 0
+	createsprite gClawSlashSpriteTemplate, ANIM_TARGET, 2, -10, 10, 0
+	createsprite gShakeMonOrTerrainSpriteTemplate, ANIM_ATTACKER, 2, -4, 1, 10, 3, 1
+	delay 8
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 6, 4
+	delay 2
+	playsewithpan SE_W013, SOUND_PAN_TARGET
+	createsprite gClawSlashSpriteTemplate, ANIM_TARGET, 2, 10, -10, 1
+	createsprite gClawSlashSpriteTemplate, ANIM_TARGET, 2, 10, 10, 1
+	createsprite gShakeMonOrTerrainSpriteTemplate, ANIM_ATTACKER, 2, -4, 1, 10, 3, 1
+	waitforvisualfinish
+	call ToxicBubbles
+	call ToxicBubbles
+	waitforvisualfinish
+	delay 15
+	call PoisonBubblesEffect
+	waitforvisualfinish
+	end
 	
 Move_METASTASIZE::
 	goto Move_VENOM_DRENCH
+	goto Move_POISON_GAS
+	goto Move_TOXIC
 
 Move_PSIONIC_SLAM::
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
