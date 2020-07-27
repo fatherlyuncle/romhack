@@ -14814,6 +14814,7 @@ Move_METASTASIZE::
 Move_PSIONIC_SLAM::
 	loadspritegfx ANIM_TAG_WHITE_CIRCLE_OF_LIGHT
 	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET
 	loadspritegfx ANIM_TAG_SPIRAL
 	monbg ANIM_ATK_PARTNER
 	fadetobg BG_PSYCHIC
@@ -14849,7 +14850,7 @@ Move_PSIONIC_SLAM::
 	createvisualtask AnimTask_BlendBattleAnimPalExclude, 5, 5, 2, 0, 16, RGB_WHITEALPHA
 	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_WHITE_CIRCLE_OF_LIGHT, 2, 0, 16, RGB_WHITEALPHA
 	waitforvisualfinish
-	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_IMPACT, 0, 12, 12, RGB(0, 0, 23)
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_HANDS_AND_FEET, 0, 12, 12, RGB(0, 0, 23)
 	waitforvisualfinish
 	createsprite gRandomPosHitSplatSpriteTemplate, ANIM_TARGET, 3, 1, 2
 	createvisualtask SoundTask_PlaySE1WithPanning, 5, SE_W063, SOUND_PAN_TARGET
@@ -14910,27 +14911,24 @@ Move_NECROMANCY::
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_ATTACKER
 	fadetobg BG_GHOST
+	waitbgfadeout
+	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
 	waitbgfadein
-	delay 0
 	playsewithpan SE_W060, SOUND_PAN_ATTACKER
 	createvisualtask AnimTask_NightShadeClone, 5, 85
 	delay 70
+	createvisualtask AnimTask_BlendColorCycle, 2, 2, 2, 6, 0, 8, RGB_WHITE
 	createvisualtask AnimTask_SpiteTargetShadow, 2
 	loopsewithpan SE_W060, SOUND_PAN_TARGET, 20, 3
 	waitforvisualfinish
-	createvisualtask AnimTask_AttackerFadeToInvisible, 2, 1
+	invisible ANIM_ATTACKER
 	waitforvisualfinish
 	clearmonbg ANIM_ATTACKER
-	invisible ANIM_ATTACKER
 	delay 1
 	createvisualtask AnimTask_CurseStretchingBlackBg, 5
 	waitforvisualfinish
-	createvisualtask AnimTask_SetAttackerInvisibleWaitForSignal, 2
-	setalpha 12, 8
 	monbg ANIM_TARGET
 	delay 1
-	launchtask AnimTask_PurpleFlamesOnTarget 0x3 0x0
-	delay 2
 	launchtask AnimTask_PurpleFlamesOnTarget 0x3 0x0
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
 	playsewithpan SE_W171, SOUND_PAN_TARGET
@@ -14940,17 +14938,11 @@ Move_NECROMANCY::
 	waitforvisualfinish
 	delay 1
 	clearmonbg ANIM_TARGET
-	delay 1
-	setarg 7, 0x1000
 	delay 32
-	createvisualtask AnimTask_InitAttackerFadeFromInvisible, 2
-	monbg ANIM_ATTACKER
-	createvisualtask AnimTask_AttackerFadeFromInvisible, 2, 1
-	waitforvisualfinish
-	clearmonbg ANIM_ATTACKER
+	visible ANIM_ATTACKER
 	delay 1
 	restorebg
-	waitbgfadein
+	call UnsetPsychicBg
 	end
 	
 Move_SPOOK::
@@ -14973,38 +14965,38 @@ Move_SPOOK::
 	createvisualtask AnimTask_UproarDistortion, 2, 0
 	createsprite gNightmareDevilSpriteTemplate, ANIM_TARGET, 2
 	waitforvisualfinish
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
-	blendoff
-	delay 1
-	waitforvisualfinish
+	@createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
+	@blendoff
+	@delay 1
+	@waitforvisualfinish
 	restorebg
 	waitbgfadein
 	end
 	
 Move_WYVERNS_WRATH::
-	goto Move_DRAGON_RUSH
+	goto Move_DRAGON_PULSE
 
 Move_DRAGON_BLOOD::
-	goto Move_DRAGON_ASCENT
+	goto Move_BOLT_STRIKE
 
 Move_DEMONIC_HOWL::
 	@@@goto Move_DARK_VOID
-	goto Move_CORE_ENFORCER
+	goto Move_ROAR_OF_TIME
 
 Move_MURKY_STARE::
-	goto Move_HYPERSPACE_FURY
+	goto Move_SPECIAL_REND
 	
 Move_MERCURY_BOMB::
-	goto Move_HYPERSPACE_HOLE
+	goto Move_MAGMA_STORM
 	
 Move_NANOBOTS::
-	goto Move_PRISMATIC_LASER
+	goto Move_FUSION_BOLT
 
 Move_PIXIE_DUST::
-	goto Move_THOUSAND_ARROWS
+	goto Move_FUSION_FLARE
 
 Move_LUNAR_CURSE::
-	goto Move_THOUSAND_WAVES
+	goto Move_V_CREATE
 	@loadspritegfx ANIM_TAG_MOON
 	@loadspritegfx ANIM_TAG_NAIL
 	@loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
