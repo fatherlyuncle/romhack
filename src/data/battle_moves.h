@@ -10498,7 +10498,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_LUNAR_CURSE] =
     {
-        .effect = EFFECT_CURSE,//LUNAR_CURSE,
+        .effect = EFFECT_HIT,//LUNAR_CURSE,
         .power = 0,
         .type = TYPE_FAIRY,
         .accuracy = 100,

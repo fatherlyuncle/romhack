@@ -14593,12 +14593,12 @@ Move_INSECTION::
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
 	delay 16
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 30, -32, 0
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 30, -32, 1
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 0, -32, 0
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 0, -32, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
 	delay 16
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -42, 0
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -42, 1
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 64, -1, 0
+	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 64, -1, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
 	delay 5
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 10, 1
@@ -14823,16 +14823,21 @@ Move_PSIONIC_SLAM::
 	delay 127
 	delay 4
 	playsewithpan SE_W060, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_BlendBattleAnimPal, 9, 2, 2, 10, 0, RGB_WHITE
 	createvisualtask AnimTask_ScaleMonAndRestore, 5, -5, -5, 10, ANIM_ATTACKER, 1
-	createvisualtask AnimTask_BlendBattleAnimPal, 9, 2, 2, 10, 0, 0x7FFC
 	waitforvisualfinish
-	createvisualtask AnimTask_TransparentCloneGrowAndShrink, 5, ANIM_ATTACKER	
+	createvisualtask AnimTask_TransparentCloneGrowAndShrink, 5, ANIM_ATTACKER
+	clearmonbg ANIM_ATK_PARTNER	
+	blendoff
 	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 20, 1, 0
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 0
 	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 2
 	playsewithpan SE_W043, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 1
+	playsewithpan SE_W043, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 2
+	playsewithpan SE_W043, SOUND_PAN_ATTACKER
 	waitforvisualfinish
-	clearmonbg ANIM_ATK_PARTNER
 	blendoff
 	call UnsetPsychicBg
 	end
