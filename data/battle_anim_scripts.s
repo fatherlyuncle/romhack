@@ -14830,7 +14830,7 @@ Move_PSIONIC_SLAM::
 	createsprite gFistFootSpriteTemplate, ANIM_TARGET, 3, 0, 0, 20, 1, 0
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 0
 	createvisualtask AnimTask_ExtrasensoryDistortion, 5, 2
-	playsewithpan SE_W043, SOUND_PAN_ATTACKERdyn
+	playsewithpan SE_W043, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
 	blendoff
