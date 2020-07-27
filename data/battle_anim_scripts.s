@@ -14592,9 +14592,11 @@ Move_INSECTION::
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
+	delay 16
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
+	delay 16
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
 	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
 	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
@@ -14652,10 +14654,10 @@ Move_CRYO_BURST::
 	loadspritegfx ANIM_TAG_FIRE_PLUME
 	loadspritegfx ANIM_TAG_ICE_CRYSTALS
 	loadspritegfx ANIM_TAG_ICE_SPIKES
+	monbg ANIM_DEF_PARTNER
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 11, 4, 0, 4, RGB_BLACK
 	fadetobg BG_ICE
 	waitbgfadeout
-	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
-	waitbgfadein
 	playsewithpan SE_W082, SOUND_PAN_ATTACKER
 	launchtask AnimTask_ShakeMon 0x5 0x5 0x0 0x0 0x2 0x28 0x1
 	waitforvisualfinish
@@ -14665,10 +14667,11 @@ Move_CRYO_BURST::
 	waitforvisualfinish
 	loopsewithpan SE_W196, SOUND_PAN_TARGET, 0xb, 0x3
 	launchtask AnimTask_ShakeMon 0x5 0x5 0x1 0x0 0x3 0x19 0x1
-	delay 55
+	delay 30
 	call IceSpikesEffectLong
 	waitforvisualfinish
 	call IceCrystalEffectLong
+	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	restorebg
 	waitbgfadeout
@@ -14707,7 +14710,6 @@ Move_NOXIOUS_CLAW::
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	loadspritegfx ANIM_TAG_CLAW_SLASH
 	createvisualtask AnimTask_LoadMistTiles, 5
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 3, 0, 16, RGB(26, 0, 26)
 	delay 16
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 6, 4
 	delay 2
@@ -14733,8 +14735,8 @@ Move_NOXIOUS_CLAW::
 	
 Move_METASTASIZE::
 	goto Move_VENOM_DRENCH
-	goto Move_POISON_GAS
-	goto Move_TOXIC
+	@@goto Move_POISON_GAS
+	@@goto Move_TOXIC
 
 Move_PSIONIC_SLAM::
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
