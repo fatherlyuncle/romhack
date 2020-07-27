@@ -14710,6 +14710,7 @@ Move_NOXIOUS_CLAW::
 	loadspritegfx ANIM_TAG_POISON_BUBBLE
 	loadspritegfx ANIM_TAG_CLAW_SLASH
 	createvisualtask AnimTask_LoadMistTiles, 5
+	createvisualtask AnimTask_BlendBackground, 6, 6, RGB(26, 0, 26)
 	delay 16
 	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 6, 4
 	delay 2
@@ -14731,12 +14732,64 @@ Move_NOXIOUS_CLAW::
 	delay 15
 	call PoisonBubblesEffect
 	waitforvisualfinish
+	blendoff
 	end
 	
 Move_METASTASIZE::
-	goto Move_VENOM_DRENCH
-	@@goto Move_POISON_GAS
-	@@goto Move_TOXIC
+	loadspritegfx ANIM_TAG_POISON_BUBBLE
+	loadspritegfx ANIM_TAG_PURPLE_GAS_CLOUD
+	monbg ANIM_DEF_PARTNER
+	monbgprio_29
+	setalpha 12, 8
+	loopsewithpan SE_W054, SOUND_PAN_TARGET, 17, 10
+	call SmogCloud
+	call SmogCloud
+	call SmogCloud
+	call SmogCloud
+	call SmogCloud
+	call SmogCloud
+	call SmogCloud
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 0, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 5
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 24, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 5
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, -24, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 5
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 0, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 5
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, 24, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 5
+	createsprite gAcidPoisonBubbleSpriteTemplate, ANIM_TARGET, 2, 20, 0, 40, 1, -24, 0, TRUE
+	playsewithpan SE_W145C, SOUND_PAN_ATTACKER
+	delay 15
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 10, 1
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_DEF_PARTNER, 2, 0, 10, 1
+	createvisualtask AnimTask_BlendColorCycle, 2, 20, 2, 2, 0, 12, RGB(30, 0, 31)
+	createsprite gAcidPoisonDropletSpriteTemplate, ANIM_TARGET, 2, 0, -22, 0, 15, 55, TRUE
+	playsewithpan SE_W145, SOUND_PAN_TARGET
+	delay 10
+	createsprite gAcidPoisonDropletSpriteTemplate, ANIM_TARGET, 2, -26, -24, 0, 15, 55, TRUE
+	playsewithpan SE_W145, SOUND_PAN_TARGET
+	delay 10
+	createsprite gAcidPoisonDropletSpriteTemplate, ANIM_TARGET, 2, 15, -27, 0, 15, 50, TRUE
+	playsewithpan SE_W145, SOUND_PAN_TARGET
+	delay 10
+	createsprite gAcidPoisonDropletSpriteTemplate, ANIM_TARGET, 2, -15, -17, 0, 10, 45, TRUE
+	playsewithpan SE_W145, SOUND_PAN_TARGET
+	delay 10
+	createsprite gAcidPoisonDropletSpriteTemplate, ANIM_TARGET, 2, 27, -22, 0, 15, 50, TRUE
+	playsewithpan SE_W145, SOUND_PAN_TARGET
+	waitforvisualfinish
+	delay 15
+	call PoisonBubblesEffect
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	end
 
 Move_PSIONIC_SLAM::
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
@@ -14776,7 +14829,7 @@ Move_PSIONIC_SLAM::
 	end
 	
 Move_BRAIN_DRAIN::
-	goto Move_DREAM_EATER
+	goto Move_RAZOR_SHELL
 	
 Move_NECROMANCY::
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
