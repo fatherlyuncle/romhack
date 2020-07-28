@@ -14591,34 +14591,50 @@ Move_CRYSTALLIZE::
 Move_INSECTION::
 	loadspritegfx ANIM_TAG_SLASH_2
 	loadspritegfx ANIM_TAG_CUT
+	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
 	call SetBugBg
+	waitbgfadeout
+	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
+	waitbgfadein
 	setalpha 12, 8
 	createvisualtask AnimTask_TranslateMonEllipticalRespectSide, 2, ANIM_ATTACKER, 24, 6, 1, 5
 	createvisualtask AnimTask_TraceMonBlended, 2, 0, 4, 7, 3
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
-	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
-	delay 16
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, -10, -32, 0
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, -10, -32, 1
-	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
-	delay 16
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 64, -1, 0
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 64, -1, 1
-	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
-	delay 16
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 64, 32, 0
-	createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 64, 32, 1
-	playsewithpan SE_W013B, SOUND_PAN_ATTACKER
-	delay 5
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 10, 1
-	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 3, 1, RGB_BLACK, 10, 0, 0
+	@createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 0
+	@createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 40, -32, 1
+	@playsewithpan SE_W013B, SOUND_PAN_ATTACKER
+	@delay 16
+	@createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, -10, -32, 0
+	@createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, -10, -32, 1
+	@playsewithpan SE_W013B, SOUND_PAN_ATTACKER
+	@delay 16
+	@createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 64, -32, 0
+	@createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 2, 64, -32, 1
+	@playsewithpan SE_W013B, SOUND_PAN_ATTACKER
+	@delay 16
+	@createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 5, 40, -32, 0
+	@createsprite gCuttingSliceSpriteTemplate, ANIM_ATTACKER, 5, 40, -32, 1
+	@playsewithpan SE_W013B, SOUND_PAN_ATTACKER
+	@delay 5
+	@createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 10, 1
+	@createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 3, 1, RGB_BLACK, 10, 0, 0
+	@playsewithpan SE_W013, SOUND_PAN_TARGET
+	@waitforvisualfinish
+	createsprite gGuillotineSpriteTemplate, ANIM_ATTACKER, 2, 0
+	createsprite gGuillotineSpriteTemplate, ANIM_ATTACKER, 2, 1
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 4, 2, 0, 16, RGB_BLACK
+	delay 9
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 23, 1
+	delay 46
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 4, 0, 8, 1
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, ANIM_TARGET, 0
+	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 31, 3, 1, RGB_BLACK, 8, 0, 0
 	playsewithpan SE_W013, SOUND_PAN_TARGET
 	waitforvisualfinish
 	clearmonbg ANIM_TARGET
 	blendoff
 	delay 2
+	restorebg
 	call UnsetBugBg
 	waitbgfadein
 	end
@@ -14974,29 +14990,29 @@ Move_SPOOK::
 	end
 	
 Move_WYVERNS_WRATH::
-	goto Move_DRAGON_PULSE
+	goto Move_MULTI_ATTACK
 
 Move_DRAGON_BLOOD::
-	goto Move_BOLT_STRIKE
+	goto Move_TRUMP_CARD
 
 Move_DEMONIC_HOWL::
 	@@@goto Move_DARK_VOID
-	goto Move_ROAR_OF_TIME
+	goto Move_RETALITATE
 
 Move_MURKY_STARE::
-	goto Move_SPECIAL_REND
+	goto Move_SACRED_SWORD
 	
 Move_MERCURY_BOMB::
-	goto Move_MAGMA_STORM
+	goto Move_SECRET_SWORD
 	
 Move_NANOBOTS::
-	goto Move_FUSION_BOLT
+	goto Move_STEAM_ERUPTION
 
 Move_PIXIE_DUST::
-	goto Move_FUSION_FLARE
+	goto Move_LANDS_WRATH
 
 Move_LUNAR_CURSE::
-	goto Move_V_CREATE
+	goto Move_LIGHT_OF_RUIN
 	@loadspritegfx ANIM_TAG_MOON
 	@loadspritegfx ANIM_TAG_NAIL
 	@loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
