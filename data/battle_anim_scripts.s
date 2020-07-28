@@ -14922,6 +14922,10 @@ Move_BRAIN_DRAIN::
 	end
 	
 Move_NECROMANCY::
+
+curse bg, then frostbreath but purple fire, then purple fire ring, w/ ghost. 
+also make sure to check spook to make sure its fixed.
+
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
 	loadspritegfx ANIM_TAG_IMPACT
@@ -14981,64 +14985,38 @@ Move_SPOOK::
 	createvisualtask AnimTask_UproarDistortion, 2, 0
 	createsprite gNightmareDevilSpriteTemplate, ANIM_TARGET, 2
 	waitforvisualfinish
-	@createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
-	@blendoff
-	@delay 1
-	@waitforvisualfinish
+	@@createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
+	blendoff
+	delay 1
+	@@waitforvisualfinish
 	restorebg
 	waitbgfadein
 	end
 	
 Move_WYVERNS_WRATH::
-	goto Move_MULTI_ATTACK
+	goto Move_SPIRIT_SHACKLE
 
 Move_DRAGON_BLOOD::
-	goto Move_TRUMP_CARD
+	goto Move_MOONGEIST_BEAM
 
 Move_DEMONIC_HOWL::
 	@@@goto Move_DARK_VOID
 	goto Move_RETALITATE
 
 Move_MURKY_STARE::
-	goto Move_SACRED_SWORD
+	goto Move_SPECTRAL_THIEF
 	
 Move_MERCURY_BOMB::
-	goto Move_SECRET_SWORD
+	goto Move_PHANTOM_FORCE
 	
 Move_NANOBOTS::
-	goto Move_STEAM_ERUPTION
+	goto Move_OMINOUS_WIND
 
 Move_PIXIE_DUST::
-	goto Move_LANDS_WRATH
+	goto Move_SHADOW_FORCE
 
 Move_LUNAR_CURSE::
 	goto Move_LIGHT_OF_RUIN
-	@loadspritegfx ANIM_TAG_MOON
-	@loadspritegfx ANIM_TAG_NAIL
-	@loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
-	@monbg ANIM_ATK_PARTNER
-	@createvisualtask AnimTask_CurseStretchingBlackBg, 5
-	@waitforvisualfinish
-	@delay 20
-	@createsprite gCurseNailSpriteTemplate, ANIM_ATTACKER, 2
-	@delay 60
-	@call CurseGhostShakeFromNail
-	@delay 41
-	@call CurseGhostShakeFromNail
-	@delay 41
-	@call CurseGhostShakeFromNail
-	@waitforvisualfinish
-	@clearmonbg ANIM_ATK_PARTNER
-	@delay 1
-	@monbg ANIM_DEF_PARTNER
-	@playsewithpan SE_W171, SOUND_PAN_TARGET
-	@createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
-	@createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 14, 1
-	@waitforvisualfinish
-	@createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 16, 0, RGB_BLACK
-	@waitforvisualfinish
-	@clearmonbg ANIM_DEF_PARTNER
-	@end
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
