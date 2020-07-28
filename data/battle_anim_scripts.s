@@ -14593,7 +14593,7 @@ Move_INSECTION::
 	loadspritegfx ANIM_TAG_CUT
 	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_TARGET
-	fadetobg SetBugBg
+	fadetobg BG_BUG_PLAYER
 	waitbgfadeout
 	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
 	waitbgfadein
