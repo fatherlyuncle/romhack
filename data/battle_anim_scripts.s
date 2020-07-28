@@ -14923,8 +14923,8 @@ Move_BRAIN_DRAIN::
 	
 Move_NECROMANCY::
 
-curse bg, then frostbreath but purple fire, then purple fire ring, w/ ghost. 
-also make sure to check spook to make sure its fixed.
+@@curse bg, then frostbreath but purple fire, then purple fire ring, w/ ghost. 
+@@@also make sure to check spook to make sure its fixed.
 
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
