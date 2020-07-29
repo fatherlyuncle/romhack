@@ -66,6 +66,18 @@ static const union AffineAnimCmd sSquishTargetAffineAnimCmds[] =
 };
 
 //// CUSTOM MOVES
+//dragon Blood
+const struct SpriteTemplate gDragonBloodBuffTemplate =
+{
+    .tileTag = ANIM_TAG_FOCUS_ENERGY,
+    .paletteTag = ANIM_TAG_ICE_CHUNK,
+    .oam = &gOamData_AffineOff_ObjNormal_16x32,
+    .anims = gEndureEnergyAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimEndureEnergy
+};
+
 //demonichowl
 const struct SpriteTemplate gDemonicHowlFlameSwirlTemplate =
 {
