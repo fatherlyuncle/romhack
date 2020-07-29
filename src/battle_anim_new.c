@@ -66,6 +66,133 @@ static const union AffineAnimCmd sSquishTargetAffineAnimCmds[] =
 };
 
 //// CUSTOM MOVES
+//wyverns wrath
+const struct SpriteTemplate gWyvernsWrathOrbSlideSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_CIRCLE_OF_LIGHT,
+    .paletteTag = ANIM_TAG_ICE_CHUNK,
+    .oam = &gOamData_AffineNormal_ObjBlend_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gAffineAnims_GrowingElectricOrb,
+    .callback = AnimVoltTackleOrbSlide,
+};
+
+const struct SpriteTemplate gWyvernsWrathFlameSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_SMALL_EMBER,
+    .paletteTag = ANIM_TAG_ICE_CHUNK,
+    .oam = &gOamData_AffineDouble_ObjNormal_8x16,
+    .anims = sAnims_VoltTackleBolt,
+    .images = NULL,
+    .affineAnims = sAffineAnims_VoltTackleBolt,
+    .callback = AnimVoltTackleBolt,
+};
+
+void AnimTask_WyvernsWrathFlame(u8 taskId)
+{
+    struct Task *task = &gTasks[taskId];
+
+    switch(task->data[0])
+    {
+    case 0:
+        task->data[1] = GetBattlerSide(gBattleAnimAttacker) == B_SIDE_PLAYER ? 1 : -1;
+
+        switch (gBattleAnimArgs[0])
+        {
+        case 0:
+            task->data[3] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
+            task->data[5] = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
+            task->data[4] = (task->data[1] * 128) + 120;
+            break;
+        case 4:
+            task->data[3] = 120 - (task->data[1] * 128);
+            task->data[5] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_Y_PIC_OFFSET);
+            task->data[4] = GetBattlerSpriteCoord(gBattleAnimTarget, BATTLER_COORD_X_2) - (task->data[1] * 32);
+            break;
+        default:
+            if ((gBattleAnimArgs[0] & 1) != 0)
+            {
+                task->data[3] = 256;
+                task->data[4] = -16;
+            }
+            else
+            {
+                task->data[3] = -16;
+                task->data[4] = 256;
+            }
+
+            if (task->data[1] == 1)
+            {
+                task->data[5] = 80 - gBattleAnimArgs[0] * 10;
+            }
+            else
+            {
+                u16 temp;
+                task->data[5] = gBattleAnimArgs[0] * 10 + 40;
+                temp = task->data[3];
+                task->data[3] = task->data[4];
+                task->data[4] = temp;
+            }
+        }
+
+        if (task->data[3] < task->data[4])
+        {
+            task->data[1] = 1;
+            task->data[6] = 0;
+        }
+        else
+        {
+            task->data[1] = -1;
+            task->data[6] = 3;
+        }
+
+        task->data[0]++;
+        break;
+    case 1:
+        if (++task->data[2] > 0)
+        {
+            task->data[2] = 0;
+            if (sub_420B069(task, taskId) || sub_420B069(task, taskId))
+                task->data[0]++;
+        }
+        break;
+    case 2:
+        if (task->data[7] == 0)
+            DestroyAnimVisualTask(taskId);
+    }
+}
+
+static bool8 sub_420B069(struct Task *task, u8 taskId)
+{
+    u8 spriteId = CreateSprite(&gWyvernsWrathFlameSpriteTemplate, task->data[3], task->data[5], 35);
+    if (spriteId != MAX_SPRITES)
+    {
+        gSprites[spriteId].data[6] = taskId;
+        gSprites[spriteId].data[7] = 7;
+        task->data[7]++;
+    }
+
+    task->data[6] += task->data[1];
+    if (task->data[6] < 0)
+        task->data[6] = 3;
+
+    if (task->data[6] > 3)
+        task->data[6] = 0;
+
+    task->data[3] += task->data[1] * 16;
+
+    if ((task->data[1] == 1 && task->data[3] >= task->data[4])
+        || (task->data[1] == -1 && task->data[3] <= task->data[4]))
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
+}
+
 //dragon Blood
 const struct SpriteTemplate gDragonBloodBuffTemplate =
 {
