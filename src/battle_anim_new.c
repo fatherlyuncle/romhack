@@ -16,7 +16,7 @@
 #include "constants/moves.h"
 
 //// function declarations
-static bool8 sub_420B069(struct Task *task, u8 taskId)
+static bool8 sub_420B069(struct Task *task, u8 taskId);
 static void SpriteCB_SpriteToCentreOfSide(struct Sprite* sprite);
 static void SpriteCB_SpriteOnMonForDuration(struct Sprite *sprite);
 static void SpriteCB_ToxicThreadWrap(struct Sprite *sprite);
