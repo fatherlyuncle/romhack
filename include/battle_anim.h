@@ -412,9 +412,6 @@ void AnimCrossImpact(struct Sprite *sprite);
 void AnimHitSplatOnMonEdge(struct Sprite *sprite);
 
 // battle_anim_electric.c
-void AnimVoltTackleOrbSlide(struct Sprite *);
-void AnimVoltTackleOrbSlide_Step(struct Sprite *);
-void AnimVoltTackleBolt(struct Sprite *);
 void AnimThunderWave(struct Sprite *sprite);
 void AnimGrowingChargeOrb(struct Sprite *sprite);
 void AnimZapCannonSpark(struct Sprite *sprite);
@@ -422,13 +419,6 @@ void AnimSparkElectricity(struct Sprite *sprite);
 void AnimElectricPuff(struct Sprite *sprite);
 void AnimSparkElectricityFlashing(struct Sprite *sprite);
 void AnimGrowingShockWaveOrb(struct Sprite *sprite);
-extern const union AnimCmd sAnim_VoltTackleBolt_0[];
-extern const union AnimCmd sAnim_VoltTackleBolt_1[];
-extern const union AnimCmd sAnim_VoltTackleBolt_2[];
-extern const union AnimCmd sAnim_VoltTackleBolt_3[];
-extern const union AnimCmd *const sAnims_VoltTackleBolt[];
-extern const union AffineAnimCmd sAffineAnim_VoltTackleBolt[];
-extern const union AffineAnimCmd *const sAffineAnims_VoltTackleBolt[];
 extern const union AffineAnimCmd *const gAffineAnims_GrowingElectricOrb[];
 extern const union AffineAnimCmd *const gAffineAnims_FlashingSpark[];
 extern const union AnimCmd *const gAnims_ThunderboltOrb[];

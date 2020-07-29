@@ -15094,41 +15094,7 @@ Move_WYVERNS_WRATH::
 	end
 
 Move_DRAGON_BLOOD::
-	loadspritegfx ANIM_TAG_FOCUS_ENERGY
-	loadspritegfx ANIM_TAG_ICE_CHUNK
-	monbg ANIM_DEF_PARTNER
-	fadetobg BG_FIRE_2
-	waitbgfadeout
-	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x1000 0x0 0x0 0xFFFF
-	waitbgfadein
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 3, 0, 9, 31
-	playsewithpan SE_W082, SOUND_PAN_ATTACKER
-	call DragonBloodBuffUp
-	delay 0x8
-	launchtask AnimTask_ShakeMon2 0x2 0x5 0x0 0x1 0x0 0x20 0x1
-	call DragonBloodBuffUp
-	delay 0x8
-	call DragonBloodBuffUp
-	waitforvisualfinish
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 3, 9, 0, 31
-	waitforvisualfinish
-	clearmonbg ANIM_DEF_PARTNER
-	blendoff
-	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 4, 0, 30, 1
-	call UnsetPsychicBg
-	waitforvisualfinish
-	end
-DragonBloodBuffUp:
-	launchtemplate gDragonBloodBuffTemplate 0x2 0x4 0x0 0xffe8 0x1a 0x2
-	delay 0x4
-	launchtemplate gDragonBloodBuffTemplate 0x2 0x4 0x0 0xe 0x1c 0x1
-	delay 0x4
-	launchtemplate gDragonBloodBuffTemplate 0x2 0x4 0x0 0xfffb 0xa 0x2
-	delay 0x4
-	launchtemplate gDragonBloodBuffTemplate 0x2 0x4 0x0 0x1c 0x1a 0x3
-	delay 0x4
-	launchtemplate gDragonBloodBuffTemplate 0x2 0x4 0x0 0xfff4 0x0 0x1
-	return
+	goto Move_DARK_VOID
 
 Move_DEMONIC_HOWL::
 	loadspritegfx ANIM_TAG_FOCUS_ENERGY @focus energy

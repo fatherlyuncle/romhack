@@ -22,10 +22,10 @@ static void AnimThunderWave_Step(struct Sprite *);
 static void AnimTask_ElectricChargingParticles_Step(u8 taskId);
 static void AnimElectricChargingParticles(struct Sprite *);
 static void AnimElectricChargingParticles_Step(struct Sprite *);
-//static void AnimVoltTackleOrbSlide(struct Sprite *);
-//static void AnimVoltTackleOrbSlide_Step(struct Sprite *);
+static void AnimVoltTackleOrbSlide(struct Sprite *);
+static void AnimVoltTackleOrbSlide_Step(struct Sprite *);
 static bool8 sub_810B154(struct Task *task, u8 taskId);
-//static void AnimVoltTackleBolt(struct Sprite *);
+static void AnimVoltTackleBolt(struct Sprite *);
 static bool8 sub_810B430(struct Task *task, u8 taskId);
 static void AnimShockWaveProgressingBolt(struct Sprite *);
 static bool8 sub_810B614(struct Task *task, u8 taskId);
@@ -426,31 +426,31 @@ const struct SpriteTemplate gVoltTackleOrbSlideSpriteTemplate =
     .callback = AnimVoltTackleOrbSlide,
 };
 
-/*static */const union AnimCmd sAnim_VoltTackleBolt_0[] =
+static const union AnimCmd sAnim_VoltTackleBolt_0[] =
 {
     ANIMCMD_FRAME(0, 3),
     ANIMCMD_END,
 };
 
-/*static */const union AnimCmd sAnim_VoltTackleBolt_1[] =
+static const union AnimCmd sAnim_VoltTackleBolt_1[] =
 {
     ANIMCMD_FRAME(2, 3),
     ANIMCMD_END,
 };
 
-/*static */const union AnimCmd sAnim_VoltTackleBolt_2[] =
+static const union AnimCmd sAnim_VoltTackleBolt_2[] =
 {
     ANIMCMD_FRAME(4, 3),
     ANIMCMD_END,
 };
 
-/*static */const union AnimCmd sAnim_VoltTackleBolt_3[] =
+static const union AnimCmd sAnim_VoltTackleBolt_3[] =
 {
     ANIMCMD_FRAME(6, 3),
     ANIMCMD_END,
 };
 
-/*static */const union AnimCmd *const sAnims_VoltTackleBolt[] =
+static const union AnimCmd *const sAnims_VoltTackleBolt[] =
 {
     sAnim_VoltTackleBolt_0,
     sAnim_VoltTackleBolt_1,
@@ -458,7 +458,7 @@ const struct SpriteTemplate gVoltTackleOrbSlideSpriteTemplate =
     sAnim_VoltTackleBolt_3,
 };
 
-/*static */const union AffineAnimCmd sAffineAnim_VoltTackleBolt[] =
+static const union AffineAnimCmd sAffineAnim_VoltTackleBolt[] =
 {
     AFFINEANIMCMD_FRAME(0x100, 0x100, 64, 0),
     AFFINEANIMCMD_END,
@@ -1030,7 +1030,7 @@ void AnimElectricPuff(struct Sprite *sprite)
 }
 
 // Creates an orb of electricity that grows then slides off-screen. The attacker slides with it
-/*static */void AnimVoltTackleOrbSlide(struct Sprite *sprite)
+static void AnimVoltTackleOrbSlide(struct Sprite *sprite)
 {
     StartSpriteAffineAnim(sprite, 1);
     sprite->pos1.x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
@@ -1044,7 +1044,7 @@ void AnimElectricPuff(struct Sprite *sprite)
     sprite->callback = AnimVoltTackleOrbSlide_Step;
 }
 
-/*static */void AnimVoltTackleOrbSlide_Step(struct Sprite *sprite)
+static void AnimVoltTackleOrbSlide_Step(struct Sprite *sprite)
 {
     switch (sprite->data[0])
     {
