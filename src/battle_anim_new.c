@@ -66,6 +66,29 @@ static const union AffineAnimCmd sSquishTargetAffineAnimCmds[] =
 };
 
 //// CUSTOM MOVES
+//demonichowl
+const struct SpriteTemplate gDemonicHowlFlameSwirlTemplate =
+{
+    .tileTag = ANIM_TAG_SMALL_EMBER,
+    .paletteTag = ANIM_TAG_HANDS_AND_FEET,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gAnims_FlamethrowerFlame,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimParticleInVortex
+};
+
+const struct SpriteTemplate gFlyingGhostSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .paletteTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32, //32x16 originally
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimFlyingSandCrescent,
+};
+
 //necromancy
 const struct SpriteTemplate gNecromancyPurpleRageTemplate =
 {
@@ -88,6 +111,18 @@ const struct SpriteTemplate gNecromancyPurpleBreathTemplate =
     .affineAnims = gAffineAnims_DragonRageFire,
     .callback = AnimDragonFireToTarget
 };
+
+const struct SpriteTemplate gNecromancyFlameSwirlTemplate =
+{
+    .tileTag = ANIM_TAG_SMALL_EMBER,
+    .paletteTag = ANIM_TAG_PURPLE_FLAME,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gAnims_FlamethrowerFlame,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimParticleInVortex
+};
+
 //// GEN 5
 //wide guard
 const struct SpriteTemplate gWideGuardBlueConversionTemplate =
@@ -994,6 +1029,7 @@ const struct SpriteTemplate gBlueFlareFlameSwirlTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimParticleInVortex
 };
+
 
 const struct SpriteTemplate gBlueFlareBurnTemplate =
 {

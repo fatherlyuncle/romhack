@@ -14960,7 +14960,8 @@ Move_NECROMANCY::
 	waitforvisualfinish
 	monbg ANIM_TARGET
 	monbgprio_29
-	launchtask AnimTask_PurpleFlamesOnTarget 0x3 0x0
+	call NecromancyFireSpin
+	call NecromancyFireSpin
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
 	playsewithpan SE_W171, SOUND_PAN_TARGET
 	delay 0x20
@@ -14970,7 +14971,21 @@ Move_NECROMANCY::
 	clearmonbg ANIM_TARGET
 	call UnsetPsychicBg
 	end
-	
+NecromancyFireSpin:
+	launchtemplate gNecromancyFlameSwirlTemplate 0x82 0x7 0x0 0x1c 0x210 0x1e 0xd 0x32 0x1
+	delay 0x2
+	launchtemplate gNecromancyFlameSwirlTemplate 0x82 0x7 0x0 0x20 0x1e0 0x14 0x10 0xffd2 0x1
+	delay 0x2
+	launchtemplate gNecromancyFlameSwirlTemplate 0x82 0x7 0x0 0x21 0x240 0x14 0x8 0x2a 0x1
+	delay 0x2
+	launchtemplate gNecromancyFlameSwirlTemplate 0x82 0x7 0x0 0x1f 0x190 0x19 0xb 0xffd6 0x1
+	delay 0x2
+	launchtemplate gNecromancyFlameSwirlTemplate 0x82 0x7 0x0 0x1c 0x200 0x19 0x10 0x2e 0x1
+	delay 0x2
+	launchtemplate gNecromancyFlameSwirlTemplate 0x82 0x7 0x0 0x21 0x1d0 0x1e 0xf 0xffce 0x1
+	delay 0x2
+	return
+
 Move_SPOOK::
 	loadspritegfx ANIM_TAG_EYE_SPARKLE
 	loadspritegfx ANIM_TAG_DEVIL
@@ -15007,6 +15022,7 @@ Move_DEMONIC_HOWL::
 	loadspritegfx ANIM_TAG_FOCUS_ENERGY @focus energy
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET @black color
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	loadspritegfx ANIM_TAG_SMALL_EMBER
 	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_GHOSTLY_SPIRIT, 0, 6, 6, RGB_BLACK
 	fadetobg BG_DARK_VOID
 	createvisualtask AnimTask_BlendBackground, 6, 6, RGB_BLACK
@@ -15018,6 +15034,7 @@ Move_DEMONIC_HOWL::
 	delay 0x8
 	call SpectralThiefBuffUp
 	delay 0x8
+	createvisualtask AnimTask_DeepInhale, 2, 0
 	panse_1B SE_W109, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	delay 4
 	createvisualtask AnimTask_MoveHeatWaveTargets, 5
@@ -15036,20 +15053,40 @@ Move_DEMONIC_HOWL::
 	delay 10
 	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 60, 2560, 96, 1
 	waitforvisualfinish
+	call DemonicHowlFireSpin
+	call DemonicHowlFireSpin
+	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
+	playsewithpan SE_W171, SOUND_PAN_TARGET
+	waitforvisualfinish
 	call UnsetPsychicBg
 	end
-
+DemonicHowlFireSpin:
+	launchtemplate gDemonicHowlFlameSwirlTemplate 0x82 0x7 0x0 0x1c 0x210 0x1e 0xd 0x32 0x1
+	delay 0x2
+	launchtemplate gDemonicHowlFlameSwirlTemplate 0x82 0x7 0x0 0x20 0x1e0 0x14 0x10 0xffd2 0x1
+	delay 0x2
+	launchtemplate gDemonicHowlFlameSwirlTemplate 0x82 0x7 0x0 0x21 0x240 0x14 0x8 0x2a 0x1
+	delay 0x2
+	launchtemplate gDemonicHowlFlameSwirlTemplate 0x82 0x7 0x0 0x1f 0x190 0x19 0xb 0xffd6 0x1
+	delay 0x2
+	launchtemplate gDemonicHowlFlameSwirlTemplate 0x82 0x7 0x0 0x1c 0x200 0x19 0x10 0x2e 0x1
+	delay 0x2
+	launchtemplate gDemonicHowlFlameSwirlTemplate 0x82 0x7 0x0 0x21 0x1d0 0x1e 0xf 0xffce 0x1
+	delay 0x2
+	return
+	
 Move_MURKY_STARE::
-	goto Move_SPECTRAL_THIEF
+	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
+	goto Move_TICKLE
 	
 Move_MERCURY_BOMB::
 	goto Move_PHANTOM_FORCE
 	
 Move_NANOBOTS::
-	goto Move_OMINOUS_WIND
+	goto Move_THUNDER
 
 Move_PIXIE_DUST::
-	goto Move_PHANTOM_FORCE
+	goto Move_BLUE_FLARE
 
 Move_LUNAR_CURSE::
 	loadspritegfx ANIM_TAG_IMPACT
