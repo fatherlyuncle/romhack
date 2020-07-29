@@ -412,6 +412,9 @@ void AnimCrossImpact(struct Sprite *sprite);
 void AnimHitSplatOnMonEdge(struct Sprite *sprite);
 
 // battle_anim_electric.c
+void AnimVoltTackleOrbSlide(struct Sprite *);
+void AnimVoltTackleOrbSlide_Step(struct Sprite *);
+void AnimVoltTackleBolt(struct Sprite *);
 void AnimThunderWave(struct Sprite *sprite);
 void AnimGrowingChargeOrb(struct Sprite *sprite);
 void AnimZapCannonSpark(struct Sprite *sprite);
