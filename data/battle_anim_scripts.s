@@ -15053,11 +15053,14 @@ Move_DEMONIC_HOWL::
 	delay 10
 	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 60, 2560, 96, 1
 	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 0, 16, RGB_BLACK
 	call DemonicHowlFireSpin
 	call DemonicHowlFireSpin
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
 	playsewithpan SE_W171, SOUND_PAN_TARGET
 	waitforvisualfinish
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
+	restorebg
 	call UnsetPsychicBg
 	end
 DemonicHowlFireSpin:
@@ -15076,8 +15079,25 @@ DemonicHowlFireSpin:
 	return
 	
 Move_MURKY_STARE::
+	loadspritegfx ANIM_TAG_SMALL_RED_EYE
+	loadspritegfx ANIM_TAG_EYE_SPARKLE
+	createvisualtask AnimTask_GlareEyeDots, 5, 0
+	playsewithpan SE_W060B, SOUND_PAN_ATTACKER
+	waitforvisualfinish
 	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
-	goto Move_TICKLE
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, 1, 0, 0, 16, RGB_BLACK
+	waitforvisualfinish
+	createsprite gEyeSparkleSpriteTemplate, ANIM_ATTACKER, 0, -16, -8
+	createsprite gEyeSparkleSpriteTemplate, ANIM_ATTACKER, 0, 16, -8
+	createvisualtask AnimTask_ScaryFace, 5
+	playsewithpan SE_W043, SOUND_PAN_ATTACKER
+	delay 2
+	createvisualtask AnimTask_RockMonBackAndForth, 3, ANIM_TARGET, 6, 2
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 5, 1, 0, 16, 0, RGB_BLACK
+	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
+	delay 1
+	end
 	
 Move_MERCURY_BOMB::
 	goto Move_PHANTOM_FORCE
