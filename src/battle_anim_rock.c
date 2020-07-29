@@ -129,6 +129,18 @@ const struct SpriteTemplate gFlyingSandCrescentSpriteTemplate =
     .callback = AnimFlyingSandCrescent,
 };
 
+//ghost weather gStoneEdgeSpriteTemplate
+const struct SpriteTemplate gFlyingGhostSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .paletteTag = ANIM_TAG_GHOSTLY_SPIRIT,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32, //32x16 originally
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimFlyingSandCrescent,
+};
+
 static const struct Subsprite sFlyingSandSubsprites[] =
 {
     {.x = -16, .y = 0, .shape = SPRITE_SHAPE(32x16), .size = SPRITE_SIZE(32x16), .tileOffset = 0, .priority = 1},

@@ -14922,33 +14922,42 @@ Move_BRAIN_DRAIN::
 	end
 	
 Move_NECROMANCY::
-
-@@curse bg, then frostbreath but purple fire, then purple fire ring, w/ ghost. 
-@@@also make sure to check spook to make sure its fixed.
-
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
 	loadspritegfx ANIM_TAG_IMPACT
-	monbg ANIM_ATTACKER
 	fadetobg BG_GHOST
 	waitbgfadeout
 	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
 	waitbgfadein
-	playsewithpan SE_W060, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_NightShadeClone, 5, 85
-	delay 70
-	createvisualtask AnimTask_BlendColorCycle, 2, 2, 2, 6, 0, 8, RGB_WHITE
-	createvisualtask AnimTask_SpiteTargetShadow, 2
-	loopsewithpan SE_W060, SOUND_PAN_TARGET, 20, 3
+	playsewithpan SE_W082, SOUND_PAN_ATTACKER
+	launchtask AnimTask_ShakeMon 0x5 0x5 0x0 0x0 0x2 0x28 0x1
 	waitforvisualfinish
-	invisible ANIM_ATTACKER
+	launchtemplate gSlideMonToOffsetSpriteTemplate 0x82 0x5 0x0 0xf 0x0 0x0 0x4
 	waitforvisualfinish
-	clearmonbg ANIM_ATTACKER
-	delay 1
-	createvisualtask AnimTask_CurseStretchingBlackBg, 5
+	launchtemplate gNecromancyPurpleBreathTemplate 0x82 0x5 0x1e 0xf 0x0 0xa 0xa
+	waitforvisualfinish
+	loopsewithpan SE_W196, SOUND_PAN_TARGET, 0xb, 0x3
+	launchtask AnimTask_ShakeMon 0x5 0x5 0x1 0x0 0x3 0x19 0x1
+	launchtemplate gNecromancyPurpleRageTemplate 0xc2 0x3 0x1 0x5 0x0
+	delay 0x1
+	launchtemplate gNecromancyPurpleRageTemplate 0xc2 0x3 0x1 0xfff6 0xfff1
+	delay 0x1
+	launchtemplate gNecromancyPurpleRageTemplate 0x82, 0x3, 0x1 0x0 0x19
+	delay 0x1
+	launchtemplate gNecromancyPurpleRageTemplate 0xc2 0x3 0x1 0xf 0x5
+	delay 0x1
+	launchtemplate gNecromancyPurpleRageTemplate 0xc2 0x3 0x1 0xffe7 0x0
+	delay 0x1
+	launchtemplate gNecromancyPurpleRageTemplate 0x82, 0x3, 0x1 0x1e 0x1e
+	delay 0x1
+	launchtemplate gNecromancyPurpleRageTemplate 0x82, 0x3, 0x1 0xffe5 0x19
+	delay 0x1
+	launchtemplate gNecromancyPurpleRageTemplate 0xc2 0x3 0x1 0x0 0x8
+	waitforvisualfinish
+	launchtemplate gSlideMonToOriginalPosSpriteTemplate 0xc2 0x3 0x0 0x0 0x4
 	waitforvisualfinish
 	monbg ANIM_TARGET
-	delay 1
+	monbgprio_29
 	launchtask AnimTask_PurpleFlamesOnTarget 0x3 0x0
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
 	playsewithpan SE_W171, SOUND_PAN_TARGET
@@ -14956,12 +14965,7 @@ Move_NECROMANCY::
 	launchtask AnimTask_BlendColorCycle 0x2 0x6 ANIM_PAL_DEF 0x2 0x2 0x0 0xc 0x4C4A @;Deep purple
 	launchtemplate gCurseGhostSpriteTemplate 0x84, 0x0
 	waitforvisualfinish
-	delay 1
 	clearmonbg ANIM_TARGET
-	delay 32
-	visible ANIM_ATTACKER
-	delay 1
-	restorebg
 	call UnsetPsychicBg
 	end
 	
@@ -14985,23 +14989,47 @@ Move_SPOOK::
 	createvisualtask AnimTask_UproarDistortion, 2, 0
 	createsprite gNightmareDevilSpriteTemplate, ANIM_TARGET, 2
 	waitforvisualfinish
-	@@createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
 	blendoff
 	delay 1
-	@@waitforvisualfinish
 	restorebg
 	waitbgfadein
 	end
 	
 Move_WYVERNS_WRATH::
-	goto Move_SPIRIT_SHACKLE
+	goto Move_LIGHT_OF_RUIN
 
 Move_DRAGON_BLOOD::
-	goto Move_MOONGEIST_BEAM
+	goto Move_DARK_VOID
 
 Move_DEMONIC_HOWL::
-	@@@goto Move_DARK_VOID
-	goto Move_RETALITATE
+	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	@@createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_GHOSTLY_SPIRIT, 0, 6, 6, RGB_BLACK
+	fadetobg BG_DARK_VOID
+	@@createvisualtask AnimTask_BlendBackground, 6, 6, RGB_RED
+	waitbgfadeout
+	createvisualtask AnimTask_StartSlidingBg, 5, 0, 0xFFA0, 1, 0xffff
+	waitbgfadein
+	panse_1B SE_W109, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	delay 4
+	createvisualtask AnimTask_MoveHeatWaveTargets, 5
+	delay 12
+	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 10, 2304, 96, 1
+	delay 10
+	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 90, 2048, 96, 1
+	delay 10
+	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 50, 2560, 96, 1
+	delay 10
+	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 20, 2304, 96, 1
+	delay 10
+	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 70, 1984, 96, 1
+	delay 10
+	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 0, 2816, 96, 1
+	delay 10
+	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 60, 2560, 96, 1
+	waitforvisualfinish
+	call UnsetPsychicBg
+	end
 
 Move_MURKY_STARE::
 	goto Move_SPECTRAL_THIEF
@@ -15013,10 +15041,10 @@ Move_NANOBOTS::
 	goto Move_OMINOUS_WIND
 
 Move_PIXIE_DUST::
-	goto Move_SHADOW_FORCE
+	goto Move_PHANTOM_FORCE
 
 Move_LUNAR_CURSE::
-	goto Move_LIGHT_OF_RUIN
+	goto Move_HYDRO_CANNON
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:

@@ -65,6 +65,29 @@ static const union AffineAnimCmd sSquishTargetAffineAnimCmds[] =
     AFFINEANIMCMD_END,
 };
 
+//// CUSTOM MOVES
+//necromancy
+const struct SpriteTemplate gNecromancyPurpleRageTemplate =
+{
+    .tileTag = ANIM_TAG_FIRE_PLUME,
+    .paletteTag = ANIM_TAG_PURPLE_FLAME,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gAnims_DragonRageFirePlume,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimDragonRageFirePlume
+};
+
+const struct SpriteTemplate gNecromancyPurpleBreathTemplate =
+{
+    .tileTag = ANIM_TAG_SMALL_EMBER,
+    .paletteTag = ANIM_TAG_PURPLE_FLAME,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gAnims_DragonRageFire,
+    .images = NULL,
+    .affineAnims = gAffineAnims_DragonRageFire,
+    .callback = AnimDragonFireToTarget
+};
 //// GEN 5
 //wide guard
 const struct SpriteTemplate gWideGuardBlueConversionTemplate =
@@ -274,7 +297,7 @@ const struct SpriteTemplate gSimpleBeamBrownTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = TranslateAnimSpriteToTargetMonLocation
 };
-  
+
 const struct SpriteTemplate gSimpleBeamPinkTemplate =
 {
     .tileTag = ANIM_TAG_GOLD_RING,
@@ -333,12 +356,12 @@ const struct SpriteTemplate gQuickGuardArmImpactTemplate =
 };
 
 //sky drop
-static const union AffineAnimCmd sSkyDropFlyBallAffineAnimCmd_0[] = 
+static const union AffineAnimCmd sSkyDropFlyBallAffineAnimCmd_0[] =
 {
-    AFFINEANIMCMD_FRAME(0xa0, 0x100, 0x50, 0x0),    //.hword 0xa0, 0x100, 0x50, 0x0, 
+    AFFINEANIMCMD_FRAME(0xa0, 0x100, 0x50, 0x0),    //.hword 0xa0, 0x100, 0x50, 0x0,
     AFFINEANIMCMD_END
 };
-static const union AffineAnimCmd *const sSkyDropFlyBallAffineAnimCmds[] = 
+static const union AffineAnimCmd *const sSkyDropFlyBallAffineAnimCmds[] =
 {
     sSkyDropFlyBallAffineAnimCmd_0
 };
@@ -526,7 +549,7 @@ const struct SpriteTemplate gHornLeechHornTemplate =
 };
 
 //dual chop
-const struct SpriteTemplate gDualChopImpactTemplate = 
+const struct SpriteTemplate gDualChopImpactTemplate =
 {
     .tileTag = ANIM_TAG_IMPACT,
     .paletteTag = ANIM_TAG_POISON_BUBBLE,
@@ -893,7 +916,7 @@ const struct SpriteTemplate gTechnoBlastIceBlastTemplate =
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = TranslateAnimSpriteToTargetMonLocation
-}; 
+};
 const struct SpriteTemplate gTechnoBlastIceSparkTemplate =
 {
     .tileTag = ANIM_TAG_SPARK_2,
@@ -1124,7 +1147,7 @@ static const union AffineAnimCmd sSpriteAffineAnim_DrakeStrikePlayer[] =
     AFFINEANIMCMD_FRAME(0, 0, 0xb9, 1),        //.hword 0,0,0x01b9
     AFFINEANIMCMD_END,      //.hword 0,0x7fff,0,0,0
 };
-static const union AffineAnimCmd sSpriteAffineAnim_DrakeStrikeOpponent[] = 
+static const union AffineAnimCmd sSpriteAffineAnim_DrakeStrikeOpponent[] =
 {
     AFFINEANIMCMD_FRAME(0, 0, 0x50, 1),    //.hword 0,0,0x0150,0,
     AFFINEANIMCMD_END,      //.hword 0x7fff,0,0,0
@@ -1196,15 +1219,15 @@ const struct SpriteTemplate gForestsCurseIngrainTemplate =
 PB_TEMPLATE_1: .hword 0x0,0xa,0xfffe,0x0
                         00 00 00 0A FE FF 00 00
 */
-static const union AnimCmd sAnimCmd_PetalBlizzard1_0[] = 
+static const union AnimCmd sAnimCmd_PetalBlizzard1_0[] =
 {
     ANIMCMD_FRAME(0, 10),
     ANIMCMD_JUMP(0),
 };
-static const union AnimCmd *const sAnimCmdTable_PetalBlizzard1[] = 
+static const union AnimCmd *const sAnimCmdTable_PetalBlizzard1[] =
 {
     sAnimCmd_PetalBlizzard1_0,
-}; 
+};
 const struct SpriteTemplate gPetalBlizzardTwister1Template =
 {
     .tileTag = ANIM_TAG_FLOWER,
@@ -1216,13 +1239,13 @@ const struct SpriteTemplate gPetalBlizzardTwister1Template =
     .callback = AnimMoveTwisterParticle
 };
 static const u16 sPetalBlizzardFlowerOam[] = {0x0, 0x2000,0x0800,0x0};  //todo: convert to oam data
-static const union AnimCmd sAnimCmd_PetalBlizzard2_0[] = 
+static const union AnimCmd sAnimCmd_PetalBlizzard2_0[] =
 {
     ANIMCMD_FRAME(0, 4),
     ANIMCMD_FRAME(4, 0),
     ANIMCMD_END,
 };
-static const union AnimCmd *const sAnimCmdTable_PetalBlizzard2[] = 
+static const union AnimCmd *const sAnimCmdTable_PetalBlizzard2[] =
 {
     sAnimCmd_PetalBlizzard2_0,
 };
@@ -1966,7 +1989,7 @@ const struct SpriteTemplate gPrecipiceBladesPlumeTemplate =
 };
 
 //dragon ascent
-static const union AffineAnimCmd sAffineAnimCmd_Drake[] = 
+static const union AffineAnimCmd sAffineAnimCmd_Drake[] =
 {
     AFFINEANIMCMD_FRAME(0, 0, 0, 1), //drake faces up
     AFFINEANIMCMD_END,
@@ -2763,7 +2786,7 @@ const struct SpriteTemplate gCoreEnforcerBeamTemplate =
     .callback = SpriteCB_CoreEnforcerBeam
 };
 
-const struct SpriteTemplate gCoreEnforcerExplosionTemplate = 
+const struct SpriteTemplate gCoreEnforcerExplosionTemplate =
 {
     .tileTag = ANIM_TAG_EXPLOSION,
     .paletteTag = ANIM_TAG_EXPLOSION,
@@ -2935,7 +2958,7 @@ const struct SpriteTemplate gPrismaticLaserChargeTemplate =
     .affineAnims = gAffineAnims_GrowingElectricOrb,
     .callback = AnimGrowingChargeOrb
 };
- 
+
 const struct SpriteTemplate gPrismaticLaserYellowOutwardTemplate =
 {
     .tileTag = ANIM_TAG_GREEN_SPIKE,
@@ -4040,7 +4063,7 @@ const struct SpriteTemplate gSteelBeamSpikeShardTemplate =
 static u8 LoadBattleAnimTarget(u8 arg)
 {
     u8 battler;
-    
+
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
     {
         switch (gBattleAnimArgs[arg])
@@ -4066,7 +4089,7 @@ static u8 LoadBattleAnimTarget(u8 arg)
         else
             battler = gBattleAnimTarget;
     }
-    
+
     return battler;
 }
 
@@ -4618,7 +4641,7 @@ static void SpriteCB_PyroBallRockBounceStep(struct Sprite* sprite)
 {
     s8 initialVerticalVelocity;
     s8 initialHorizontalVelocity;
-    
+
     if (sprite->pos2.y > 0) //Rock returned back down
     {
         if (gBattleAnimArgs[2] || sMovingBackHorizontally) //Finished moving from left to right
@@ -4699,7 +4722,7 @@ static void SpriteCB_PyroBallLaunch(struct Sprite* sprite)
 static void SpriteCB_AcidLaunchSingleTarget(struct Sprite *sprite)
 {
     s16 l1, l2;
-    
+
     if (!gBattleAnimArgs[3])
         StartSpriteAnim(sprite, 2);
 
@@ -4892,7 +4915,7 @@ static void AnimHappyHourCoinShower(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[3] != 0)
         SetAverageBattlerPositions(gBattleAnimAttacker, 0, &sprite->pos1.x, &sprite->pos1.y);   //coin shower on attacker
-    
+
     sprite->pos1.x += gBattleAnimArgs[0];
     sprite->pos1.y += 14;
     StartSpriteAnim(sprite, gBattleAnimArgs[1]);
@@ -4925,7 +4948,7 @@ static void SpriteCB_Geyser(struct Sprite* sprite)
 static void AnimTask_WaitAffineAnim(u8 taskId)
 {
     struct Task* task = &gTasks[taskId];
-    
+
     if (!RunAffineAnimFromTaskData(task))
         DestroyAnimVisualTask(taskId);
 }
@@ -4934,7 +4957,7 @@ void AnimTask_SquishTarget(u8 taskId)
 {
     struct Task* task = &gTasks[taskId];
     u8 spriteId = GetAnimBattlerSpriteId(ANIM_TARGET);
-    
+
     PrepareAffineAnimInTaskData(task, spriteId, sSquishTargetAffineAnimCmds);
     task->func = AnimTask_WaitAffineAnim;
 }
@@ -4991,4 +5014,3 @@ void AnimTask_TechnoBlast(u8 taskId)
     gBattleAnimArgs[0] = ItemId_GetHoldEffectParam(gBattleMons[gBattleAnimAttacker].item);
     DestroyAnimVisualTask(taskId);
 }
-
