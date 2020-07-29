@@ -15053,14 +15053,14 @@ Move_DEMONIC_HOWL::
 	delay 10
 	createsprite gFlyingGhostSpriteTemplate, ANIM_ATTACKER, 40, 60, 2560, 96, 1
 	waitforvisualfinish
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 0, 16, RGB_BLACK
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_TARGET, 2, 27, 3, 0, 16, RGB_BLACK
 	call DemonicHowlFireSpin
 	call DemonicHowlFireSpin
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
 	playsewithpan SE_W171, SOUND_PAN_TARGET
 	waitforvisualfinish
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
-	restorebg
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_TARGET, 2, 27, 3, 16, 0, RGB_BLACK
+	delay 1
 	call UnsetPsychicBg
 	end
 DemonicHowlFireSpin:
