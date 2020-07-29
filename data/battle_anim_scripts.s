@@ -14924,6 +14924,8 @@ Move_BRAIN_DRAIN::
 Move_NECROMANCY::
 	loadspritegfx ANIM_TAG_PURPLE_FLAME
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	loadspritegfx ANIM_TAG_FIRE_PLUME
 	loadspritegfx ANIM_TAG_IMPACT
 	fadetobg BG_GHOST
 	waitbgfadeout
@@ -14990,8 +14992,7 @@ Move_SPOOK::
 	createsprite gNightmareDevilSpriteTemplate, ANIM_TARGET, 2
 	waitforvisualfinish
 	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 27, 3, 16, 0, RGB_BLACK
-	blendoff
-	delay 1
+	waitforvisualfinish
 	restorebg
 	waitbgfadein
 	end
@@ -15003,13 +15004,20 @@ Move_DRAGON_BLOOD::
 	goto Move_DARK_VOID
 
 Move_DEMONIC_HOWL::
+	loadspritegfx ANIM_TAG_FOCUS_ENERGY @focus energy
+	loadspritegfx ANIM_TAG_HANDS_AND_FEET @black color
 	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
-	@@createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_GHOSTLY_SPIRIT, 0, 6, 6, RGB_BLACK
+	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_GHOSTLY_SPIRIT, 0, 6, 6, RGB_BLACK
 	fadetobg BG_DARK_VOID
-	@@createvisualtask AnimTask_BlendBackground, 6, 6, RGB_RED
+	createvisualtask AnimTask_BlendBackground, 6, 6, RGB_BLACK
 	waitbgfadeout
 	createvisualtask AnimTask_StartSlidingBg, 5, 0, 0xFFA0, 1, 0xffff
 	waitbgfadein
+	playsewithpan SE_W082, SOUND_PAN_ATTACKER
+	call SpectralThiefBuffUp
+	delay 0x8
+	call SpectralThiefBuffUp
+	delay 0x8
 	panse_1B SE_W109, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
 	delay 4
 	createvisualtask AnimTask_MoveHeatWaveTargets, 5
@@ -15044,7 +15052,18 @@ Move_PIXIE_DUST::
 	goto Move_PHANTOM_FORCE
 
 Move_LUNAR_CURSE::
-	goto Move_HYDRO_CANNON
+	loadspritegfx ANIM_TAG_IMPACT
+	monbg ANIM_TARGET
+	setalpha 12, 8
+	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
+	delay 6
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
+	playsewithpan SE_W004, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_TARGET
+	blendoff
+	end
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
