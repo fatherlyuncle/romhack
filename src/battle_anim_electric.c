@@ -464,7 +464,7 @@ static const union AffineAnimCmd sAffineAnim_VoltTackleBolt[] =
     AFFINEANIMCMD_END,
 };
 
-/*static*/const union AffineAnimCmd *const sAffineAnims_VoltTackleBolt[] =
+static const union AffineAnimCmd *const sAffineAnims_VoltTackleBolt[] =
 {
     sAffineAnim_VoltTackleBolt,
 };
