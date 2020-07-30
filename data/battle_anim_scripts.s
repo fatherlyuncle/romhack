@@ -15013,7 +15013,73 @@ Move_SPOOK::
 	end
 
 Move_WYVERNS_WRATH::
-	goto Move_DRAGON_ASCENT
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_ICE_CHUNK
+	loadspritegfx ANIM_TAG_FOCUS_ENERGY
+	monbg ANIM_DEF_PARTNER
+	fadetobg BG_FIRE_2
+	waitbgfadeout
+	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x1000 0x0 0x0 0xFFFF
+	waitbgfadein
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 3, 0, 9, 31
+	playsewithpan SE_W082, SOUND_PAN_ATTACKER
+	call DragonBloodBuffUp
+	delay 0x8
+	launchtask AnimTask_ShakeMon2 0x2 0x5 0x0 0x1 0x0 0x20 0x1
+	call DragonBloodBuffUp
+	delay 0x8
+	call DragonBloodBuffUp
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, 2, 3, 9, 0, 31
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	delay 1
+	createvisualtask AnimTask_SkullBashPosition, 2, 0
+	playsewithpan SE_W036, SOUND_PAN_ATTACKER
+	waitforvisualfinish
+	playse SE_BAN
+	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 3, 1, RGB_BLACK, 14, 0x7FFF, 14
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_ATTACKER, 2, 0, 40, 1
+	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 10, 0, 40, 1
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 0, ANIM_TARGET, 3
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 0, 2, ANIM_TARGET, 3
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -4, 3, ANIM_TARGET, 3
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -8, -5, ANIM_TARGET, 3
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 4, -12, ANIM_TARGET, 3
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 16, 0, ANIM_TARGET, 3
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 5, 18, ANIM_TARGET, 3
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -17, 12, ANIM_TARGET, 2
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, -21, -15, ANIM_TARGET, 2
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 8, -27, ANIM_TARGET, 2
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createsprite gFlashingHitSplatSpriteTemplate, ANIM_TARGET, 3, 32, 0, ANIM_TARGET, 2
+	playsewithpan SE_W015, SOUND_PAN_TARGET
+	delay 4
+	createvisualtask AnimTask_SkullBashPosition, 2, 1
+	waitforvisualfinish
+	call UnsetPsychicBg
+	waitforvisualfinish
+	end
 
 Move_DRAGON_BLOOD::
 	loadspritegfx ANIM_TAG_FOCUS_ENERGY
