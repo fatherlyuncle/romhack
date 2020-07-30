@@ -15038,7 +15038,7 @@ Move_WYVERNS_WRATH::
 	createvisualtask AnimTask_SkullBashPosition, 2, 0
 	playsewithpan SE_W036, SOUND_PAN_ATTACKER
 	waitforvisualfinish
-	playse SE_BAN
+	playse SE_W015
 	createsprite gComplexPaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 3, 1, RGB_BLACK, 14, 0x7FFF, 14
 	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_ATTACKER, 2, 0, 40, 1
 	createvisualtask AnimTask_ShakeMonInPlace, 2, ANIM_TARGET, 10, 0, 40, 1
@@ -15208,26 +15208,64 @@ Move_MURKY_STARE::
 	end
 
 Move_MERCURY_BOMB::
-	goto Move_PHANTOM_FORCE
+	loadspritegfx ANIM_TAG_IMPACT @pound
+	loadspritegfx ANIM_TAG_SMALL_RED_EYE @red
+	loadspritegfx ANIM_TAG_SMALL_EMBER @fire
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS @fire launches
+	loadspritegfx ANIM_TAG_JAGGED_MUSIC_NOTE @red
+	call ShellTrapUnleash
+	goto Move_INFESTATION
 
 Move_NANOBOTS::
-	goto Move_THUNDER
+	goto Move_FAIRY_LOCK
 
 Move_PIXIE_DUST::
-	goto Move_BLUE_FLARE
+	goto Move_FAIRY_WIND
 
 Move_LUNAR_CURSE::
-	loadspritegfx ANIM_TAG_IMPACT
-	monbg ANIM_TARGET
-	setalpha 12, 8
-	createsprite gHorizontalLungeSpriteTemplate, ANIM_ATTACKER, 2, 4, 4
-	delay 6
-	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, ANIM_TARGET, 2
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 6, 1
-	playsewithpan SE_W004, SOUND_PAN_TARGET
+	loadspritegfx ANIM_TAG_MOON
+	loadspritegfx ANIM_TAG_GREEN_SPARKLE
+	loadspritegfx ANIM_TAG_NAIL
+	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	setalpha 0, 16
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 16, RGB_BLACK
 	waitforvisualfinish
-	clearmonbg ANIM_TARGET
-	blendoff
+	createsprite gMoonSpriteTemplate, ANIM_ATTACKER, 2, 120, 56
+	createvisualtask AnimTask_AlphaFadeIn, 3, 0, 16, 16, 0, 1
+	playsewithpan SE_W236, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, -12, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, -24, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 21, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 0, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 10, 0
+	delay 20
+	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
+	delay 1
+	monbg ANIM_ATK_PARTNER
+	createsprite gCurseNailSpriteTemplate, ANIM_ATTACKER, 2
+	delay 60
+	call CurseGhostShakeFromNail
+	delay 41
+	call CurseGhostShakeFromNail
+	delay 41
+	call CurseGhostShakeFromNail
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
+	delay 1
+	monbg ANIM_DEF_PARTNER
+	playsewithpan SE_W171, SOUND_PAN_TARGET
+	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 14, 1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	createvisualtask AnimTask_MoonlightEndFade, 2
+	waitforvisualfinish
 	end
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@

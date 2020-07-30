@@ -66,7 +66,6 @@ static const union AffineAnimCmd sSquishTargetAffineAnimCmds[] =
 };
 
 //// CUSTOM MOVES
-//wyverns wrath
 
 //dragon Blood
 const struct SpriteTemplate gDragonBloodBuffTemplate =

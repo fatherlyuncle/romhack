@@ -10455,7 +10455,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_MERCURY_BOMB] =
     {
-        .effect = EFFECT_METAL_BURST,//MERCURY_BOMB,
+        .effect = EFFECT_HIT,//MERCURY_BOMB,
         .power = 150,
         .type = TYPE_STEEL,
         .accuracy = 100,
