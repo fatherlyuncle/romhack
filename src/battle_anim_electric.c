@@ -1116,7 +1116,7 @@ void AnimTask_VoltTackleAttackerReappear(u8 taskId)
 }
 
 // The horizontal bolts of electricity for Volt Tackle
-static void AnimTask_VoltTackleBolt(u8 taskId)
+void AnimTask_VoltTackleBolt(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
 
@@ -1220,7 +1220,7 @@ static bool8 sub_810B154(struct Task *task, u8 taskId)
     }
 }
 
-void AnimVoltTackleBolt(struct Sprite *sprite)
+static void AnimVoltTackleBolt(struct Sprite *sprite)
 {
     if (++sprite->data[0] > 12)
     {
