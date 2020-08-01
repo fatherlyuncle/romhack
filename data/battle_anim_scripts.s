@@ -15158,10 +15158,10 @@ Move_DEMONIC_HOWL::
 	createvisualtask AnimTask_SetGreyscaleOrOriginalPal, 5, 5, 0
 	createvisualtask AnimTask_SetGreyscaleOrOriginalPal, 5, 6, 0
 	createvisualtask AnimTask_SetGreyscaleOrOriginalPal, 5, 7, 0
-	playsewithpan SE_W221, SOUND_PAN_TARGET
+	playsewithpan SE_W221B, SOUND_PAN_TARGET
 	call DemonicHowlFireSpin
 	delay 10
-	playsewithpan SE_W221, SOUND_PAN_TARGET
+	playsewithpan SE_W221B, SOUND_PAN_TARGET
 	call DemonicHowlFireSpin
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
 	playsewithpan SE_W171, SOUND_PAN_TARGET
@@ -15399,31 +15399,25 @@ PixieDustHit:
 	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -10, -10, 1
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 4
-	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 10, 20, 1
-	playsewithpan SE_W215, SOUND_PAN_TARGET
-	delay 4
 	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -29, 0, 1
-	playsewithpan SE_W215, SOUND_PAN_TARGET
-	delay 4
-	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 29, -20, 1
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 4
 	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -5, 10, 1
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 4
-	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 17, -12, 1
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, 17, -12, 1
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 4
 	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -20, 0, 1
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 4
-	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, -15, 15, 1
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -15, 15, 1
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 4
-	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 26, -5, 1
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, 26, -5, 1
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 4
-	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 0, 0, 1
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, 0, 0, 1
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 4
 	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, 20, 2, 1

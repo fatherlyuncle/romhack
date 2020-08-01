@@ -78,17 +78,6 @@ const struct SpriteTemplate gPixieDustHitLargeSpriteTemplate =
     .callback = AnimIceEffectParticle,
 };
 
-const struct SpriteTemplate gPixieDustHitSmallSpriteTemplate =
-{
-    .tileTag = ANIM_TAG_GREEN_SPARKLE,
-    .paletteTag = ANIM_TAG_PINK_PETAL,
-    .oam = &gOamData_AffineNormal_ObjBlend_8x8,
-    .anims = gAnims_IceCrystalSmall,
-    .images = NULL,
-    .affineAnims = gAffineAnims_IceCrystalHit,
-    .callback = AnimIceEffectParticle,
-};
-
 const struct SpriteTemplate gPixieDustWindTemplate =
 {
     .tileTag = ANIM_TAG_GREEN_SPARKLE,
