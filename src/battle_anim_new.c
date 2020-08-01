@@ -89,17 +89,6 @@ const struct SpriteTemplate gPixieDustWindTemplate =
     .callback = AnimMoveParticleBeyondTarget,
 };
 
-const struct SpriteTemplate gSwirlingPixieDustSpriteTemplate =
-{
-    .tileTag = ANIM_TAG_GREEN_SPARKLE,
-    .paletteTag = ANIM_TAG_PINK_PETAL,
-    .oam = &gOamData_AffineOff_ObjNormal_8x8,
-    .anims = gAnims_Snowball,
-    .images = NULL,
-    .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimSwirlingSnowball_Step1,
-};
-
 const struct SpriteTemplate gPixieDustTemplate =
 {
     .tileTag = ANIM_TAG_GREEN_SPARKLE,

@@ -15378,6 +15378,7 @@ Move_PIXIE_DUST::
 	playsewithpan SE_W016, SOUND_PAN_TARGET
 	call PixieDust
 	call PixieDust
+	call PixieDust
 	waitforvisualfinish
 	call PixieDustHit
 	waitforvisualfinish
@@ -15423,27 +15424,20 @@ PixieDustHit:
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	return
 PixieDust:
-	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -10, 0, -10, 72, 1
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0, 80, 0, 0, 1
-	delay 3
-	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -15, 0, -15, 72, 1
+	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -10, 0, -10, 80, 0, 0, 1
-	delay 3
-	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -5, 0, -5, 72, 1
+	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 10, 0, 10, 80, 0, 0, 1
-	delay 3
-	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -10, 0, -10, 72, 1
+	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -20, 0, -20, 80, 0, 0, 1
-	delay 3
-	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -20, 0, -20, 72, 1
+	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 15, 0, 15, 80, 0, 0, 1
-	delay 3
-	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -15, 0, -15, 72, 1
+	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -20, 0, -20, 80, 0, 0, 1
-	delay 3
-	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, -25, 72, 1
+	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 20, 0, 20, 80, 0, 0, 1
-	delay 3
+	delay 2
 	return
 PixieDustVortex:
 	launchtemplate gPixieDustTemplate 0x82 0x7 0x0 0x1c 0x210 0x1e 0xd 0x32 0x1
@@ -15460,7 +15454,7 @@ PixieDustVortex:
 	delay 0x1
 	return	
 	
-Move_LUNAR_CURSE:
+Move_LUNAR_CURSE::
 	loadspritegfx ANIM_TAG_MOON
 	loadspritegfx ANIM_TAG_GREEN_SPARKLE
 	loadspritegfx ANIM_TAG_NAIL
