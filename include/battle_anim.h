@@ -469,6 +469,7 @@ void AnimSwirlingSnowball_Step1(struct Sprite *sprite);
 extern const union AnimCmd *const gAnims_Snowball[];
 extern const union AffineAnimCmd *const gAffineAnims_IceCrystalHit[];
 extern const union AnimCmd *const gAnims_IceCrystalLarge[];
+extern const union AnimCmd *const gAnims_IceCrystalSmall[];
 extern const union AnimCmd *const gAnims_IceBallChunk[];
 extern const union AnimCmd *const gAnims_BlizzardIceCrystal[];
 

@@ -67,6 +67,28 @@ static const union AffineAnimCmd sSquishTargetAffineAnimCmds[] =
 
 //// CUSTOM MOVES
 //pixiedust
+const struct SpriteTemplate gPixieDustHitLargeSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GREEN_SPARKLE,
+    .paletteTag = ANIM_TAG_PINK_PETAL,
+    .oam = &gOamData_AffineNormal_ObjBlend_8x16,
+    .anims = gAnims_IceCrystalLarge,
+    .images = NULL,
+    .affineAnims = gAffineAnims_IceCrystalHit,
+    .callback = AnimIceEffectParticle,
+};
+
+const struct SpriteTemplate gPixieDustHitSmallSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GREEN_SPARKLE,
+    .paletteTag = ANIM_TAG_PINK_PETAL,
+    .oam = &gOamData_AffineNormal_ObjBlend_8x8,
+    .anims = gAnims_IceCrystalSmall,
+    .images = NULL,
+    .affineAnims = gAffineAnims_IceCrystalHit,
+    .callback = AnimIceEffectParticle,
+};
+
 const struct SpriteTemplate gPixieDustWindTemplate =
 {
     .tileTag = ANIM_TAG_GREEN_SPARKLE,
@@ -86,7 +108,7 @@ const struct SpriteTemplate gSwirlingPixieDustSpriteTemplate =
     .anims = gAnims_Snowball,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = AnimSwirlingSnowball,
+    .callback = AnimSwirlingSnowball_Step1,
 };
 
 const struct SpriteTemplate gPixieDustTemplate =

@@ -15380,6 +15380,8 @@ Move_PIXIE_DUST::
 	call PixieDust
 	playsewithpan SE_W016, SOUND_PAN_TARGET
 	waitforvisualfinish
+	call PixieDustHit
+	waitforvisualfinish
 	launchtask AnimTask_ShakeMon 0x2 0x5 ANIM_TARGET 0x3 0x0 0x4f 0x1
 	loopsewithpan SE_W236, SOUND_PAN_ATTACKER, 0x0, 0x4F
 	call PixieDustVortex
@@ -15393,6 +15395,40 @@ Move_PIXIE_DUST::
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
+PixieDustHit:
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -10, -10, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 10, 20, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -29, 0, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 29, -20, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -5, 10, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 17, -12, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, -20, 0, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, -15, 15, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 26, -5, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitSmallSpriteTemplate, ANIM_TARGET, 2, 0, 0, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	delay 4
+	createsprite gPixieDustHitLargeSpriteTemplate, ANIM_TARGET, 2, 20, 2, 1
+	playsewithpan SE_W215, SOUND_PAN_TARGET
+	return
 PixieDust:
 	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -10, 0, -10, 72, 1
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0, 80, 0, 0, 1
