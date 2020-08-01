@@ -14072,54 +14072,6 @@ SteelBeamShards:
 
 @@@@@@@@@@@@@@@@@@@@@@@ CUSTOM TM TYPE MOVES @@@@@@@@@@@@
 
-Move_LUNAR_CURSE::
-	loadspritegfx ANIM_TAG_MOON
-	loadspritegfx ANIM_TAG_GREEN_SPARKLE
-	loadspritegfx ANIM_TAG_NAIL
-	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
-	setalpha 0, 16
-	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 16, RGB_BLACK
-	waitforvisualfinish
-	createsprite gMoonSpriteTemplate, ANIM_ATTACKER, 2, 120, 56
-	createvisualtask AnimTask_AlphaFadeIn, 3, 0, 16, 16, 0, 1
-	playsewithpan SE_W236, 0
-	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, -12, 0
-	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, -24, 0
-	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 21, 0
-	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 0, 0
-	delay 30
-	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 10, 0
-	delay 20
-	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
-	delay 1
-	monbg ANIM_ATK_PARTNER
-	createsprite gCurseNailSpriteTemplate, ANIM_ATTACKER, 2
-	delay 60
-	call CurseGhostShakeFromNail
-	delay 41
-	call CurseGhostShakeFromNail
-	delay 41
-	call CurseGhostShakeFromNail
-	waitforvisualfinish
-	clearmonbg ANIM_ATK_PARTNER
-	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
-	delay 1
-	monbg ANIM_DEF_PARTNER
-	playsewithpan SE_W171, SOUND_PAN_TARGET
-	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 14, 1
-	waitforvisualfinish
-	clearmonbg ANIM_DEF_PARTNER
-	createvisualtask AnimTask_MoonlightEndFade, 2
-	waitforvisualfinish
-	blendoff
-	end
-
-
 Move_SIMPLE_STRIKE::
 	loadspritegfx ANIM_TAG_IMPACT @hits
 	loadspritegfx ANIM_TAG_SPARK_2
@@ -14991,7 +14943,7 @@ Move_NECROMANCY::
 	waitforvisualfinish
 	launchtemplate gNecromancyPurpleBreathTemplate 0x82 0x5 0x1e 0xf 0x0 0xa 0xa
 	waitforvisualfinish
-	loopsewithpan SE_W196, SOUND_PAN_TARGET, 0xb, 0x3
+	loopsewithpan SE_W221, SOUND_PAN_TARGET, 0xb, 0x3
 	launchtask AnimTask_ShakeMon 0x5 0x5 0x1 0x0 0x3 0x19 0x1
 	launchtemplate gNecromancyPurpleRageTemplate 0xc2 0x3 0x1 0x5 0x0
 	delay 0x1
@@ -15012,6 +14964,7 @@ Move_NECROMANCY::
 	launchtemplate gSlideMonToOriginalPosSpriteTemplate 0xc2 0x3 0x0 0x0 0x4
 	waitforvisualfinish
 	monbg ANIM_TARGET
+	playsewithpan SE_W053, SOUND_PAN_TARGET
 	call NecromancyFireSpin
 	call NecromancyFireSpin
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
@@ -15466,6 +15419,54 @@ PixieDustVortex:
 	playsewithpan SE_W215, SOUND_PAN_TARGET
 	delay 0x1
 	return	
+
+Move_LUNAR_CURSE::
+	loadspritegfx ANIM_TAG_MOON
+	loadspritegfx ANIM_TAG_GREEN_SPARKLE
+	loadspritegfx ANIM_TAG_NAIL
+	loadspritegfx ANIM_TAG_GHOSTLY_SPIRIT
+	setalpha 0, 16
+	createsprite gSimplePaletteBlendSpriteTemplate, ANIM_ATTACKER, 2, 1, 1, 0, 16, RGB_BLACK
+	waitforvisualfinish
+	createsprite gMoonSpriteTemplate, ANIM_ATTACKER, 2, 120, 56
+	createvisualtask AnimTask_AlphaFadeIn, 3, 0, 16, 16, 0, 1
+	playsewithpan SE_W236, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, -12, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, -24, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 21, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 0, 0
+	delay 30
+	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 10, 0
+	delay 20
+	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
+	delay 1
+	monbg ANIM_ATK_PARTNER
+	createsprite gCurseNailSpriteTemplate, ANIM_ATTACKER, 2
+	delay 60
+	call CurseGhostShakeFromNail
+	delay 41
+	call CurseGhostShakeFromNail
+	delay 41
+	call CurseGhostShakeFromNail
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
+	delay 1
+	monbg ANIM_DEF_PARTNER
+	playsewithpan SE_W171, SOUND_PAN_TARGET
+	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
+	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 14, 1
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	createvisualtask AnimTask_MoonlightEndFade, 2
+	waitforvisualfinish
+	blendoff
+	end
+
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
