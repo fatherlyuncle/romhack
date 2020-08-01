@@ -10453,19 +10453,18 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 		.argument = MOVE_EFFECT_ACC_MINUS_1,
     },
 	
-	[MOVE_MERCURY_BOMB] =
+	[MOVE_MERCURY_BODY] =
     {
-        .effect = EFFECT_FOCUS_PUNCH,//MERCURY_BOMB,
-        .power = 150,
+        .effect = EFFECT_BURN_HIT,//BODY_PRESS,
+        .power = 80,
         .type = TYPE_STEEL,
         .accuracy = 100,
-        .pp = 5,
-        .secondaryEffectChance = 100,
+        .pp = 10,
+        .secondaryEffectChance = 10,
         .target = MOVE_TARGET_SELECTED,
-        .priority = 0,//-3,
-        .flags = FLAG_PROTECT_AFFECTED,
+        .priority = 0,
+        .flags = FLAG_PROTECT_AFFECTED | FLAG_KINGSROCK_AFFECTED | FLAG_MAKES_CONTACT,
         .split = SPLIT_PHYSICAL,
-		.argument = STATUS1_BURN,
     },
 	
 	[MOVE_NANOBOTS] =

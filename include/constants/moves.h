@@ -769,7 +769,7 @@
 #define MOVE_DRAGON_BLOOD             (MOVES_COUNT_GEN8 + 29)
 #define MOVE_DEMONIC_HOWL             (MOVES_COUNT_GEN8 + 30)
 #define MOVE_MURKY_STARE              (MOVES_COUNT_GEN8 + 31)
-#define MOVE_MERCURY_BOMB             (MOVES_COUNT_GEN8 + 32)
+#define MOVE_MERCURY_BODY             (MOVES_COUNT_GEN8 + 32)
 #define MOVE_NANOBOTS                 (MOVES_COUNT_GEN8 + 33)
 #define MOVE_PIXIE_DUST               (MOVES_COUNT_GEN8 + 34)
 #define MOVE_LUNAR_CURSE              (MOVES_COUNT_GEN8 + 35)

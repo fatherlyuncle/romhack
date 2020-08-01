@@ -5020,10 +5020,10 @@ const struct Item gItems[] =
         .secondaryId = 0,
     },
 
-	[ITEM_TM83_MERCURY_BOMB] =
+	[ITEM_TM83_MERCURY_BODY] =
     {
         .name = _("TM83"),
-        .itemId = ITEM_TM83_MERCURY_BOMB,
+        .itemId = ITEM_TM83_MERCURY_BODY,
         .price = 3000,
         .description = sTM83Desc,
         .pocket = POCKET_TM_HM,

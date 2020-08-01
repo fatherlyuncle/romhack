@@ -2895,9 +2895,9 @@ static const u8 sMURKY_STAREDescription[] = _(
     "Cast a dark gaze on the foe,\n"
     "confusing and scaring them.");
 
-static const u8 sMERCURY_BOMBDescription[] = _(
-    "Sets a mercury trap that \n"
-    "explodes and burns when hit.");
+static const u8 sMERCURY_BODYDescription[] = _(
+    "Does more damage the higher\n"
+    "the user's Def. May burn.");
 
 static const u8 sNANOBOTSDescription[] = _(
     "Unleash a horde of medical\n"
@@ -3663,7 +3663,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 	[MOVE_DRAGON_BLOOD - 1] = sDRAGON_BLOODDescription,
 	[MOVE_DEMONIC_HOWL - 1] = sDEMONIC_HOWLDescription,
 	[MOVE_MURKY_STARE - 1] = sMURKY_STAREDescription,
-	[MOVE_MERCURY_BOMB - 1] = sMERCURY_BOMBDescription,
+	[MOVE_MERCURY_BODY - 1] = sMERCURY_BODYDescription,
 	[MOVE_NANOBOTS - 1] = sNANOBOTSDescription,
 	[MOVE_PIXIE_DUST - 1] = sPIXIE_DUSTDescription,
 	[MOVE_LUNAR_CURSE - 1] = sLUNAR_CURSEDescription,

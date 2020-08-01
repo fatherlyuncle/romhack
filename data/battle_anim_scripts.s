@@ -762,7 +762,7 @@ gBattleAnims_Moves::
 	.4byte Move_DRAGON_BLOOD
 	.4byte Move_DEMONIC_HOWL
 	.4byte Move_MURKY_STARE
-	.4byte Move_MERCURY_BOMB
+	.4byte Move_MERCURY_BODY
 	.4byte Move_NANOBOTS
 	.4byte Move_PIXIE_DUST
 	.4byte Move_LUNAR_CURSE
@@ -15211,8 +15211,7 @@ Move_MURKY_STARE::
 	delay 1
 	end
 
-Move_MERCURY_BOMB::
-MercuryBombUnleash:
+Move_MERCURY_BODY::
 	loadspritegfx ANIM_TAG_CONVERSION
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
 	monbg ANIM_DEF_PARTNER
@@ -15282,60 +15281,6 @@ MercuryBombUnleash:
 	restorebg
 	waitbgfadein
 	end
-MercuryBombChargeUp:
-	loadspritegfx ANIM_TAG_CONVERSION
-	loopsewithpan SE_W231, SOUND_PAN_ATTACKER, 28, 2
-	createvisualtask AnimTask_MetallicShine, 5, 0, 0, 0
-	waitforvisualfinish
-	monbg ANIM_ATK_PARTNER
-	monbgprio_28 ANIM_ATTACKER
-	setalpha 16, 0
-	delay 0
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -24, -24
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -8, -24
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 8, -24
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 24, -24
-	delay 3
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -24, -8
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -8, -8
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 8, -8
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 24, -8
-	delay 3
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -24, 8
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -8, 8
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 8, 8
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 24, 8
-	delay 3
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -24, 24
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -8, 24
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 8, 24
-	delay 3
-	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 24, 24
-	delay 20
-	playsewithpan SE_W112, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_FlashAnimTagWithColor, 2, ANIM_TAG_CONVERSION, 1, 1, RGB_RED, 12, 0, 0
-	delay 6
-	createvisualtask AnimTask_ConversionAlphaBlend, 5
-	waitforvisualfinish
-	delay 1
-	clearmonbg ANIM_ATK_PARTNER
-	blendoff
-	end
 
 Move_NANOBOTS::
 	loadspritegfx ANIM_TAG_SMALL_BUBBLES
@@ -15377,11 +15322,11 @@ Move_PIXIE_DUST::
 	setalpha 12, 8
 	launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x1 0x0 0x8 0x6e7d
 	waitforvisualfinish
-	playsewithpan SE_W016, SOUND_PAN_TARGET
 	call PixieDust
 	call PixieDust
 	call PixieDust
 	waitforvisualfinish
+	call PixieDustHit
 	call PixieDustHit
 	waitforvisualfinish
 	launchtask AnimTask_ShakeMon 0x2 0x5 ANIM_TARGET 0x3 0x0 0x4f 0x1
@@ -15507,7 +15452,6 @@ Move_LUNAR_CURSE::
 	createvisualtask AnimTask_MoonlightEndFade, 2
 	waitforvisualfinish
 	end
-
 
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
