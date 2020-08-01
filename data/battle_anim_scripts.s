@@ -15375,10 +15375,9 @@ Move_PIXIE_DUST::
 	setalpha 12, 8
 	launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x1 0x0 0x8 0x6e7d
 	waitforvisualfinish
-	panse_1B SE_W016, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
-	call PixieDust
-	call PixieDust
 	playsewithpan SE_W016, SOUND_PAN_TARGET
+	call PixieDust
+	call PixieDust
 	waitforvisualfinish
 	call PixieDustHit
 	waitforvisualfinish
