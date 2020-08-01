@@ -10486,7 +10486,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .effect = EFFECT_TRAP,
         .power = 35,
         .type = TYPE_FAIRY,
-        .accuracy = 100,
+        .accuracy = 90,
         .pp = 15,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
@@ -10497,7 +10497,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_LUNAR_CURSE] =
     {
-        .effect = EFFECT_SLEEP,//LUNAR_CURSE,
+        .effect = EFFECT_SLEEP, //LUNAR_CURSE,
         .power = 0,
         .type = TYPE_FAIRY,
         .accuracy = 100,
