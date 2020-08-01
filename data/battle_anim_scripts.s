@@ -14068,6 +14068,8 @@ SteelBeamShards:
 	launchtemplate gSteelBeamSpikeShardTemplate 0x80, 0x5 0xf 0xf 0x14 0xffec 0xfff6
 	delay 0x2
 
+
+
 @@@@@@@@@@@@@@@@@@@@@@@ CUSTOM TM TYPE MOVES @@@@@@@@@@@@
 
 Move_SIMPLE_STRIKE::
@@ -15383,7 +15385,6 @@ Move_PIXIE_DUST::
 	call PixieDustHit
 	waitforvisualfinish
 	launchtask AnimTask_ShakeMon 0x2 0x5 ANIM_TARGET 0x3 0x0 0x4f 0x1
-	loopsewithpan SE_W236, SOUND_PAN_ATTACKER, 0x0, 0x4F
 	call PixieDustVortex
 	call PixieDustVortex
 	call PixieDustVortex
@@ -15391,7 +15392,7 @@ Move_PIXIE_DUST::
 	call PixieDustVortex
 	waitforvisualfinish
 	launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x1 0x8 0x0 0x6e7d
-	waitforvisualfinish
+	delay 1
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
 	end
@@ -15425,18 +15426,25 @@ PixieDustHit:
 	return
 PixieDust:
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0, 80, 0, 0, 1
+	playsewithpan SE_W236, SOUND_PAN_TARGET
 	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -10, 0, -10, 80, 0, 0, 1
+	playsewithpan SE_W236, SOUND_PAN_TARGET
 	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 10, 0, 10, 80, 0, 0, 1
+	playsewithpan SE_W236, SOUND_PAN_TARGET
 	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -20, 0, -20, 80, 0, 0, 1
+	playsewithpan SE_W236, SOUND_PAN_TARGET
 	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 15, 0, 15, 80, 0, 0, 1
+	playsewithpan SE_W236, SOUND_PAN_TARGET
 	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -20, 0, -20, 80, 0, 0, 1
+	playsewithpan SE_W236, SOUND_PAN_TARGET
 	delay 2
 	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 20, 0, 20, 80, 0, 0, 1
+	playsewithpan SE_W236, SOUND_PAN_TARGET
 	delay 2
 	return
 PixieDustVortex:
@@ -15499,6 +15507,8 @@ Move_LUNAR_CURSE::
 	createvisualtask AnimTask_MoonlightEndFade, 2
 	waitforvisualfinish
 	end
+
+
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
 Move_NONE:
