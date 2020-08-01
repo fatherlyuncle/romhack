@@ -15158,8 +15158,10 @@ Move_DEMONIC_HOWL::
 	createvisualtask AnimTask_SetGreyscaleOrOriginalPal, 5, 5, 0
 	createvisualtask AnimTask_SetGreyscaleOrOriginalPal, 5, 6, 0
 	createvisualtask AnimTask_SetGreyscaleOrOriginalPal, 5, 7, 0
+	playsewithpan SE_W221, SOUND_PAN_TARGET
 	call DemonicHowlFireSpin
 	delay 10
+	playsewithpan SE_W221, SOUND_PAN_TARGET
 	call DemonicHowlFireSpin
 	launchtask AnimTask_ShakeMon 0x5 0x5 ANIM_TARGET 0x2 0x0 0x25 0x1
 	playsewithpan SE_W171, SOUND_PAN_TARGET
@@ -15351,7 +15353,7 @@ Move_NANOBOTS::
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	end
-	NanobotsVortex:
+NanobotsVortex:
 	launchtemplate gNanobotsTemplate 0x82 0x7 0x0 0x1c 0x210 0x1e 0xd 0x32 0x1
 	delay 0x1
 	launchtemplate gNanobotsTemplate 0x82 0x7 0x0 0x20 0x1e0 0x14 0x10 0xffd2 0x1
@@ -15367,8 +15369,68 @@ Move_NANOBOTS::
 	return
 
 Move_PIXIE_DUST::
-	goto Move_FAIRY_WIND
-
+	loadspritegfx ANIM_TAG_PINK_PETAL
+	loadspritegfx ANIM_TAG_GREEN_SPARKLE
+	monbg ANIM_DEF_PARTNER
+	setalpha 12, 8
+	launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x1 0x0 0x8 0x6e7d
+	waitforvisualfinish
+	panse_1B SE_W016, SOUND_PAN_ATTACKER, SOUND_PAN_TARGET, +2, 0
+	call PixieDust
+	call PixieDust
+	playsewithpan SE_W016, SOUND_PAN_TARGET
+	waitforvisualfinish
+	launchtask AnimTask_ShakeMon 0x2 0x5 ANIM_TARGET 0x3 0x0 0x4f 0x1
+	loopsewithpan SE_W236, SOUND_PAN_ATTACKER, 0x0, 0x4F
+	call PixieDustVortex
+	call PixieDustVortex
+	call PixieDustVortex
+	call PixieDustVortex
+	call PixieDustVortex
+	waitforvisualfinish
+	launchtask AnimTask_BlendBattleAnimPal 0xa 0x5 ANIM_PAL_BG 0x1 0x8 0x0 0x6e7d
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	end
+PixieDust:
+	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -10, 0, -10, 72, 1
+	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 0, 0, 0, 80, 0, 0, 1
+	delay 3
+	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -15, 0, -15, 72, 1
+	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -10, 0, -10, 80, 0, 0, 1
+	delay 3
+	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -5, 0, -5, 72, 1
+	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 10, 0, 10, 80, 0, 0, 1
+	delay 3
+	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -10, 0, -10, 72, 1
+	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -20, 0, -20, 80, 0, 0, 1
+	delay 3
+	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -20, 0, -20, 72, 1
+	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 15, 0, 15, 80, 0, 0, 1
+	delay 3
+	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -15, 0, -15, 72, 1
+	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, -20, 0, -20, 80, 0, 0, 1
+	delay 3
+	createsprite gSwirlingPixieDustSpriteTemplate, ANIM_ATTACKER, 40, 0, -25, 0, -25, 72, 1
+	createsprite gPixieDustWindTemplate, ANIM_ATTACKER, 40, 0, 20, 0, 20, 80, 0, 0, 1
+	delay 3
+	return
+PixieDustVortex:
+	launchtemplate gPixieDustTemplate 0x82 0x7 0x0 0x1c 0x210 0x1e 0xd 0x32 0x1
+	delay 0x1
+	launchtemplate gPixieDustTemplate 0x82 0x7 0x0 0x20 0x1e0 0x14 0x10 0xffd2 0x1
+	delay 0x1
+	launchtemplate gPixieDustTemplate 0x82 0x7 0x0 0x21 0x240 0x14 0x8 0x2a 0x1
+	delay 0x1
+	launchtemplate gPixieDustTemplate 0x82 0x7 0x0 0x1f 0x190 0x19 0xb 0xffd6 0x1
+	delay 0x1
+	launchtemplate gPixieDustTemplate 0x82 0x7 0x0 0x1c 0x200 0x19 0x10 0x2e 0x1
+	delay 0x1
+	launchtemplate gPixieDustTemplate 0x82 0x7 0x0 0x21 0x1d0 0x1e 0xf 0xffce 0x1
+	delay 0x1
+	return	
+	
 Move_LUNAR_CURSE:
 	loadspritegfx ANIM_TAG_MOON
 	loadspritegfx ANIM_TAG_GREEN_SPARKLE

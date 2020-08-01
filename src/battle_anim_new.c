@@ -66,7 +66,39 @@ static const union AffineAnimCmd sSquishTargetAffineAnimCmds[] =
 };
 
 //// CUSTOM MOVES
-//mercury bomb
+//pixiedust
+const struct SpriteTemplate gPixieDustWindTemplate =
+{
+    .tileTag = ANIM_TAG_GREEN_SPARKLE,
+    .paletteTag = ANIM_TAG_PINK_PETAL,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gAnims_BlizzardIceCrystal,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimMoveParticleBeyondTarget,
+};
+
+const struct SpriteTemplate gSwirlingPixieDustSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_GREEN_SPARKLE,
+    .paletteTag = ANIM_TAG_PINK_PETAL,
+    .oam = &gOamData_AffineOff_ObjNormal_8x8,
+    .anims = gAnims_Snowball,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSwirlingSnowball,
+};
+
+const struct SpriteTemplate gPixieDustTemplate =
+{
+    .tileTag = ANIM_TAG_GREEN_SPARKLE,
+    .paletteTag = ANIM_TAG_PINK_PETAL,
+    .oam = &gOamData_AffineOff_ObjNormal_8x8,
+    .anims = gAnims_WaterPulseBubble,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimParticleInVortex
+};
 
 //nanobots
 const struct SpriteTemplate gNanobotsTemplate =
@@ -79,6 +111,7 @@ const struct SpriteTemplate gNanobotsTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimParticleInVortex
 };
+
 //dragon Blood
 const struct SpriteTemplate gDragonBloodBuffTemplate =
 {
