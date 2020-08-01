@@ -66,7 +66,19 @@ static const union AffineAnimCmd sSquishTargetAffineAnimCmds[] =
 };
 
 //// CUSTOM MOVES
+//mercury bomb
 
+//nanobots
+const struct SpriteTemplate gNanobotsTemplate =
+{
+    .tileTag = ANIM_TAG_SMALL_BUBBLES,
+    .paletteTag = ANIM_TAG_GRAY_ORB,
+    .oam = &gOamData_AffineOff_ObjNormal_8x8,
+    .anims = gAnims_WaterPulseBubble,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimParticleInVortex
+};
 //dragon Blood
 const struct SpriteTemplate gDragonBloodBuffTemplate =
 {

@@ -15208,21 +15208,168 @@ Move_MURKY_STARE::
 	end
 
 Move_MERCURY_BOMB::
-	loadspritegfx ANIM_TAG_IMPACT @pound
-	loadspritegfx ANIM_TAG_SMALL_RED_EYE @red
-	loadspritegfx ANIM_TAG_SMALL_EMBER @fire
-	loadspritegfx ANIM_TAG_ICE_CRYSTALS @fire launches
-	loadspritegfx ANIM_TAG_JAGGED_MUSIC_NOTE @red
-	call ShellTrapUnleash
-	goto Move_INFESTATION
+MercuryBombUnleash:
+	loadspritegfx ANIM_TAG_CONVERSION
+	loadspritegfx ANIM_TAG_HOLLOW_ORB
+	monbg ANIM_DEF_PARTNER
+	monbgprio_2A ANIM_TARGET
+	setalpha 0, 16
+	delay 0
+	playsewithpan SE_W112, SOUND_PAN_TARGET
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, -24, 60
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, -24, 65
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, -24, 70
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, -24, 75
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, -8, 80
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, -8, 85
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, -8, 90
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, -8, 95
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, 8, 100
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, 8, 105
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, 8, 110
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, 8, 115
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, 24, 120
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, 24, 125
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, 24, 130
+	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, 24, 135
+	createvisualtask AnimTask_Conversion2AlphaBlend, 5
+	delay 60
+	playsewithpan SE_W129, SOUND_PAN_TARGET
+	delay 10
+	playsewithpan SE_W129, SOUND_PAN_TARGET
+	delay 10
+	playsewithpan SE_W129, SOUND_PAN_TARGET
+	delay 10
+	playsewithpan SE_W129, SOUND_PAN_TARGET
+	delay 10
+	playsewithpan SE_W129, SOUND_PAN_TARGET
+	delay 10
+	playsewithpan SE_W129, SOUND_PAN_TARGET
+	delay 10
+	playsewithpan SE_W129, SOUND_PAN_TARGET
+	delay 10
+	playsewithpan SE_W129, SOUND_PAN_TARGET
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
+	monbg ANIM_ATTACKER
+	monbgprio_28 ANIM_ATTACKER
+	delay 1
+	createvisualtask AnimTask_DragonDanceWaver, 5
+	playsewithpan SE_W100, SOUND_PAN_ATTACKER
+	delay 8
+	createvisualtask AnimTask_BlendPalInAndOutByTag, 5, ANIM_TAG_HOLLOW_ORB, RGB_RED, 14, 0, 3
+	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 0
+	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 43
+	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 85
+	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 128
+	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 170
+	createsprite gDragonDanceOrbSpriteTemplate, ANIM_ATTACKER, 2, 213
+	delay 30
+	playsewithpan SE_W100, SOUND_PAN_ATTACKER
+	delay 30
+	playsewithpan SE_W120, SOUND_PAN_ATTACKER
+	call SetImpactBackground
+	createvisualtask AnimTask_BlendColorCycle, 2, 1, 2, 8, 0, 10, RGB_WHITE
+	delay 1
+	clearmonbg ANIM_ATTACKER
+	blendoff
+	delay 2
+	restorebg
+	waitbgfadein
+	end
+MercuryBombChargeUp:
+	loadspritegfx ANIM_TAG_CONVERSION
+	loopsewithpan SE_W231, SOUND_PAN_ATTACKER, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 0, 0, 0
+	waitforvisualfinish
+	monbg ANIM_ATK_PARTNER
+	monbgprio_28 ANIM_ATTACKER
+	setalpha 16, 0
+	delay 0
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -24, -24
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -8, -24
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 8, -24
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 24, -24
+	delay 3
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -24, -8
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -8, -8
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 8, -8
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 24, -8
+	delay 3
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -24, 8
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -8, 8
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 8, 8
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 24, 8
+	delay 3
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -24, 24
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, -8, 24
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 8, 24
+	delay 3
+	createsprite gConversionSpriteTemplate, ANIM_ATTACKER, 2, 24, 24
+	delay 20
+	playsewithpan SE_W112, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_FlashAnimTagWithColor, 2, ANIM_TAG_CONVERSION, 1, 1, RGB_RED, 12, 0, 0
+	delay 6
+	createvisualtask AnimTask_ConversionAlphaBlend, 5
+	waitforvisualfinish
+	delay 1
+	clearmonbg ANIM_ATK_PARTNER
+	blendoff
+	end
 
 Move_NANOBOTS::
-	goto Move_FAIRY_LOCK
+	loadspritegfx ANIM_TAG_SMALL_BUBBLES
+	loadspritegfx ANIM_TAG_GRAY_ORB
+	loopsewithpan SE_W231, SOUND_PAN_ATTACKER, 28, 2
+	createvisualtask AnimTask_MetallicShine, 5, 0, 0, 0
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, ANIM_PAL_DEF, 0x2, 0x0, 0x9, 0x7320
+	loopsewithpan SE_W129, SOUND_PAN_ATTACKER, 0x0, 0x4F
+	call NanobotsVortex
+	call NanobotsVortex
+	call NanobotsVortex
+	call NanobotsVortex
+	call NanobotsVortex
+	waitforvisualfinish
+	launchtask AnimTask_BlendBattleAnimPal 0xA 0x5 ANIM_PAL_DEF 0x2 0x9 0x0 0x7320
+	waitforvisualfinish
+	clearmonbg ANIM_DEF_PARTNER
+	end
+	NanobotsVortex:
+	launchtemplate gNanobotsTemplate 0x82 0x7 0x0 0x1c 0x210 0x1e 0xd 0x32 0x1
+	delay 0x1
+	launchtemplate gNanobotsTemplate 0x82 0x7 0x0 0x20 0x1e0 0x14 0x10 0xffd2 0x1
+	delay 0x1
+	launchtemplate gNanobotsTemplate 0x82 0x7 0x0 0x21 0x240 0x14 0x8 0x2a 0x1
+	delay 0x1
+	launchtemplate gNanobotsTemplate 0x82 0x7 0x0 0x1f 0x190 0x19 0xb 0xffd6 0x1
+	delay 0x1
+	launchtemplate gNanobotsTemplate 0x82 0x7 0x0 0x1c 0x200 0x19 0x10 0x2e 0x1
+	delay 0x1
+	launchtemplate gNanobotsTemplate 0x82 0x7 0x0 0x21 0x1d0 0x1e 0xf 0xffce 0x1
+	delay 0x1
+	return
 
 Move_PIXIE_DUST::
 	goto Move_FAIRY_WIND
 
-Move_LUNAR_CURSE::
+Move_LUNAR_CURSE:
 	loadspritegfx ANIM_TAG_MOON
 	loadspritegfx ANIM_TAG_GREEN_SPARKLE
 	loadspritegfx ANIM_TAG_NAIL
