@@ -15225,6 +15225,7 @@ Move_MERCURY_BODY::
 	monbgprio_28 ANIM_ATTACKER
 	fadetobg BG_AURA_SPHERE
 	createvisualtask AnimTask_BlendBackground, 6, 6, RGB(150,150,150)
+	waitbgfadeout
 	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
 	waitbgfadein
 	delay 20
@@ -15271,7 +15272,6 @@ Move_MERCURY_BODY::
 	blendoff
 	delay 2
 	restorebg
-	waitbgfadein
 	end
 
 Move_NANOBOTS::
