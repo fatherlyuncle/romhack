@@ -15220,6 +15220,7 @@ Move_MERCURY_BODY::
 	loadspritegfx ANIM_TAG_CONVERSION
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
 	monbg ANIM_ATTACKER
+	monbgprio_2A ANIM_ATTACKER
 	setalpha 0, 16
 	delay 0
 	playsewithpan SE_W112, SOUND_PAN_ATTACKER
@@ -15257,9 +15258,7 @@ Move_MERCURY_BODY::
 	delay 10
 	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	waitforvisualfinish
-	clearmonbg ANIM_DEF_PARTNER
 	blendoff
-	monbg ANIM_ATTACKER
 	monbgprio_28 ANIM_ATTACKER
 	delay 1
 	createvisualtask AnimTask_DragonDanceWaver, 5
