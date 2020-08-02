@@ -15219,48 +15219,45 @@ Move_MURKY_STARE::
 Move_MERCURY_BODY::
 	loadspritegfx ANIM_TAG_CONVERSION
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
+	loadspritegfx ANIM_TAG_IMPACT
 	monbg ANIM_ATTACKER
-	monbgprio_2A ANIM_ATTACKER
-	setalpha 0, 16
-	delay 0
-	playsewithpan SE_W112, SOUND_PAN_ATTACKER
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, -24, 60
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, -24, 65
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, -24, 70
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, -24, 75
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, -8, 80
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, -8, 85
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, -8, 90
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, -8, 95
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, 8, 100
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, 8, 105
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, 8, 110
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, 8, 115
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, 24, 120
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, 24, 125
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, 24, 130
-	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, 24, 135
-	createvisualtask AnimTask_Conversion2AlphaBlend, 5
-	delay 60
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	delay 10
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	delay 10
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	delay 10
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	delay 10
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	delay 10
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	delay 10
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	delay 10
-	playsewithpan SE_W129, SOUND_PAN_ATTACKER
-	waitforvisualfinish
-	blendoff
 	monbgprio_28 ANIM_ATTACKER
-	delay 1
+	fadetobg BG_MERCURY_BODY
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_ROCK_WRECKER
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_TRICK_ROOM
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_AURA_SPHERE
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_CLANGOROUS_SOULBLAZE
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_WONDER_ROOM
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_MAGIC_ROOM
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_GARBAGE_FALLS
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_SPACIAL_REND_ON_OPPONENT
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
 	createvisualtask AnimTask_DragonDanceWaver, 5
 	playsewithpan SE_W100, SOUND_PAN_ATTACKER
 	delay 8
