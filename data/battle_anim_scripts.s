@@ -15443,7 +15443,7 @@ Move_LUNAR_CURSE::
 	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 10, 0
 	delay 20
 	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
-	delay 1
+	delay 2
 	monbg ANIM_ATK_PARTNER
 	createsprite gCurseNailSpriteTemplate, ANIM_ATTACKER, 2
 	delay 60
@@ -15452,7 +15452,7 @@ Move_LUNAR_CURSE::
 	call CurseGhostShakeFromNail
 	delay 41
 	call CurseGhostShakeFromNail
-	waitforvisualfinish
+	delay 2
 	clearmonbg ANIM_ATK_PARTNER
 	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
 	delay 1
