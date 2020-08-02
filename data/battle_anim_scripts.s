@@ -14499,6 +14499,7 @@ Move_WING_SLASH::
 	delay 17
 	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, -8, 0
 	createsprite gSlashSliceSpriteTemplate, ANIM_TARGET, 2, 1, 8, 0
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 2, 0, 23, 1
 	loopsewithpan SE_W013, SOUND_PAN_TARGET, 5, 2
 	waitforvisualfinish
 	createsprite gSlideMonToOriginalPosSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 11
@@ -15219,10 +15220,9 @@ Move_MERCURY_BODY::
 	loadspritegfx ANIM_TAG_CONVERSION
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
 	monbg ANIM_ATTACKER
-	monbgprio_2A ANIM_ATTACKER
 	setalpha 0, 16
 	delay 0
-	playsewithpan SE_W112, SOUND_PAN_TARGET
+	playsewithpan SE_W112, SOUND_PAN_ATTACKER
 	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -24, -24, 60
 	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, -8, -24, 65
 	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 8, -24, 70
@@ -15241,21 +15241,21 @@ Move_MERCURY_BODY::
 	createsprite gConversion2SpriteTemplate, ANIM_ATTACKER, 2, 24, 24, 135
 	createvisualtask AnimTask_Conversion2AlphaBlend, 5
 	delay 60
-	playsewithpan SE_W129, SOUND_PAN_TARGET
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	delay 10
-	playsewithpan SE_W129, SOUND_PAN_TARGET
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	delay 10
-	playsewithpan SE_W129, SOUND_PAN_TARGET
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	delay 10
-	playsewithpan SE_W129, SOUND_PAN_TARGET
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	delay 10
-	playsewithpan SE_W129, SOUND_PAN_TARGET
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	delay 10
-	playsewithpan SE_W129, SOUND_PAN_TARGET
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	delay 10
-	playsewithpan SE_W129, SOUND_PAN_TARGET
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	delay 10
-	playsewithpan SE_W129, SOUND_PAN_TARGET
+	playsewithpan SE_W129, SOUND_PAN_ATTACKER
 	waitforvisualfinish
 	clearmonbg ANIM_DEF_PARTNER
 	blendoff
@@ -15443,7 +15443,7 @@ Move_LUNAR_CURSE::
 	createsprite gMoonlightSparkleSpriteTemplate, ANIM_ATTACKER, 40, 10, 0
 	delay 20
 	createvisualtask AnimTask_InvertScreenColor, 2, 0x1 | 0x2 | 0x4
-	delay 2
+	delay 20
 	monbg ANIM_ATK_PARTNER
 	createsprite gCurseNailSpriteTemplate, ANIM_ATTACKER, 2
 	delay 60
@@ -15460,7 +15460,7 @@ Move_LUNAR_CURSE::
 	playsewithpan SE_W171, SOUND_PAN_TARGET
 	createsprite gCurseGhostSpriteTemplate, ANIM_TARGET, 2
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 2, 0, 14, 1
-	waitforvisualfinish
+	delay 20
 	clearmonbg ANIM_DEF_PARTNER
 	createvisualtask AnimTask_MoonlightEndFade, 2
 	waitforvisualfinish
