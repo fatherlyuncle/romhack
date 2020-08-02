@@ -15217,20 +15217,13 @@ Move_MURKY_STARE::
 	end
 
 Move_MERCURY_BODY::
-	loadspritegfx ANIM_TAG_CONVERSION
 	loadspritegfx ANIM_TAG_HOLLOW_ORB
 	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_EXPLOSION
+	loadspritegfx ANIM_TAG_EXPLOSION_6
 	monbg ANIM_ATTACKER
 	monbgprio_28 ANIM_ATTACKER
 	fadetobg BG_MERCURY_BODY
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_ROCK_WRECKER
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_TRICK_ROOM
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
@@ -15238,23 +15231,47 @@ Move_MERCURY_BODY::
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
-	fadetobg BG_CLANGOROUS_SOULBLAZE
+	fadetobg BG_ELECTRIC_TERRAIN
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
-	fadetobg BG_WONDER_ROOM
+	fadetobg BG_MISTY_TERRAIN
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
-	fadetobg BG_MAGIC_ROOM
+	fadetobg BG_PSYCHIC_TERRAIN
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
-	fadetobg BG_GARBAGE_FALLS
+	fadetobg BG_GRASS_TERRAIN
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
-	fadetobg BG_SPACIAL_REND_ON_OPPONENT
+	fadetobg BG_ZMOVE_MOUNTAIN
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_NEVERENDING_NIGHTMARE
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_SHATTERED_PSYCHE
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_BLACKHOLE_ECLIPSE
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_SOULSTEALING_7STAR_STRIKE
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_MALICIOUS_MOONSAULT
+	waitbgfadein
+	waitforvisualfinish
+	delay 20
+	fadetobg BG_DYNAMAX_CANNON
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
@@ -15274,10 +15291,26 @@ Move_MERCURY_BODY::
 	playsewithpan SE_W120, SOUND_PAN_ATTACKER
 	call SetImpactBackground
 	createvisualtask AnimTask_BlendColorCycle, 2, 1, 2, 8, 0, 10, RGB_WHITE
-	createsprite gBasicHitSplatSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, ANIM_TARGET, 1
-	launchtask AnimTask_ShakeMon 0x2 0x5 ANIM_TARGET 0x3 0x0 0x4f 0x1
-	waitforvisualfinish
+	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 0
+	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 5, 0, 7, 1
 	delay 1
+	waitsound
+	playsewithpan SE_W120, SOUND_PAN_TARGET
+	createvisualtask AnimTask_ShakeMon2, 5, ANIM_TARGET, 5, 0, 28, 1
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 0, 0, 1, 1
+	delay 6
+	playsewithpan SE_W120, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 24, -24, 1, 1
+	delay 6
+	playsewithpan SE_W120, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, -16, 16, 1, 1
+	delay 6
+	playsewithpan SE_W120, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, -24, -12, 1, 1
+	delay 6
+	playsewithpan SE_W120, SOUND_PAN_TARGET
+	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 16, 16, 1, 1
+	waitforvisualfinish
 	clearmonbg ANIM_ATTACKER
 	blendoff
 	delay 2
