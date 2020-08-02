@@ -15243,7 +15243,7 @@ Move_MERCURY_BODY::
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
-	fadetobg BG_GRASS_TERRAIN
+	fadetobg BG_GRASSY_TERRAIN
 	waitbgfadein
 	waitforvisualfinish
 	delay 20
