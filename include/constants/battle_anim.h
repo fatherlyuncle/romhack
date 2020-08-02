@@ -492,7 +492,6 @@
 #define BG_HYPER_BEAM                           75
 #define BG_DYNAMAX_CANNON                       76
 #define BG_AURA_SPHERE                          77
-#define BG_MERCURY_BODY                         78
 
 // table ids for general animations
 #define B_ANIM_CASTFORM_CHANGE          0x0

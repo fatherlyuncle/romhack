@@ -15223,57 +15223,10 @@ Move_MERCURY_BODY::
 	loadspritegfx ANIM_TAG_EXPLOSION_6
 	monbg ANIM_ATTACKER
 	monbgprio_28 ANIM_ATTACKER
-	fadetobg BG_MERCURY_BODY
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
 	fadetobg BG_AURA_SPHERE
+	createvisualtask AnimTask_BlendBackground, 6, 6, RGB(150,150,150)
+	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
 	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_ELECTRIC_TERRAIN
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_MISTY_TERRAIN
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_PSYCHIC_TERRAIN
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_GRASSY_TERRAIN
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_ZMOVE_MOUNTAIN
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_NEVERENDING_NIGHTMARE
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_SHATTERED_PSYCHE
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_BLACKHOLE_ECLIPSE
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_SOULSTEALING_7STAR_STRIKE
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_MALICIOUS_MOONSAULT
-	waitbgfadein
-	waitforvisualfinish
-	delay 20
-	fadetobg BG_DYNAMAX_CANNON
-	waitbgfadein
-	waitforvisualfinish
 	delay 20
 	createvisualtask AnimTask_DragonDanceWaver, 5
 	playsewithpan SE_W100, SOUND_PAN_ATTACKER
@@ -15289,6 +15242,9 @@ Move_MERCURY_BODY::
 	playsewithpan SE_W100, SOUND_PAN_ATTACKER
 	delay 30
 	playsewithpan SE_W120, SOUND_PAN_ATTACKER
+	restorebg
+	waitbgfadeout
+	setarg 7, 0xFFFF
 	call SetImpactBackground
 	createvisualtask AnimTask_BlendColorCycle, 2, 1, 2, 8, 0, 10, RGB_WHITE
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 0
