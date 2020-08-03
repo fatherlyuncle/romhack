@@ -15269,9 +15269,7 @@ Move_MERCURY_BODY::
 	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 16, 16, 1, 1
 	waitforvisualfinish
 	clearmonbg ANIM_ATTACKER
-	blendoff
-	delay 2
-	restorebg
+	call UnsetPsychicBg
 	end
 
 Move_NANOBOTS::
