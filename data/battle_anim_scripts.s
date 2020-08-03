@@ -15246,7 +15246,7 @@ Move_MERCURY_BODY::
 	waitbgfadeout
 	setarg 7, 0xFFFF
 	call SetImpactBackground
-	createvisualtask AnimTask_BlendColorCycle, 2, 1, 2, 8, 0, 10, RGB_WHITE
+	createvisualtask AnimTask_BlendColorCycle, 2, 1, 2, 6, 0, 10, RGB_WHITE @@changed 8 to 6, num blends
 	createsprite gBasicHitSplatSpriteTemplate, ANIM_TARGET, 2, 0, 0, ANIM_TARGET, 0
 	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 5, 0, 7, 1
 	delay 1
@@ -15266,7 +15266,7 @@ Move_MERCURY_BODY::
 	delay 6
 	playsewithpan SE_W120, SOUND_PAN_TARGET
 	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 16, 16, 1, 1
-	delay 2
+	delay 20
 	clearmonbg ANIM_ATTACKER
 	blendoff
 	restorebg
