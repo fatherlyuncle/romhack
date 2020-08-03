@@ -15266,7 +15266,7 @@ Move_MERCURY_BODY::
 	delay 6
 	playsewithpan SE_W120, SOUND_PAN_TARGET
 	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 16, 16, 1, 1
-	delay 20
+	delay 2
 	clearmonbg ANIM_ATTACKER
 	blendoff
 	restorebg
