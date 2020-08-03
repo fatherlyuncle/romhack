@@ -10007,7 +10007,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 	
 	[MOVE_CONVERSATION] =
     {
-        .effect = EFFECT_HIT,//CONVERSATION,
+        .effect = EFFECT_CONVERSATION,
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 80,
