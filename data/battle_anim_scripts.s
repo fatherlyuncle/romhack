@@ -15224,7 +15224,6 @@ Move_MERCURY_BODY::
 	monbg ANIM_ATTACKER
 	monbgprio_28 ANIM_ATTACKER
 	fadetobg BG_MERCURY_BODY
-	createvisualtask AnimTask_BlendBackground, 6, 6, RGB(150,150,150)
 	waitbgfadeout
 	launchtask AnimTask_StartSlidingBg 0x5 0x4 0x300 0x0 0x0 0xffff
 	waitbgfadein
