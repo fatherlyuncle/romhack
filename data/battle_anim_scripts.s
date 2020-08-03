@@ -15267,7 +15267,7 @@ Move_MERCURY_BODY::
 	delay 6
 	playsewithpan SE_W120, SOUND_PAN_TARGET
 	createsprite gExplosionSpriteTemplate, ANIM_ATTACKER, 3, 16, 16, 1, 1
-	waitforvisualfinish
+	delay 20
 	clearmonbg ANIM_ATTACKER
 	call UnsetPsychicBg
 	end
