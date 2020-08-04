@@ -1298,6 +1298,11 @@
 	.4byte \ptr
 	.endm
 	
+	.macro conversation ptr:req
+	.byte 0x100
+	.4byte \ptr
+	.endm
+	
 @ various command changed to more readable macros
 	.macro cancelmultiturnmoves battler:req
 	various \battler, VARIOUS_CANCEL_MULTI_TURN_MOVES
