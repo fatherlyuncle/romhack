@@ -12189,14 +12189,14 @@ static void Cmd_conversation(void)
 			break;
 		}
 	case 2:
-		if (gStatuses3[i] & STATUS3_PERISH_SONG
-            || gBattleMons[i].ability == ABILITY_SOUNDPROOF)
+		if (gStatuses3[gBattlerTarget] & STATUS3_PERISH_SONG
+            || gBattleMons[gBattlerTarget].ability == ABILITY_SOUNDPROOF)
             break;
         else
         {
-            gStatuses3[i] |= STATUS3_PERISH_SONG;
-            gDisableStructs[i].perishSongTimer = 3;
-            gDisableStructs[i].perishSongTimerStartValue = 3;
+            gStatuses3[gBattlerTarget] |= STATUS3_PERISH_SONG;
+            gDisableStructs[gBattlerTarget].perishSongTimer = 3;
+            gDisableStructs[gBattlerTarget].perishSongTimerStartValue = 3;
 			break;
         }
 	case 3:
