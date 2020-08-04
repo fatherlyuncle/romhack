@@ -382,7 +382,7 @@ BattleScript_EffectConversation::
 	jumpifsafeguard BattleScript_SafeguardProtected
 	attackanimation
 	waitanimation
-	conversation
+	conversation BS_TARGET, BattleScript_ButItFailed
 	resultmessage
 	waitmessage 0x40
 	goto BattleScript_MoveEnd

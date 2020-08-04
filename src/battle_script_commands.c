@@ -336,7 +336,6 @@ static void Cmd_jumpifoppositegenders(void);
 static void Cmd_trygetbaddreamstarget(void);
 static void Cmd_tryworryseed(void);
 static void Cmd_metalburstdamagecalculator(void);
-static void Cmd_conversation(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -596,7 +595,6 @@ void (* const gBattleScriptingCommandsTable[])(void) =
 	Cmd_trygetbaddreamstarget, // 0xFD
 	Cmd_tryworryseed, // 0xFE
 	Cmd_metalburstdamagecalculator, // 0xFF
-	Cmd_conversation, // 0x100
 };
 
 struct StatFractions
@@ -6849,6 +6847,89 @@ static void Cmd_various(void)
 
     switch (gBattlescriptCurrInstr[2])
     {
+	case VARIOUS_CONVERSATION:
+		{
+		u8 rand = Random() & 0x07;
+		switch (rand)
+			{
+			case 0:
+				if(gBattleMons[gBattlerTarget].status2 & STATUS2_LOCK_CONFUSE)
+					break;
+				else
+				{
+					gBattleMons[gBattlerTarget].status2 |= STATUS2_LOCK_CONFUSE;
+					break;
+				}
+			case 1:
+				if(gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION)
+					break;
+				else
+				{
+					gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
+					break;
+				}
+			case 2:
+				if (gStatuses3[gBattlerTarget] & STATUS3_PERISH_SONG
+		            || gBattleMons[gBattlerTarget].ability == ABILITY_SOUNDPROOF)
+			        break;
+			    else
+			    {
+					gStatuses3[gBattlerTarget] |= STATUS3_PERISH_SONG;
+			        gDisableStructs[gBattlerTarget].perishSongTimer = 3;
+			        gDisableStructs[gBattlerTarget].perishSongTimerStartValue = 3;
+					break;
+			    }
+			case 3:
+				if (gStatuses3[gBattlerTarget] & STATUS3_YAWN
+					|| gBattleMons[gBattlerTarget].status1 & STATUS1_ANY)
+					break;
+				else
+				{
+					gStatuses3[gBattlerTarget] |= 0x1000;
+					break;
+				}
+			case 4:
+				if (gStatuses3[gBattlerTarget] & STATUS3_EMBARGO)
+					break;
+				else
+				{
+					gStatuses3[gBattlerTarget] |= STATUS3_EMBARGO;
+					gDisableStructs[gBattlerTarget].embargoTimer = 5;
+					break;
+				}
+			case 5:
+				if (gBattleMons[gBattlerTarget].status2 & STATUS2_TORMENT)
+					break;
+				else
+				{
+					gBattleMons[gBattlerTarget].status2 |= STATUS2_TORMENT;
+					break;
+				}
+			case 6:
+				if (gBattleMons[gBattlerTarget].status1 & STATUS1_ANY || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_ELECTRIC))
+					break;
+				else
+				{
+					gBattleMons[gBattlerTarget].status1 |= STATUS1_PARALYSIS;
+					break;
+				}
+			case 7:
+				if (gDisableStructs[gBattlerTarget].tauntTimer == 0)
+				{
+					u8 turns = 4;
+					if (GetBattlerTurnOrderNum(gBattlerTarget) > GetBattlerTurnOrderNum(gBattlerAttacker))
+						turns--; // If the target hasn't yet moved this turn, Taunt lasts for only three turns (source: Bulbapedia)
+
+					gDisableStructs[gBattlerTarget].tauntTimer = gDisableStructs[gBattlerTarget].tauntTimer2 = turns;
+				}
+				break;
+			default:
+				gMoveResultFlags |= MOVE_RESULT_FAILED;
+			    gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+				break;
+			}
+			gBattlescriptCurrInstr+= 5;
+		}
     // Roar will fail in a double wild battle when used by the player against one of the two alive wild mons.
     // Also when an opposing wild mon uses it againt its partner.
     case VARIOUS_JUMP_IF_ROAR_FAILS:
@@ -12165,88 +12246,4 @@ static void Cmd_metalburstdamagecalculator(void)
         gSpecialStatuses[gBattlerAttacker].ppNotAffectedByPressure = 1;
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
-}
-
-static void Cmd_conversation(void)
-{
-	u8 rand = Random() & 0x07;
-	switch (rand)
-	{
-	case 0:
-		if(gBattleMons[gBattlerTarget].status2 & STATUS2_LOCK_CONFUSE)
-			break;
-		else
-		{
-			gBattleMons[gBattlerTarget].status2 |= STATUS2_LOCK_CONFUSE;
-			break;
-		}
-	case 1:
-		if(gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION)
-			break;
-		else
-		{
-			gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
-			break;
-		}
-	case 2:
-		if (gStatuses3[gBattlerTarget] & STATUS3_PERISH_SONG
-            || gBattleMons[gBattlerTarget].ability == ABILITY_SOUNDPROOF)
-            break;
-        else
-        {
-            gStatuses3[gBattlerTarget] |= STATUS3_PERISH_SONG;
-            gDisableStructs[gBattlerTarget].perishSongTimer = 3;
-            gDisableStructs[gBattlerTarget].perishSongTimerStartValue = 3;
-			break;
-        }
-	case 3:
-		if (gStatuses3[gBattlerTarget] & STATUS3_YAWN
-        || gBattleMons[gBattlerTarget].status1 & STATUS1_ANY)
-			break;
-		else
-		{
-			gStatuses3[gBattlerTarget] |= 0x1000;
-			break;
-		}
-	case 4:
-		if (gStatuses3[gBattlerTarget] & STATUS3_EMBARGO)
-			break;
-		else
-		{
-			gStatuses3[gBattlerTarget] |= STATUS3_EMBARGO;
-			gDisableStructs[gBattlerTarget].embargoTimer = 5;
-			break;
-		}
-	case 5:
-		if (gBattleMons[gBattlerTarget].status2 & STATUS2_TORMENT)
-			break;
-		else
-		{
-			gBattleMons[gBattlerTarget].status2 |= STATUS2_TORMENT;
-			break;
-		}
-	case 6:
-		if (gBattleMons[gBattlerTarget].status1 & STATUS1_ANY || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_ELECTRIC))
-			break;
-		else
-		{
-			gBattleMons[gBattlerTarget].status1 |= STATUS1_PARALYSIS;
-			break;
-		}
-	case 7:
-		if (gDisableStructs[gBattlerTarget].tauntTimer == 0)
-		{
-			u8 turns = 4;
-			if (GetBattlerTurnOrderNum(gBattlerTarget) > GetBattlerTurnOrderNum(gBattlerAttacker))
-				turns--; // If the target hasn't yet moved this turn, Taunt lasts for only three turns (source: Bulbapedia)
-
-			gDisableStructs[gBattlerTarget].tauntTimer = gDisableStructs[gBattlerTarget].tauntTimer2 = turns;
-		}
-		break;
-	default:
-		gMoveResultFlags |= MOVE_RESULT_FAILED;
-        gBattleCommunication[MULTISTRING_CHOOSER] = 1;
-		break;
-	}
-	gBattlescriptCurrInstr+= 5;
 }

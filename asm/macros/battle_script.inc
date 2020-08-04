@@ -1298,8 +1298,8 @@
 	.4byte \ptr
 	.endm
 	
-	.macro conversation ptr:req
-	.byte 0x100
+	.macro conversation battler:req, ptr:req
+	various \battler, VARIOUS_CONVERSATION
 	.4byte \ptr
 	.endm
 	
