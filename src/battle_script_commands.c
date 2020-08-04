@@ -12226,7 +12226,7 @@ static void Cmd_conversation(void)
 			break;
 		}
 	case 6:
-		if (gBattleMons[gBattlerTarget].status1 & STATUS1_ANY || IS_BATTLER_OF_TYPE(battlerTarget, TYPE_ELECTRIC))
+		if (gBattleMons[gBattlerTarget].status1 & STATUS1_ANY || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_ELECTRIC))
 			break;
 		else
 		{
