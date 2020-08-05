@@ -6853,8 +6853,10 @@ static void Cmd_various(void)
 		switch (rand){
 			case 0:
 				if(gBattleMons[gBattlerTarget].status2 & STATUS2_LOCK_CONFUSE)
+				{
 					gBattlescriptCurrInstr++;
 					return;
+				}
 				else
 				{
 					gBattleMons[gBattlerTarget].status2 |= STATUS2_LOCK_CONFUSE;
@@ -6863,8 +6865,10 @@ static void Cmd_various(void)
 				}
 			case 1:
 				if(gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION)
+				{
 					gBattlescriptCurrInstr++;
 					return;
+				}
 				else
 				{
 					gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
@@ -6874,8 +6878,10 @@ static void Cmd_various(void)
 			case 2:
 				if (gStatuses3[gBattlerTarget] & STATUS3_PERISH_SONG
 		            || gBattleMons[gBattlerTarget].ability == ABILITY_SOUNDPROOF)
-			        gBattlescriptCurrInstr++;
+			    {
+					gBattlescriptCurrInstr++;
 					return;
+				}
 			    else
 			    {
 					gStatuses3[gBattlerTarget] |= STATUS3_PERISH_SONG;
@@ -6887,8 +6893,10 @@ static void Cmd_various(void)
 			case 3:
 				if (gStatuses3[gBattlerTarget] & STATUS3_YAWN
 					|| gBattleMons[gBattlerTarget].status1 & STATUS1_ANY)
+				{
 					gBattlescriptCurrInstr++;
 					return;
+				}
 				else
 				{
 					gStatuses3[gBattlerTarget] |= 0x1000;
@@ -6897,8 +6905,10 @@ static void Cmd_various(void)
 				}
 			case 4:
 				if (gStatuses3[gBattlerTarget] & STATUS3_EMBARGO)
+				{
 					gBattlescriptCurrInstr++;
 					return;
+				}
 				else
 				{
 					gStatuses3[gBattlerTarget] |= STATUS3_EMBARGO;
@@ -6908,8 +6918,10 @@ static void Cmd_various(void)
 				}
 			case 5:
 				if (gBattleMons[gBattlerTarget].status2 & STATUS2_TORMENT)
+				{
 					gBattlescriptCurrInstr++;
 					return;
+				}
 				else
 				{
 					gBattleMons[gBattlerTarget].status2 |= STATUS2_TORMENT;
@@ -6918,8 +6930,10 @@ static void Cmd_various(void)
 				}
 			case 6:
 				if (gBattleMons[gBattlerTarget].status1 & STATUS1_ANY || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_ELECTRIC))
+				{
 					gBattlescriptCurrInstr++;
 					return;
+				}
 				else
 				{
 					gBattleMons[gBattlerTarget].status1 |= STATUS1_PARALYSIS;
