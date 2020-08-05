@@ -381,7 +381,7 @@ BattleScript_EffectConversation::
 	jumpifsafeguard BattleScript_SafeguardProtected
 	attackanimation
 	waitanimation
-	conversation
+	conversation BS_TARGET, BattleScript_ButItFailed
 	seteffectprimary
 	printstring STRINGID_PKMNSSTATCHANGED2
 	waitmessage 0x40
