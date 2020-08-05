@@ -369,6 +369,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	
 BattleScript_EffectConversation::
 	attackcanceler
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
 	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_LeafGuardProtects
@@ -377,13 +378,12 @@ BattleScript_EffectConversation::
 	jumpifshieldsdown BS_TARGET, BattleScript_LeafGuardProtects
 	jumpifsubstituteblocks BattleScript_ButItFailed
 	jumpifstatus BS_TARGET, STATUS1_SLEEP, BattleScript_ButItFailed
-	trypoisontype BS_ATTACKER, BS_TARGET, BattleScript_NotAffected
-	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	jumpifsafeguard BattleScript_SafeguardProtected
 	attackanimation
 	waitanimation
-	conversation BS_TARGET, BattleScript_ButItFailed
-	resultmessage
+	conversation
+	seteffectprimary
+	printstring STRINGID_PKMNSSTATCHANGED2
 	waitmessage 0x40
 	goto BattleScript_MoveEnd
 

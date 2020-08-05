@@ -6848,69 +6848,82 @@ static void Cmd_various(void)
     switch (gBattlescriptCurrInstr[2])
     {
 	case VARIOUS_CONVERSATION:
-		{
+	{
 		u8 rand = Random() & 0x07;
-		switch (rand)
-			{
+		switch (rand){
 			case 0:
 				if(gBattleMons[gBattlerTarget].status2 & STATUS2_LOCK_CONFUSE)
-					break;
+					gBattlescriptCurrInstr++;
+					return;
 				else
 				{
 					gBattleMons[gBattlerTarget].status2 |= STATUS2_LOCK_CONFUSE;
+					gBattlescriptCurrInstr++;
 					break;
 				}
 			case 1:
 				if(gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION)
-					break;
+					gBattlescriptCurrInstr++;
+					return;
 				else
 				{
 					gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
+					gBattlescriptCurrInstr+= 4;
 					break;
 				}
 			case 2:
 				if (gStatuses3[gBattlerTarget] & STATUS3_PERISH_SONG
 		            || gBattleMons[gBattlerTarget].ability == ABILITY_SOUNDPROOF)
-			        break;
+			        gBattlescriptCurrInstr++;
+					return;
 			    else
 			    {
 					gStatuses3[gBattlerTarget] |= STATUS3_PERISH_SONG;
 			        gDisableStructs[gBattlerTarget].perishSongTimer = 3;
 			        gDisableStructs[gBattlerTarget].perishSongTimerStartValue = 3;
+					gBattlescriptCurrInstr+= 5;
 					break;
 			    }
 			case 3:
 				if (gStatuses3[gBattlerTarget] & STATUS3_YAWN
 					|| gBattleMons[gBattlerTarget].status1 & STATUS1_ANY)
-					break;
+					gBattlescriptCurrInstr++;
+					return;
 				else
 				{
 					gStatuses3[gBattlerTarget] |= 0x1000;
+					gBattlescriptCurrInstr+= 5;
 					break;
 				}
 			case 4:
 				if (gStatuses3[gBattlerTarget] & STATUS3_EMBARGO)
-					break;
+					gBattlescriptCurrInstr++;
+					return;
 				else
 				{
 					gStatuses3[gBattlerTarget] |= STATUS3_EMBARGO;
 					gDisableStructs[gBattlerTarget].embargoTimer = 5;
+					gBattlescriptCurrInstr+= 5;
 					break;
 				}
 			case 5:
 				if (gBattleMons[gBattlerTarget].status2 & STATUS2_TORMENT)
-					break;
+					gBattlescriptCurrInstr++;
+					return;
 				else
 				{
 					gBattleMons[gBattlerTarget].status2 |= STATUS2_TORMENT;
+					gBattlescriptCurrInstr+= 5;
 					break;
 				}
 			case 6:
 				if (gBattleMons[gBattlerTarget].status1 & STATUS1_ANY || IS_BATTLER_OF_TYPE(gBattlerTarget, TYPE_ELECTRIC))
-					break;
+					gBattlescriptCurrInstr++;
+					return;
 				else
 				{
 					gBattleMons[gBattlerTarget].status1 |= STATUS1_PARALYSIS;
+					gBattlescriptCurrInstr+= 5;
 					break;
 				}
 			case 7:
@@ -6922,14 +6935,14 @@ static void Cmd_various(void)
 
 					gDisableStructs[gBattlerTarget].tauntTimer = gDisableStructs[gBattlerTarget].tauntTimer2 = turns;
 				}
+				gBattlescriptCurrInstr+= 5;
 				break;
 			default:
 				gMoveResultFlags |= MOVE_RESULT_FAILED;
 			    gBattleCommunication[MULTISTRING_CHOOSER] = 1;
-				break;
-			}
-			gBattlescriptCurrInstr+= 5;
+				gBattlescriptCurrInstr+= 7;
 		}
+	}
     // Roar will fail in a double wild battle when used by the player against one of the two alive wild mons.
     // Also when an opposing wild mon uses it againt its partner.
     case VARIOUS_JUMP_IF_ROAR_FAILS:
