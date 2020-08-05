@@ -525,6 +525,7 @@
 #define B_ANIM_TERRAIN_PSYCHIC          0x1B
 #define B_ANIM_ILLUSION_OFF             0x1C
 #define B_ANIM_FORM_CHANGE              0x1D
+#define B_ANIM_SLIDE_OFFSCREEN          0x1E // for Emergency Exit
 
 // special animations table
 #define B_ANIM_LVL_UP                   0x0
@@ -534,6 +535,7 @@
 #define B_ANIM_SAFARI_BALL_THROW        0x4
 #define B_ANIM_SUBSTITUTE_TO_MON        0x5
 #define B_ANIM_MON_TO_SUBSTITUTE        0x6
+#define B_ANIM_CRITICAL_CAPTURE_THROW   0x7
 
 // status animation table
 #define B_ANIM_STATUS_PSN               0x0

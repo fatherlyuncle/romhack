@@ -1,3 +1,5 @@
+.set LOCALID_RIVAL, 2
+
 Route103_MapScripts:: @ 81EC38E
 	map_script MAP_SCRIPT_ON_TRANSITION, Route103_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, Route103_OnLoad
@@ -32,9 +34,9 @@ Route103_EventScript_RivalMay:: @ 81EC3DA
 	playbgm MUS_FIELD13, 1
 	applymovement 2, Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement 2, Common_Movement_ExclamationMark
+	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement 2, Common_Movement_Delay48
+	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	msgbox Route103_Text_MayLetsBattle, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103
@@ -63,11 +65,11 @@ Route103_EventScript_RivalBrendan:: @ 81EC434
 	msgbox Route103_Text_BrendanRoute103Pokemon, MSGBOX_DEFAULT
 	closemessage
 	playbgm MUS_BOY_SUP, 1
-	applymovement 2, Common_Movement_FacePlayer
+	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement 2, Common_Movement_ExclamationMark
+	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement 2, Common_Movement_Delay48
+	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	msgbox Route103_Text_BrendanLetsBattle, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103
@@ -101,42 +103,42 @@ Route103_EventScript_StartMayBattleFlying::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_FLYING, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattlePoison::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_POISON, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleGround::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_GROUND, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleRock::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_ROCK, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleBug::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_BUG, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleGhost::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_GHOST, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleSteel::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_STEEL, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleFire:: @ 81EC48E
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleWater:: @ 81EC49E
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
@@ -146,32 +148,32 @@ Route103_EventScript_StartMayBattleGrass:: @ 81EC4AE
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleElectric::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_ELECTRIC, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattlePsychic::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_PSYCHIC, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleIce::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_ICE, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleDragon::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_DRAGON, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleDark::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_DARK, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
 	end
-	
+
 Route103_EventScript_StartMayBattleFairy::
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_FAIRY, Route103_Text_MayDefeated
 	goto Route103_EventScript_AfterMayBattle
@@ -186,42 +188,42 @@ Route103_EventScript_StartBrendanBattleFlying::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_FLYING, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattlePoison::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_POISON, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleGround::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_GROUND, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleRock::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_ROCK, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleBug::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_BUG, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleGhost::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_GHOST, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleSteel::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_STEEL, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleFire:: @ 81EC48E
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TREECKO, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleWater:: @ 81EC49E
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
@@ -231,32 +233,32 @@ Route103_EventScript_StartBrendanBattleGrass:: @ 81EC4AE
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleElectric::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_ELECTRIC, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattlePsychic::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_PSYCHIC, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleIce::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_ICE, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleDragon::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_DRAGON, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleDark::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_DARK, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
 	end
-	
+
 Route103_EventScript_StartBrendanBattleFairy::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_FAIRY, Route103_Text_BrendanDefeated
 	goto Route103_EventScript_AfterBrendanBattle
@@ -283,35 +285,35 @@ Route103_EventScript_RivalExit:: @ 81EC50A
 
 Route103_EventScript_RivalExitFacingNorth:: @ 81EC53D
 	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_WatchRivalExitFacingNorth
-	applymovement 2, Route103_Movement_RivalExitFacingNorth1
+	applymovement LOCALID_RIVAL, Route103_Movement_RivalExitFacingNorth1
 	waitmovement 0
 	playse SE_DANSA
-	applymovement 2, Route103_EventScript_RivalExitFacingNorth2
+	applymovement LOCALID_RIVAL, Route103_EventScript_RivalExitFacingNorth2
 	waitmovement 0
 	goto Route103_EventScript_RivalEnd
 	end
 
 Route103_EventScript_RivalExitFacingEastOrWest:: @ 81EC561
 	applymovement OBJ_EVENT_ID_PLAYER, Route103_Movement_WatchRivalExitFacingEastOrWest
-	applymovement 2, Route103_Movement_RivalExit1
+	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit1
 	waitmovement 0
 	playse SE_DANSA
-	applymovement 2, Route103_Movement_RivalExit2
+	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit2
 	waitmovement 0
 	goto Route103_EventScript_RivalEnd
 	end
 
 Route103_EventScript_RivalExitFacingSouth:: @ 81EC585
-	applymovement 2, Route103_Movement_RivalExit1
+	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit1
 	waitmovement 0
 	playse SE_DANSA
-	applymovement 2, Route103_Movement_RivalExit2
+	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit2
 	waitmovement 0
 	goto Route103_EventScript_RivalEnd
 	end
 
 Route103_EventScript_RivalEnd:: @ 81EC5A2
-	removeobject 2
+	removeobject LOCALID_RIVAL
 	setvar VAR_BIRCH_LAB_STATE, 4
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103
@@ -522,7 +524,7 @@ Route103_Text_ShortcutToOldale: @ 81ECBB5
 Route103_EventScript_Normal::
 	goto Route103_EventScript_FightingCheck
 	return
-	
+
 Route103_EventScript_Fighting::
 	random 3
 	switch VAR_RESULT
@@ -530,7 +532,7 @@ Route103_EventScript_Fighting::
 	case 1, Route103_EventScript_PsychicCheck
 	case 2, Route103_EventScript_FairyCheck
 	return
-	
+
 Route103_EventScript_Flying::
 	random 3
 	switch VAR_RESULT
@@ -545,7 +547,7 @@ Route103_EventScript_Poison::
 	case 0, Route103_EventScript_GroundCheck
 	case 1, Route103_EventScript_PsychicCheck
 	return
-	
+
 Route103_EventScript_Ground::
 	random 3
 	switch VAR_RESULT
@@ -553,7 +555,7 @@ Route103_EventScript_Ground::
 	case 1, Route103_EventScript_GrassCheck
 	case 2, Route103_EventScript_IceCheck
 	return
-	
+
 Route103_EventScript_Rock::
 	random 5
 	switch VAR_RESULT
@@ -563,7 +565,7 @@ Route103_EventScript_Rock::
 	case 3, Route103_EventScript_WaterCheck
 	case 4, Route103_EventScript_GrassCheck
 	return
-	
+
 Route103_EventScript_Bug::
 	random 3
 	switch VAR_RESULT
@@ -571,14 +573,14 @@ Route103_EventScript_Bug::
 	case 1, Route103_EventScript_RockCheck
 	case 2, Route103_EventScript_FireCheck
 	return
-	
+
 Route103_EventScript_Ghost::
 	random 2
 	switch VAR_RESULT
 	case 0, Route103_EventScript_GhostCheck
 	case 1, Route103_EventScript_DarkCheck
 	return
-	
+
 Route103_EventScript_Steel::
 	random 3
 	switch VAR_RESULT
@@ -586,7 +588,7 @@ Route103_EventScript_Steel::
 	case 1, Route103_EventScript_GroundCheck
 	case 2, Route103_EventScript_FireCheck
 	return
-	
+
 Route103_EventScript_Fire::
 	random 3
 	switch VAR_RESULT
@@ -594,14 +596,14 @@ Route103_EventScript_Fire::
 	case 1, Route103_EventScript_RockCheck
 	case 2, Route103_EventScript_WaterCheck
 	return
-	
+
 Route103_EventScript_Water::
 	random 2
 	switch VAR_RESULT
 	case 0, Route103_EventScript_GrassCheck
 	case 1, Route103_EventScript_ElectricCheck
 	return
-	
+
 Route103_EventScript_Grass::
 	random 5
 	switch VAR_RESULT
@@ -611,11 +613,11 @@ Route103_EventScript_Grass::
 	case 3, Route103_EventScript_FireCheck
 	case 4, Route103_EventScript_IceCheck
 	return
-	
+
 Route103_EventScript_Electric::
 	goto Route103_EventScript_GroundCheck
 	return
-	
+
 Route103_EventScript_Psychic::
 	random 3
 	switch VAR_RESULT
@@ -623,7 +625,7 @@ Route103_EventScript_Psychic::
 	case 1, Route103_EventScript_GhostCheck
 	case 2, Route103_EventScript_DarkCheck
 	return
-	
+
 Route103_EventScript_Ice::
 	random 4
 	switch VAR_RESULT
@@ -632,7 +634,7 @@ Route103_EventScript_Ice::
 	case 2, Route103_EventScript_SteelCheck
 	case 3, Route103_EventScript_FireCheck
 	return
-	
+
 Route103_EventScript_Dragon::
 	random 3
 	switch VAR_RESULT
@@ -640,7 +642,7 @@ Route103_EventScript_Dragon::
 	case 1, Route103_EventScript_DragonCheck
 	case 2, Route103_EventScript_FairyCheck
 	return
-	
+
 Route103_EventScript_Dark::
 	random 3
 	switch VAR_RESULT
@@ -648,14 +650,14 @@ Route103_EventScript_Dark::
 	case 1, Route103_EventScript_BugCheck
 	case 2, Route103_EventScript_FairyCheck
 	return
-	
+
 Route103_EventScript_Fairy::
 	random 2
 	switch VAR_RESULT
 	case 0, Route103_EventScript_PoisonCheck
 	case 1, Route103_EventScript_SteelCheck
 	return
-	
+
 Route103_EventScript_FightingCheck::
 	setvar VAR_STARTER_MON, 1
 	checkplayergender
@@ -673,7 +675,7 @@ Route103_EventScript_FlyingCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleFlying
 	return
-	
+
 Route103_EventScript_PoisonCheck::
 	setvar VAR_STARTER_MON, 3
 	checkplayergender
@@ -682,7 +684,7 @@ Route103_EventScript_PoisonCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattlePoison
 	return
-	
+
 Route103_EventScript_GroundCheck::
 	setvar VAR_STARTER_MON, 4
 	checkplayergender
@@ -691,7 +693,7 @@ Route103_EventScript_GroundCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleGround
 	return
-	
+
 Route103_EventScript_RockCheck::
 	setvar VAR_STARTER_MON, 5
 	checkplayergender
@@ -700,7 +702,7 @@ Route103_EventScript_RockCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleRock
 	return
-	
+
 Route103_EventScript_BugCheck::
 	setvar VAR_STARTER_MON, 6
 	checkplayergender
@@ -709,7 +711,7 @@ Route103_EventScript_BugCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleBug
 	return
-	
+
 Route103_EventScript_GhostCheck::
 	setvar VAR_STARTER_MON, 7
 	checkplayergender
@@ -718,7 +720,7 @@ Route103_EventScript_GhostCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleGhost
 	return
-	
+
 Route103_EventScript_SteelCheck::
 	setvar VAR_STARTER_MON, 8
 	checkplayergender
@@ -727,7 +729,7 @@ Route103_EventScript_SteelCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleSteel
 	return
-	
+
 Route103_EventScript_FireCheck::
 	setvar VAR_STARTER_MON, 10
 	checkplayergender
@@ -736,7 +738,7 @@ Route103_EventScript_FireCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleFire
 	return
-	
+
 Route103_EventScript_WaterCheck::
 	setvar VAR_STARTER_MON, 11
 	checkplayergender
@@ -745,7 +747,7 @@ Route103_EventScript_WaterCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleWater
 	return
-	
+
 Route103_EventScript_GrassCheck::
 	setvar VAR_STARTER_MON, 12
 	checkplayergender
@@ -754,7 +756,7 @@ Route103_EventScript_GrassCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleGrass
 	return
-	
+
 Route103_EventScript_ElectricCheck::
 	setvar VAR_STARTER_MON, 13
 	checkplayergender
@@ -763,7 +765,7 @@ Route103_EventScript_ElectricCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleElectric
 	return
-	
+
 Route103_EventScript_PsychicCheck::
 	setvar VAR_STARTER_MON, 14
 	checkplayergender
@@ -772,7 +774,7 @@ Route103_EventScript_PsychicCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattlePsychic
 	return
-	
+
 Route103_EventScript_IceCheck::
 	setvar VAR_STARTER_MON, 15
 	checkplayergender
@@ -781,7 +783,7 @@ Route103_EventScript_IceCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleIce
 	return
-	
+
 Route103_EventScript_DragonCheck::
 	setvar VAR_STARTER_MON, 16
 	checkplayergender
@@ -790,7 +792,7 @@ Route103_EventScript_DragonCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleDragon
 	return
-	
+
 Route103_EventScript_DarkCheck::
 	setvar VAR_STARTER_MON, 17
 	checkplayergender
@@ -799,7 +801,7 @@ Route103_EventScript_DarkCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleDark
 	return
-	
+
 Route103_EventScript_FairyCheck::
 	setvar VAR_STARTER_MON, 18
 	checkplayergender
@@ -808,11 +810,11 @@ Route103_EventScript_FairyCheck::
 	compare VAR_RESULT, FEMALE
 	goto_if_eq Route103_EventScript_StartBrendanBattleFairy
 	return
-	
+
 Route103_Text_RouteSign: @ 81ECC1A
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
-	
+
 Route103_EventScript_Isabelle:: @ 81EC78F
 	trainerbattle_single TRAINER_ISABELLE, Route103_Text_IsabelleIntro, Route103_Text_IsabelleDefeated
 	msgbox Route103_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
