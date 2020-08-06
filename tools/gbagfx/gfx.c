@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <string.h>
 #include "global.h"
 #include "gfx.h"
 #include "util.h"
@@ -352,7 +353,17 @@ void ReadImage(char *path, int tilesWidth, int bitDepth, int metatileWidth, int 
 	unsigned char *buffer = ReadWholeFile(path, &fileSize);
 
 	int numTiles = fileSize / tileSize;
-
+	if (image->tilemap.data.affine != NULL)
+    {
+	    int outTileSize = (bitDepth == 4 && image->palette.numColors > 16) ? 64 : tileSize;
+        buffer = DecodeTilemap(buffer, &image->tilemap, &numTiles, image->isAffine, tileSize, outTileSize, bitDepth);
+        if (outTileSize == 64)
+        {
+            tileSize = 64;
+            image->bitDepth = bitDepth = 8;
+        }
+    }
+	
 	int tilesHeight = (numTiles + tilesWidth - 1) / tilesWidth;
 
 	if (tilesWidth % metatileWidth != 0)
@@ -439,6 +450,11 @@ void WriteImage(char *path, int numTiles, int bitDepth, int metatileWidth, int m
 
 void FreeImage(struct Image *image)
 {
+    if (image->tilemap.data.affine != NULL)
+    {
+        free(image->tilemap.data.affine);
+        image->tilemap.data.affine = NULL;
+    }
 	free(image->pixels);
 	image->pixels = NULL;
 }
@@ -459,6 +475,12 @@ void ReadGbaPalette(char *path, struct Palette *palette)
 		palette->colors[i].green = UPCONVERT_BIT_DEPTH(GET_GBA_PAL_GREEN(paletteEntry));
 		palette->colors[i].blue = UPCONVERT_BIT_DEPTH(GET_GBA_PAL_BLUE(paletteEntry));
 	}
+	// png can only accept 16 or 256 colors, so fill the remainder with black
+	if (palette->numColors > 16)
+    {
+	    memset(&palette->colors[palette->numColors], 0, (256 - palette->numColors) * sizeof(struct Color));
+	    palette->numColors = 256;
+    }
 
 	free(data);
 }
