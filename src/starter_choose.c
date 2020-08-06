@@ -42,9 +42,9 @@ static void CB2_StarterChoose(void);
 static void ClearStarterLabel(void);
 static void Task_StarterChoose(u8 taskId);
 static void Task_HandleStarterChooseInput(u8 taskId);
-static void Task_WaitForStarterSprite(u8 taskId);
-static void Task_AskConfirmStarter(u8 taskId);
-static void Task_HandleConfirmStarterInput(u8 taskId);
+static void Task_WaitForStarterSprite(u8 taskId, u8 sprites[]);
+static void Task_AskConfirmStarter(u8 taskId, u8 sprites[]);
+static void Task_HandleConfirmStarterInput(u8 taskId, u8 sprites[]);
 static void Task_DeclineStarter(u8 taskId);
 static void Task_MoveStarterChooseCursor(u8 taskId);
 static void Task_CreateStarterLabel(u8 taskId);
@@ -451,7 +451,7 @@ void CB2_ChooseStarter(void)
 	else
 		gSpecialVar_Unused_0x8014 = gBaseStats[sStarterMon[gSpecialVar_Result]].type1;
 
-	Task_StarterChoose1(gSpecialVar_Result/*, spritecollection*/);
+	Task_StarterChoose(gSpecialVar_Result/*, spritecollection*/);
     ResetAllPicSprites();
     SetMainCallback2(gMain.savedCallback);
 
@@ -603,15 +603,15 @@ static void Task_StarterChoose(u8 taskId)
     }
 }*/
 
-static void Task_StarterChoose2(u8 taskId)
+static void Task_HandleStarterChooseInput(u8 taskId)
 {
     u8 selection = taskId;
 	u8 sprites[2];
 
-	sub_8134604();
+	ClearStarterLabel();
 
 	// Create white circle background
-	sprites[0] = CreateSprite(&gUnknown_085B1F40, sPokeballCoords[selection][0], sPokeballCoords[selection][1], 1);
+	sprites[0] = CreateSprite(&sSpriteTemplate_StarterCircle, sPokeballCoords[selection][0], sPokeballCoords[selection][1], 1);
 	//gTasks[taskId].tCircleSpriteId = spriteId;
 
 	// Create Pokemon sprite
@@ -620,11 +620,11 @@ static void Task_StarterChoose2(u8 taskId)
 	//gSprites[spriteId].callback = StarterPokemonSpriteCallback;
 
 	//gTasks[taskId].tPkmnSpriteId = spriteId;
-	Task_StarterChoose3(taskId, sprites);
+	Task_WaitForStarterSprite(taskId, sprites);
 
 }
 
-static void Task_WaitForStarterSprite(u8 taskId)
+static void Task_WaitForStarterSprite(u8 taskId, u8 sprites[])
 {
     /*if (gSprites[gTasks[taskId].tCircleSpriteId].affineAnimEnded &&
         gSprites[gTasks[taskId].tCircleSpriteId].pos1.x == STARTER_PKMN_POS_X &&
@@ -635,7 +635,7 @@ static void Task_WaitForStarterSprite(u8 taskId)
     }
 }
 
-static void Task_AskConfirmStarter(u8 taskId)
+static void Task_AskConfirmStarter(u8 taskId, u8 sprites[])
 {
     //PlayCry1(GetStarterPokemon(gTasks[taskId].tStarterSelection), 0);
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
@@ -646,7 +646,7 @@ static void Task_AskConfirmStarter(u8 taskId)
     Task_HandleConfirmStarterInput(taskId, sprites);
 }
 
-static void Task_HandleConfirmStarterInput(u8 taskId)
+static void Task_HandleConfirmStarterInput(u8 taskId, u8 sprites[])
 {
     u8 spriteId;
 
@@ -676,8 +676,8 @@ static void Task_HandleConfirmStarterInput(u8 taskId)
 
 static void Task_DeclineStarter(u8 taskId)
 {
-    //gTasks[taskId].func = Task_StarterChoose;
-    Task_StarterChoose(taskId);
+    gTasks[taskId].func = Task_StarterChoose;
+    //Task_StarterChoose(taskId);
 }
 
 static void CreateStarterPokemonLabel(u8 selection)
