@@ -18,7 +18,7 @@
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
 #include "field_weather.h"
-#include "fldeff.h" //for flash 
+#include "fldeff.h" //for flash
 #include "item.h"
 #include "item_menu.h"
 #include "item_use.h"
@@ -196,7 +196,7 @@ void ItemUseOutOfBattle_Fly(u8 taskId)
 {
 	if(Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
 	{
-		
+
 		if(!gTasks[taskId].tUsingRegisteredKeyItem)
 		{
 			gSpecialVar_0x8000 = 591;
@@ -219,7 +219,7 @@ static void FldEff_UseFlash(void)//wiservisor flash fix
 {
     PlaySE(SE_W115);
     FlagSet(FLAG_SYS_USE_FLASH);
-    ScriptContext1_SetupScript(EventScript_FldEffFlash);
+    ScriptContext1_SetupScript(EventScript_UseFlash);
 }
 
 static void FieldCallback_Flash(void)//wiservisor flashfix
@@ -936,7 +936,7 @@ static void Task_UseRepel(u8 taskId)
 void ItemUseOutOfBattle_SprayPaint(u8 taskId) //turn next pokemon shiny based off repel
 {
 	if (VarGet(VAR_SPRAY_COUNT) == 0) // closes if one is already in use
-	{ 
+	{
 		PlaySE(SE_TU_SAA);
 		VarSet(VAR_SPRAY_COUNT, 1);
 		RemoveUsedItem();
