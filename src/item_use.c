@@ -224,7 +224,7 @@ static void FldEff_UseFlash(void)//wiservisor flash fix
 
 static void FieldCallback_Flash(void)//wiservisor flashfix
 {
-    u8 taskId = oei_task_add();
+    u8 taskId = CreateFieldMoveTask();
     FadeInFromBlack();
     gSpecialVar_0x8000 = 594;
     gTasks[taskId].data[8] = (uintptr_t)FldEff_UseFlash >> 16;
