@@ -4682,7 +4682,7 @@ void CopyPlayerPartyMonToBattleData(u8 battlerId, u8 partyIndex)
 {
     PokemonToBattleMon(&gPlayerParty[partyIndex], &gBattleMons[battlerId]);
     gBattleStruct->hpOnSwitchout[GetBattlerSide(battlerId)] = gBattleMons[battlerId].hp;
-    sub_803FA70(battlerId);
+    UpdateSentPokesToOpponentValue(battlerId);
     ClearTemporarySpeciesSpriteData(battlerId, FALSE);
 }
 
