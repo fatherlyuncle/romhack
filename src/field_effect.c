@@ -2925,8 +2925,8 @@ static u8 InitFieldMoveMonSprite(u32 species, u32 otId, u32 personality)
 	u16 v0;
     u8 monSprite;
     struct Sprite *sprite;
-    v0 = (a0 & 0x80000000) >> 16;
-    a0 &= 0x7fffffff;
+    v0 = (species & 0x80000000) >> 16;
+    species &= 0x7fffffff;
     monSprite = AddItemIconSprite(2110, 2110, VarGet(gSpecialVar_0x8000)); //test to change icon by item
     gSprites[monSprite].pos1.y = 0x50;
     gSprites[monSprite].pos1.x = 0x140;
