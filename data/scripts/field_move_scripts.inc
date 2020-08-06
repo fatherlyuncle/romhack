@@ -1,4 +1,4 @@
-
+@ Interact with cuttable tree
 EventScript_CutTree:: @ 82906BB
 	lockall
 	//goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
@@ -19,7 +19,8 @@ EventScript_CutTree:: @ 82906BB
 	goto EventScript_CutTreeDown
 	end
 
-EventScript_FldEffCut:: @ 8290705
+@ Use cut from party menu
+EventScript_UseCut:: @ 8290705
 	lockall
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
@@ -60,6 +61,7 @@ Text_CantCut: @ 829077D
 	.string "This tree looks like it can be\n"
 	.string "chopped down!$"
 
+@ Interact with smashable rock
 EventScript_RockSmash:: @ 82907A6
 	lockall
 	//goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
@@ -80,7 +82,8 @@ EventScript_RockSmash:: @ 82907A6
 	goto EventScript_SmashRock
 	end
 
-EventScript_FldEffRockSmash:: @ 82907F0
+@ Use rock smash from party menu
+EventScript_UseRockSmash:: @ 82907F0
 	lockall
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
 	waitstate
@@ -92,10 +95,10 @@ EventScript_SmashRock:: @ 82907FB
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
 	specialvar VAR_RESULT, TryUpdateRusturfTunnelState
-	compare VAR_RESULT, 1
+	compare VAR_RESULT, TRUE
 	goto_if_eq EventScript_EndSmash
 	special RockSmashWildEncounter
-	compare VAR_RESULT, 0
+	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_EndSmash
 	waitstate
 	releaseall
@@ -145,7 +148,7 @@ EventScript_StrengthBoulder:: @ 82908BA
 	goto EventScript_ActivateStrength
 	end
 
-EventScript_FldEffStrength:: @ 82908FD
+EventScript_UseStrength:: @ 82908FD
 	lockall
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
